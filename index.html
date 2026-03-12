@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>WSDM 2027</title>
     <style>
         * {
@@ -380,6 +380,195 @@
             }
         }
 
+        @media (min-width: 2560px) {
+            /* 按照1920px的比例缩放 (2560/1920 = 1.3333) */
+            .box1 {
+                width: 1055px;
+                height: 400px;
+            }
+            
+            .box2 {
+                width: 1055px;
+                height: 429px;
+            }
+            
+            .box3 {
+                min-width: 933px;
+            }
+            
+            .info-label,
+            .info-value {
+                font-size: 35px;
+            }
+            
+            .registration-text h3 {
+                font-size: 37px;
+            }
+            
+            .registration-text p {
+                font-size: 35px;
+            }
+            
+            .registration-button {
+                width: 333px;
+            }
+            
+            .registration-button a {
+                font-size: 37px;
+            }
+            
+            .intro-section {
+                height: 859px;
+            }
+            
+            .intro-section h3 {
+                font-size: 43px;
+            }
+            
+            .intro-section p {
+                font-size: 37px;
+            }
+            
+            
+            
+            .cfp-section {
+                padding: 8rem;
+                margin-top: 80px;
+            }
+            
+            .cfp-section h2 {
+                font-size: 53px;
+                margin-bottom: 200px;
+            }
+            
+            .cfp-section h2::after {
+                width: 117px;
+                height: 13px;
+                bottom: -67px;
+            }
+            
+            .cfp-section p {
+                font-size: 32px;
+            }
+            
+            .cfp-section h3 {
+                font-size: 37px;
+            }
+            
+            .cfp-section ul {
+                font-size: 32px;
+            }
+            
+            .timeline-item {
+                padding: 2.7rem 1.3rem;
+                min-height: 417px;
+            }
+            
+            .timeline-item:not(:last-child) {
+                margin-right: 67px;
+                clip-path: polygon(0 0, calc(100% - 107px) 0, 100% 50%, calc(100% - 107px) 100%, 0 100%);
+            }
+            
+            .timeline-item:not(:first-child) {
+                margin-left: -200px;
+            }
+            
+            .timeline-item h3 {
+                font-size: 32px;
+                padding: 0.7rem 1.3rem;
+            }
+            
+            .timeline-item p {
+                font-size: 24px;
+            }
+            
+            .timeline-icon {
+                margin-bottom: 2rem;
+                width: 80px;
+                height: 80px;
+            }
+            
+            .timeline-icon svg {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .chairs-grid {
+                grid-template-columns: repeat(3, 611px);
+            }
+            
+            .chairs-grid.chairs-grid-small {
+                grid-template-columns: repeat(2, 611px);
+            }
+            
+            .chair-card {
+                background-image: url('./images/chair-card-bg.svg');
+                background-size: cover;
+                background-position: center;
+                width: 611px;
+                height: 791px;
+                margin: 0 auto;
+                padding: 2.7rem 1.3rem 1.3rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                text-align: center;
+                cursor: pointer;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            
+            .chair-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            }
+            
+            .chair-image {
+                width: 436px;
+                height: 436px;
+                border-radius: 50%;
+                border: 7px solid #D9D9D9;
+                margin-bottom: 3.3rem;
+            }
+            
+            .chair-image img {
+                border-radius: 50%;
+            }
+            
+            .chair-name {
+                font-size: 37px;
+            }
+            
+            .chair-affiliation {
+                font-size: 32px;
+            }
+            
+            /* Speaker section adjustments */
+            .speaker {
+                width: 611px;
+                height: 791px;
+            }
+            
+            .speakers-grid {
+                grid-template-columns: repeat(auto-fit, minmax(611px, 1fr));
+            }
+            
+            .speaker img {
+                width: 436px;
+                height: 436px;
+                border: 7px solid #D9D9D9;
+                margin-bottom: 3.3rem;
+            }
+            
+            .speaker h3 {
+                font-size: 37px;
+            }
+            
+            .speaker p {
+                font-size: 32px;
+            }
+        }
+
         /* Adjustments for different screen sizes */
         @media (max-width: 1919px) and (min-width: 1200px) {
             .header {
@@ -727,34 +916,166 @@
         }
 
         /* Responsive adjustments for info section */
-        @media (max-width: 1600px) {
-            .box1,
-            .box2 {
-                width: 500px;
-            }
-            
-            .box3 {
-                min-width: 400px;
-            }
-        }
 
         @media (max-width: 1200px) {
+            /* 按照1920px的比例缩放 (1200/1920 = 0.625) */
             .info-container {
-                flex-direction: column;
-                align-items: center;
+                flex-direction: row;
+                align-items: flex-start;
             }
 
             .box1,
-            .box2,
+            .box2 {
+                width: 494px;
+                height: auto;
+            }
+
             .box3 {
-                width: 100%;
-                max-width: 791px;
-                min-width: 100%;
+                min-width: 438px;
                 height: auto;
             }
 
             .intro-section {
-                height: auto;
+                height: 403px;
+            }
+            
+            .info-label,
+            .info-value {
+                font-size: 16px;
+            }
+            
+            .registration-text h3 {
+                font-size: 17px;
+            }
+            
+            .registration-text p {
+                font-size: 16px;
+            }
+            
+            .registration-button {
+                width: 156px;
+            }
+            
+            .registration-button a {
+                font-size: 17px;
+            }
+            
+            .hero {
+                min-height: 750px;
+            }
+            
+            .cfp-section {
+                padding: 2.5rem 3.8rem;
+                margin-top: 38px;
+            }
+            
+            .cfp-section h2 {
+                font-size: 25px;
+                margin-bottom: 94px;
+            }
+            
+            .cfp-section h2::after {
+                width: 55px;
+                height: 6px;
+                bottom: -31px;
+            }
+            
+            .cfp-section p {
+                font-size: 15px;
+            }
+            
+            .cfp-section h3 {
+                font-size: 18px;
+            }
+            
+            .cfp-section ul {
+                font-size: 15px;
+            }
+            
+            .timeline-item {
+                padding: 0.8rem 0.4rem;
+                min-height: 130px;
+            }
+            
+            .timeline-item:not(:last-child) {
+                margin-right: 28px;
+                clip-path: polygon(0 0, calc(100% - 44px) 0, 100% 50%, calc(100% - 44px) 100%, 0 100%);
+            }
+            
+            .timeline-item:not(:first-child) {
+                margin-left: -84px;
+            }
+            
+            .timeline-item h3 {
+                font-size: 9px;
+                padding: 0.2rem 0.4rem;
+            }
+            
+            .timeline-item p {
+                font-size: 8px;
+            }
+            
+            .timeline-icon {
+                margin-bottom: 0.6rem;
+                width: 25px;
+                height: 25px;
+            }
+            
+            .timeline-icon svg {
+                width: 13px;
+                height: 13px;
+            }
+            
+            .chairs-grid {
+                grid-template-columns: repeat(3, 300px);
+            }
+            
+            .chairs-grid.chairs-grid-small {
+                grid-template-columns: repeat(2, 300px);
+            }
+            
+            .chair-card {
+                background-image: url('./images/chair-card-bg.svg');
+                background-size: cover;
+                background-position: center;
+                width: 300px;
+                height: 400px;
+                margin: 0 auto;
+                padding: 1.2rem 0.8rem 0.8rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                text-align: center;
+            }
+            
+            .chair-image {
+                width: 204px;
+                height: 204px;
+                border-radius: 50%;
+                border: 3px solid #D9D9D9;
+                margin-bottom: 1.6rem;
+            }
+            
+            .chair-image img {
+                border-radius: 50%;
+            }
+            
+            .chair-name {
+                font-size: 18px;
+            }
+            
+            .chair-affiliation {
+                font-size: 15px;
+            }
+            
+            /* Speaker section adjustments */
+            .speaker h3 {
+                font-size: 22px;
+            }
+            
+            .speaker p {
+                font-size: 18px;
             }
         }
 
@@ -1339,6 +1660,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            border-radius: 50%;
         }
 
         .chair-name {
@@ -1603,6 +1925,23 @@
             .chair-card {
                 width: 350px;
                 height: 450px;
+                padding: 1.7rem 1.2rem 1.2rem;
+                background-image: url('./images/chair-card-bg.svg');
+                background-size: cover;
+                background-position: center;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                text-align: center;
+                cursor: pointer;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            
+            .chair-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
             }
             
             .chairs-grid {
@@ -1840,6 +2179,23 @@
             .chair-card {
                 width: 350px;
                 height: 450px;
+                padding: 1.7rem 1.2rem 1.2rem;
+                background-image: url('./images/chair-card-bg.svg');
+                background-size: cover;
+                background-position: center;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                text-align: center;
+                cursor: pointer;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            
+            .chair-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
             }
             
             .chairs-grid {
@@ -2038,6 +2394,499 @@
             
             .footer-links a {
                 font-size: 12px;
+            }
+        }
+
+        @media (max-width: 1600px) {
+            /* 按照1920px的比例缩放 (1600/1920 = 0.833333) */
+            .box1 {
+                width: 659px;
+                height: 250px;
+            }
+            
+            .box2 {
+                width: 659px;
+                height: 268px;
+            }
+            
+            .box3 {
+                min-width: 583px;
+            }
+            
+            .info-label,
+            .info-value {
+                font-size: 22px;
+            }
+            
+            .registration-text h3 {
+                font-size: 23px;
+            }
+            
+            .registration-text p {
+                font-size: 22px;
+            }
+            
+            .registration-button {
+                width: 208px;
+            }
+            
+            .registration-button a {
+                font-size: 23px;
+            }
+            
+            .intro-section {
+                height: 537px;
+            }
+            
+            .intro-section h3 {
+                font-size: 27px;
+            }
+            
+            .intro-section p {
+                font-size: 23px;
+            }
+            
+            .hero {
+                min-height: 1000px;
+            }
+            
+            .cfp-section {
+                padding: 3.3rem 5rem;
+                margin-top: 50px;
+            }
+            
+            .cfp-section h2 {
+                font-size: 33px;
+                margin-bottom: 125px;
+            }
+            
+            .cfp-section h2::after {
+                width: 73px;
+                height: 8px;
+                bottom: -42px;
+            }
+            
+            .cfp-section p {
+                font-size: 20px;
+            }
+            
+            .cfp-section h3 {
+                font-size: 23px;
+            }
+            
+            .cfp-section ul {
+                font-size: 20px;
+            }
+            
+            .timeline-item {
+                padding: 1.5rem 0.7rem;
+                min-height: 240px;
+            }
+            
+            .timeline-item:not(:last-child) {
+                margin-right: 38px;
+                clip-path: polygon(0 0, calc(100% - 60px) 0, 100% 50%, calc(100% - 60px) 100%, 0 100%);
+            }
+            
+            .timeline-item:not(:first-child) {
+                margin-left: -115px;
+            }
+            
+            .timeline-item h3 {
+                font-size: 18px;
+                padding: 0.35rem 0.7rem;
+            }
+            
+            .timeline-item p {
+                font-size: 13px;
+            }
+            
+            .timeline-icon {
+                margin-bottom: 1.1rem;
+                width: 45px;
+                height: 45px;
+            }
+            
+            .timeline-icon svg {
+                width: 22px;
+                height: 22px;
+            }
+            
+            .chairs-grid {
+                grid-template-columns: repeat(3, 373px);
+            }
+            
+            .chairs-grid.chairs-grid-small {
+                grid-template-columns: repeat(2, 373px);
+            }
+            
+            .chair-card {
+                background-image: url('./images/chair-card-bg.svg');
+                background-size: cover;
+                background-position: center;
+                width: 373px;
+                height: 494px;
+                margin: 0 auto;
+                padding: 1.7rem 1.2rem 1.2rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                text-align: center;
+            }
+            
+            .chair-image {
+                width: 272px;
+                height: 272px;
+                border-radius: 50%;
+                border: 4px solid #D9D9D9;
+                margin-bottom: 2.1rem;
+            }
+            
+            .chair-image img {
+                border-radius: 50%;
+            }
+            
+            .chair-name {
+                font-size: 23px;
+            }
+            
+            .chair-affiliation {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 1470px) {
+            /* 按照1920px的比例缩放 (1470/1920 = 0.765625) */
+            .box1 {
+                width: 606px;
+                height: 230px;
+            }
+            
+            .box2 {
+                width: 606px;
+                height: 246px;
+            }
+            
+            .box3 {
+                min-width: 536px;
+            }
+            
+            .info-label,
+            .info-value {
+                font-size: 20px;
+            }
+            
+            .registration-text h3 {
+                font-size: 21px;
+            }
+            
+            .registration-text p {
+                font-size: 20px;
+            }
+            
+            .registration-button {
+                width: 191px;
+            }
+            
+            .registration-button a {
+                font-size: 21px;
+            }
+            
+            .intro-section {
+                height: 493px;
+            }
+            
+            .intro-section h3 {
+                font-size: 22px;
+            }
+            
+            .intro-section p {
+                font-size: 21px;
+            }
+            
+            .hero {
+                min-height: 919px;
+            }
+            
+            .cfp-section {
+                padding: 3rem 4.6rem;
+                margin-top: 30px;
+            }
+            
+            .cfp-section h2 {
+                font-size: 31px;
+                margin-bottom: 60px;
+            }
+            
+            .cfp-section h2::after {
+                width: 67px;
+                height: 8px;
+                bottom: -38px;
+            }
+            
+            .cfp-section p {
+                font-size: 18px;
+            }
+            
+            .cfp-section h3 {
+                font-size: 21px;
+            }
+            
+            .cfp-section ul {
+                font-size: 18px;
+            }
+            
+            .timeline-item {
+                padding: 1rem 0.5rem;
+                min-height: 160px;
+            }
+            
+            .timeline-item:not(:last-child) {
+                margin-right: 35px;
+                clip-path: polygon(0 0, calc(100% - 55px) 0, 100% 50%, calc(100% - 55px) 100%, 0 100%);
+            }
+            
+            .timeline-item:not(:first-child) {
+                margin-left: -105px;
+            }
+            
+            .timeline-item h3 {
+                font-size: 11px;
+                padding: 0.25rem 0.5rem;
+            }
+            
+            .timeline-item p {
+                font-size: 9px;
+            }
+            
+            .timeline-icon {
+                margin-bottom: 0.8rem;
+                width: 32px;
+                height: 32px;
+            }
+            
+            .timeline-icon svg {
+                width: 16px;
+                height: 16px;
+            }
+            
+            .chairs-grid {
+                grid-template-columns: repeat(3, 300px);
+            }
+            
+            .chairs-grid.chairs-grid-small {
+                grid-template-columns: repeat(2, 300px);
+            }
+            
+            .chair-card {
+                width: 300px;
+                height: 400px;
+                padding: 1.5rem 1rem 1rem;
+                background-image: url('./images/chair-card-bg.svg');
+                background-size: cover;
+                background-position: center;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                text-align: center;
+                cursor: pointer;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            
+            .chair-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            }
+            
+            .chair-image {
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                border: 4px solid #D9D9D9;
+                margin-bottom: 1.5rem;
+            }
+            
+            .chair-image img {
+                border-radius: 50%;
+            }
+            
+            .chair-name {
+                font-size: 20px;
+            }
+            
+            .chair-affiliation {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            /* 按照1920px的比例缩放 (1200/1920 = 0.625) */
+            .box1 {
+                width: 494px;
+                height: 188px;
+            }
+            
+            .box2 {
+                width: 494px;
+                height: 201px;
+            }
+            
+            .box3 {
+                min-width: 438px;
+            }
+            
+            .info-label,
+            .info-value {
+                font-size: 16px;
+            }
+            
+            .registration-text h3 {
+                font-size: 17px;
+            }
+            
+            .registration-text p {
+                font-size: 16px;
+            }
+            
+            .registration-button {
+                width: 156px;
+            }
+            
+            .registration-button a {
+                font-size: 17px;
+            }
+            
+            .intro-section {
+                height: 403px;
+            }
+            
+            .intro-section h3 {
+                font-size: 20px;
+            }
+            
+            .intro-section p {
+                font-size: 17px;
+            }
+            
+            .hero {
+                min-height: 750px;
+            }
+            
+            .cfp-section {
+                padding: 2.5rem 3.8rem;
+                margin-top: 38px;
+            }
+            
+            .cfp-section h2 {
+                font-size: 25px;
+                margin-bottom: 94px;
+            }
+            
+            .cfp-section h2::after {
+                width: 55px;
+                height: 6px;
+                bottom: -31px;
+            }
+            
+            .cfp-section p {
+                font-size: 15px;
+            }
+            
+            .cfp-section h3 {
+                font-size: 18px;
+            }
+            
+            .cfp-section ul {
+                font-size: 15px;
+            }
+            
+            .timeline-item {
+                padding: 0.8rem 0.4rem;
+                min-height: 130px;
+            }
+            
+            .timeline-item:not(:last-child) {
+                margin-right: 28px;
+                clip-path: polygon(0 0, calc(100% - 44px) 0, 100% 50%, calc(100% - 44px) 100%, 0 100%);
+            }
+            
+            .timeline-item:not(:first-child) {
+                margin-left: -84px;
+            }
+            
+            .timeline-item h3 {
+                font-size: 9px;
+                padding: 0.2rem 0.4rem;
+            }
+            
+            .timeline-item p {
+                font-size: 8px;
+            }
+            
+            .timeline-icon {
+                margin-bottom: 0.6rem;
+                width: 25px;
+                height: 25px;
+            }
+            
+            .timeline-icon svg {
+                width: 13px;
+                height: 13px;
+            }
+            
+            .chairs-grid {
+                grid-template-columns: repeat(3, 286px);
+            }
+            
+            .chairs-grid.chairs-grid-small {
+                grid-template-columns: repeat(2, 286px);
+            }
+            
+            .chair-card {
+                background-image: url('./images/chair-card-bg.svg');
+                background-size: cover;
+                background-position: top center;
+                width: 286px;
+                height: 371px;
+                margin: 0 auto;
+                padding: 1.2rem 0.8rem 0.8rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                text-align: center;
+            }
+            
+            .chair-image {
+                width: 204px;
+                height: 204px;
+                border-radius: 50%;
+                border: 3px solid #D9D9D9;
+                margin-bottom: 1.6rem;
+            }
+            
+            .chair-image img {
+                border-radius: 50%;
+            }
+            
+            .chair-name {
+                font-size: 18px;
+            }
+            
+            .chair-affiliation {
+                font-size: 15px;
+            }
+            
+            /* Speaker section adjustments */
+            .speaker h3 {
+                font-size: 22px;
+            }
+            
+            .speaker p {
+                font-size: 18px;
             }
         }
     </style>
