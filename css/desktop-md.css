@@ -1,0 +1,184 @@
+/* 1600px样式 */
+@media (max-width: 1919px) and (min-width: 1600px) {
+    .header {
+        padding-right: 50px;
+    }
+}
+
+@media (max-width: 1600px) {
+    /* 按照1920px的比例缩放 (1600/1920 = 0.833333) */
+    .box1 {
+        width: 659px;
+        height: 250px;
+    }
+    
+    .box2 {
+        width: 659px;
+        height: 268px;
+    }
+    
+    .box3 {
+        min-width: 583px;
+    }
+    
+    .info-label,
+    .info-value {
+        font-size: 22px;
+    }
+    
+    .registration-text h3 {
+        font-size: 23px;
+    }
+    
+    .registration-text p {
+        font-size: 22px;
+    }
+    
+    .registration-button {
+        width: 208px;
+    }
+    
+    .registration-button a {
+        font-size: 23px;
+    }
+    
+    .intro-section {
+        height: 537px;
+    }
+    
+    .intro-section h3 {
+        font-size: 27px;
+    }
+    
+    .intro-section p {
+        font-size: 23px;
+    }
+    
+    .hero {
+        min-height: 1000px;
+    }
+    
+    .cfp-section {
+        padding: 3.3rem 5rem;
+        margin-top: 50px;
+    }
+    
+    .cfp-section h2 {
+        font-size: 33px;
+        margin-bottom: 125px;
+    }
+    
+    .cfp-section h2::after {
+        width: 73px;
+        height: 8px;
+        bottom: -42px;
+    }
+    
+    .cfp-section p {
+        font-size: 20px;
+    }
+    
+    .cfp-section h3 {
+        font-size: 23px;
+    }
+    
+    .cfp-section ul {
+        font-size: 20px;
+    }
+    
+    /* 重要日期区域 */
+    .dates-section {
+        padding: 0 6rem;
+    }
+    
+    .dates-timeline {
+        flex-direction: row;
+    }
+    
+    .timeline-item {
+        padding: 1.5rem 0.7rem;
+        min-height: 240px;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .timeline-item:nth-child(1) { z-index: 10; }
+    .timeline-item:nth-child(2) { z-index: 9; }
+    .timeline-item:nth-child(3) { z-index: 8; }
+    .timeline-item:nth-child(4) { z-index: 7; }
+    .timeline-item:nth-child(5) { z-index: 6; }
+    
+    .timeline-item:not(:last-child) {
+        margin-right: 38px;
+        clip-path: polygon(0 0, calc(100% - 60px) 0, 100% 50%, calc(100% - 60px) 100%, 0 100%);
+    }
+    
+    .timeline-item:not(:first-child) {
+        margin-left: -115px;
+    }
+    
+    .timeline-item h3 {
+        font-size: 18px;
+        padding: 0.35rem 0.7rem;
+    }
+    
+    .timeline-item p {
+        font-size: 13px;
+    }
+    
+    .timeline-icon {
+        margin-bottom: 1.1rem;
+        width: 45px;
+        height: 45px;
+    }
+    
+    .timeline-icon svg {
+        width: 22px;
+        height: 22px;
+    }
+    
+    /* 主席区域 */
+    .chairs-grid {
+        grid-template-columns: repeat(3, 373px);
+    }
+    
+    .chairs-grid.chairs-grid-small {
+        grid-template-columns: repeat(2, 373px);
+    }
+    
+    .chair-card {
+        width: 373px;
+        height: 494px;
+        padding: 1.7rem 1.2rem 1.2rem;
+    }
+    
+    .chair-image {
+        width: 272px;
+        height: 272px;
+        border: 4px solid #D9D9D9;
+        margin-bottom: 2.1rem;
+    }
+    
+    .chair-name {
+        font-size: 23px;
+    }
+    
+    .chair-affiliation {
+        font-size: 20px;
+    }
+    
+    /* 演讲者区域 */
+    .speaker {
+        width: 350px;
+        height: 450px;
+    }
+    
+    .speakers-grid {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+    
+    .speaker img {
+        width: 250px;
+        height: 250px;
+    }
+}

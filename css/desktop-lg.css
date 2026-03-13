@@ -1,0 +1,6 @@
+/* 1920px及以上样式 */
+@media (min-width: 1920px) {
+    .header {
+        padding-right: 97px;
+    }
+}

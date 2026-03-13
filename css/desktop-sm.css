@@ -1,0 +1,309 @@
+/* 1200px样式 */
+/* ====== 1470px-1201px 专门适配 ====== */
+@media (max-width: 1599px) and (min-width: 1201px) {
+    /* 计算比例：1470/1920 ≈ 0.7656 */
+    
+    .info-container {
+        flex-direction: row;
+        align-items: flex-start;
+        margin-top: 153px; /* 200 * 0.7656 ≈ 153px */
+    }
+    .timeline-item h3 {
+        font-size: 16px;
+        padding: 0.2rem 0.4rem;
+    }
+	.timeline-item p {
+        font-size: 14px;
+    }
+    .box1 {
+        width: 606px; /* 791 * 0.7656 ≈ 606px */
+        height: auto;
+        min-height: 230px; /* 300 * 0.7656 ≈ 230px */
+    }
+    
+    .box2 {
+        width: 606px; /* 791 * 0.7656 ≈ 606px */
+        height: auto;
+        min-height: 246px; /* 322 * 0.7656 ≈ 246px */
+    }
+    
+    .box3 {
+        min-width: 536px; /* 700 * 0.7656 ≈ 536px */
+        width: 95%;
+        height: auto;
+    }
+    
+    .info-label,
+    .info-value {
+        font-size: 20px; /* 26 * 0.7656 ≈ 20px */
+    }
+    
+    .registration-text h3 {
+        font-size: 21px; /* 28 * 0.7656 ≈ 21px */
+    }
+    
+    .registration-text p {
+        font-size: 20px; /* 26 * 0.7656 ≈ 20px */
+    }
+    
+    .registration-button {
+        width: 191px; /* 250 * 0.7656 ≈ 191px */
+    }
+    
+    .registration-button a {
+        font-size: 21px; /* 28 * 0.7656 ≈ 21px */
+    }
+    
+    .intro-section {
+        height: auto;
+        min-height: 493px; /* 644 * 0.7656 ≈ 493px */
+    }
+    
+    .intro-section h3 {
+        font-size: 25px; /* 32 * 0.7656 ≈ 25px */
+    }
+    
+    .intro-section p {
+        font-size: 21px; /* 28 * 0.7656 ≈ 21px */
+    }
+    
+    /* 保持其他元素的比例适配 */
+    .hero {
+        min-height: 919px; /* 1200 * 0.7656 ≈ 919px */
+    }
+    
+    .cfp-section {
+        padding: 4.6rem; /* 6 * 0.7656 ≈ 4.6rem */
+        margin-top: 61px; /* 80 * 0.7656 ≈ 61px */
+    }
+    
+    .cfp-section h2 {
+        font-size: 31px; /* 40 * 0.7656 ≈ 31px */
+        margin-bottom: 115px; /* 150 * 0.7656 ≈ 115px */
+    }
+    
+    .cfp-section h2::after {
+        width: 67px; /* 88 * 0.7656 ≈ 67px */
+        bottom: -38px; /* -50 * 0.7656 ≈ -38px */
+    }
+    
+    /* 演讲者区域适配 */
+    .speaker {
+        width: 351px; /* 458 * 0.7656 ≈ 351px */
+        height: 454px; /* 593 * 0.7656 ≈ 454px */
+    }
+    .speakers-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .speaker img {
+        width: 250px; /* 327 * 0.7656 ≈ 250px */
+        height: 250px;
+    }
+    
+    /* 主席区域适配 */
+    .chairs-grid {
+        grid-template-columns: repeat(3, 351px);
+    }
+    
+    .chairs-grid.chairs-grid-small {
+        grid-template-columns: repeat(2, 351px);
+    }
+    
+    .chair-card {
+        width: 351px;
+        height: 454px;
+    }
+    
+    .chair-image {
+        width: 250px;
+        height: 250px;
+    }
+	.intro-section p{
+		font-size:24px;
+	}
+}
+@media (max-width: 1200px) {
+    /* 按照1920px的比例缩放 (1200/1920 = 0.625) */
+    .info-container {
+        flex-direction: row;
+        align-items: flex-start;
+        margin-top: 100px;
+    }
+	.hero{
+		min-height:600px;
+	}
+    .box1,
+    .box2 {
+        width: 494px;
+        height: auto;
+    }
+	.box2{
+		min-height:200px;
+	}
+    .box3 {
+        min-width: 438px;
+        height: auto;
+    }
+
+    .intro-section {
+        height: auto;
+        min-height: 403px;
+    }
+    
+    .info-label,
+    .info-value {
+        font-size: 16px;
+    }
+    
+    .registration-text h3 {
+        font-size: 17px;
+    }
+    
+    .registration-text p {
+        font-size: 16px;
+    }
+    
+    .registration-button {
+        width: 156px;
+    }
+    
+    .registration-button a {
+        font-size: 17px;
+    }
+    
+    .cfp-section {
+        padding: 2.5rem 3.8rem;
+        margin-top: 38px;
+    }
+    
+    .cfp-section h2 {
+        font-size: 25px;
+        margin-bottom: 94px;
+    }
+    
+    .cfp-section h2::after {
+        width: 55px;
+        height: 6px;
+        bottom: -31px;
+    }
+    
+    .cfp-section p {
+        font-size: 15px;
+    }
+    
+    .cfp-section h3 {
+        font-size: 18px;
+    }
+    
+    .cfp-section ul {
+        font-size: 15px;
+    }
+    
+    /* 重要日期区域 */
+    .dates-section {
+        padding: 0 6rem;
+    }
+    
+    .dates-timeline {
+        flex-direction: row;
+    }
+    
+    .timeline-item {
+        padding: 0.8rem 0.4rem;
+        min-height: 130px;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .timeline-item:nth-child(1) { z-index: 10; }
+    .timeline-item:nth-child(2) { z-index: 9; }
+    .timeline-item:nth-child(3) { z-index: 8; }
+    .timeline-item:nth-child(4) { z-index: 7; }
+    .timeline-item:nth-child(5) { z-index: 6; }
+    
+    .timeline-item:not(:last-child) {
+        margin-right: 28px;
+        clip-path: polygon(0 0, calc(100% - 44px) 0, 100% 50%, calc(100% - 44px) 100%, 0 100%);
+    }
+    
+    .timeline-item:not(:first-child) {
+        margin-left: -84px;
+    }
+    
+    .timeline-item h3 {
+        font-size: 16px;
+        padding: 0.2rem 0.4rem;
+    }
+    
+    .timeline-item p {
+        font-size: 16px;
+    }
+    
+    .timeline-icon {
+        margin-bottom: 0.6rem;
+        width: 25px;
+        height: 25px;
+    }
+    
+    .timeline-icon svg {
+        width: 13px;
+        height: 13px;
+    }
+    
+    /* 主席区域 */
+    .chairs-grid {
+        grid-template-columns: repeat(3, 286px);
+    }
+    
+    .chairs-grid.chairs-grid-small {
+        grid-template-columns: repeat(2, 286px);
+    }
+    
+    .chair-card {
+        width: 286px;
+        height: 371px;
+        padding: 1.2rem 0.8rem 0.8rem;
+    }
+    
+    .chair-image {
+        width: 204px;
+        height: 204px;
+        border: 3px solid #D9D9D9;
+        margin-bottom: 1.6rem;
+    }
+    
+    .chair-name {
+        font-size: 18px;
+    }
+    
+    .chair-affiliation {
+        font-size: 15px;
+    }
+    
+    /* 演讲者区域 */
+    .speaker {
+        width: 300px;
+        height: 400px;
+    }
+    
+    .speakers-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    
+    .speaker h3 {
+        font-size: 22px;
+    }
+    
+    .speaker p {
+        font-size: 18px;
+    }
+    
+    .speaker img {
+        width: 200px;
+        height: 200px;
+    }
+	.intro-section p{
+		font-size:18px;
+		min-height:300px;
+	}
+}

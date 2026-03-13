@@ -1,0 +1,318 @@
+/* 480px and below - 修正版 */
+@media (max-width: 480px) {
+    /* ===== 1. 基础与布局容器 ===== */
+body {
+    font-size: 14px; /* 可根据需要设置基础字体大小 */
+}
+
+.info-container {
+    padding: 0 0.5rem;
+    gap: 0.8rem;
+    margin-top: 40px;
+    flex-direction: column;
+    align-items: stretch;
+}
+.info-left,
+.info-right {
+    width: 100%;
+    max-width: 100%;
+}
+.box1,
+.box2,
+.box3 {
+    margin-bottom: 0.8rem;
+    padding: 0.6rem;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    height: auto;
+    overflow: hidden;
+}
+
+/* ===== 2. 信息展示区块组件 ===== */
+/* 2.1 信息项 */
+.info-item {
+    flex-direction: column;
+    gap: 0.3rem;
+}
+.info-icon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 0.2rem;
+}
+.info-icon svg {
+    width: 16px;
+    height: 16px;
+}
+.info-label {
+    font-size: 16px;
+    line-height: 1.2;
+    display: block;
+    margin-bottom: 0.2rem;
+}
+.info-value {
+    font-size: 16px;
+    line-height: 1.2;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+.info-content {
+    width: 100%;
+    max-width: 100%;
+}
+.info-content p {
+    line-height: 1.2;
+    width: 100%;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+/* 2.2 注册区域 */
+.registration-content {
+    flex-direction: column;
+}
+.registration-button {
+    width: 100%;
+    margin-top: 1rem;
+}
+.registration-text h3 {
+    font-size: 20px;
+    line-height: 1.2;
+}
+.registration-text p {
+    font-size: 16px;
+    line-height: 1.2;
+    width: 100%;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+.registration-button a {
+    font-size: 20px;
+    line-height: 1.2;
+
+}
+
+/* 2.3 介绍区域 */
+.intro-section{
+	min-height:120px;
+}
+.intro-section h3 {
+    font-size: 20px;
+    line-height: 1.2;
+	min-height: none;
+}
+.intro-section p {
+    font-size: 16px;
+    line-height: 1.2;
+    width: 100%;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+/* ===== 3. 页眉 (Header) 与导航 ===== */
+.header {
+    flex-direction: row;
+    height: 56px;
+    padding: 0 20px;
+    gap: 0;
+    justify-content: space-between;
+}
+.nav {
+    display: none; /* 桌面导航隐藏 */
+}
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.mobile-menu-button {
+    display: block;
+}
+.search {
+    margin-left: 0;
+}
+.desktop-search {
+    display: none;
+}
+.mobile-nav-item a {
+    font-size: 1.1rem;
+}
+.mobile-dropdown a {
+    font-size: 0.9rem;
+}
+
+/* ===== 4. 主视觉区域 (Hero) ===== */
+.hero {
+    min-height: auto;
+    height: auto;
+    padding: 40px 15px 30px;
+    background-image: url('../figma/image/mmlegc0w-22xvof6.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hero h1 {
+    font-size: 1.5rem;
+}
+
+/* ===== 5. 重要日期时间轴 ===== */
+.dates-section {
+    padding: 0;
+}
+.dates-timeline {
+    flex-direction: column;
+}
+.timeline-item:not(:first-child),
+.timeline-item:not(:last-child) {
+    margin-left: 0;
+	margin-right:0 ;
+    clip-path: none;
+}
+.timeline-item{
+	min-height:60px;
+}
+
+/* ===== 6. 演讲者与主席板块 ===== */
+/* 6.1 通用卡片网格 */
+.chairs-grid,
+.chairs-grid.chairs-grid-small,
+.speakers-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+.info-grid {
+    grid-template-columns: 1fr;
+}
+.chairs-title::before, .chairs-title::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80px;
+    height: 2px;
+    background: #961F12;
+}
+.chairs-title::before {
+    left: 0px;
+}
+.chairs-title::after {
+    right: 0px;
+}
+/* 6.2 主席卡片 */
+.chair-card {
+    width: 100%;
+    max-width: 280px;
+    height: 380px;
+    padding: 1rem 0.8rem 0.8rem;
+    margin: 0 auto;
+}
+.chair-image {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 1.2rem;
+}
+.chair-name {
+    font-size: 16px;
+}
+.chair-affiliation {
+    font-size: 14px;
+}
+
+/* 6.3 演讲者卡片 */
+.speaker {
+    width: 100%;
+    height: auto;
+    min-height: 350px;
+    background-position: top left; /* 修正背景图位置 */
+}
+.speaker img {
+    width: 160px;
+    height: 160px;
+}
+
+/* ===== 7. 征文 (CFP) 与主题列表板块 ===== */
+.cfp-section {
+    padding: 1.5rem 1rem;
+}
+.cfp-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+.cfp-section h2::after {
+    height: 10px;
+    bottom: -15px;
+    width: 60px;
+}
+.cfp-section p {
+    font-size: 16px;
+    margin-top: 25px;
+    margin-bottom: 1.2rem;
+}
+.cfp-section h3 {
+    font-size: 20px;
+    margin: 1.5rem 0 0.8rem;
+}
+.cfp-section ul {
+    font-size: 16px;
+    margin-left: 1.2rem;
+}
+
+.topics-section {
+    padding: 2rem 1rem;
+    margin: 20px 0 0 0 !important; /* 覆盖行内样式 */
+    clip-path: none !important;
+}
+.topics-section h2 {
+    font-size: 24px;
+}
+.topics-section .topics-description {
+    font-size: 13px;
+}
+.topic-list li {
+    font-size: 13px;
+}
+
+/* ===== 8. 页脚 (Footer) ===== */
+.footer h2 {
+    font-size: 20px;
+}
+.footer p {
+    font-size: 12px;
+}
+.footer-links a {
+    font-size: 12px;
+}
+.footer-bottom {
+    flex-direction: column;
+    gap: 0.8rem;
+    padding-top: 1rem;
+}
+.footer-links {
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+/* ===== 9. 联系区域 ===== */
+.contact-section {
+    padding: 2rem 1rem;
+}
+.contact-content p {
+    font-size: 18px;
+    margin-bottom: 1.2rem;
+}
+.contact-btn {
+    font-size: 18px;
+    padding: 0.6rem 1.5rem;
+}
+}

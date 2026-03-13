@@ -1,0 +1,156 @@
+/* ====== 平板和移动端通用样式 ====== */
+@media (max-width: 1199px) {
+    /* 隐藏桌面导航 */
+    .nav {
+        display: none !important;
+    }
+    
+    /* 显示移动端菜单按钮 */
+    .mobile-menu-button {
+        display: block !important;
+        cursor: pointer;
+        z-index: 1000;
+    }
+    
+    /* 显示头部右侧容器（包含搜索和菜单按钮） */
+    .header-right {
+        display: flex !important;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    /* 隐藏桌面搜索，移动端可能用不同的搜索方式 */
+    .desktop-search {
+        display: none !important;
+    }
+    
+    /* 调整头部布局 */
+    .header {
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+    
+    /* 移动端导航样式 - 从图片看是深红色背景 */
+    .mobile-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: #961f12; /* 深红色背景 */
+        z-index: 2000;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        overflow-y: auto;
+    }
+    
+    .mobile-nav.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .mobile-nav-content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .mobile-nav-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .mobile-nav-header h2 {
+        color: white;
+        font-family: "Archivo Black", sans-serif;
+        font-size: 28px;
+        font-weight: 900;
+        margin: 0;
+    }
+    
+    .close-button {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .close-button span {
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background: white;
+    }
+    
+    .close-button span:first-child {
+        transform: rotate(45deg);
+    }
+    
+    .close-button span:last-child {
+        transform: rotate(-45deg);
+    }
+    
+    .mobile-nav-items {
+        flex: 1;
+    }
+    
+    .mobile-nav-item {
+        margin-bottom: 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 15px;
+    }
+    
+    .mobile-nav-item:last-child {
+        border-bottom: none;
+    }
+    
+    .mobile-nav-item a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 600;
+        display: block;
+        padding: 10px 0;
+    }
+    
+    .mobile-dropdown {
+        margin-left: 20px;
+        margin-top: 10px;
+        display: none;
+    }
+    
+    .mobile-nav-item.active .mobile-dropdown {
+        display: block;
+    }
+    
+    .mobile-dropdown a {
+        font-size: 16px;
+        font-weight: 500;
+        padding: 8px 0;
+        opacity: 0.9;
+    }
+    
+    /* 响应式调整 */
+    .hero {
+        padding-top: 80px;
+    }
+    
+    .info-container {
+        flex-direction: column;
+        margin-top: 50px;
+    }
+    
+    .box1, .box2, .box3 {
+        width: 100%;
+        min-width: auto;
+    }
+}
