@@ -56,26 +56,7 @@
             padding: 108px 20px 40px;
         }
 
-        /* Mobile responsive adjustments for hero section */
-        @media (max-width: 768px) {
-            .hero {
-                min-height: 1800px;
-                background-image: url('.figma/image/mmlegc0w-22xvof6.png');
-                background-position: center;
-                background-size: cover;
-                background-repeat: no-repeat;
-            }
-        }
 
-        @media (max-width: 480px) {
-            .hero {
-                min-height: 2000px;
-                background-image: url('./figma/image/mmlegc0w-22xvof6.png');
-                background-position: center;
-                background-size: cover;
-                background-repeat: no-repeat;
-            }
-        }
 
         .hero h1 {
             font-size: 2.5rem;
@@ -373,23 +354,21 @@
             padding: 8px 0;
         }
 
-        /* Header layout for 1920px */
-        @media (min-width: 1920px) {
-            .header {
-                padding-right: 97px;
-            }
-        }
-
+        /* Media queries in order from largest to smallest */
+        
+        /* 2560px and above */
         @media (min-width: 2560px) {
             /* 按照1920px的比例缩放 (2560/1920 = 1.3333) */
             .box1 {
                 width: 1055px;
-                height: 400px;
+                height: auto;
+                min-height: 400px;
             }
             
             .box2 {
                 width: 1055px;
-                height: 429px;
+                height: auto;
+                min-height: 429px;
             }
             
             .box3 {
@@ -429,8 +408,6 @@
                 font-size: 37px;
             }
             
-            
-            
             .cfp-section {
                 padding: 8rem;
                 margin-top: 80px;
@@ -459,9 +436,40 @@
                 font-size: 32px;
             }
             
+            /* Important Dates Section */
+            .dates-section {
+                padding: 0 6rem;
+            }
+            
+            .dates-timeline {
+                flex-direction: row;
+            }
+            
             .timeline-item {
                 padding: 2.7rem 1.3rem;
                 min-height: 417px;
+                position: relative;
+                z-index: 1;
+            }
+            
+            .timeline-item:nth-child(1) {
+                z-index: 10;
+            }
+            
+            .timeline-item:nth-child(2) {
+                z-index: 9;
+            }
+            
+            .timeline-item:nth-child(3) {
+                z-index: 8;
+            }
+            
+            .timeline-item:nth-child(4) {
+                z-index: 7;
+            }
+            
+            .timeline-item:nth-child(5) {
+                z-index: 6;
             }
             
             .timeline-item:not(:last-child) {
@@ -569,21 +577,591 @@
             }
         }
 
-        /* Adjustments for different screen sizes */
-        @media (max-width: 1919px) and (min-width: 1200px) {
+        /* 1920px and above */
+        @media (min-width: 1920px) {
+            .header {
+                padding-right: 97px;
+            }
+        }
+
+        /* 1919px to 1600px */
+        @media (max-width: 1919px) and (min-width: 1600px) {
             .header {
                 padding-right: 50px;
             }
         }
 
-        @media (max-width: 1199px) and (min-width: 768px) {
-            .header {
-                padding-right: 30px;
+        /* 1600px and below */
+        @media (max-width: 1600px) {
+            /* 按照1920px的比例缩放 (1600/1920 = 0.833333) */
+            .box1 {
+                width: 659px;
+                height: 250px;
+            }
+            
+            .box2 {
+                width: 659px;
+                height: 268px;
+            }
+            
+            .box3 {
+                min-width: 583px;
+            }
+            
+            .info-label,
+            .info-value {
+                font-size: 22px;
+            }
+            
+            .registration-text h3 {
+                font-size: 23px;
+            }
+            
+            .registration-text p {
+                font-size: 22px;
+            }
+            
+            .registration-button {
+                width: 208px;
+            }
+            
+            .registration-button a {
+                font-size: 23px;
+            }
+            
+            .intro-section {
+                height: 537px;
+            }
+            
+            .intro-section h3 {
+                font-size: 27px;
+            }
+            
+            .intro-section p {
+                font-size: 23px;
+            }
+            
+            .hero {
+                min-height: 1000px;
+            }
+            
+            .cfp-section {
+                padding: 3.3rem 5rem;
+                margin-top: 50px;
+            }
+            
+            .cfp-section h2 {
+                font-size: 33px;
+                margin-bottom: 125px;
+            }
+            
+            .cfp-section h2::after {
+                width: 73px;
+                height: 8px;
+                bottom: -42px;
+            }
+            
+            .cfp-section p {
+                font-size: 20px;
+            }
+            
+            .cfp-section h3 {
+                font-size: 23px;
+            }
+            
+            .cfp-section ul {
+                font-size: 20px;
+            }
+            
+            .timeline-item {
+                padding: 1.5rem 0.7rem;
+                min-height: 240px;
+            }
+            
+            .timeline-item:not(:last-child) {
+                margin-right: 38px;
+                clip-path: polygon(0 0, calc(100% - 60px) 0, 100% 50%, calc(100% - 60px) 100%, 0 100%);
+            }
+            
+            .timeline-item:not(:first-child) {
+                margin-left: -115px;
+            }
+            
+            .timeline-item h3 {
+                font-size: 18px;
+                padding: 0.35rem 0.7rem;
+            }
+            
+            .timeline-item p {
+                font-size: 13px;
+            }
+            
+            .timeline-icon {
+                margin-bottom: 1.1rem;
+                width: 45px;
+                height: 45px;
+            }
+            
+            .timeline-icon svg {
+                width: 22px;
+                height: 22px;
+            }
+            
+            .chairs-grid {
+                grid-template-columns: repeat(3, 373px);
+            }
+            
+            .chairs-grid.chairs-grid-small {
+                grid-template-columns: repeat(2, 373px);
+            }
+            
+            .chair-card {
+                background-image: url('./images/chair-card-bg.svg');
+                background-size: cover;
+                background-position: center;
+                width: 373px;
+                height: 494px;
+                margin: 0 auto;
+                padding: 1.7rem 1.2rem 1.2rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                text-align: center;
+                cursor: pointer;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            
+            .chair-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            }
+            
+            .chair-image {
+                width: 272px;
+                height: 272px;
+                border-radius: 50%;
+                border: 4px solid #D9D9D9;
+                margin-bottom: 2.1rem;
+            }
+            
+            .chair-image img {
+                border-radius: 50%;
+            }
+            
+            .chair-name {
+                font-size: 23px;
+            }
+            
+            .chair-affiliation {
+                font-size: 20px;
+            }
+            
+            /* Speaker image adjustments */
+            .speaker img {
+                width: 250px;
+                height: 250px;
             }
         }
 
-        /* Mobile responsive */
+        /* 1470px and below */
+        @media (max-width: 1470px) {
+            /* 按照1920px的比例缩放 (1470/1920 = 0.765625) */
+            .box1 {
+                width: 606px;
+                height: 230px;
+            }
+            
+            .box2 {
+                width: 606px;
+                height: 246px;
+            }
+            
+            .box3 {
+                min-width: 583px;
+            }
+            
+            .info-label,
+            .info-value {
+                font-size: 20px;
+            }
+            
+            .registration-text h3 {
+                font-size: 21px;
+            }
+            
+            .registration-text p {
+                font-size: 20px;
+            }
+            
+            .registration-button {
+                width: 191px;
+            }
+            
+            .registration-button a {
+                font-size: 21px;
+            }
+            
+            .intro-section {
+                height: 493px;
+            }
+            
+            .intro-section h3 {
+                font-size: 22px;
+            }
+            
+            .intro-section p {
+                font-size: 21px;
+            }
+            
+            .cfp-section {
+                padding: 3rem 4.6rem;
+                margin-top: 30px;
+            }
+            
+            .cfp-section h2 {
+                font-size: 31px;
+                margin-bottom: 60px;
+            }
+            
+            .cfp-section h2::after {
+                width: 67px;
+                height: 8px;
+                bottom: -38px;
+            }
+            
+            .cfp-section p {
+                font-size: 18px;
+            }
+            
+            .cfp-section h3 {
+                font-size: 21px;
+            }
+            
+            .cfp-section ul {
+                font-size: 18px;
+            }
+            
+            .timeline-item {
+                padding: 1rem 0.5rem;
+                min-height: 160px;
+            }
+            
+            .timeline-item:not(:last-child) {
+                margin-right: 35px;
+                clip-path: polygon(0 0, calc(100% - 55px) 0, 100% 50%, calc(100% - 55px) 100%, 0 100%);
+            }
+            
+            .timeline-item:not(:first-child) {
+                margin-left: -105px;
+            }
+            
+            .timeline-item h3 {
+                font-size: 11px;
+                padding: 0.25rem 0.5rem;
+            }
+            
+            .timeline-item p {
+                font-size: 9px;
+            }
+            
+            .timeline-icon {
+                margin-bottom: 0.8rem;
+                width: 32px;
+                height: 32px;
+            }
+            
+            .timeline-icon svg {
+                width: 16px;
+                height: 16px;
+            }
+            
+            .chairs-grid {
+                grid-template-columns: repeat(3, 300px);
+            }
+            
+            .chairs-grid.chairs-grid-small {
+                grid-template-columns: repeat(2, 300px);
+            }
+            
+            .chair-card {
+                width: 300px;
+                height: 400px;
+                padding: 1.5rem 1rem 1rem;
+            }
+            
+            .chair-image {
+                width: 200px;
+                height: 200px;
+                margin-bottom: 1.5rem;
+            }
+            
+            .chair-name {
+                font-size: 20px;
+            }
+            
+            .chair-affiliation {
+                font-size: 16px;
+            }
+        }
+
+        /* 1200px and below */
+        @media (max-width: 1200px) {
+            /* 按照1920px的比例缩放 (1200/1920 = 0.625) */
+            .info-container {
+                flex-direction: row;
+                align-items: flex-start;
+                margin-top: 100px;
+            }
+
+            .box1,
+            .box2 {
+                width: 494px;
+                height: auto;
+            }
+
+            .box3 {
+                width: 100%;
+                height: auto;
+            }
+
+            .intro-section {
+                height: auto;
+                min-height: 403px;
+            }
+            
+            .info-label,
+            .info-value {
+                font-size: 16px;
+            }
+            
+            .registration-text h3 {
+                font-size: 17px;
+            }
+            
+            .registration-text p {
+                font-size: 16px;
+            }
+            
+            .registration-button {
+                width: 156px;
+            }
+            
+            .registration-button a {
+                font-size: 17px;
+            }
+            
+            .cfp-section {
+                padding: 2.5rem 3.8rem;
+                margin-top: 38px;
+            }
+            
+            .cfp-section h2 {
+                font-size: 25px;
+                margin-bottom: 94px;
+            }
+            
+            .cfp-section h2::after {
+                width: 55px;
+                height: 6px;
+                bottom: -31px;
+            }
+            
+            .cfp-section p {
+                font-size: 15px;
+            }
+            
+            .cfp-section h3 {
+                font-size: 18px;
+            }
+            
+            .cfp-section ul {
+                font-size: 15px;
+            }
+            
+            .timeline-item {
+                padding: 0.8rem 0.4rem;
+                min-height: 130px;
+            }
+            
+            .timeline-item:not(:last-child) {
+                margin-right: 28px;
+                clip-path: polygon(0 0, calc(100% - 44px) 0, 100% 50%, calc(100% - 44px) 100%, 0 100%);
+            }
+            
+            .timeline-item:not(:first-child) {
+                margin-left: -84px;
+            }
+            
+            .timeline-item h3 {
+                font-size: 9px;
+                padding: 0.2rem 0.4rem;
+            }
+            
+            .timeline-item p {
+                font-size: 16px;
+            }
+            
+            .timeline-icon {
+                margin-bottom: 0.6rem;
+                width: 25px;
+                height: 25px;
+            }
+            
+            .timeline-icon svg {
+                width: 13px;
+                height: 13px;
+            }
+            
+            .chairs-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+            
+            .chairs-grid.chairs-grid-small {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+            
+            .chair-card {
+                width: 300px;
+                height: 400px;
+                padding: 1.2rem 0.8rem 0.8rem;
+            }
+            
+            .chair-image {
+                width: 204px;
+                height: 204px;
+                margin-bottom: 1.6rem;
+            }
+            
+            .chair-name {
+                font-size: 18px;
+            }
+            
+            .chair-affiliation {
+                font-size: 15px;
+            }
+            
+            /* Speaker section adjustments */
+            .speaker h3 {
+                font-size: 22px;
+            }
+            
+            .speaker p {
+                font-size: 18px;
+            }
+            
+            /* Speaker image adjustments */
+            .speaker img {
+                width: 200px;
+                height: 200px;
+            }
+        }
+
+        /* 768px and below */
         @media (max-width: 768px) {
+            .info-container {
+                padding: 0 1rem;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 1.5rem;
+                margin-top: 60px;
+            }
+            
+            .info-left,
+            .info-right {
+                width: 100%;
+                max-width: 100%;
+            }
+            
+            .box1,
+            .box2,
+            .box3 {
+                width: 100%;
+                max-width: 100%;
+                min-width: 0;
+                height: auto;
+                overflow: hidden;
+                margin-bottom: 1.5rem;
+                box-sizing: border-box;
+            }
+            
+            .info-item {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .info-icon {
+                margin-bottom: 0.5rem;
+            }
+            
+            .info-content {
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+            
+            .info-content p {
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                white-space: normal;
+            }
+            
+            .info-value {
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+            
+            .registration-content {
+                flex-direction: column;
+            }
+            
+            .registration-button {
+                width: 100%;
+                margin-top: 1rem;
+            }
+            
+            .info-label,
+            .info-value {
+                font-size: 14px;
+            }
+            
+            .registration-text h3 {
+                font-size: 18px;
+            }
+            
+            .registration-text p {
+                font-size: 14px;
+            }
+            
+            .registration-button a {
+                font-size: 18px;
+            }
+            
+            .intro-section h3 {
+                font-size: 18px;
+            }
+            
+            .intro-section p {
+                font-size: 14px;
+            }
+            
+            /* Hero section adjustments */
+            .hero {
+                min-height: auto;
+                height: auto;
+                padding: 60px 20px 40px;
+                background-image: url('.figma/image/mmlegc0w-22xvof6.png');
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            
+            /* Speaker image adjustments */
+            .speaker img {
+                width: 220px;
+                height: 220px;
+            }
+            
+            /* Header adjustments */
             .header {
                 justify-content: space-between;
             }
@@ -606,6 +1184,199 @@
             .search {
                 margin-left: 0;
             }
+            
+            .desktop-search {
+                display: none;
+            }
+            
+            /* Chairs section adjustments */
+            .chairs-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .chairs-grid.chairs-grid-small {
+                grid-template-columns: 1fr;
+            }
+            
+            .chair-card {
+                width: 100%;
+                max-width: 300px;
+                height: 400px;
+            }
+        }
+
+        /* 480px and below */
+        @media (max-width: 480px) {
+            .info-container {
+                padding: 0 0.5rem;
+                gap: 0.8rem;
+                margin-top: 40px;
+            }
+            
+            .box1,
+            .box2,
+            .box3 {
+                margin-bottom: 0.8rem;
+                padding: 0.6rem;
+                width: 100%;
+                max-width: 100%;
+                min-width: 0;
+                box-sizing: border-box;
+            }
+            
+            .info-item {
+                flex-direction: column;
+                gap: 0.3rem;
+            }
+            
+            .info-icon {
+                width: 24px;
+                height: 24px;
+                margin-bottom: 0.2rem;
+            }
+            
+            .info-icon svg {
+                width: 16px;
+                height: 16px;
+            }
+            
+            .info-label {
+                font-size: 16px;
+                line-height: 1.2;
+                display: block;
+                margin-bottom: 0.2rem;
+            }
+            
+            .info-value {
+                font-size: 16px;
+                line-height: 1.2;
+                display: block;
+                width: 100%;
+                max-width: 100%;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                white-space: normal;
+            }
+            
+            .info-content {
+                width: 100%;
+                max-width: 100%;
+            }
+            
+            .info-content p {
+                line-height: 1.2;
+                width: 100%;
+                max-width: 100%;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                white-space: normal;
+            }
+            
+            .registration-text h3 {
+                font-size: 20px;
+                line-height: 1.2;
+            }
+            
+            .registration-text p {
+                font-size: 16px;
+                line-height: 1.2;
+                width: 100%;
+                max-width: 100%;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                white-space: normal;
+            }
+            
+            .registration-button a {
+                font-size: 20px;
+                line-height: 1.2;
+            }
+            
+            .intro-section h3 {
+                font-size: 20px;
+                line-height: 1.2;
+            }
+            
+            .intro-section p {
+                font-size: 16px;
+                line-height: 1.2;
+                width: 100%;
+                max-width: 100%;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                white-space: normal;
+            }
+            
+            /* Hero section adjustments */
+            .hero {
+                min-height: auto;
+                height: auto;
+                padding: 40px 15px 30px;
+                background-image: url('./figma/image/mmlegc0w-22xvof6.png');
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+            
+            /* Speaker image adjustments */
+            .speaker img {
+                width: 160px;
+                height: 160px;
+            }
+            
+            /* Header adjustments */
+            .header {
+                flex-direction: row;
+                height: 56px;
+                padding: 0 20px;
+                gap: 0;
+            }
+            
+            .mobile-nav-item a {
+                font-size: 1.1rem;
+            }
+            
+            .mobile-dropdown a {
+                font-size: 0.9rem;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            /* Chairs section adjustments */
+            .chairs-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .chairs-grid.chairs-grid-small {
+                grid-template-columns: 1fr;
+            }
+            
+            .chair-card {
+                width: 100%;
+                max-width: 280px;
+                height: 380px;
+                padding: 1rem 0.8rem 0.8rem;
+            }
+            
+            .chair-image {
+                width: 180px;
+                height: 180px;
+                margin-bottom: 1.2rem;
+            }
+            
+            .chair-name {
+                font-size: 16px;
+            }
+            
+            .chair-affiliation {
+                font-size: 14px;
+            }
         }
 
         /* Desktop mode */
@@ -619,43 +1390,6 @@
             }
         }
 
-        /* Mobile mode */
-        @media (max-width: 768px) {
-            .desktop-search {
-                display: none;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero {
-                height: 300px;
-                padding-top: 40px;
-            }
-
-            .hero h1 {
-                font-size: 1.5rem;
-            }
-
-            .header {
-                flex-direction: row;
-                height: 56px;
-                padding: 0 20px;
-                gap: 0;
-            }
-
-            .mobile-nav-item a {
-                font-size: 1.1rem;
-            }
-
-            .mobile-dropdown a {
-                font-size: 0.9rem;
-            }
-
-            .info-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
         /* Info container embedded in hero */
         .info-container {
             max-width: 1600px;
@@ -663,25 +1397,6 @@
             display: flex;
             gap: 2rem;
             margin-top: 200px;
-        }
-
-        /* Responsive adjustments for margin */
-        @media (max-width: 1200px) {
-            .info-container {
-                margin-top: 200px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .info-container {
-                margin-top: 150px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .info-container {
-                margin-top: 100px;
-            }
         }
 
         .info-left {
@@ -693,18 +1408,21 @@
         /* Box styles */
         .box1 {
             width: 791px;
-            height: 300px;
-            background: rgba(0, 0, 0, 0.5);
+            height: auto;
+            min-height: 300px;
+            background: #7A1207;
             padding: 1.5rem;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             text-align: left;
+            color: #D9D9D9;
         }
 
         .box2 {
             width: 791px;
-            height: 322px;
+            height: auto;
+            min-height: 322px;
             text-align: left;
         }
 
@@ -889,7 +1607,8 @@
         .intro-section {
             background: #A92E20;
             padding: 1.5rem;
-            height: 644px;
+            height: auto;
+            min-height: 644px;
             display: flex;
             flex-direction: column;
             box-shadow: 16px 16px 0px #4D2C29;
@@ -917,6 +1636,327 @@
 
         /* Responsive adjustments for info section */
 
+        @media (max-width: 1600px) {
+            /* 按照1920px的比例缩放 (1600/1920 = 0.833333) */
+            .box1 {
+                width: 659px;
+                height: 250px;
+            }
+            
+            .box2 {
+                width: 659px;
+                height: 268px;
+            }
+            
+            .box3 {
+                min-width: 583px;
+            }
+            
+            .info-label,
+            .info-value {
+                font-size: 22px;
+            }
+            
+            .registration-text h3 {
+                font-size: 23px;
+            }
+            
+            .registration-text p {
+                font-size: 22px;
+            }
+            
+            .registration-button {
+                width: 208px;
+            }
+            
+            .registration-button a {
+                font-size: 23px;
+            }
+            
+            .intro-section {
+                height: 537px;
+            }
+            
+            .intro-section h3 {
+                font-size: 27px;
+            }
+            
+            .intro-section p {
+                font-size: 23px;
+            }
+            
+            .hero {
+                min-height: 1000px;
+            }
+            
+            .cfp-section {
+                padding: 3.3rem 5rem;
+                margin-top: 50px;
+            }
+            
+            .cfp-section h2 {
+                font-size: 33px;
+                margin-bottom: 125px;
+            }
+            
+            .cfp-section h2::after {
+                width: 73px;
+                height: 8px;
+                bottom: -42px;
+            }
+            
+            .cfp-section p {
+                font-size: 20px;
+            }
+            
+            .cfp-section h3 {
+                font-size: 23px;
+            }
+            
+            .cfp-section ul {
+                font-size: 20px;
+            }
+            
+            .timeline-item {
+                padding: 1.5rem 0.7rem;
+                min-height: 240px;
+            }
+            
+            .timeline-item:not(:last-child) {
+                margin-right: 38px;
+                clip-path: polygon(0 0, calc(100% - 60px) 0, 100% 50%, calc(100% - 60px) 100%, 0 100%);
+            }
+            
+            .timeline-item:not(:first-child) {
+                margin-left: -115px;
+            }
+            
+            .timeline-item h3 {
+                font-size: 18px;
+                padding: 0.35rem 0.7rem;
+            }
+            
+            .timeline-item p {
+                font-size: 13px;
+            }
+            
+            .timeline-icon {
+                margin-bottom: 1.1rem;
+                width: 45px;
+                height: 45px;
+            }
+            
+            .timeline-icon svg {
+                width: 22px;
+                height: 22px;
+            }
+            
+            .chairs-grid {
+                grid-template-columns: repeat(3, 373px);
+            }
+            
+            .chairs-grid.chairs-grid-small {
+                grid-template-columns: repeat(2, 373px);
+            }
+            
+            .chair-card {
+                background-image: url('./images/chair-card-bg.svg');
+                background-size: cover;
+                background-position: center;
+                width: 373px;
+                height: 494px;
+                margin: 0 auto;
+                padding: 1.7rem 1.2rem 1.2rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                text-align: center;
+            }
+            
+            .chair-image {
+                width: 272px;
+                height: 272px;
+                border-radius: 50%;
+                border: 4px solid #D9D9D9;
+                margin-bottom: 2.1rem;
+            }
+            
+            .chair-image img {
+                border-radius: 50%;
+            }
+            
+            .chair-name {
+                font-size: 23px;
+            }
+            
+            .chair-affiliation {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 1470px) {
+            /* 按照1920px的比例缩放 (1470/1920 = 0.765625) */
+            .box1 {
+                width: 606px;
+                height: 230px;
+            }
+            
+            .box2 {
+                width: 606px;
+                height: 246px;
+            }
+            
+            .box3 {
+                min-width: 583px;
+            }
+            
+            .info-label,
+            .info-value {
+                font-size: 20px;
+            }
+            
+            .registration-text h3 {
+                font-size: 21px;
+            }
+            
+            .registration-text p {
+                font-size: 20px;
+            }
+            
+            .registration-button {
+                width: 191px;
+            }
+            
+            .registration-button a {
+                font-size: 21px;
+            }
+            
+            .intro-section {
+                height: 493px;
+            }
+            
+            .intro-section h3 {
+                font-size: 22px;
+            }
+            
+            .intro-section p {
+                font-size: 21px;
+            }
+            
+            .cfp-section {
+                padding: 3rem 4.6rem;
+                margin-top: 30px;
+            }
+            
+            .cfp-section h2 {
+                font-size: 31px;
+                margin-bottom: 60px;
+            }
+            
+            .cfp-section h2::after {
+                width: 67px;
+                height: 8px;
+                bottom: -38px;
+            }
+            
+            .cfp-section p {
+                font-size: 18px;
+            }
+            
+            .cfp-section h3 {
+                font-size: 21px;
+            }
+            
+            .cfp-section ul {
+                font-size: 18px;
+            }
+            
+            .timeline-item {
+                padding: 1rem 0.5rem;
+                min-height: 160px;
+            }
+            
+            .timeline-item:not(:last-child) {
+                margin-right: 35px;
+                clip-path: polygon(0 0, calc(100% - 55px) 0, 100% 50%, calc(100% - 55px) 100%, 0 100%);
+            }
+            
+            .timeline-item:not(:first-child) {
+                margin-left: -105px;
+            }
+            
+            .timeline-item h3 {
+                font-size: 11px;
+                padding: 0.25rem 0.5rem;
+            }
+            
+            .timeline-item p {
+                font-size: 9px;
+            }
+            
+            .timeline-icon {
+                margin-bottom: 0.8rem;
+                width: 32px;
+                height: 32px;
+            }
+            
+            .timeline-icon svg {
+                width: 16px;
+                height: 16px;
+            }
+            
+            .chairs-grid {
+                grid-template-columns: repeat(3, 300px);
+            }
+            
+            .chairs-grid.chairs-grid-small {
+                grid-template-columns: repeat(2, 300px);
+            }
+            
+            .chair-card {
+                width: 300px;
+                height: 400px;
+                padding: 1.5rem 1rem 1rem;
+                background-image: url('./images/chair-card-bg.svg');
+                background-size: cover;
+                background-position: center;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                text-align: center;
+                cursor: pointer;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            
+            .chair-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            }
+            
+            .chair-image {
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                border: 4px solid #D9D9D9;
+                margin-bottom: 1.5rem;
+            }
+            
+            .chair-image img {
+                border-radius: 50%;
+            }
+            
+            .chair-name {
+                font-size: 20px;
+            }
+            
+            .chair-affiliation {
+                font-size: 16px;
+            }
+        }
+
         @media (max-width: 1200px) {
             /* 按照1920px的比例缩放 (1200/1920 = 0.625) */
             .info-container {
@@ -931,12 +1971,13 @@
             }
 
             .box3 {
-                min-width: 438px;
+                width: 100%;
                 height: auto;
             }
 
             .intro-section {
-                height: 403px;
+                height: auto;
+                min-height: 403px;
             }
             
             .info-label,
@@ -958,10 +1999,6 @@
             
             .registration-button a {
                 font-size: 17px;
-            }
-            
-            .hero {
-                min-height: 750px;
             }
             
             .cfp-section {
@@ -1012,7 +2049,7 @@
             }
             
             .timeline-item p {
-                font-size: 8px;
+                font-size: 16px;
             }
             
             .timeline-icon {
@@ -1077,11 +2114,26 @@
             .speaker p {
                 font-size: 18px;
             }
+            
+            /* Speaker image adjustments */
+            .speaker img {
+                width: 200px;
+                height: 200px;
+            }
         }
 
         @media (max-width: 768px) {
             .info-container {
                 padding: 0 1rem;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 1.5rem;
+            }
+            
+            .info-left,
+            .info-right {
+                width: 100%;
+                max-width: 100%;
             }
             
             .box1,
@@ -1089,6 +2141,11 @@
             .box3 {
                 width: 100%;
                 max-width: 100%;
+                min-width: 0;
+                height: auto;
+                overflow: hidden;
+                margin-bottom: 1.5rem;
+                box-sizing: border-box;
             }
             
             .info-item {
@@ -1098,6 +2155,22 @@
 
             .info-icon {
                 margin-bottom: 0.5rem;
+            }
+            
+            .info-content {
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+            
+            .info-content p {
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                white-space: normal;
+            }
+            
+            .info-value {
+                word-wrap: break-word;
+                overflow-wrap: break-word;
             }
             
             .registration-content {
@@ -1111,54 +2184,211 @@
             
             .info-label,
             .info-value {
-                font-size: 20px;
+                font-size: 14px;
             }
             
             .registration-text h3 {
-                font-size: 24px;
+                font-size: 18px;
             }
             
             .registration-text p {
-                font-size: 20px;
+                font-size: 14px;
             }
             
             .registration-button a {
-                font-size: 24px;
+                font-size: 18px;
             }
             
             .intro-section h3 {
-                font-size: 24px;
+                font-size: 18px;
             }
             
             .intro-section p {
+                font-size: 14px;
+            }
+        }
+
+        /* For screens with width between 414px and 480px */
+        @media (max-width: 480px) and (min-width: 414px) {
+            .info-container {
+                padding: 0 0.5rem;
+                gap: 0.8rem;
+            }
+            
+            .box1,
+            .box2,
+            .box3 {
+                margin-bottom: 0.8rem;
+                padding: 0.6rem;
+                width: 100%;
+                max-width: 100%;
+                min-width: 0;
+                box-sizing: border-box;
+            }
+            
+            .info-item {
+                flex-direction: column;
+                gap: 0.3rem;
+            }
+            
+            .info-icon {
+                width: 24px;
+                height: 24px;
+                margin-bottom: 0.2rem;
+            }
+            
+            .info-icon svg {
+                width: 16px;
+                height: 16px;
+            }
+            
+            .info-label {
+                font-size: 16px;
+                line-height: 1.2;
+                display: block;
+                margin-bottom: 0.2rem;
+            }
+            
+            .info-value {
+                font-size: 16px;
+                line-height: 1.2;
+                display: block;
+                width: 100%;
+                max-width: 100%;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                white-space: normal;
+            }
+            
+            .registration-text h3 {
                 font-size: 20px;
+                line-height: 1.2;
+            }
+            
+            .registration-text p {
+                font-size: 16px;
+                line-height: 1.2;
+            }
+            
+            .registration-button a {
+                font-size: 20px;
+                line-height: 1.2;
+            }
+            
+            .intro-section {
+                height: auto;
+                min-height: auto;
+            }
+            
+            .intro-section h3 {
+                font-size: 18px;
+                line-height: 1.2;
+            }
+            
+            .intro-section p {
+                font-size: 16px;
+                line-height: 1.2;
             }
         }
 
         @media (max-width: 480px) {
-            .info-label,
+            .info-container {
+                padding: 0 0.5rem;
+                gap: 0.8rem;
+            }
+            
+            .box1,
+            .box2,
+            .box3 {
+                margin-bottom: 0.8rem;
+                padding: 0.6rem;
+                width: 100%;
+                max-width: 100%;
+                min-width: 0;
+                box-sizing: border-box;
+            }
+            
+            .info-item {
+                flex-direction: column;
+                gap: 0.3rem;
+            }
+            
+            .info-icon {
+                width: 24px;
+                height: 24px;
+                margin-bottom: 0.2rem;
+            }
+            
+            .info-icon svg {
+                width: 16px;
+                height: 16px;
+            }
+            
+            .info-label {
+                font-size: 16px;
+                line-height: 1.2;
+                display: block;
+                margin-bottom: 0.2rem;
+            }
+            
             .info-value {
-                font-size: 18px;
+                font-size: 16px;
+                line-height: 1.2;
+                display: block;
+                width: 100%;
+                max-width: 100%;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                white-space: normal;
+            }
+            
+            .info-content {
+                width: 100%;
+                max-width: 100%;
+            }
+            
+            .info-content p {
+                line-height: 1.2;
+                width: 100%;
+                max-width: 100%;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                white-space: normal;
             }
             
             .registration-text h3 {
                 font-size: 20px;
+                line-height: 1.2;
             }
             
             .registration-text p {
-                font-size: 18px;
+                font-size: 16px;
+                line-height: 1.2;
+                width: 100%;
+                max-width: 100%;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                white-space: normal;
             }
             
             .registration-button a {
                 font-size: 20px;
+                line-height: 1.2;
             }
             
             .intro-section h3 {
                 font-size: 20px;
+                line-height: 1.2;
             }
             
             .intro-section p {
-                font-size: 18px;
+                font-size: 16px;
+                line-height: 1.2;
+                width: 100%;
+                max-width: 100%;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                white-space: normal;
             }
         }
 
@@ -1237,40 +2467,12 @@
             margin: 0;
         }
 
-        /* Responsive adjustments for speaker images */
-        @media (max-width: 1600px) {
-            .speaker img {
-                width: 250px;
-                height: 250px;
-            }
-        }
 
-        @media (max-width: 1200px) {
-            .speaker img {
-                width: 200px;
-                height: 200px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .speaker img {
-                width: 220px;
-                height: 220px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .speaker img {
-                width: 160px;
-                height: 160px;
-            }
-        }
 
         /* Call for papers section */
         .cfp-section {
             padding: 6rem;
             background: #ffffff;
-            margin-top: 60px;
         }
 
         .cfp-section h2 {
@@ -1373,26 +2575,27 @@
         /* Background colors for each timeline item */
         .timeline-item:nth-child(1) {
             background: #961F12;
-            z-index:10;
+            z-index: 10;
         }
 
         .timeline-item:nth-child(2) {
             background: #BE3323;
-            z-index:9;
+            z-index: 9;
         }
 
         .timeline-item:nth-child(3) {
             background: #D14334;
-            z-index:8;
+            z-index: 8;
         }
 
         .timeline-item:nth-child(4) {
             background: #DE5141;
-             z-index:7;
+            z-index: 7;
         }
 
         .timeline-item:nth-child(5) {
             background: #961F12;
+            z-index: 6;
         }
 
         /* Small arrow between items */
@@ -1794,6 +2997,8 @@
 
 
 
+
+
         /* Responsive adjustments for Call for Papers */
         @media (max-width: 768px) {
             .cfp-section {
@@ -1919,52 +3124,22 @@
             .chair-affiliation {
                 font-size: 18px;
             }
-
-        /* Responsive adjustments for chairs section */
-        @media (max-width: 1600px) {
-            .chair-card {
-                width: 350px;
-                height: 450px;
-                padding: 1.7rem 1.2rem 1.2rem;
-                background-image: url('./images/chair-card-bg.svg');
-                background-size: cover;
-                background-position: center;
-                margin: 0 auto;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: flex-start;
-                text-align: center;
-                cursor: pointer;
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-            }
-            
-            .chair-card:hover {
-                transform: translateY(-10px);
-                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-            }
-            
-            .chairs-grid {
-                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            }
-            
-            .chairs-grid.chairs-grid-small {
-                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            }
         }
 
-        @media (max-width: 1200px) {
-            .chair-card {
-                width: 300px;
-                height: 400px;
-            }
-            
+        @media (max-width: 480px) {
             .chairs-grid {
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
             }
             
             .chairs-grid.chairs-grid-small {
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                grid-template-columns: 1fr;
+            }
+            
+            .chair-card {
+                width: 100%;
+                height: auto;
+                min-height: 350px;
             }
         }
 
@@ -1994,12 +3169,10 @@
             }
 
             /* Responsive adjustments for Important Dates */
-            .dates-section {
-                padding: 0;
-            }
+           
 
             .dates-timeline {
-                flex-direction: column;
+                flex-direction: row;
                 align-items: stretch;
                 gap: 0;
             }
@@ -2011,9 +3184,9 @@
                 width: 100%;
                 min-height: 180px;
                 padding: 1.2rem 0.8rem;
-                clip-path: none !important;
-                margin-left: 0 !important;
-                margin-right: 0 !important;
+                clip-path: none;
+                margin-left: 0;
+                margin-right: 0;
             }
 
             .timeline-icon {
@@ -2032,7 +3205,6 @@
                 font-size: 14px;
                 margin-bottom: 0.3rem;
                 text-align: center;
-                background: #484848;
                 padding: 0.2rem 0.6rem;
             }
 
@@ -2176,43 +3348,9 @@
 
         /* Responsive adjustments for chairs section */
         @media (max-width: 1600px) {
-            .chair-card {
-                width: 350px;
-                height: 450px;
-                padding: 1.7rem 1.2rem 1.2rem;
-                background-image: url('./images/chair-card-bg.svg');
-                background-size: cover;
-                background-position: center;
-                margin: 0 auto;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: flex-start;
-                text-align: center;
-                cursor: pointer;
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-            }
-            
-            .chair-card:hover {
-                transform: translateY(-10px);
-                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-            }
-            
-            .chairs-grid {
-                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            }
-            
-            .chairs-grid.chairs-grid-small {
-                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            }
         }
 
         @media (max-width: 1200px) {
-            .chair-card {
-                width: 300px;
-                height: 400px;
-            }
-            
             .chairs-grid {
                 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             }
@@ -2238,7 +3376,8 @@
         /* Responsive adjustments */
         @media (max-width: 768px) {
             .hero {
-                height: 400px;
+                height: auto;
+                min-height: auto;
                 padding-top: 60px;
             }
 
@@ -2257,7 +3396,8 @@
 
         @media (max-width: 480px) {
             .hero {
-                height: 300px;
+                height: auto;
+                min-height: auto;
             }
 
             .hero h1 {
@@ -2398,21 +3538,7 @@
         }
 
         @media (max-width: 1600px) {
-            /* 按照1920px的比例缩放 (1600/1920 = 0.833333) */
-            .box1 {
-                width: 659px;
-                height: 250px;
-            }
-            
-            .box2 {
-                width: 659px;
-                height: 268px;
-            }
-            
-            .box3 {
-                min-width: 583px;
-            }
-            
+            /* 按照 1920px 的比例缩放 (1600/1920 = 0.833333) */
             .info-label,
             .info-value {
                 font-size: 22px;
@@ -2432,22 +3558,6 @@
             
             .registration-button a {
                 font-size: 23px;
-            }
-            
-            .intro-section {
-                height: 537px;
-            }
-            
-            .intro-section h3 {
-                font-size: 27px;
-            }
-            
-            .intro-section p {
-                font-size: 23px;
-            }
-            
-            .hero {
-                min-height: 1000px;
             }
             
             .cfp-section {
@@ -2478,9 +3588,40 @@
                 font-size: 20px;
             }
             
+            /* Important Dates Section */
+            .dates-section {
+                padding: 0 6rem;
+            }
+            
+            .dates-timeline {
+                flex-direction: row;
+            }
+            
             .timeline-item {
                 padding: 1.5rem 0.7rem;
                 min-height: 240px;
+                position: relative;
+                z-index: 1;
+            }
+            
+            .timeline-item:nth-child(1) {
+                z-index: 10;
+            }
+            
+            .timeline-item:nth-child(2) {
+                z-index: 9;
+            }
+            
+            .timeline-item:nth-child(3) {
+                z-index: 8;
+            }
+            
+            .timeline-item:nth-child(4) {
+                z-index: 7;
+            }
+            
+            .timeline-item:nth-child(5) {
+                z-index: 6;
             }
             
             .timeline-item:not(:last-child) {
@@ -2557,21 +3698,7 @@
         }
 
         @media (max-width: 1470px) {
-            /* 按照1920px的比例缩放 (1470/1920 = 0.765625) */
-            .box1 {
-                width: 606px;
-                height: 230px;
-            }
-            
-            .box2 {
-                width: 606px;
-                height: 246px;
-            }
-            
-            .box3 {
-                min-width: 536px;
-            }
-            
+            /* 按照 1920px 的比例缩放 (1470/1920 = 0.765625) */
             .info-label,
             .info-value {
                 font-size: 20px;
@@ -2591,22 +3718,6 @@
             
             .registration-button a {
                 font-size: 21px;
-            }
-            
-            .intro-section {
-                height: 493px;
-            }
-            
-            .intro-section h3 {
-                font-size: 22px;
-            }
-            
-            .intro-section p {
-                font-size: 21px;
-            }
-            
-            .hero {
-                min-height: 919px;
             }
             
             .cfp-section {
@@ -2637,9 +3748,40 @@
                 font-size: 18px;
             }
             
+            /* Important Dates Section */
+            .dates-section {
+                padding: 0 6rem;
+            }
+            
+            .dates-timeline {
+                flex-direction: row;
+            }
+            
             .timeline-item {
                 padding: 1rem 0.5rem;
                 min-height: 160px;
+                position: relative;
+                z-index: 1;
+            }
+            
+            .timeline-item:nth-child(1) {
+                z-index: 10;
+            }
+            
+            .timeline-item:nth-child(2) {
+                z-index: 9;
+            }
+            
+            .timeline-item:nth-child(3) {
+                z-index: 8;
+            }
+            
+            .timeline-item:nth-child(4) {
+                z-index: 7;
+            }
+            
+            .timeline-item:nth-child(5) {
+                z-index: 6;
             }
             
             .timeline-item:not(:last-child) {
@@ -2723,21 +3865,7 @@
         }
 
         @media (max-width: 1200px) {
-            /* 按照1920px的比例缩放 (1200/1920 = 0.625) */
-            .box1 {
-                width: 494px;
-                height: 188px;
-            }
-            
-            .box2 {
-                width: 494px;
-                height: 201px;
-            }
-            
-            .box3 {
-                min-width: 438px;
-            }
-            
+            /* 按照 1920px 的比例缩放 (1200/1920 = 0.625) */
             .info-label,
             .info-value {
                 font-size: 16px;
@@ -2757,22 +3885,6 @@
             
             .registration-button a {
                 font-size: 17px;
-            }
-            
-            .intro-section {
-                height: 403px;
-            }
-            
-            .intro-section h3 {
-                font-size: 20px;
-            }
-            
-            .intro-section p {
-                font-size: 17px;
-            }
-            
-            .hero {
-                min-height: 750px;
             }
             
             .cfp-section {
@@ -2803,9 +3915,40 @@
                 font-size: 15px;
             }
             
+            /* Important Dates Section */
+            .dates-section {
+                padding: 0 6rem;
+            }
+            
+            .dates-timeline {
+                flex-direction: row;
+            }
+            
             .timeline-item {
                 padding: 0.8rem 0.4rem;
                 min-height: 130px;
+                position: relative;
+                z-index: 1;
+            }
+            
+            .timeline-item:nth-child(1) {
+                z-index: 10;
+            }
+            
+            .timeline-item:nth-child(2) {
+                z-index: 9;
+            }
+            
+            .timeline-item:nth-child(3) {
+                z-index: 8;
+            }
+            
+            .timeline-item:nth-child(4) {
+                z-index: 7;
+            }
+            
+            .timeline-item:nth-child(5) {
+                z-index: 6;
             }
             
             .timeline-item:not(:last-child) {
@@ -2823,7 +3966,7 @@
             }
             
             .timeline-item p {
-                font-size: 8px;
+                font-size: 16px;
             }
             
             .timeline-icon {
@@ -2888,6 +4031,351 @@
             .speaker p {
                 font-size: 18px;
             }
+            
+            /* Speaker image adjustments */
+            .speaker img {
+                width: 200px;
+                height: 200px;
+            }
+        }
+
+        /* 768px and below */
+        @media (max-width: 768px) {
+            .info-container {
+                padding: 0 1rem;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 1.5rem;
+                margin-top: 60px;
+            }
+            
+            .info-left,
+            .info-right {
+                width: 100%;
+                max-width: 100%;
+            }
+            
+            .box1,
+            .box2,
+            .box3 {
+                width: 100%;
+                max-width: 100%;
+                min-width: 0;
+                height: auto;
+                overflow: hidden;
+                margin-bottom: 1.5rem;
+                box-sizing: border-box;
+            }
+            
+            .info-item {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .info-icon {
+                margin-bottom: 0.5rem;
+            }
+            
+            .info-content {
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+            
+            .info-content p {
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                white-space: normal;
+            }
+            
+            .info-value {
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+            
+            .registration-content {
+                flex-direction: column;
+            }
+            
+            .registration-button {
+                width: 100%;
+                margin-top: 1rem;
+            }
+            
+            .info-label,
+            .info-value {
+                font-size: 14px;
+            }
+            
+            .registration-text h3 {
+                font-size: 18px;
+            }
+            
+            .registration-text p {
+                font-size: 14px;
+            }
+            
+            .registration-button a {
+                font-size: 18px;
+            }
+            
+            .intro-section h3 {
+                font-size: 18px;
+            }
+            
+            .intro-section p {
+                font-size: 14px;
+            }
+            
+            /* Hero section adjustments */
+            .hero {
+                min-height: auto;
+                height: auto;
+                padding: 60px 20px 40px;
+                background-image: url('.figma/image/mmlegc0w-22xvof6.png');
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            
+            /* Speaker image adjustments */
+            .speaker img {
+                width: 220px;
+                height: 220px;
+            }
+            
+            /* Header adjustments */
+            .header {
+                justify-content: space-between;
+            }
+
+            .nav {
+                display: none;
+            }
+
+            /* Right side container for search and menu */
+            .header-right {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .mobile-menu-button {
+                display: block;
+            }
+
+            .search {
+                margin-left: 0;
+            }
+            
+            .desktop-search {
+                display: none;
+            }
+            
+            /* Chairs section adjustments */
+            .chairs-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .chairs-grid.chairs-grid-small {
+                grid-template-columns: 1fr;
+            }
+            
+            .chair-card {
+                width: 100%;
+                max-width: 300px;
+                height: 400px;
+            }
+        }
+
+        /* 480px and below */
+        @media (max-width: 480px) {
+            .info-container {
+                padding: 0 0.5rem;
+                gap: 0.8rem;
+                margin-top: 40px;
+            }
+            
+            .box1,
+            .box2,
+            .box3 {
+                margin-bottom: 0.8rem;
+                padding: 0.6rem;
+                width: 100%;
+                max-width: 100%;
+                min-width: 0;
+                box-sizing: border-box;
+            }
+            
+            .info-item {
+                flex-direction: column;
+                gap: 0.3rem;
+            }
+            
+            .info-icon {
+                width: 24px;
+                height: 24px;
+                margin-bottom: 0.2rem;
+            }
+            
+            .info-icon svg {
+                width: 16px;
+                height: 16px;
+            }
+            
+            .info-label {
+                font-size: 16px;
+                line-height: 1.2;
+                display: block;
+                margin-bottom: 0.2rem;
+            }
+            
+            .info-value {
+                font-size: 16px;
+                line-height: 1.2;
+                display: block;
+                width: 100%;
+                max-width: 100%;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                white-space: normal;
+            }
+            
+            .info-content {
+                width: 100%;
+                max-width: 100%;
+            }
+            
+            .info-content p {
+                line-height: 1.2;
+                width: 100%;
+                max-width: 100%;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                white-space: normal;
+            }
+            
+            .registration-text h3 {
+                font-size: 20px;
+                line-height: 1.2;
+            }
+            
+            .registration-text p {
+                font-size: 16px;
+                line-height: 1.2;
+                width: 100%;
+                max-width: 100%;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                white-space: normal;
+            }
+            
+            .registration-button a {
+                font-size: 20px;
+                line-height: 1.2;
+            }
+            
+            .intro-section h3 {
+                font-size: 20px;
+                line-height: 1.2;
+            }
+            
+            .intro-section p {
+                font-size: 16px;
+                line-height: 1.2;
+                width: 100%;
+                max-width: 100%;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                white-space: normal;
+            }
+            
+            /* Hero section adjustments */
+            .hero {
+                min-height: auto;
+                height: auto;
+                padding: 40px 15px 30px;
+                background-image: url('./figma/image/mmlegc0w-22xvof6.png');
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+            
+            /* Speaker image adjustments */
+            .speaker img {
+                width: 160px;
+                height: 160px;
+            }
+            
+            /* Header adjustments */
+            .header {
+                flex-direction: row;
+                height: 56px;
+                padding: 0 20px;
+                gap: 0;
+            }
+            
+            .mobile-nav-item a {
+                font-size: 1.1rem;
+            }
+            
+            .mobile-dropdown a {
+                font-size: 0.9rem;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            /* Chairs section adjustments */
+            .chairs-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .chairs-grid.chairs-grid-small {
+                grid-template-columns: 1fr;
+            }
+            
+            .chair-card {
+                width: 100%;
+                max-width: 280px;
+                height: 380px;
+                padding: 1rem 0.8rem 0.8rem;
+            }
+            
+            .chair-image {
+                width: 180px;
+                height: 180px;
+                margin-bottom: 1.2rem;
+            }
+            
+            .chair-name {
+                font-size: 16px;
+            }
+            
+            .chair-affiliation {
+                font-size: 14px;
+            }
+          .dates-timeline {
+              flex-direction: column;
+          }
+          .dates-section{
+            padding: 0;
+          }
+          .timeline-item:not(:first-child),.timeline-item:not(:last-child) {
+              margin-left: -0px;
+              clip-path: none;
+          }
+        }
+        
+        /* Fix speaker background image for 480px and below */
+        @media (max-width: 480px) {
+            .speaker {
+                background-position: top left;
+            }
         }
     </style>
 </head>
@@ -2950,7 +4438,6 @@
                 <div class="dropdown-menu">
                     <a href="#">Menu-1</a>
                     <a href="#">Menu-2</a>
-                    <a href="#">Menu-3</a>
                 </div>
             </div>
             <div class="nav-item">
@@ -2987,73 +4474,78 @@
                 </div>
             </div>
         </div>
-        
-        <!-- Mobile navigation -->
-        <div class="mobile-nav">
-            <div class="mobile-nav-content">
-                <div class="mobile-nav-header">
-                    <div class="logo">
-                        <a href="#">WSDM 2027</a>
-                    </div>
-                    <div class="close-button">
-                        <span></span>
-                        <span></span>
+    </header>
+    
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <div class="mobile-nav-content">
+            <div class="mobile-nav-header">
+                <div class="logo">
+                    <a href="#">WSDM 2027</a>
+                </div>
+                <div class="close-button">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="mobile-nav-items">
+                <div class="mobile-nav-item">
+                    <a href="#">WSDM 2027</a>
+                </div>
+                <div class="mobile-nav-item">
+                    <a href="#">Program</a>
+                    <div class="mobile-dropdown">
+                        <a href="#">Menu-1</a>
+                        <a href="#">Menu-2</a>
+                        <a href="#">Menu-3</a>
                     </div>
                 </div>
-                <div class="mobile-nav-items">
-                    <div class="mobile-nav-item">
-                        <a href="#">Program</a>
-                        <div class="mobile-dropdown">
-                            <a href="#">Menu-1</a>
-                            <a href="#">Menu-2</a>
-                            <a href="#">Menu-3</a>
-                        </div>
+                <div class="mobile-nav-item">
+                    <a href="#">WSDM Cup</a>
+                </div>
+                <div class="mobile-nav-item">
+                    <a href="#">Attending</a>
+                    <div class="mobile-dropdown">
+                        <a href="#">Menu-1</a>
+                        <a href="#">Menu-2</a>
                     </div>
-                    <div class="mobile-nav-item">
-                        <a href="#">WSDM Cup</a>
+                </div>
+                <div class="mobile-nav-item">
+                    <a href="#">Calls</a>
+                    <div class="mobile-dropdown">
+                        <a href="#">Menu-1</a>
+                        <a href="#">Menu-2</a>
+                        <a href="#">Menu-3</a>
+                        <a href="#">Menu-4</a>
                     </div>
-                    <div class="mobile-nav-item">
-                        <a href="#">Attending</a>
-                        <div class="mobile-dropdown">
-                            <a href="#">Menu-1</a>
-                            <a href="#">Menu-2</a>
-                        </div>
+                </div>
+                <div class="mobile-nav-item">
+                    <a href="#">Organizers</a>
+                    <div class="mobile-dropdown">
+                        <a href="#">Menu-1</a>
+                        <a href="#">Menu-2</a>
                     </div>
-                    <div class="mobile-nav-item">
-                        <a href="#">Calls</a>
-                        <div class="mobile-dropdown">
-                            <a href="#">Menu-1</a>
-                            <a href="#">Menu-2</a>
-                            <a href="#">Menu-3</a>
-                            <a href="#">Menu-4</a>
-                        </div>
+                </div>
+                <div class="mobile-nav-item">
+                    <a href="#">Sponsoring</a>
+                    <div class="mobile-dropdown">
+                        <a href="#">Menu-1</a>
+                        <a href="#">Menu-2</a>
+                        <a href="#">Menu-3</a>
                     </div>
-                    <div class="mobile-nav-item">
-                        <a href="#">Organizers</a>
-                        <div class="mobile-dropdown">
-                            <a href="#">Menu-1</a>
-                            <a href="#">Menu-2</a>
-                        </div>
-                    </div>
-                    <div class="mobile-nav-item">
-                        <a href="#">Sponsoring</a>
-                        <div class="mobile-dropdown">
-                            <a href="#">Menu-1</a>
-                            <a href="#">Menu-2</a>
-                            <a href="#">Menu-3</a>
-                        </div>
-                    </div>
-                    <div class="mobile-nav-item">
-                        <a href="#">Venue & Travel</a>
-                        <div class="mobile-dropdown">
-                            <a href="#">Menu-1</a>
-                            <a href="#">Menu-2</a>
-                        </div>
+                </div>
+                <div class="mobile-nav-item">
+                    <a href="#">Venue & Travel</a>
+                    <div class="mobile-dropdown">
+                        <a href="#">Menu-1</a>
+                        <a href="#">Menu-2</a>
                     </div>
                 </div>
             </div>
         </div>
-    </header>
+    </div>
+    
+
 
     <!-- Main content -->
     <main class="main-content">
