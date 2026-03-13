@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>WSDM 2027 - Call for Papers</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header styles */
+        .header {
+            background: #961f12;
+            width: 100%;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px 0 0;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        /* Main content styles */
+        .main-content {
+            width: 100%;
+            max-width: 1920px;
+            margin: 0 auto;
+        }
+
+        /* Logo */
+        .logo a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 900;
+            font-family: "Archivo Black", sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .logo-rectangle {
+            width: 98px;
+            height: 56px;
+            display: block;
+        }
+
+        .logo-image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 76px;
+            height: 29px;
+        }
+
+        /* Responsive adjustments for logo */
+        @media (max-width: 768px) {
+            .logo a {
+                font-size: 1rem;
+                gap: 8px;
+            }
+            
+            .logo-rectangle {
+                width: 78px;
+                height: 45px;
+            }
+            
+            .logo-image {
+                width: 60px;
+                height: 23px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo a {
+                font-size: 0.9rem;
+                gap: 6px;
+            }
+            
+            .logo-rectangle {
+                width: 65px;
+                height: 37px;
+            }
+            
+            .logo-image {
+                width: 50px;
+                height: 19px;
+            }
+        }
+
+        /* Navigation */
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            flex: 1;
+            justify-content: center;
+        }
+
+        .nav-item {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-item a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        /* Dropdown icon */
+        .dropdown-icon {
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 5px solid white;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+
+        /* Dropdown menu */
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #961f12;
+            min-width: 150px;
+            padding: 10px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            z-index: 1000;
+        }
+
+        .nav-item:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 8px 15px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .dropdown-menu a:hover {
+            background: #a92e20;
+        }
+
+        /* Search */
+        .search {
+            display: flex;
+            align-items: center;
+            margin-left: 1rem;
+        }
+
+        .search svg {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+        }
+
+        /* Header right container */
+        .header-right {
+            display: none;
+        }
+
+        /* Desktop search */
+        .desktop-search {
+            display: block;
+        }
+
+        /* Mobile menu button */
+        .mobile-menu-button {
+            display: none;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .menu-icon {
+            width: 30px;
+            height: 20px;
+            position: relative;
+        }
+
+        .menu-icon::before,
+        .menu-icon::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background: white;
+            left: 0;
+        }
+
+        .menu-icon::before {
+            top: 0;
+        }
+
+        .menu-icon::after {
+            bottom: 0;
+        }
+
+        .menu-icon span {
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background: white;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        /* Mobile navigation */
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: #961f12;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .mobile-nav.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-nav-content {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .mobile-nav-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .close-button {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .close-button span {
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background: white;
+            left: 0;
+            top: 50%;
+        }
+
+        .close-button span:first-child {
+            transform: rotate(45deg) translateY(-50%);
+        }
+
+        .close-button span:last-child {
+            transform: rotate(-45deg) translateY(-50%);
+        }
+
+        .mobile-nav-items {
+            flex: 1;
+        }
+
+        .mobile-nav-item {
+            margin-bottom: 15px;
+        }
+
+        .mobile-nav-item a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+            display: block;
+            padding: 10px 0;
+        }
+
+        .mobile-dropdown {
+            margin-left: 20px;
+            margin-top: 10px;
+            display: none;
+        }
+
+        .mobile-nav-item.active .mobile-dropdown {
+            display: block;
+        }
+
+        .mobile-dropdown a {
+            font-size: 1rem;
+            font-weight: 500;
+            padding: 8px 0;
+        }
+
+        /* Header layout for 1920px */
+        @media (min-width: 1920px) {
+            .header {
+                padding-right: 97px;
+            }
+        }
+
+        @media (min-width: 2560px) {
+            /* 按照1920px的比例缩放 (2560/1920 = 1.3333) */
+            .cfp-section {
+                padding: 8rem;
+                margin-top: 80px;
+            }
+            
+            .cfp-section h2 {
+                font-size: 53px;
+                margin-bottom: 200px;
+            }
+            
+            .cfp-section h2::after {
+                width: 117px;
+                height: 13px;
+                bottom: -67px;
+            }
+            
+            .cfp-section p {
+                font-size: 32px;
+            }
+            
+            .cfp-section h3 {
+                font-size: 37px;
+            }
+            
+            .cfp-section ul {
+                font-size: 32px;
+            }
+            
+            .timeline-item {
+                padding: 2.7rem 1.3rem;
+                min-height: 417px;
+            }
+            
+            .timeline-item:not(:last-child) {
+                margin-right: 67px;
+                clip-path: polygon(0 0, calc(100% - 107px) 0, 100% 50%, calc(100% - 107px) 100%, 0 100%);
+            }
+            
+            .timeline-item:not(:first-child) {
+                margin-left: -200px;
+            }
+            
+            .timeline-item h3 {
+                font-size: 32px;
+                padding: 0.7rem 1.3rem;
+            }
+            
+            .timeline-item p {
+                font-size: 24px;
+            }
+            
+            .timeline-icon {
+                margin-bottom: 2rem;
+                width: 80px;
+                height: 80px;
+            }
+            
+            .timeline-icon svg {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        /* Adjustments for different screen sizes */
+        @media (max-width: 1919px) and (min-width: 1200px) {
+            .header {
+                padding-right: 50px;
+            }
+        }
+
+        @media (max-width: 1199px) and (min-width: 768px) {
+            .header {
+                padding-right: 30px;
+            }
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .header {
+                justify-content: space-between;
+            }
+
+            .nav {
+                display: none;
+            }
+
+            /* Right side container for search and menu */
+            .header-right {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .mobile-menu-button {
+                display: block;
+            }
+
+            .search {
+                margin-left: 0;
+            }
+        }
+
+        /* Desktop mode */
+        @media (min-width: 769px) {
+            .header-right {
+                display: none;
+            }
+            
+            .desktop-search {
+                display: block;
+            }
+        }
+
+        /* Mobile mode */
+        @media (max-width: 768px) {
+            .desktop-search {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                flex-direction: row;
+                height: 56px;
+                padding: 0 20px;
+                gap: 0;
+            }
+
+            .mobile-nav-item a {
+                font-size: 1.1rem;
+            }
+
+            .mobile-dropdown a {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Call for papers section */
+        .cfp-section {
+            padding: 6rem;
+            background: #ffffff;
+        }
+
+        .cfp-section h2 {
+            color: #961F12;
+            font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: normal;
+            text-align: center;
+            margin-bottom: 150px;
+        }
+
+        .cfp-section p {
+            color: #000;
+            font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            margin-bottom: 1.5rem;
+            text-align: justify;
+            margin-top: 20px;
+        }
+
+        .cfp-section h3 {
+            color: #000;
+            font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin: 2rem 0 1rem;
+        }
+
+        .cfp-section ul {
+            color: #000;
+            font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            margin-left: 2rem;
+        }
+
+        .cfp-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Important Dates Section */
+        .dates-section {
+            padding: 0 6rem;
+            color: white;
+            overflow: hidden;
+        }
+
+        .dates-container {
+            max-width: 100%;
+            margin: 0;
+        }
+
+        .dates-timeline {
+            display: flex;
+            align-items: stretch;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .timeline-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            flex: 1;
+            padding: 2rem 1rem;
+            min-height: 313px;
+            z-index: 1;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .timeline-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Background colors for each timeline item */
+        .timeline-item:nth-child(1) {
+            background: #961F12;
+            z-index:10;
+        }
+
+        .timeline-item:nth-child(2) {
+            background: #BE3323;
+            z-index:9;
+        }
+
+        .timeline-item:nth-child(3) {
+            background: #D14334;
+            z-index:8;
+        }
+
+        .timeline-item:nth-child(4) {
+            background: #DE5141;
+             z-index:7;
+        }
+
+        .timeline-item:nth-child(5) {
+            background: #961F12;
+        }
+
+        /* Small arrow between items */
+        .timeline-item:not(:last-child) {
+            margin-right: 50px;
+            clip-path: polygon(0 0, calc(100% - 80px) 0, 100% 50%, calc(100% - 80px) 100%, 0 100%);
+        }
+
+        .timeline-item:not(:first-child) {
+            margin-left: -150px;
+        }
+
+        .timeline-icon {
+            margin-bottom: 1.5rem;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #D9D9D9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .timeline-icon svg {
+            width: 30px;
+            height: 30px;
+        }
+
+        .timeline-item h3 {
+            color: #ffffff;
+            font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-align: center;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+
+        .timeline-item p {
+            color: #ffffff;
+            font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            margin: 0;
+            text-align: center;
+        }
+
+        .deadline-note {
+            background: #333333;
+            color: #ffffff;
+            font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .deadline-note p {
+            margin: 0;
+        }
+
+        /* List of Topics Section */
+        .topics-section {
+            background: #4a4a4a;
+            padding: 4rem 2rem 4rem calc(2rem + 20px);
+            position: relative;
+            margin:  20px 6rem 0 6rem;
+        }
+
+        .topics-section .container {
+            max-width: 100%;
+            margin: 0;
+        }
+
+        .topics-section h2 {
+            color: #ffffff;
+            font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        .topics-section h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 10px;
+            background: #D9D9D9;
+            margin: 1rem auto;
+        }
+
+        .topics-section .topics-description {
+            color: #ffffff;
+            font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 3rem;
+            opacity: 0.8;
+        }
+
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-bottom: 3rem;
+            padding: 2rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .topic-list ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .topic-list li {
+            color: #ffffff;
+            font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 0.8rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .topic-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #ffffff;
+        }
+
+        .topics-section .read-more {
+            text-align: center;
+        }
+
+        .topics-section .read-more-btn {
+            display: inline-block;
+            background: #961F12;
+            color: #ffffff;
+            padding: 1rem 3rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+            transition: background 0.3s ease;
+        }
+
+        .topics-section .read-more-btn:hover {
+            background: #BE3323;
+        }
+
+        /* Corner decorations */
+        .topics-section {
+            clip-path: polygon(
+                60px 0, 100% 0,
+                100% calc(100% - 60px), calc(100% - 60px) 100%,
+                0 100%, 0 60px
+            );
+        }
+
+        /* Responsive adjustments for Call for Papers */
+        @media (max-width: 768px) {
+            .cfp-section {
+                padding: 1.5rem 1rem;
+            }
+
+            .cfp-section h2 {
+                font-size: 28px;
+                margin-bottom: 20px;
+            }
+
+            .cfp-section h2::after {
+                height: 10px;
+                bottom: -15px;
+            }
+
+            .cfp-section p {
+                font-size: 16px;
+                margin-top: 20px;
+                margin-bottom: 1rem;
+            }
+
+            .cfp-section h3 {
+                font-size: 20px;
+                margin: 1.5rem 0 0.8rem;
+            }
+
+            .cfp-section ul {
+                font-size: 16px;
+                margin-left: 1.2rem;
+            }
+
+            /* Responsive adjustments for List of Topics */
+            .topics-section {
+                padding: 2rem 1rem !important;
+                margin-right: 0 !important;
+                margin-left: 0 !important;
+                clip-path: none !important;
+            }
+
+            .topics-section::before,
+            .topics-section::after {
+                display: none !important;
+            }
+
+            .topics-section h2 {
+                font-size: 24px;
+            }
+
+            .topics-section h2::after {
+                width: 30px;
+                height: 2px;
+            }
+
+            .topics-section .topics-description {
+                font-size: 13px;
+                margin-bottom: 1.5rem;
+            }
+
+            .topics-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+                padding: 1.5rem 0;
+            }
+
+            .topic-list li {
+                font-size: 13px;
+                padding-left: 1rem;
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cfp-section {
+                padding: 1.5rem 1rem;
+            }
+
+            .cfp-section h2 {
+                font-size: 28px;
+                margin-bottom: 20px;
+            }
+
+            .cfp-section h2::after {
+                height: 10px;
+                bottom: -15px;
+                width: 60px;
+            }
+
+            .cfp-section p {
+                font-size: 16px;
+                margin-top: 25px;
+                margin-bottom: 1.2rem;
+            }
+
+            .cfp-section h3 {
+                font-size: 20px;
+                margin: 1.5rem 0 0.8rem;
+            }
+
+            .cfp-section ul {
+                font-size: 16px;
+                margin-left: 1.2rem;
+            }
+
+            /* Responsive adjustments for List of Topics */
+            .topics-section {
+                padding: 2rem 1rem;
+            }
+
+            .topics-section h2 {
+                font-size: 24px;
+            }
+
+            .topics-section .topics-description {
+                font-size: 13px;
+            }
+
+            .topic-list li {
+                font-size: 13px;
+            }
+
+            /* Responsive adjustments for Important Dates */
+            .dates-section {
+                padding: 0;
+            }
+
+            .timeline-item {
+                min-height: 180px;
+                padding: 1rem 0.8rem;
+            }
+
+            .timeline-icon {
+                width: 45px;
+                height: 45px;
+            }
+
+            .timeline-icon svg {
+                width: 22px;
+                height: 22px;
+            }
+
+            .timeline-item h3 {
+                font-size: 16px;
+            }
+
+            .timeline-item p {
+                font-size: 12px;
+            }
+
+            .deadline-note {
+                font-size: 16px;
+                padding-top: 1.2rem;
+            }
+        }
+
+        /* Responsive adjustments for Important Dates */
+        @media (max-width: 768px) {
+            /* Responsive adjustments for Important Dates */
+            .dates-section {
+                padding: 0;
+            }
+
+            .dates-timeline {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+            }
+
+            .timeline-item {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.8rem;
+                width: 100%;
+                min-height: 180px;
+                padding: 1.2rem 0.8rem;
+                clip-path: none !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+
+            .timeline-icon {
+                margin-bottom: 0.8rem;
+                flex-shrink: 0;
+                width: 45px;
+                height: 45px;
+            }
+
+            .timeline-icon svg {
+                width: 22px;
+                height: 22px;
+            }
+
+            .timeline-item h3 {
+                font-size: 14px;
+                margin-bottom: 0.3rem;
+                text-align: center;
+                background: #484848;
+                padding: 0.2rem 0.6rem;
+            }
+
+            .timeline-item p {
+                font-size: 12px;
+                text-align: center;
+            }
+
+            .deadline-note {
+                font-size: 12px;
+                padding: 0.8rem;
+            }
+        }
+
+        /* Footer */
+        .footer {
+            background: #961f12;
+            color: white;
+            padding-top: 2rem;
+            text-align: center;
+        }
+
+        .footer h2 {
+            margin: 0 0 1.5rem;
+            font-size: 28px;
+            font-weight: 900;
+            font-family: "Archivo Black", sans-serif;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            flex-wrap: wrap;
+            gap: 1rem;
+            background: #ffffff;
+            color: #A02437;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #A02437;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #D9D9D9;
+        }
+
+        /* Responsive adjustments for footer */
+        @media (max-width: 768px) {
+            .footer {
+                padding: 1.5rem 1rem;
+            }
+            
+            .footer h2 {
+                font-size: 24px;
+                margin-bottom: 1rem;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                gap: 0.8rem;
+                padding-top: 1rem;
+            }
+            
+            .footer-links {
+                gap: 1.5rem;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer h2 {
+                font-size: 20px;
+            }
+            
+            .footer p {
+                font-size: 12px;
+            }
+            
+            .footer-links a {
+                font-size: 12px;
+            }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1200px) {
+            /* 按照1920px的比例缩放 (1200/1920 = 0.625) */
+            .cfp-section {
+                padding: 2.5rem 3.8rem;
+                margin-top: 38px;
+            }
+            
+            .cfp-section h2 {
+                font-size: 25px;
+                margin-bottom: 94px;
+            }
+            
+            .cfp-section h2::after {
+                width: 55px;
+                height: 6px;
+                bottom: -31px;
+            }
+            
+            .cfp-section p {
+                font-size: 15px;
+            }
+            
+            .cfp-section h3 {
+                font-size: 18px;
+            }
+            
+            .cfp-section ul {
+                font-size: 15px;
+            }
+            
+            .timeline-item {
+                padding: 0.8rem 0.4rem;
+                min-height: 130px;
+            }
+            
+            .timeline-item:not(:last-child) {
+                margin-right: 28px;
+                clip-path: polygon(0 0, calc(100% - 44px) 0, 100% 50%, calc(100% - 44px) 100%, 0 100%);
+            }
+            
+            .timeline-item:not(:first-child) {
+                margin-left: -84px;
+            }
+            
+            .timeline-item h3 {
+                font-size: 9px;
+                padding: 0.2rem 0.4rem;
+            }
+            
+            .timeline-item p {
+                font-size: 8px;
+            }
+            
+            .timeline-icon {
+                margin-bottom: 0.6rem;
+                width: 25px;
+                height: 25px;
+            }
+            
+            .timeline-icon svg {
+                width: 13px;
+                height: 13px;
+            }
+        }
+
+        @media (max-width: 1600px) {
+            /* 按照1920px的比例缩放 (1600/1920 = 0.833333) */
+            .cfp-section {
+                padding: 3.3rem 5rem;
+                margin-top: 50px;
+            }
+            
+            .cfp-section h2 {
+                font-size: 33px;
+                margin-bottom: 125px;
+            }
+            
+            .cfp-section h2::after {
+                width: 73px;
+                height: 8px;
+                bottom: -42px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <a href="#">
+                <div class="logo-container">
+                    <img src="./figma/image/screenshot_33_76.png" alt="Rectangle 19" class="logo-rectangle">
+                    <img src="./figma/image/screenshot_33_77.png" alt="WSDM Logo" class="logo-image">
+                </div>
+                WSDM 2027
+            </a>
+        </div>
+        
+        <!-- Desktop navigation -->
+        <div class="nav">
+            <div class="nav-item">
+                <a href="#">Program</a>
+                <span class="dropdown-icon"></span>
+                <div class="dropdown-menu">
+                    <a href="#">Menu-1</a>
+                    <a href="#">Menu-2</a>
+                    <a href="#">Menu-3</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a href="#">WSDM Cup</a>
+            </div>
+            <div class="nav-item">
+                <a href="#">Attending</a>
+                <span class="dropdown-icon"></span>
+                <div class="dropdown-menu">
+                    <a href="#">Menu-1</a>
+                    <a href="#">Menu-2</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a href="#">Calls</a>
+                <span class="dropdown-icon"></span>
+                <div class="dropdown-menu">
+                    <a href="#">Menu-1</a>
+                    <a href="#">Menu-2</a>
+                    <a href="#">Menu-3</a>
+                    <a href="#">Menu-4</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a href="#">Organizers</a>
+                <span class="dropdown-icon"></span>
+                <div class="dropdown-menu">
+                    <a href="#">Menu-1</a>
+                    <a href="#">Menu-2</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a href="#">Sponsoring</a>
+                <span class="dropdown-icon"></span>
+                <div class="dropdown-menu">
+                    <a href="#">Menu-1</a>
+                    <a href="#">Menu-2</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a href="#">Venue & Travel</a>
+                <span class="dropdown-icon"></span>
+                <div class="dropdown-menu">
+                    <a href="#">Menu-1</a>
+                    <a href="#">Menu-2</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Desktop search -->
+        <div class="desktop-search">
+            <div class="search">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+        
+        <!-- Right side container for search and menu -->
+        <div class="header-right">
+            <div class="search">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <div class="mobile-menu-button">
+                <div class="menu-icon">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <div class="mobile-nav-content">
+            <div class="mobile-nav-header">
+                <div class="logo">
+                    <a href="#">
+                        <div class="logo-container">
+                            <img src="./figma/image/screenshot_33_76.png" alt="Rectangle 19" class="logo-rectangle">
+                            <img src="./figma/image/screenshot_33_77.png" alt="WSDM Logo" class="logo-image">
+                        </div>
+                        WSDM 2027
+                    </a>
+                </div>
+                <div class="close-button">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="mobile-nav-items">
+                <div class="mobile-nav-item">
+                    <a href="#">WSDM 2027</a>
+                </div>
+                <div class="mobile-nav-item">
+                    <a href="#">Program</a>
+                    <div class="mobile-dropdown">
+                        <a href="#">Menu-1</a>
+                        <a href="#">Menu-2</a>
+                        <a href="#">Menu-3</a>
+                    </div>
+                </div>
+                <div class="mobile-nav-item">
+                    <a href="#">WSDM Cup</a>
+                </div>
+                <div class="mobile-nav-item">
+                    <a href="#">Attending</a>
+                    <div class="mobile-dropdown">
+                        <a href="#">Menu-1</a>
+                        <a href="#">Menu-2</a>
+                    </div>
+                </div>
+                <div class="mobile-nav-item">
+                    <a href="#">Calls</a>
+                    <div class="mobile-dropdown">
+                        <a href="#">Menu-1</a>
+                        <a href="#">Menu-2</a>
+                        <a href="#">Menu-3</a>
+                        <a href="#">Menu-4</a>
+                    </div>
+                </div>
+                <div class="mobile-nav-item">
+                    <a href="#">Organizers</a>
+                    <div class="mobile-dropdown">
+                        <a href="#">Menu-1</a>
+                        <a href="#">Menu-2</a>
+                    </div>
+                </div>
+                <div class="mobile-nav-item">
+                    <a href="#">Sponsoring</a>
+                    <div class="mobile-dropdown">
+                        <a href="#">Menu-1</a>
+                        <a href="#">Menu-2</a>
+                        <a href="#">Menu-3</a>
+                    </div>
+                </div>
+                <div class="mobile-nav-item">
+                    <a href="#">Venue & Travel</a>
+                    <div class="mobile-dropdown">
+                        <a href="#">Menu-1</a>
+                        <a href="#">Menu-2</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const closeButton = document.querySelector('.close-button');
+        const mobileNav = document.querySelector('.mobile-nav');
+        const mobileNavItems = document.querySelectorAll('.mobile-nav-item');
+
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileNav.classList.add('active');
+            });
+        }
+
+        if (closeButton) {
+            closeButton.addEventListener('click', () => {
+                mobileNav.classList.remove('active');
+            });
+        }
+
+        // Mobile dropdown toggle
+        mobileNavItems.forEach(item => {
+            const link = item.querySelector('a');
+            link.addEventListener('click', (e) => {
+                if (item.querySelector('.mobile-dropdown')) {
+                    e.preventDefault();
+                    item.classList.toggle('active');
+                }
+            });
+        });
+    </script>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Call for Papers Section -->
+        <section class="cfp-section">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h1 style="font-size: 3rem; font-weight: 900; color: #961F12; margin-bottom: 0.5rem;">The WSDM 2027 @ Hong Kong</h1>
+                <h2 style="font-size: 1.5rem; font-weight: 600; color: #000; margin-bottom: 1rem;">The 20th ACM International Conference on Web Search and Data Mining</h2>
+                <div style="width: 88px; height: 10px; background: #961F12; margin: 0 auto;"></div>
+            </div>
+            <p>
+                We are delighted to open the call for proposals for hosting challenge problems for the WSDM Cup 2025, a high impact ML / AI competition event that will be co-located with the WSDM 2025 main conference in Hannover, Germany from March 10-14th.
+            </p>
+            <p>
+                Competitions of this form are a crucial part of the research ecosystem, bringing together world-class experts from all over the world to independently evaluate their own best ideas on an important problem. Past experience has shown this process to create both amazing progress on specific problems, but also help to achieve a depth of validation and understanding in a way that lives up to the highest ideals of empirical rigor for AI and ML as research field.
+            </p>
+            <p>
+                We are seeking proposals for challenge problems and datasets from both industrial and academic institutions, with an emphasis on novel challenges that will help uncover the most topical and important issues facing the WSDM community today.
+            </p>
+            <p>
+                Furthermore, we are delighted to announce that this year's challenge (or challenges, if more than one is selected) will be conducted on Kaggle and that the WSDM Cup will be supported by full-time Kaggle staff. In addition to waiving their usual fees for a selected WSDM challenge, Kaggle will also be providing a USD 50,000 prize fund in order to attract the largest possible levels of participation from across the community.
+            </p>
+            <p>
+                We strongly encourage all interested institutions and research groups to submit proposals and be part of this important challenge. Hosting the challenge is a fantastic way to bring a strong spotlight to previously under-studied areas or emerging topics, to showcase expertise, to establish new benchmarks in the field, and to contribute to advancing the field forward on real world problems.
+            </p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <h2>WSDM 2027</h2>
+        <div class="footer-bottom">
+            <p>© 2027, WSDM 2027. All right reserved.</p>
+            <div class="footer-links">
+                <a href="#">Imprint</a>
+                <a href="#">Private Policy</a>
+                <a href="#">Cookie Policy (EU)</a>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
