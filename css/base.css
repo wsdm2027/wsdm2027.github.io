@@ -48,7 +48,6 @@ body {
 }
 
 .logo-rectangle {
-    width: 98px;
     height: 56px;
     display: block;
 }
@@ -372,7 +371,7 @@ body {
 }
 
 .info-label {
-    color: #D9D9D9;
+    color: #ffffff;
     font-size: 26px;
     font-style: normal;
     font-weight: 600;
@@ -384,7 +383,7 @@ body {
 }
 
 .info-value {
-    color: #D9D9D9;
+    color: #ffffff;
     font-size: 26px;
     font-style: normal;
     font-weight: 400;
@@ -542,6 +541,7 @@ body {
     font-weight: 400;
     line-height: normal;
     flex: 1;
+	padding: 5px;
 }
 
 /* ====== 演讲者区域 ====== */
@@ -572,7 +572,7 @@ body {
     width: 458px;
     height: 593px;
     padding: 2rem 1rem 1rem;
-    background-image: url('../images/speaker-card-bg.svg');
+    background-image: url('../images/speaker-card-bg.png');
     background-size: cover;
     background-position: center;
     margin: 0 auto;
@@ -899,7 +899,16 @@ body {
     background: #f5f5f5;
     padding: 4rem 2rem;
 }
+/* 第一个 .chairs-section */
+.general-chairs {
+  padding:  4rem 2rem 0 2rem; /* 上 右 下 左 */;
+}
 
+/* 第二个 .chairs-section */
+.program-chairs {
+  padding: 0 2rem 4rem 2rem;
+  background: #ffffff;
+}
 .chairs-section .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -943,6 +952,7 @@ body {
     margin-bottom: 3rem;
 }
 
+
 .chairs-grid {
     display: grid;
     grid-template-columns: repeat(3, 458px);
@@ -957,7 +967,7 @@ body {
 }
 
 .chair-card {
-    background-image: url('../images/chair-card-bg.svg');
+    background-image: url('../images/chair-card-bg.png');
     background-size: cover;
     background-position: center;
     width: 458px;
@@ -971,6 +981,12 @@ body {
     text-align: center;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chair-card-1 {
+	background-image: url('../images/chair-card-bg-1.png');
+	background-size: cover;
+    background-position: center;
 }
 
 .chair-card:hover {
@@ -1004,7 +1020,9 @@ body {
     font-weight: 900;
     margin: 0 0 0.5rem 0;
 }
-
+.chair-name-1{
+	color: #ffffff;
+}
 .chair-affiliation {
     color: #484848;
     font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
@@ -1012,7 +1030,9 @@ body {
     font-weight: 600;
     margin: 0;
 }
-
+.chair-name-1{
+	color: #ffffff;
+}
 .more-organizers {
     text-align: center;
     margin-top: 2rem;

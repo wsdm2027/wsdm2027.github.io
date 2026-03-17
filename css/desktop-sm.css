@@ -24,7 +24,7 @@
     .box2 {
         width: 606px; /* 791 * 0.7656 ≈ 606px */
         height: auto;
-        min-height: 246px; /* 322 * 0.7656 ≈ 246px */
+        min-height: 200px; /* 322 * 0.7656 ≈ 246px */
     }
     
     .box3 {
