@@ -121,6 +121,9 @@
 	.intro-section p{
 		font-size:24px;
 	}
+	.chair-affiliation {
+        font-size: 18px;
+    }
 }
 @media (max-width: 1200px) {
     /* 按照1920px的比例缩放 (1200/1920 = 0.625) */
