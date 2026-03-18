@@ -34,9 +34,7 @@
         <a href="#">Program</a>
         <span class="dropdown-icon"></span>
         <div class="dropdown-menu">
-          <a href="#">Menu-1</a>
-          <a href="#">Menu-2</a>
-          <a href="#">Menu-3</a>
+          <a href="./program-overview.html">Overview</a>
         </div>
       </div>
       <div class="nav-item">
@@ -117,7 +115,7 @@
     <div class="mobile-nav-content">
       <div class="mobile-nav-header">
         <div class="logo">
-          <a href="#">WSDM 2027</a>
+          <a href="./index.html">WSDM 2027</a>
         </div>
         <div class="close-button">
           <span></span>
@@ -126,14 +124,12 @@
       </div>
       <div class="mobile-nav-items">
         <div class="mobile-nav-item">
-          <a href="#">WSDM 2027</a>
+          <a href="./index.html">WSDM 2027</a>
         </div>
         <div class="mobile-nav-item">
           <a href="#">Program</a>
           <div class="mobile-dropdown">
-            <a href="#">Menu-1</a>
-            <a href="#">Menu-2</a>
-            <a href="#">Menu-3</a>
+            <a href="./program-overview.html">Overview</a>
           </div>
         </div>
         <div class="mobile-nav-item">
@@ -156,11 +152,7 @@
           </div>
         </div>
         <div class="mobile-nav-item">
-          <a href="#">Organizers</a>
-          <div class="mobile-dropdown">
-            <a href="#">Menu-1</a>
-            <a href="#">Menu-2</a>
-          </div>
+          <a href="./organizers.html">Organizers</a>
         </div>
         <div class="mobile-nav-item">
           <a href="#">Sponsoring</a>
@@ -594,7 +586,7 @@
         const mobileNavItems = document.querySelectorAll('.mobile-nav-item');
         mobileNavItems.forEach(item => {
           const link = item.querySelector('a');
-          if (link.nextElementSibling && link.nextElementSibling.classList.contains('dropdown-icon')) {
+          if (link.nextElementSibling && link.nextElementSibling.classList.contains('mobile-dropdown')) {
             link.addEventListener('click', function (e) {
               e.preventDefault();
               item.classList.toggle('active');
