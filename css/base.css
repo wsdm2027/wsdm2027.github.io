@@ -514,10 +514,9 @@ body {
 
 /* 介绍区域 */
 .intro-section {
-    background: #A92E20;
+    background: #7A1207;
     padding: 1.5rem;
     height: auto;
-    min-height: 644px;
     display: flex;
     flex-direction: column;
     box-shadow: 16px 16px 0px #4D2C29;
