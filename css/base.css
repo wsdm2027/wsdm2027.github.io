@@ -1203,11 +1203,11 @@ body {
 
 /* ====== 新增样式：双列布局和新卡片样式 ====== */
 .org-program-chairs{
-  padding: 0 2rem 0rem 0rem;
+  padding:  0rem 2rem 0 2rem;
 }
 .wtsp-chairs{
   background:#F2F2F2;
-  padding: 2rem 2rem 0rem 0rem;
+  padding: 2rem 0rem 0rem 0rem;
 }
 
 .wtsp-chairs .container {
@@ -1218,7 +1218,7 @@ body {
 .industry-chairs,
 .ww-chairs{
   background: #FFFFFF;
-  padding: 0 2rem 0rem 0rem;
+  padding: 0 0rem 0rem 0rem;
 }
 .chairs-row {
     display: flex;

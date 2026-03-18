@@ -1,25 +1,29 @@
 /* 480px and below - 修正版 */
 @media (max-width: 480px) {
-    /* ===== 1. 基础与布局容器 ===== */
-body {
-    font-size: 14px; /* 可根据需要设置基础字体大小 */
-}
 
-.info-container {
+  /* ===== 1. 基础与布局容器 ===== */
+  body {
+    font-size: 14px;
+    /* 可根据需要设置基础字体大小 */
+  }
+
+  .info-container {
     padding: 0 0.5rem;
     gap: 0.8rem;
     margin-top: 40px;
     flex-direction: column;
     align-items: stretch;
-}
-.info-left,
-.info-right {
+  }
+
+  .info-left,
+  .info-right {
     width: 100%;
     max-width: 100%;
-}
-.box1,
-.box2,
-.box3 {
+  }
+
+  .box1,
+  .box2,
+  .box3 {
     margin-bottom: 0.8rem;
     padding: 0.6rem;
     width: 100%;
@@ -28,30 +32,34 @@ body {
     box-sizing: border-box;
     height: auto;
     overflow: hidden;
-}
+  }
 
-/* ===== 2. 信息展示区块组件 ===== */
-/* 2.1 信息项 */
-.info-item {
+  /* ===== 2. 信息展示区块组件 ===== */
+  /* 2.1 信息项 */
+  .info-item {
     flex-direction: column;
     gap: 0.3rem;
-}
-.info-icon {
+  }
+
+  .info-icon {
     width: 24px;
     height: 24px;
     margin-bottom: 0.2rem;
-}
-.info-icon svg {
+  }
+
+  .info-icon svg {
     width: 16px;
     height: 16px;
-}
-.info-label {
+  }
+
+  .info-label {
     font-size: 16px;
     line-height: 1.2;
     display: block;
     margin-bottom: 0.2rem;
-}
-.info-value {
+  }
+
+  .info-value {
     font-size: 16px;
     line-height: 1.2;
     display: block;
@@ -60,33 +68,38 @@ body {
     word-wrap: break-word;
     overflow-wrap: break-word;
     white-space: normal;
-}
-.info-content {
+  }
+
+  .info-content {
     width: 100%;
     max-width: 100%;
-}
-.info-content p {
+  }
+
+  .info-content p {
     line-height: 1.2;
     width: 100%;
     max-width: 100%;
     word-wrap: break-word;
     overflow-wrap: break-word;
     white-space: normal;
-}
+  }
 
-/* 2.2 注册区域 */
-.registration-content {
+  /* 2.2 注册区域 */
+  .registration-content {
     flex-direction: column;
-}
-.registration-button {
+  }
+
+  .registration-button {
     width: 100%;
     margin-top: 1rem;
-}
-.registration-text h3 {
+  }
+
+  .registration-text h3 {
     font-size: 20px;
     line-height: 1.2;
-}
-.registration-text p {
+  }
+
+  .registration-text p {
     font-size: 16px;
     line-height: 1.2;
     width: 100%;
@@ -94,23 +107,26 @@ body {
     word-wrap: break-word;
     overflow-wrap: break-word;
     white-space: normal;
-}
-.registration-button a {
+  }
+
+  .registration-button a {
     font-size: 20px;
     line-height: 1.2;
 
-}
+  }
 
-/* 2.3 介绍区域 */
-.intro-section{
-	min-height:120px;
-}
-.intro-section h3 {
+  /* 2.3 介绍区域 */
+  .intro-section {
+    min-height: 120px;
+  }
+
+  .intro-section h3 {
     font-size: 20px;
     line-height: 1.2;
-	min-height: none;
-}
-.intro-section p {
+    min-height: none;
+  }
+
+  .intro-section p {
     font-size: 16px;
     line-height: 1.2;
     width: 100%;
@@ -118,42 +134,50 @@ body {
     word-wrap: break-word;
     overflow-wrap: break-word;
     white-space: normal;
-}
+  }
 
-/* ===== 3. 页眉 (Header) 与导航 ===== */
-.header {
+  /* ===== 3. 页眉 (Header) 与导航 ===== */
+  .header {
     flex-direction: row;
     height: 56px;
     padding: 0 20px 0 0;
     gap: 0;
     justify-content: space-between;
-}
-.nav {
-    display: none; /* 桌面导航隐藏 */
-}
-.header-right {
+  }
+
+  .nav {
+    display: none;
+    /* 桌面导航隐藏 */
+  }
+
+  .header-right {
     display: flex;
     align-items: center;
     gap: 15px;
-}
-.mobile-menu-button {
-    display: block;
-}
-.search {
-    margin-left: 0;
-}
-.desktop-search {
-    display: none;
-}
-.mobile-nav-item a {
-    font-size: 1.1rem;
-}
-.mobile-dropdown a {
-    font-size: 0.9rem;
-}
+  }
 
-/* ===== 4. 主视觉区域 (Hero) ===== */
-.hero {
+  .mobile-menu-button {
+    display: block;
+  }
+
+  .search {
+    margin-left: 0;
+  }
+
+  .desktop-search {
+    display: none;
+  }
+
+  .mobile-nav-item a {
+    font-size: 1.1rem;
+  }
+
+  .mobile-dropdown a {
+    font-size: 0.9rem;
+  }
+
+  /* ===== 4. 主视觉区域 (Hero) ===== */
+  .hero {
     min-height: auto;
     height: auto;
     padding: 40px 15px 30px;
@@ -161,40 +185,48 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-}
-.hero h1 {
+  }
+
+  .hero h1 {
     font-size: 1.5rem;
-}
+  }
 
-/* ===== 5. 重要日期时间轴 ===== */
-.dates-section {
+  /* ===== 5. 重要日期时间轴 ===== */
+  .dates-section {
     padding: 0;
-}
-.dates-timeline {
-    flex-direction: column;
-}
-.timeline-item:not(:first-child),
-.timeline-item:not(:last-child) {
-    margin-left: 0;
-	margin-right:0 ;
-    clip-path: none;
-}
-.timeline-item{
-	min-height:60px;
-}
+  }
 
-/* ===== 6. 演讲者与主席板块 ===== */
-/* 6.1 通用卡片网格 */
-.chairs-grid,
-.chairs-grid.chairs-grid-small,
-.speakers-grid {
-    grid-template-columns: 1fr;
+  .dates-timeline {
+    flex-direction: column;
+  }
+
+  .timeline-item:not(:first-child),
+  .timeline-item:not(:last-child) {
+    margin-left: 0;
+    margin-right: 0;
+    clip-path: none;
+  }
+
+  .timeline-item {
+    min-height: 60px;
+  }
+
+  /* ===== 6. 演讲者与主席板块 ===== */
+  /* 6.1 通用卡片网格 */
+  .chairs-grid,
+  .chairs-grid.chairs-grid-small,
+  .speakers-grid {
+    grid-template-columns: 280px;
     gap: 1.5rem;
-}
-.info-grid {
+    justify-content: center;
+  }
+
+  .info-grid {
     grid-template-columns: 1fr;
-}
-.chairs-title::before, .chairs-title::after {
+  }
+
+  .chairs-title::before,
+  .chairs-title::after {
     content: '';
     position: absolute;
     top: 50%;
@@ -202,178 +234,361 @@ body {
     width: 80px;
     height: 2px;
     background: #961F12;
-}
-.chairs-title::before {
-    left: 0px;
-}
-.chairs-title::after {
-    right: 0px;
-}
-/* 6.2 主席卡片 */
-.chair-card {
+  }
+
+  .chairs-title::before {
+    left: -90px;
+  }
+
+  .chairs-title::after {
+    right: -90px;
+  }
+
+  /* 为org-general-chairs区域的chairs-title添加白色线条 */
+  .org-general-chairs .chairs-title::before,
+  .org-general-chairs .chairs-title::after {
+    background: #FFFFFF;
+  }
+
+  .org-general-chairs .chairs-title {
+    position: relative;
+    display: inline-block;
+    padding: 0 2rem;
+  }
+
+  /* 6.2 主席卡片 */
+  .chair-card {
     width: 100%;
     max-width: 280px;
     height: 380px;
     padding: 1rem 0.8rem 0.8rem;
     margin: 0 auto;
-}
-.chair-image {
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* 确保chair-card-1的样式优先级足够高 */
+  .chairs-section.program-chairs .chair-card.chair-card-1 {
+    background-image: url('../images/chair-card-bg-1.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+
+  /* 确保chair-card-2的样式优先级足够高 */
+  .chair-card.chair-card-2 {
+    background-image: url('../images/speaker-card-bg.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+
+  /* 确保chair-card-3的样式优先级足够高 */
+  .chair-card.chair-card-3 {
+    background-image: url('../images/chair-card-bg-2.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+
+  /* 确保chair-card-new-2的样式优先级足够高 */
+  .chair-card.chair-card-new.chair-card-new-2 {
+    background-image: url('../images/chair-card-bg.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    width: 100%;
+    max-width: 280px;
+    height: 380px;
+    padding: 1rem 0.8rem 0.8rem;
+    margin: 0 auto;
+  }
+
+  /* 确保wtsp-chairs区域中的chair-card-new-2样式优先级足够高 */
+  .wtsp-chairs .chairs-grid .chair-card.chair-card-new.chair-card-new-2 {
+    background-image: url('../images/chair-card-bg.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    width: 280px !important;
+    height: 380px !important;
+    padding: 1rem 0.8rem 0.8rem !important;
+    margin: 0 auto !important;
+  }
+
+  .chair-image {
     width: 180px;
     height: 180px;
     margin-bottom: 1.2rem;
-}
-.chair-name {
-    font-size: 16px;
-}
-.chair-affiliation {
-    font-size: 14px;
-}
+  }
 
-/* 6.3 演讲者卡片 */
-.speaker {
+  .chair-name {
+    font-size: 16px;
+  }
+
+  .chair-affiliation {
+    font-size: 14px;
+  }
+
+  /* 确保chairs-row在移动端正确显示 */
+  .chairs-row {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .chairs-row .chairs-category {
+    min-width: 100%;
+  }
+
+  .chairs-row .chairs-grid {
+    grid-template-columns: 280px;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+
+  /* 确保industry-chairs区域的chair-card正确显示 */
+  .industry-chairs .chairs-grid {
+    display: grid !important;
+    grid-template-columns: 280px;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+
+  /* 确保industry-chairs区域中的chair-card-3样式优先级足够高 */
+  .industry-chairs .chairs-grid .chair-card.chair-card-new.chair-card-3 {
+    background-image: url('../images/chair-card-bg-2.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    width: 280px !important;
+    height: 380px !important;
+    padding: 1rem 0.8rem 0.8rem !important;
+    margin: 0 auto !important;
+  }
+
+  /* 确保Demo Chairs和Proceedings Chairs区域的chair-card正确显示 */
+  .ddpv-chairs .chairs-grid {
+    grid-template-columns: 280px;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+
+  .ddpv-chairs .chairs-grid[style*="display: block"] {
+    display: grid !important;
+    grid-template-columns: 280px;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+
+  /* 确保ddpv-chairs区域中的chair-card-new-2样式优先级足够高 */
+  .ddpv-chairs .chairs-grid .chair-card.chair-card-new.chair-card-new-2 {
+    background-image: url('../images/chair-card-bg.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    width: 280px !important;
+    height: 380px !important;
+    padding: 1rem 0.8rem 0.8rem !important;
+    margin: 0 auto !important;
+  }
+
+  /* 确保Demo Chairs区域的chair-card正确显示 */
+  .ddpv-chairs .chairs-category:nth-child(2) .chairs-grid .chair-card.chair-card-new.chair-card-new-2 {
+    background-image: url('../images/chair-card-bg.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    width: 280px !important;
+    height: 380px !important;
+    padding: 1rem 0.8rem 0.8rem !important;
+    margin: 0 auto !important;
+  }
+
+  /* 6.3 演讲者卡片 */
+  .speaker {
     width: 100%;
     height: auto;
     min-height: 350px;
-    background-position: top left; /* 修正背景图位置 */
-}
-.speaker img {
+    background-position: top left;
+    /* 修正背景图位置 */
+  }
+
+  .speaker img {
     width: 160px;
     height: 160px;
-}
+  }
 
-/* ===== 7. 征文 (CFP) 与主题列表板块 ===== */
-.cfp-section {
+  /* ===== 7. 征文 (CFP) 与主题列表板块 ===== */
+  .cfp-section {
     padding: 1.5rem 1rem;
-}
-.cfp-section h2 {
+  }
+
+  .cfp-section h2 {
     font-size: 28px;
     margin-bottom: 20px;
-}
-.cfp-section h2::after {
+  }
+
+  .cfp-section h2::after {
     height: 10px;
     bottom: -15px;
     width: 60px;
-}
-.cfp-section p {
+  }
+
+  .cfp-section p {
     font-size: 16px;
     margin-top: 25px;
     margin-bottom: 1.2rem;
-}
-.cfp-section h3 {
+  }
+
+  .cfp-section h3 {
     font-size: 20px;
     margin: 1.5rem 0 0.8rem;
-}
-.cfp-section ul {
+  }
+
+  .cfp-section ul {
     font-size: 16px;
     margin-left: 1.2rem;
-}
+  }
 
-.topics-section {
+  .topics-section {
     padding: 2rem 1rem;
-    margin: 20px 0 0 0 !important; /* 覆盖行内样式 */
+    margin: 20px 0 0 0 !important;
+    /* 覆盖行内样式 */
     clip-path: none !important;
-}
-.topics-section h2 {
-    font-size: 24px;
-}
-.topics-section .topics-description {
-    font-size: 13px;
-}
-.topic-list li {
-    font-size: 13px;
-}
+  }
 
-/* ===== 8. 页脚 (Footer) ===== */
-.footer h2 {
+  .topics-section h2 {
+    font-size: 24px;
+  }
+
+  .topics-section .topics-description {
+    font-size: 13px;
+  }
+
+  .topic-list li {
+    font-size: 13px;
+  }
+
+  /* ===== 8. 页脚 (Footer) ===== */
+  .footer h2 {
     font-size: 20px;
-}
-.footer p {
+  }
+
+  .footer p {
     font-size: 12px;
-}
-.footer-links a {
+  }
+
+  .footer-links a {
     font-size: 12px;
-}
-.footer-bottom {
+  }
+
+  .footer-bottom {
     flex-direction: column;
     gap: 0.8rem;
     padding-top: 1rem;
-}
-.footer-links {
+  }
+
+  .footer-links {
     gap: 1.5rem;
     justify-content: center;
-}
+  }
 
-/* ===== 9. 联系区域 ===== */
-.contact-section {
+  /* ===== 9. 联系区域 ===== */
+  .contact-section {
     padding: 2rem 1rem;
-}
-.contact-content p {
+  }
+
+  .contact-content p {
     font-size: 18px;
     margin-bottom: 1.2rem;
-}
-.contact-btn {
+  }
+
+  .contact-btn {
     font-size: 18px;
     padding: 0.6rem 1.5rem;
-}
+  }
 
-/* ===== 10. 当前区域移动端适配 ===== */
-.program-chairs .container {
+  /* ===== 10. 当前区域移动端适配 ===== */
+  .program-chairs .container {
     max-width: 100%;
     padding: 0 1rem;
-}
+  }
 
-.chairs-row {
+  .chairs-row {
     flex-direction: column;
     gap: 2rem;
-}
+  }
 
-.chairs-row .chairs-category {
+  .chairs-row .chairs-category {
     min-width: 100%;
-}
+  }
 
-.chairs-row .chairs-title {
+  .chairs-row .chairs-title {
     font-size: 24px;
     padding: 0 0.5rem;
-}
+  }
 
-.chairs-row .chairs-title::before,
-.chairs-row .chairs-title::after {
+  .chairs-row .chairs-title::before,
+  .chairs-row .chairs-title::after {
     width: 60px;
-}
+  }
 
-.chairs-row .chairs-title::before {
+  .chairs-row .chairs-title::before {
     left: -65px;
-}
+  }
 
-.chairs-row .chairs-title::after {
+  .chairs-row .chairs-title::after {
     right: -65px;
-}
+  }
 
-.chairs-row .chairs-grid {
+  .chairs-row .chairs-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
-}
+  }
 
-.chair-card-new {
+  .chair-card-new {
     width: 100%;
     max-width: 280px;
     height: 380px;
     padding: 1rem 0.8rem 0.8rem;
     margin: 0 auto;
-}
+  }
 
-.chair-card-new .chair-image {
+  .chair-card-new .chair-image {
     width: 180px;
     height: 180px;
     margin-bottom: 1.2rem;
     border: 3px solid #D9D9D9;
-}
+  }
 
-.chair-name-new {
+  .chair-name-new {
     font-size: 16px;
-}
+  }
 
-.chair-affiliation.chair-name-new {
+  .chair-affiliation.chair-name-new {
     font-size: 14px;
-}
+  }
+   .chairs-title::before{
+    left: 0;
+  }
+  .chairs-title::after{
+    right: 0;
+  }
+  .org-general-chairs .chairs-title::before,
+  .org-general-chairs .chairs-title::after {
+    width: 120px;
+  }
+  .org-program-chairs .chairs-title::before,
+  .org-program-chairs .chairs-title::after {
+    width: 120px;
+  }
+  .org-program-chairs  .chairs-category:last-child .chairs-title::before,
+  .org-program-chairs  .chairs-category:last-child .chairs-title::after {
+    width: 50px;
+  }
+  .chairs-category{
+    margin-bottom:0;
+  }
+  .best-paper-award-chairs{
+    padding: 0 2rem;
+  }
+  .chairs-row{
+    gap: 1rem;
+    margin-bottom:0;
+  }
+  .ww-chairs,.ddpv-chairs{
+    padding: 1rem 2rem;
+  }
 }
