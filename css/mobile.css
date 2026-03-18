@@ -124,7 +124,7 @@ body {
 .header {
     flex-direction: row;
     height: 56px;
-    padding: 0 20px;
+    padding: 0 20px 0 0;
     gap: 0;
     justify-content: space-between;
 }
@@ -314,5 +314,66 @@ body {
 .contact-btn {
     font-size: 18px;
     padding: 0.6rem 1.5rem;
+}
+
+/* ===== 10. 当前区域移动端适配 ===== */
+.program-chairs .container {
+    max-width: 100%;
+    padding: 0 1rem;
+}
+
+.chairs-row {
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.chairs-row .chairs-category {
+    min-width: 100%;
+}
+
+.chairs-row .chairs-title {
+    font-size: 24px;
+    padding: 0 0.5rem;
+}
+
+.chairs-row .chairs-title::before,
+.chairs-row .chairs-title::after {
+    width: 60px;
+}
+
+.chairs-row .chairs-title::before {
+    left: -65px;
+}
+
+.chairs-row .chairs-title::after {
+    right: -65px;
+}
+
+.chairs-row .chairs-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.chair-card-new {
+    width: 100%;
+    max-width: 280px;
+    height: 380px;
+    padding: 1rem 0.8rem 0.8rem;
+    margin: 0 auto;
+}
+
+.chair-card-new .chair-image {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 1.2rem;
+    border: 3px solid #D9D9D9;
+}
+
+.chair-name-new {
+    font-size: 16px;
+}
+
+.chair-affiliation.chair-name-new {
+    font-size: 14px;
 }
 }

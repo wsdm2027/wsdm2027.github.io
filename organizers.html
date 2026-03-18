@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>WSDM 2027</title>
+  <!-- 基础样式（无媒体查询） -->
+  <link rel="stylesheet" href="css/base.css">
+
+  <!-- 响应式样式（按从大到小顺序） -->
+  <link rel="stylesheet" href="css/desktop-xl.css" media="(min-width: 2560px)">
+  <link rel="stylesheet" href="css/desktop-lg.css" media="(min-width: 1920px)">
+  <link rel="stylesheet" href="css/desktop-md.css" media="(min-width: 1600px)">
+  <link rel="stylesheet" href="css/desktop-sm.css" media="(min-width: 1200px)">
+  <link rel="stylesheet" href="css/tablet.css" media="(max-width: 1199px)">
+  <link rel="stylesheet" href="css/mobile.css" media="(max-width: 480px)">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <a href="./index.html">
+        <div class="logo-container">
+          <img src="./images/logo.png" alt="Rectangle 19" class="logo-rectangle">
+        </div>
+      </a>
+    </div>
+
+    <!-- Desktop navigation -->
+    <div class="nav">
+      <div class="nav-item">
+        <a href="#">Program</a>
+        <span class="dropdown-icon"></span>
+        <div class="dropdown-menu">
+          <a href="#">Menu-1</a>
+          <a href="#">Menu-2</a>
+          <a href="#">Menu-3</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="#">WSDM Cup</a>
+      </div>
+      <div class="nav-item">
+        <a href="#">Attending</a>
+        <span class="dropdown-icon"></span>
+        <div class="dropdown-menu">
+          <a href="#">Menu-1</a>
+          <a href="#">Menu-2</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="#">Calls</a>
+        <span class="dropdown-icon"></span>
+        <div class="dropdown-menu">
+          <a href="#">Menu-1</a>
+          <a href="#">Menu-2</a>
+          <a href="#">Menu-3</a>
+          <a href="#">Menu-4</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="./organizers.html">Organizers</a>
+        
+      </div>
+      <div class="nav-item">
+        <a href="#">Sponsoring</a>
+        <span class="dropdown-icon"></span>
+        <div class="dropdown-menu">
+          <a href="#">Menu-1</a>
+          <a href="#">Menu-2</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="#">Venue & Travel</a>
+        <span class="dropdown-icon"></span>
+        <div class="dropdown-menu">
+          <a href="#">Menu-1</a>
+          <a href="#">Menu-2</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Desktop search -->
+    <div class="desktop-search">
+      <div class="search">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z"
+            stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- Right side container for search and menu -->
+    <div class="header-right">
+      <div class="search">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z"
+            stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+
+      <!-- Mobile menu button -->
+      <div class="mobile-menu-button">
+        <div class="menu-icon">
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav">
+    <div class="mobile-nav-content">
+      <div class="mobile-nav-header">
+        <div class="logo">
+          <a href="#">WSDM 2027</a>
+        </div>
+        <div class="close-button">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="mobile-nav-items">
+        <div class="mobile-nav-item">
+          <a href="#">WSDM 2027</a>
+        </div>
+        <div class="mobile-nav-item">
+          <a href="#">Program</a>
+          <div class="mobile-dropdown">
+            <a href="#">Menu-1</a>
+            <a href="#">Menu-2</a>
+            <a href="#">Menu-3</a>
+          </div>
+        </div>
+        <div class="mobile-nav-item">
+          <a href="#">WSDM Cup</a>
+        </div>
+        <div class="mobile-nav-item">
+          <a href="#">Attending</a>
+          <div class="mobile-dropdown">
+            <a href="#">Menu-1</a>
+            <a href="#">Menu-2</a>
+          </div>
+        </div>
+        <div class="mobile-nav-item">
+          <a href="#">Calls</a>
+          <div class="mobile-dropdown">
+            <a href="#">Menu-1</a>
+            <a href="#">Menu-2</a>
+            <a href="#">Menu-3</a>
+            <a href="#">Menu-4</a>
+          </div>
+        </div>
+        <div class="mobile-nav-item">
+          <a href="#">Organizers</a>
+          <div class="mobile-dropdown">
+            <a href="#">Menu-1</a>
+            <a href="#">Menu-2</a>
+          </div>
+        </div>
+        <div class="mobile-nav-item">
+          <a href="#">Sponsoring</a>
+          <div class="mobile-dropdown">
+            <a href="#">Menu-1</a>
+            <a href="#">Menu-2</a>
+            <a href="#">Menu-3</a>
+          </div>
+        </div>
+        <div class="mobile-nav-item">
+          <a href="#">Venue & Travel</a>
+          <div class="mobile-dropdown">
+            <a href="#">Menu-1</a>
+            <a href="#">Menu-2</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Main content -->
+  <main class="main-content">
+
+    <!-- Call for Papers -->
+    <section class="cfp-section org-section">
+      <h2>Organizers</h2>
+    </section>
+
+    <!-- Chairs Section -->
+    <section class="chairs-section org-general-chairs">
+      <div class="container">
+        <!-- General Chairs -->
+        <div class="chairs-category">
+          <h2 class="chairs-title">General Chairs</h2>
+          <div class="chairs-grid">
+            <div class="chair-card chair-card-2">
+              <div class="chair-image">
+                <img src="./images/chairs/HUANGXiao.jpg" alt="Xiao Huang">
+              </div>
+              <h3 class="chair-name">Xiao Huang</h3>
+              <p class="chair-affiliation">The Hong Kong Polytechnic University</p>
+            </div>
+            <div class="chair-card chair-card-2">
+              <div class="chair-image">
+                <img src="./images/chairs/yanghongxia.jpg" alt="Hongxia Yang">
+              </div>
+              <h3 class="chair-name">Hongxia Yang</h3>
+              <p class="chair-affiliation">The Hong Kong Polytechnic University</p>
+            </div>
+            <div class="chair-card chair-card-2">
+              <div class="chair-image">
+                <img src="./images/chairs/songyang.jpg" alt="Yang Song">
+              </div>
+              <h3 class="chair-name">Yang Song</h3>
+              <p class="chair-affiliation">Meta</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <section class="chairs-section program-chairs org-program-chairs">
+      <div class="container">
+        <!-- Program Chairs -->
+        <div class="chairs-category">
+          <h2 class="chairs-title">Program Chairs</h2>
+          <div class="chairs-grid">
+            <div class="chair-card chair-card-1">
+              <div class="chair-image">
+                <img src="./images/chairs/huxia.jpg" alt="Xia Hu">
+              </div>
+              <h3 class="chair-name chair-name-1">Xia Hu</h3>
+              <p class="chair-affiliation chair-name-1">Shanghai AI Lab</p>
+            </div>
+            <div class="chair-card chair-card-1">
+              <div class="chair-image">
+                <img src="./images/chairs/jamescaverlee.jpg" alt="James Caverlee">
+              </div>
+              <h3 class="chair-name chair-name-1">James Caverlee</h3>
+              <p class="chair-affiliation chair-name-1">Texas A&M University</p>
+            </div>
+            <div class="chair-card chair-card-1">
+              <div class="chair-image">
+                <img src="./images/chairs/changyi.jpg" alt="Yi Chang">
+              </div>
+              <h3 class="chair-name chair-name-1">Yi Chang</h3>
+              <p class="chair-affiliation chair-name-1">Jilin University</p>
+            </div>
+          </div>
+        </div>
+        <div class="chairs-category">
+          <h2 class="chairs-title">Associate Program Chairs</h2>
+          <div class="chairs-grid">
+            <div class="chair-card chair-card-3">
+              <div class="chair-image">
+                <img src="./images/chairs/raymondwong.jpg" alt="Raymond Wong">
+              </div>
+              <h3 class="chair-name chair-name-1">Raymond Wong</h3>
+              <p class="chair-affiliation chair-name-1">Hong Kong University of Science and Technology</p>
+            </div>
+            <div class="chair-card chair-card-3">
+              <div class="chair-image">
+                <img src="./images/chairs/liuninghao.png" alt="Ninghao Liu">
+              </div>
+              <h3 class="chair-name chair-name-1">Ninghao Liu</h3>
+              <p class="chair-affiliation chair-name-1"> The Hong Kong Polytechnic University</p>
+            </div>
+            <div class="chair-card chair-card-3">
+              <div class="chair-image">
+                <img src="./images/chairs/shaojing.jpg" alt="Jing Shao">
+              </div>
+              <h3 class="chair-name chair-name-1">Jing Shao</h3>
+              <p class="chair-affiliation chair-name-1">Shanghai AI Lab/Shanghai Jiao Tong University</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="chairs-section wtsp-chairs ">
+      <div class="container">
+        <div class="chairs-row">
+          <div class="chairs-category">
+            <h2 class="chairs-title">Workshop Chairs</h2>
+            <div class="chairs-grid">
+              <div class="chair-card chair-card-new chair-card-new-2">
+                <div class="chair-image">
+                  <img src="./images/chairs/huawen.png" alt="Wen Hua">
+                </div>
+                <h3 class="chair-name">Wen Hua</h3>
+                <p class="chair-affiliation">The Hong Kong Polytechnic University</p>
+              </div>
+              <div class="chair-card chair-card-new chair-card-new-2">
+                <div class="chair-image">
+                  <img src="./images/chairs/zhaoxiangyu.jpg" alt="Xiangyu Zhao">
+                </div>
+                <h3 class="chair-name">Xiangyu Zhao</h3>
+                <p class="chair-affiliation">The Hong Kong City University</p>
+              </div>
+            </div>
+          </div>
+          <div class="chairs-category">
+            <h2 class="chairs-title">Tutorial Chairs</h2>
+            <div class="chairs-grid">
+              <div class="chair-card chair-card-new chair-card-new-2">
+                <div class="chair-image">
+                  <img src="./images/chairs/renzhaochun.jpg" alt="Zhaochun Ren">
+                </div>
+                <h3 class="chair-name">Zhaochun Ren</h3>
+                <p class="chair-affiliation">Leiden University</p>
+              </div>
+              <div class="chair-card chair-card-new chair-card-new-2">
+                <div class="chair-image">
+                  <img src="./images/chairs/HarrieOosterhuis.jpg" alt="Harrie Oosterhuis">
+                </div>
+                <h3 class="chair-name">Harrie Oosterhuis</h3>  
+                <p class="chair-affiliation">Radboud University</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="chairs-row">
+          <div class="chairs-category">
+            <h2 class="chairs-title">Sponsor Chairs</h2>
+            <div class="chairs-grid">
+              <div class="chair-card chair-card-new chair-card-new-2">
+                <div class="chair-image">
+                  <img src="./images/chairs/xujianliang.png" alt="Jianliang Xu">
+                </div>
+                <h3 class="chair-name">Jianliang Xu</h3>
+                <p class="chair-affiliation">The Hong Kong Baptist University</p>
+              </div>
+              <div class="chair-card chair-card-new chair-card-new-2">
+                <div class="chair-image">
+                  <img src="./images/chairs/carlyang.jpg" alt="Carl Yang">
+                </div>
+                <h3 class="chair-name">Carl Yang</h3>
+                <p class="chair-affiliation">The Hong Kong Polytechnic University</p>
+              </div>
+            </div>
+          </div>
+          <div class="chairs-category">
+            <h2 class="chairs-title">Publicity Chairs</h2>
+            <div class="chairs-grid">
+              <div class="chair-card chair-card-new chair-card-new-2">
+                <div class="chair-image">
+                  <img src="./images/chairs/zhaoyue.jpg" alt="Yue Zhao">
+                </div>
+                <h3 class="chair-name">Yue Zhao</h3>
+                <p class="chair-affiliation">University of Southern California</p>
+              </div>
+              <div class="chair-card chair-card-new chair-card-new-2">
+                <div class="chair-image">
+                  <img src="./images/chairs/songyangqiu.jpg" alt="Yangqiu Song">
+                </div>
+                <h3 class="chair-name">Yangqiu Song</h3>
+                <p class="chair-affiliation">Hong Kong University of Science and Technology</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="chairs-section ww-chairs">
+      <div class="chairs-row">
+        <div class="chairs-category">
+          <h2 class="chairs-title">WSDM Day Chairs</h2>
+          <div class="chairs-grid">
+            <div class="chair-card chair-card-new chair-card-3">
+              <div class="chair-image">
+                <img src="./images/chairs/lijundong.jpg" alt="Jundong Li">
+              </div>
+              <h3 class="chair-name chair-name-new">Jundong Li</h3>
+              <p class="chair-affiliation chair-name-new">University of Virginia</p>
+            </div>
+            <div class="chair-card chair-card-new chair-card-3">
+              <div class="chair-image">
+                <img src="./images/chairs/FangYuan.jpg" alt="Yuan Fang">
+              </div>
+              <h3 class="chair-name chair-name-new">Yuan Fang</h3>
+              <p class="chair-affiliation chair-name-new">Singapore Management University</p>
+            </div>
+          </div>
+        </div>
+        <div class="chairs-category">
+          <h2 class="chairs-title">WSDM Cup Chairs</h2>
+          <div class="chairs-grid">
+            <div class="chair-card chair-card-new chair-card-3">
+              <div class="chair-image">
+                <img src="./images/chairs/kyuminlee.jpg" alt="Kyumin Lee">
+              </div>
+              <h3 class="chair-name chair-name-new">Kyumin Lee</h3>
+              <p class="chair-affiliation chair-name-new">Worcester Polytechnic Institute</p>
+            </div>
+            <div class="chair-card chair-card-new chair-card-3">
+              <div class="chair-image">
+                <img src="./images/chairs/wangxinrun.jpg" alt="Xinrun Wang">
+              </div>
+              <h3 class="chair-name chair-name-new">Xinrun Wang</h3>
+              <p class="chair-affiliation chair-name-new">Singapore Management University</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="chairs-section industry-chairs">
+      <div class="chairs-row">
+        <div class="chairs-category">
+          <h2 class="chairs-title">Industry Chair</h2>
+          <div class="chairs-grid" style="display: block;">
+            <div class="chair-card chair-card-new chair-card-3">
+              <div class="chair-image">
+                <img src="./images/chairs/jiangbian.jpg" alt="Jiang Bian">
+              </div>
+              <h3 class="chair-name chair-name-new">Jiang Bian</h3>
+              <p class="chair-affiliation chair-name-new">Microsoft Research Asia</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="chairs-section best-paper-award-chairs">
+      <div class="container">
+        <!-- General Chairs -->
+        <div class="chairs-category">
+          <h2 class="chairs-title">Best Paper Award Chairs</h2>
+          <div class="chairs-grid">
+            <div class="chair-card chair-card-1">
+              <div class="chair-image">
+                <img src="./images/chairs/liuhuan.jpg" alt="Huan Liu">
+              </div>
+              <h3 class="chair-name chair-name-new">Huan Liu</h3>
+              <p class="chair-affiliation chair-name-new">Arizona State University</p>
+            </div>
+            <div class="chair-card chair-card-1">
+              <div class="chair-image">
+                <img src="./images/chairs/liqing.jpg" alt="Qing Li">
+              </div>
+              <h3 class="chair-name chair-name-new">Qing Li</h3>
+              <p class="chair-affiliation chair-name-new">The Hong Kong Polytechnic University</p>
+            </div>
+            <div class="chair-card chair-card-1">
+              <div class="chair-image">
+                <img src="./images/chairs/MaartendeRijke.jpg" alt="Maarten de Rijke">
+              </div>
+              <h3 class="chair-name chair-name-new">Maarten de Rijke</h3>
+              <p class="chair-affiliation chair-name-new">University of Amsterdam</p>
+            </div>
+          </div>
+        </div>
+        <div class="chairs-category">
+          <div class="chairs-grid chairs-grid-small">
+            <div class="chair-card chair-card-1">
+              <div class="chair-image">
+                <img src="./images/chairs/irwinking.jpg" alt="Irwin King">
+              </div>
+              <h3 class="chair-name chair-name-new">Irwin King</h3>
+              <p class="chair-affiliation chair-name-new">Chinese University of Hong Kong</p>
+            </div>
+            <div class="chair-card chair-card-1">
+              <div class="chair-image">
+                <img src="./images/chairs/yinhongzhi.jpg" alt="Hongzhi Yin">
+              </div>
+              <h3 class="chair-name chair-name-new">Hongzhi Yin</h3>
+              <p class="chair-affiliation chair-name-new">University of Queensland</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="chairs-section ddpv-chairs ">
+      <div class="container">
+        <div class="chairs-row">
+          <div class="chairs-category">
+            <h2 class="chairs-title">Doctoral Consortium Chairs</h2>
+            <div class="chairs-grid">
+              <div class="chair-card chair-card-new chair-card-new-2">
+                <div class="chair-image">
+                  <img src="./images/chairs/TylerDerr.jpg" alt="Tyler Derr">
+                </div>
+                <h3 class="chair-name">Tyler Derr</h3>
+                <p class="chair-affiliation"> Vanderbilt University</p>
+              </div>
+              <div class="chair-card chair-card-new chair-card-new-2">
+                <div class="chair-image">
+                  <img src="./images/chairs/dumengnan.jpg" alt="Mengnan Du">
+                </div>
+                <h3 class="chair-name">Mengnan Du</h3>
+                <p class="chair-affiliation">Chinese University of Hong Kong, Shenzhen</p>
+              </div>
+            </div>
+          </div>
+          <div class="chairs-category">
+            <h2 class="chairs-title">Demo Chairs</h2>
+            <div class="chairs-grid">
+              <div class="chair-card chair-card-new  chair-card-new-2">
+                <div class="chair-image">
+                  <img src="./images/chairs/zouna.jpg" alt="Na Zou">
+                </div>
+                <h3 class="chair-name">Na Zou</h3>
+                <p class="chair-affiliation">Shanghai AI Lab</p>
+              </div>
+              <div class="chair-card chair-card-new  chair-card-new-2">
+                <div class="chair-image">
+                  <img src="./images/chairs/chenchen.jpg" alt="Chen Chen">
+                </div>
+                <h3 class="chair-name">Chen Chen</h3>
+                <p class="chair-affiliation">University of Virginia</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="chairs-row">
+          <div class="chairs-category">
+            <h2 class="chairs-title">Proceedings Chairs</h2>
+            <div class="chairs-grid" style="display: block;">
+              <div class="chair-card chair-card-new  chair-card-new-2">
+                <div class="chair-image">
+                  <img src="./images/chairs/tanqiaoyu.jpg" alt="Qiaoyu Tan">
+                </div>
+                <h3 class="chair-name">Qiaoyu Tan</h3>
+                <p class="chair-affiliation">New York University Shanghai</p>
+              </div>
+              
+            </div>
+          </div>
+          <div class="chairs-category">
+            <h2 class="chairs-title">Volunteer Chairs</h2>
+            <div class="chairs-grid">
+              <div class="chair-card chair-card-new  chair-card-new-2">
+                <div class="chair-image">
+                  <img src="./images/chairs/Zhangqinggang.jpg" alt="Qinggang Zhang">
+                </div>
+                <h3 class="chair-name ">Qinggang Zhang</h3>
+                <p class="chair-affiliation ">The Hong Kong Polytechnic University</p>
+              </div>
+              <div class="chair-card chair-card-new  chair-card-new-2">
+                <div class="chair-image">
+                  <img src="./images/chairs/Zhouhuachi.jpg" alt="Yangqiu Song">
+                </div>
+                <h3 class="chair-name ">Huachi Zhou</h3>
+                <p class="chair-affiliation ">The Hong Kong Polytechnic University</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+      <h2>WSDM 2027</h2>
+      <div class="footer-bottom">
+        <p>© 2027, WSDM 2027. All right reserved.</p>
+        <div class="footer-links">
+          <a href="#">Imprint</a>
+          <a href="#">Private Policy</a>
+          <a href="#">Cookie Policy (EU)</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const mobileMenuBtn = document.querySelector('.mobile-menu-button');
+        const closeBtn = document.querySelector('.close-button');
+        const mobileNav = document.querySelector('.mobile-nav');
+
+        if (mobileMenuBtn) {
+          mobileMenuBtn.addEventListener('click', function () {
+            mobileNav.classList.add('active');
+          });
+        }
+
+        if (closeBtn) {
+          closeBtn.addEventListener('click', function () {
+            mobileNav.classList.remove('active');
+          });
+        }
+
+        // 点击菜单外部关闭菜单
+        document.addEventListener('click', function (event) {
+          if (mobileNav.classList.contains('active') &&
+            !mobileNav.contains(event.target) &&
+            !mobileMenuBtn.contains(event.target)) {
+            mobileNav.classList.remove('active');
+          }
+        });
+
+        // 移动端下拉菜单切换
+        const mobileNavItems = document.querySelectorAll('.mobile-nav-item');
+        mobileNavItems.forEach(item => {
+          const link = item.querySelector('a');
+          if (link.nextElementSibling && link.nextElementSibling.classList.contains('dropdown-icon')) {
+            link.addEventListener('click', function (e) {
+              e.preventDefault();
+              item.classList.toggle('active');
+            });
+          }
+        });
+      });
+    </script>
+</body>
+
+</html>
