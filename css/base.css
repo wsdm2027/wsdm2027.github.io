@@ -1366,6 +1366,19 @@ body {
   background-size: cover;
   background-position: center;
 }
+.best-paper-award-chairs .chair-card,
+.org-program-chairs .chair-card,   
+.org-general-chairs .chair-card{
+  width: 367.184px;
+  height: 475.415px;
+}
+.best-paper-award-chairs .chair-card .chair-image,
+.org-program-chairs .chair-card .chair-image, 
+.org-general-chairs .chair-card .chair-image{
+  width: 200px;
+  height: 200px;
+}
+
 
 /** program overview section css */
 .overview-main-content{

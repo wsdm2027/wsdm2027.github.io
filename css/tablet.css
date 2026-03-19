@@ -27,7 +27,7 @@
     /* 调整头部布局 */
     .header {
         justify-content: space-between;
-        padding: 0 20px;
+        padding: 0 20px 0 0;
     }
     
     /* 移动端导航样式 - 从图片看是深红色背景 */
@@ -152,5 +152,314 @@
     .box1, .box2, .box3 {
         width: 100%;
         min-width: auto;
+    }
+
+    /* 基础样式调整 */
+    body {
+        font-size: 15px;
+    }
+    
+    /* 增大内边距 */
+    .hero {
+        padding: 60px 20px 40px;
+    }
+    
+    .info-container {
+        padding: 0 1.5rem;
+        gap: 1.5rem;
+    }
+    
+    .box1, .box2, .box3 {
+        padding: 1.2rem;
+    }
+    
+    .cfp-section {
+        padding: 3rem 1.5rem;
+    }
+    
+    .topics-section {
+        padding: 3rem 1.5rem;
+        margin: 20px 1.5rem 0;
+    }
+    
+    .chairs-section {
+        padding: 3rem 1.5rem;
+    }
+    
+    .chairs-section.best-paper-award-chairs {
+        padding: 0rem 1.5rem;
+    }
+    
+    .contact-section {
+        padding: 3rem 1.5rem;
+    }
+    
+    /* 调整网格为1列（移动端样式） */
+    .speakers-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        justify-content: center;
+    }
+    
+    .chairs-grid {
+        grid-template-columns: 300px;
+        gap: 1.5rem;
+        justify-content: center;
+    }
+    
+    .chairs-grid.chairs-grid-small {
+        grid-template-columns: 300px;
+        justify-content: center;
+    }
+    
+    .chairs-row {
+        flex-direction: column;
+        gap: 2rem;
+        margin-bottom: 0;
+    }
+    
+    .chairs-row .chairs-category {
+        min-width: 100%;
+    }
+    
+    .chairs-row .chairs-grid {
+        grid-template-columns: 300px;
+        gap: 1.5rem;
+        justify-content: center;
+    }
+    
+    .topics-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* 微调字体大小 */
+    .hero h1 {
+        font-size: 28px;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+    }
+    
+    .info-label {
+        font-size: 22px;
+    }
+    
+    .info-value {
+        font-size: 22px;
+    }
+    
+    .registration-text h3 {
+        font-size: 24px;
+    }
+    
+    .registration-text p {
+        font-size: 22px;
+    }
+    
+    .registration-button a {
+        font-size: 24px;
+    }
+    
+    .intro-section h3 {
+        font-size: 28px;
+    }
+    
+    .intro-section p {
+        font-size: 24px;
+    }
+    
+    .speakers-section h2 {
+        font-size: 32px;
+    }
+    
+    .speaker h3 {
+        font-size: 24px;
+    }
+    
+    .speaker p {
+        font-size: 20px;
+    }
+    
+    .cfp-section h2 {
+        font-size: 32px;
+        margin-bottom: 100px;
+    }
+    
+    .cfp-section h3 {
+        font-size: 24px;
+    }
+    
+    .cfp-section p {
+        font-size: 20px;
+    }
+    
+    .cfp-section ul {
+        font-size: 20px;
+    }
+    
+    .topics-section h2 {
+        font-size: 32px;
+    }
+    
+    .topics-section .topics-description {
+        font-size: 16px;
+    }
+    
+    .topic-list li {
+        font-size: 16px;
+    }
+    
+    .chairs-title {
+        font-size: 24px;
+        padding: 0 0.5rem;
+    }
+    
+    .chairs-title::before {
+        left: -45px;
+        width: 50px;
+    }
+    
+    .chairs-title::after {
+        right: -45px;
+        width: 50px;
+    }
+    
+    .org-general-chairs .chairs-title::before,
+    .org-general-chairs .chairs-title::after {
+        width: 50px;
+    }
+    
+    .org-program-chairs .chairs-title::before,
+    .org-program-chairs .chairs-title::after {
+        width: 50px;
+    }
+    
+    .chair-name {
+        font-size: 24px;
+    }
+    
+    .chair-affiliation {
+        font-size: 20px;
+    }
+    
+    .contact-content p {
+        font-size: 22px;
+    }
+    
+    .contact-btn {
+        font-size: 22px;
+    }
+    
+    .footer h2 {
+        font-size: 24px;
+    }
+    
+    /* 调整卡片大小（移动端样式） */
+    .speaker {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        min-height: 350px;
+        margin: 0 auto;
+        background-position: top left;
+    }
+    
+    .speaker img {
+        width: 160px;
+        height: 160px;
+        margin-bottom: 1.5rem;
+    }
+    
+    .chair-card {
+        width: 100%;
+        max-width: 300px;
+        height: 380px;
+        margin: 0 auto;
+    }
+    
+    .chair-image {
+        width: 180px;
+        height: 180px;
+        margin-bottom: 1.2rem;
+    }
+    
+    .chair-card-new {
+        width: 100%;
+        max-width: 300px;
+        height: 380px;
+        padding: 1rem 0.8rem 0.8rem;
+        margin: 0 auto;
+    }
+    
+    .best-paper-award-chairs .chair-card,
+    .org-program-chairs .chair-card,   
+    .org-general-chairs .chair-card,
+    .program-chairs .chair-card {
+        width: 300px;
+        height: 380px;
+    }
+    
+    .best-paper-award-chairs .chair-card .chair-image,
+    .org-program-chairs .chair-card .chair-image, 
+    .org-general-chairs .chair-card .chair-image,
+    .program-chairs .chair-card .chair-image {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .chairs-category {
+        margin-bottom: 0;
+    }
+    
+    /* 调整industry-chairs和best-paper-award-chairs之间的间距 */
+    .industry-chairs {
+        margin-bottom: 1rem;
+    }
+    
+    .best-paper-award-chairs {
+        margin-top: 1rem;
+    }
+    
+    /* 调整时间线（移动端样式） */
+    .dates-section {
+        padding: 0;
+    }
+    
+    .dates-timeline {
+        flex-direction: column;
+    }
+    
+    .timeline-item:not(:first-child),
+    .timeline-item:not(:last-child) {
+        margin-left: 0;
+        margin-right: 0;
+        clip-path: none;
+    }
+    
+    .timeline-item {
+        min-height: 60px;
+        padding: 1.5rem 1rem;
+    }
+    
+    .timeline-item h3 {
+        font-size: 20px;
+    }
+    
+    .timeline-item p {
+        font-size: 16px;
+    }
+    
+    /* 调整导航样式 */
+    .mobile-nav-header h2 {
+        font-size: 24px;
+    }
+    
+    .mobile-nav-item a {
+        font-size: 17px;
+    }
+    
+    .mobile-dropdown a {
+        font-size: 15px;
     }
 }

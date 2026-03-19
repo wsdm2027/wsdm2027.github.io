@@ -231,7 +231,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 80px;
+    width: 50px;
     height: 2px;
     background: #961F12;
   }
@@ -254,6 +254,7 @@
     position: relative;
     display: inline-block;
     padding: 0 2rem;
+    max-width: 350px;
   }
 
   /* 6.2 主席卡片 */
@@ -522,15 +523,15 @@
 
   .chairs-row .chairs-title::before,
   .chairs-row .chairs-title::after {
-    width: 60px;
+    width: 30px;
   }
 
   .chairs-row .chairs-title::before {
-    left: -65px;
+    left: -38px;
   }
 
   .chairs-row .chairs-title::after {
-    right: -65px;
+    right: -38px;
   }
 
   .chairs-row .chairs-grid {
@@ -556,23 +557,38 @@
   .chair-name-new {
     font-size: 16px;
   }
+.org-general-chairs{
+padding: 2rem 2rem 0 2rem;
+  }
+.best-paper-award-chairs .chair-card,
+.org-program-chairs .chair-card,   
+.org-general-chairs .chair-card{
+  width: 280px;
+  height: 380px;
+}
+.best-paper-award-chairs .chair-card .chair-image,
+.org-program-chairs .chair-card .chair-image, 
+.org-general-chairs .chair-card .chair-image{
+  width: 180px;
+  height: 180px;
+}
 
   .chair-affiliation.chair-name-new {
     font-size: 14px;
   }
    .chairs-title::before{
-    left: 0;
+    left: -45px;
   }
   .chairs-title::after{
-    right: 0;
+    right: -45px;
   }
   .org-general-chairs .chairs-title::before,
   .org-general-chairs .chairs-title::after {
-    width: 120px;
+    width: 50px;
   }
   .org-program-chairs .chairs-title::before,
   .org-program-chairs .chairs-title::after {
-    width: 120px;
+    width: 50px;
   }
   .org-program-chairs  .chairs-category:last-child .chairs-title::before,
   .org-program-chairs  .chairs-category:last-child .chairs-title::after {
@@ -584,11 +600,21 @@
   .best-paper-award-chairs{
     padding: 0 2rem;
   }
+  .ddpv-chairs .chairs-title,
+  .best-paper-award-chairs .chairs-title{
+    max-width: 240px;
+  }
   .chairs-row{
     gap: 1rem;
     margin-bottom:0;
   }
   .ww-chairs,.ddpv-chairs{
     padding: 1rem 2rem;
+  }
+  .chairs-title{
+    font-size: 24px;
+  }
+  .ddpv-chairs .container{
+    padding: 0;
   }
 }

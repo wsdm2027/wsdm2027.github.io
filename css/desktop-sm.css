@@ -73,7 +73,7 @@
     }
     
     .cfp-section {
-        padding: 4.6rem; /* 6 * 0.7656 ≈ 4.6rem */
+        padding: 1rem; /* 6 * 0.7656 ≈ 4.6rem */
         margin-top: 61px; /* 80 * 0.7656 ≈ 61px */
     }
     
@@ -181,6 +181,12 @@
     
     .chair-affiliation.chair-name-new {
         font-size: 17px;
+    }
+    .best-paper-award-chairs .chair-card,
+    .org-program-chairs .chair-card,
+    .org-general-chairs .chair-card{
+      width: 281px;
+      height: 410.179px;
     }
 }
 @media (max-width: 1200px) {
@@ -369,10 +375,22 @@
 	}
     
     /* 新增：当前区域适配 */
-    .program-chairs .container {
+    .program-chairs .container,
+    .org-general-chairs .container {
         max-width: 1200px;
         padding: 0 1rem;
     }
+    
+    /* 调整org-general-chairs的网格布局，保持一排三个 */
+    .best-paper-award-chairs .chair-card,
+    .org-program-chairs .chair-card,
+    .org-general-chairs .chair-card {
+        width: 229.5px;
+        height: 297.13px;
+        margin: 0 auto;
+    }
+    
+    
     
     .chairs-row {
         gap: 1rem;
@@ -425,4 +443,11 @@
     .chair-affiliation.chair-name-new {
         font-size: 14px;
     }
+    .best-paper-award-chairs .chair-card .chair-image,
+    .org-program-chairs .chair-card .chair-image, 
+    .org-general-chairs .chair-card .chair-image{
+      width: 125px;
+      height: 125px;
+    }
+
 }

@@ -297,4 +297,10 @@
     .chair-affiliation.chair-name-new {
         font-size: 18px;
     }
+
+     
+    .org-general-chairs .chair-card{
+      width: 281px;
+      height: 410.179px;
+    }
 }
