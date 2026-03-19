@@ -188,6 +188,13 @@
       width: 281px;
       height: 410.179px;
     }
+
+    .best-paper-award-chairs .chair-card .chair-image,
+    .org-program-chairs .chair-card .chair-image, 
+    .org-general-chairs .chair-card .chair-image{
+      width: 153px;
+      height: 153px;
+    }
 }
 @media (max-width: 1200px) {
     /* 按照1920px的比例缩放 (1200/1920 = 0.625) */

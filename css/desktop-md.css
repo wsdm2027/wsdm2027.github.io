@@ -61,6 +61,18 @@
     .chair-affiliation.chair-name-new {
         font-size: 18px;
     }
+    .best-paper-award-chairs .chair-card,
+    .org-program-chairs .chair-card,
+    .org-general-chairs .chair-card{
+      width: 306px;
+      height: 396.17px;
+    }
+    .best-paper-award-chairs .chair-card .chair-image,
+    .org-program-chairs .chair-card .chair-image, 
+    .org-general-chairs .chair-card .chair-image{
+      width: 167px;
+      height: 167px;
+    }
 }
 
 @media (max-width: 1600px) {
@@ -302,5 +314,11 @@
     .org-general-chairs .chair-card{
       width: 281px;
       height: 410.179px;
+    }
+    .best-paper-award-chairs .chair-card .chair-image,
+    .org-program-chairs .chair-card .chair-image, 
+    .org-general-chairs .chair-card .chair-image{
+      width: 153px;
+      height: 153px;
     }
 }
