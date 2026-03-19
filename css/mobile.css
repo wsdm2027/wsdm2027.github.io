@@ -582,6 +582,9 @@ padding: 2rem 2rem 0 2rem;
   .chairs-title::after{
     right: -45px;
   }
+  .org-program-chairs .chairs-title{
+    max-width: 250px;
+  }
   .org-general-chairs .chairs-title::before,
   .org-general-chairs .chairs-title::after {
     width: 50px;
