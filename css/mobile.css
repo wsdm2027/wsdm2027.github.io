@@ -620,4 +620,92 @@ padding: 2rem 2rem 0 2rem;
   .ddpv-chairs .container{
     padding: 0;
   }
-}
+
+  /* ====== Venue & Travel 页面移动端适配 ====== */
+  .conference-Venue {
+    padding: 1.5rem 0.8rem;
+  }
+  
+  .conference-Venue .container {
+    padding: 0 0.8rem;
+  }
+  
+  .venue-layout {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .venue-left {
+    min-width: 100%;
+  }
+  
+  .venue-right {
+    min-width: 100%;
+  }
+  
+  .venue-title {
+    font-size: 20px;
+    margin-bottom: 0.8rem;
+  }
+  
+  .venue-description {
+    font-size: 14px;
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+  }
+  
+  .venue-location {
+    padding-top: 1.2rem;
+  }
+  
+  .venue-location p {
+    font-size: 16px;
+  }
+  
+  .conference-reach {
+    padding: 1.5rem 0.8rem;
+  }
+  
+  .conference-reach .container {
+    padding: 0 0.8rem;
+  }
+  
+  .how-to-reach-title {
+    width: 100%;
+    height: auto;
+    font-size: 24px;
+  }
+  
+  .how-to-reach-sub-title {
+    font-size: 14px;
+    margin-top: 12px;
+  }
+
+  .how-to-reach-title::before,.how-to-reach-title::after{
+    display: none;
+  }
+  
+  .how-to-reach-item {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .item-content {
+    padding: 0 0.8rem;
+  }
+  
+  .item-title {
+    font-size: 18px;
+    margin-bottom: 0.6rem;
+  }
+  
+  .item-text {
+    font-size: 14px;
+    margin-bottom: 0.6rem;
+    line-height: 1.4;
+  }
+  
+  .item-note {
+    font-size: 14px;
+  }
+}  

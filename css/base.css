@@ -1386,6 +1386,217 @@ body {
 }
 
 
+
+.conference-overview h2{
+  margin-bottom: 0;
+}
+
+.conference-Venue {
+  padding: 4rem 2rem;
+  background: #ffffff;
+}
+
+.conference-Venue .container {
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+.venue-layout {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  align-items: flex-start;
+}
+
+.venue-left {
+  flex: 1;
+  min-width: 400px;
+}
+
+.venue-image {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.venue-image-title {
+  color: #000000;
+  font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+}
+
+.venue-right {
+  flex: 1;
+  min-width: 400px;
+}
+
+.venue-title {
+  color: #000000;
+  font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.venue-description  {
+  color: #000000;
+  font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.venue-location {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 2rem;
+}
+
+.location-icon {
+  flex-shrink: 0;
+}
+
+.venue-location p {
+  color: #961F12;
+  font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.conference-reach {
+  padding: 4rem 2rem;
+  background: #F2F2F2;
+}
+
+.conference-reach .container {
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.how-to-reach-title {
+  width: 617px;
+  height: 48px;
+  text-align: center;
+  letter-spacing: 0;
+  color: #961f12;
+  font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.how-to-reach-sub-title{
+  margin-top: 20px;
+  color: #000;
+  font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.how-to-reach-title::before,
+.how-to-reach-title::after {
+  content: '';
+  position: absolute;
+  width: 77px;
+  height: 4px;
+  background: #961F12;
+}
+
+.how-to-reach-title::before {
+  left: -50px;
+}
+
+.how-to-reach-title::after {
+  right: -50px;
+}
+
+.how-to-reach-content {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.how-to-reach-item {
+  display: flex;
+  gap: 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.item-image {
+  flex: 1;
+  overflow: hidden;
+}
+
+.transport-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item-content {
+  flex: 1;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.item-title {
+  color: #961F12;
+    font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    margin-bottom: 1rem;
+}
+
+.item-text {
+  color: #000;
+  font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+  font-size: 26px;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-style: normal;
+  line-height: normal;
+}
+.item-text span{
+  font-weight: 900;
+}
+.item-note {
+  color: #000;
+  font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.item-note a {
+  color: #666BF6;
+  text-decoration: none;
+}
+
+.item-note a:hover {
+  text-decoration: underline;
+}
+
 /** program overview section css */
 .overview-main-content{
   max-width: 100%;
