@@ -6,7 +6,7 @@
     
     /* 新增：当前区域适配 */
     .program-chairs .container {
-        max-width: 1919px;
+        /* max-width: 1919px; */
         padding: 0 1.7rem;
     }
     
@@ -35,9 +35,11 @@
     .chairs-row .chairs-title::after {
         right: -92px;
     }
-    
+    .chairs-grid{
+       grid-template-columns:  repeat(auto-fit, minmax(457px, 1fr));
+    }
     .chairs-row .chairs-grid {
-        grid-template-columns: repeat(2, 306px);
+        grid-template-columns:  repeat(auto-fit, minmax(306px, 1fr));
         gap: 1.7rem;
     }
     
@@ -285,7 +287,7 @@
     }
     
     .chairs-row .chairs-grid {
-        grid-template-columns: repeat(2, 306px);
+        grid-template-columns: repeat(3, 306px);
         gap: 1.7rem;
     }
     

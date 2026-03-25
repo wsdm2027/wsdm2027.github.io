@@ -9,6 +9,7 @@ body {
   font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
   line-height: 1.6;
   color: #333;
+  overflow-x: hidden;
 }
 
 /* ====== 布局容器 ====== */
@@ -954,7 +955,7 @@ body {
 }
 
 .chairs-section .container {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
 }
 
@@ -1014,22 +1015,25 @@ body {
 
 .chairs-grid {
   display: grid;
-  grid-template-columns: repeat(3, 458px);
+  grid-template-columns: repeat(auto-fit, minmax(458px, 1fr));
   gap: 2rem;
   margin-bottom: 2rem;
   justify-content: center;
+  max-width: 100%;
 }
 
 .chairs-grid.chairs-grid-small {
-  grid-template-columns: repeat(2, 458px);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   justify-content: center;
+  max-width: 100%;
 }
 
 .chair-card {
   background-image: url('../images/chair-card-bg.png');
   background-size: cover;
   background-position: center;
-  width: 458px;
+  width: 100%;
+  max-width: 458px;
   height: 593px;
   margin: 0 auto;
   padding: 2rem 1rem 1rem;
@@ -1058,7 +1062,7 @@ body {
 
 .chair-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); */
 }
 
 .chair-image {
@@ -1274,8 +1278,9 @@ body {
 
 .chairs-row .chairs-category {
   flex: 1;
-  min-width: 500px;
+  min-width: 300px;
   margin-bottom: 0;
+  max-width: 100%;
 }
 
 .chairs-row .chairs-title {
@@ -1296,8 +1301,9 @@ body {
 }
 
 .chairs-row .chairs-grid {
-  grid-template-columns: repeat(2, 367.184px);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1rem;
+  max-width: 100%;
 }
 
 .chair-card-new {
@@ -1319,7 +1325,7 @@ body {
 
 .chair-card-new:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  
 }
 
 .chair-name-new {

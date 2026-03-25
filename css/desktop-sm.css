@@ -102,16 +102,20 @@
     
     /* 主席区域适配 */
     .chairs-grid {
-        grid-template-columns: repeat(3, 351px);
+        grid-template-columns: repeat(auto-fit, minmax(351px, 1fr));
+        max-width: 100%;
     }
     
     .chairs-grid.chairs-grid-small {
-        grid-template-columns: repeat(2, 351px);
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        max-width: 100%;
     }
     
     .chair-card {
-        width: 351px;
+        width: 100%;
+        max-width: 351px;
         height: 454px;
+        margin: 0 auto;
     }
     
     .chair-image {
@@ -136,7 +140,8 @@
     }
     
     .chairs-row .chairs-category {
-        min-width: 480px;
+        min-width: 350px;
+        flex: 1 1 350px;
     }
     
     .chairs-row .chairs-title {
@@ -158,8 +163,9 @@
     }
     
     .chairs-row .chairs-grid {
-        grid-template-columns: repeat(2, 281px);
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 1.5rem;
+        max-width: 100%;
     }
     
     .chair-card-new {
@@ -186,7 +192,7 @@
     .org-program-chairs .chair-card,
     .org-general-chairs .chair-card{
       width: 281px;
-      height: 410.179px;
+      height: 364.83px;
     }
 
     .best-paper-award-chairs .chair-card .chair-image,
@@ -326,17 +332,21 @@
     
     /* 主席区域 */
     .chairs-grid {
-        grid-template-columns: repeat(3, 286px);
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        max-width: 100%;
     }
     
     .chairs-grid.chairs-grid-small {
-        grid-template-columns: repeat(2, 286px);
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        max-width: 100%;
     }
     
     .chair-card {
-        width: 286px;
+        width: 100%;
+        max-width: 286px;
         height: 371px;
         padding: 1.2rem 0.8rem 0.8rem;
+        margin: 0 auto;
     }
     
     .chair-image {
@@ -404,7 +414,8 @@
     }
     
     .chairs-row .chairs-category {
-        min-width: 400px;
+        min-width: 300px;
+        flex: 1 1 300px;
     }
     
     .chairs-row .chairs-title {
@@ -426,8 +437,9 @@
     }
     
     .chairs-row .chairs-grid {
-        grid-template-columns: repeat(2, 229.5px);
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 0.8rem;
+        max-width: 100%;
     }
     
     .chair-card-new {
