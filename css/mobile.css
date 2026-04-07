@@ -708,4 +708,8 @@ padding: 2rem 2rem 0 2rem;
   .item-note {
     font-size: 14px;
   }
+
+  .cffp-section{
+    padding: 1.5rem 1rem;
+  }
 }  

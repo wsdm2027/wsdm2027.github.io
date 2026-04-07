@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>WSDM 2027</title>
+  <!-- 基础样式（无媒体查询） -->
+  <link rel="stylesheet" href="css/base.css">
+
+  <!-- 响应式样式（按从大到小顺序） -->
+  <link rel="stylesheet" href="css/desktop-xl.css" media="(min-width: 2560px)">
+  <link rel="stylesheet" href="css/desktop-lg.css" media="(min-width: 1920px)">
+  <link rel="stylesheet" href="css/desktop-md.css" media="(min-width: 1600px)">
+  <link rel="stylesheet" href="css/desktop-sm.css" media="(min-width: 1200px)">
+  <link rel="stylesheet" href="css/tablet.css" media="(max-width: 1199px)">
+  <link rel="stylesheet" href="css/mobile.css" media="(max-width: 480px)">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <a href="./index.html">
+        <div class="logo-container">
+          <img src="./images/logo.png" alt="Rectangle 19" class="logo-rectangle">
+        </div>
+      </a>
+    </div>
+
+    <!-- Desktop navigation -->
+    <div class="nav">
+      <div class="nav-item">
+        <a href="#">Program</a>
+        <span class="dropdown-icon"></span>
+        <div class="dropdown-menu">
+          <a href="./program-overview.html">Overview</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="#">WSDM Cup</a>
+      </div>
+      <div class="nav-item">
+        <a href="#">Attending</a>
+        <span class="dropdown-icon"></span>
+        <div class="dropdown-menu">
+          <a href="#">Menu-1</a>
+          <a href="#">Menu-2</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="#">Calls</a>
+        <span class="dropdown-icon"></span>
+        <div class="dropdown-menu">
+          <a href="./cffp.html">Call for Full Papers</a>
+          <a href="#">Call for Short Papers</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="./organizers.html">Organizers</a>
+
+      </div>
+      <div class="nav-item">
+        <a href="#">Sponsoring</a>
+        <span class="dropdown-icon"></span>
+        <div class="dropdown-menu">
+          <a href="#">Menu-1</a>
+          <a href="#">Menu-2</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="./tavel-venue.html">Venue & Travel</a>
+
+      </div>
+    </div>
+
+    <!-- Desktop search -->
+    <div class="desktop-search">
+      <div class="search">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z"
+            stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- Right side container for search and menu -->
+    <div class="header-right">
+      <div class="search">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z"
+            stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+
+      <!-- Mobile menu button -->
+      <div class="mobile-menu-button">
+        <div class="menu-icon">
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav">
+    <div class="mobile-nav-content">
+      <div class="mobile-nav-header">
+        <div class="logo">
+          <a href="./index.html">WSDM 2027</a>
+        </div>
+        <div class="close-button">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="mobile-nav-items">
+        <div class="mobile-nav-item">
+          <a href="./index.html">WSDM 2027</a>
+        </div>
+        <div class="mobile-nav-item">
+          <a href="#">Program</a>
+          <div class="mobile-dropdown">
+            <a href="./program-overview.html">Overview</a>
+          </div>
+        </div>
+        <div class="mobile-nav-item">
+          <a href="#">WSDM Cup</a>
+        </div>
+        <div class="mobile-nav-item">
+          <a href="#">Attending</a>
+          <div class="mobile-dropdown">
+            <a href="#">Menu-1</a>
+            <a href="#">Menu-2</a>
+          </div>
+        </div>
+        <div class="mobile-nav-item">
+          <a href="#">Calls</a>
+          <div class="mobile-dropdown">
+            <a href="./cffp.html">Call for Full Papers</a>
+            <a href="#">Call for Short Papers</a>
+          </div>
+        </div>
+        <div class="mobile-nav-item">
+          <a href="./organizers.html">Organizers</a>
+        </div>
+        <div class="mobile-nav-item">
+          <a href="#">Sponsoring</a>
+          <div class="mobile-dropdown">
+            <a href="#">Menu-1</a>
+            <a href="#">Menu-2</a>
+            <a href="#">Menu-3</a>
+          </div>
+        </div>
+        <div class="mobile-nav-item">
+          <a href="./tavel-venue.html">Venue & Travel</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Main content -->
+  <main class="main-content overview-main-content">
+
+    <!-- Call for Papers -->
+    <section class="cfp-section conference-overview">
+      <h2>Call for Papers</h2>
+    </section>
+    <!-- Overview -->
+    <section class="cffp-section">
+      <p>Call for Full Research Papers</p>
+      <div>
+        WSDM (pronounced “wisdom”) is a premier conference on web-inspired research involving search and data mining.
+        The 20th ACM International WSDM Conference will take place in Hong Kong, from February 15th to 19th, 2027. WSDM
+        publishes original, high-quality papers related to search and data mining on the Web and the Social Web, with an
+        emphasis on practical yet principled approaches.
+      </div>
+    </section>
+
+    <section class="cffp-section">
+      <p>Deadlines</p>
+      <div class="dates-container">
+        <div class="dates-timeline">
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <svg width="99" height="99" viewBox="0 0 99 99" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_18_866)">
+                  <path
+                    d="M55.5224 69.0439C52.2327 72.8827 48.086 74.9948 43.0823 75.3803C38.0786 75.7657 33.6574 74.3136 29.8186 71.0239C25.9797 67.7343 23.8676 63.5876 23.4821 58.5839C23.0967 53.5802 24.5488 49.159 27.8385 45.3202L45.394 24.8341C47.7664 22.0657 50.7519 20.5429 54.3504 20.2657C57.9489 19.9885 61.1324 21.0361 63.9008 23.4085C66.6691 25.7808 68.1919 28.7663 68.4692 32.3648C68.7464 35.9633 67.6988 39.1468 65.3264 41.9152L48.7198 61.2939C47.2648 62.9918 45.4405 63.9253 43.2472 64.0942C41.0538 64.2632 39.1081 63.6202 37.4102 62.1651C35.7122 60.7101 34.7788 58.8858 34.6098 56.6924C34.4408 54.4991 35.0839 52.5534 36.5389 50.8554L54.0945 30.3694L58.5239 34.1652L40.9683 54.6512C40.5571 55.1311 40.374 55.6623 40.4188 56.2449C40.4637 56.8276 40.7261 57.3245 41.206 57.7357C41.6858 58.1469 42.217 58.3301 42.7997 58.2852C43.3823 58.2403 43.8792 57.9779 44.2904 57.4981L60.897 38.1194C62.1886 36.5375 62.7671 34.7605 62.6324 32.7886C62.4977 30.8166 61.6553 29.1664 60.105 27.8379C58.5547 26.5093 56.7856 25.9216 54.7979 26.0748C52.8101 26.2279 51.152 27.0796 49.8235 28.6299L32.2679 49.116C29.9852 51.7051 28.9837 54.704 29.2635 58.1127C29.5433 61.5214 30.9936 64.3487 33.6144 66.5945C36.1982 68.8087 39.1773 69.7773 42.5518 69.5001C45.9262 69.2229 48.7733 67.8055 51.0929 65.2481L69.5974 43.6547L74.0268 47.4505L55.5224 69.0439Z"
+                    fill="#961F12" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_18_866">
+                    <rect width="70" height="70" fill="white" transform="translate(45.5496) rotate(40.595)" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+            <h3>Aug 7, 2024</h3>
+            <p>Abstract deadline</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M32.6666 4.66675H13.9999C12.7622 4.66675 11.5753 5.15841 10.7001 6.03358C9.82492 6.90875 9.33325 8.09574 9.33325 9.33342V46.6668C9.33325 47.9044 9.82492 49.0914 10.7001 49.9666C11.5753 50.8418 12.7622 51.3334 13.9999 51.3334H41.9999C43.2376 51.3334 44.4246 50.8418 45.2997 49.9666C46.1749 49.0914 46.6666 47.9044 46.6666 46.6668V18.6667M32.6666 4.66675L46.6666 18.6667M32.6666 4.66675V18.6667H46.6666M37.3333 30.3334H18.6666M37.3333 39.6668H18.6666M23.3333 21.0001H18.6666"
+                  stroke="#BE3323" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h3>Aug 14, 2024</h3>
+            <p>Papers Due</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 57V51H18V30C18 25.85 19.25 22.175 21.75 18.975C24.25 15.725 27.5 13.6 31.5 12.6V10.5C31.5 9.25 31.925 8.2 32.775 7.35C33.675 6.45 34.75 6 36 6C37.25 6 38.3 6.45 39.15 7.35C40.05 8.2 40.5 9.25 40.5 10.5V12.6C44.5 13.6 47.75 15.725 50.25 18.975C52.75 22.175 54 25.85 54 30V51H60V57H12ZM36 66C34.35 66 32.925 65.425 31.725 64.275C30.575 63.075 30 61.65 30 60H42C42 61.65 41.4 63.075 40.2 64.275C39.05 65.425 37.65 66 36 66ZM24 51H48V30C48 26.7 46.825 23.875 44.475 21.525C42.125 19.175 39.3 18 36 18C32.7 18 29.875 19.175 27.525 21.525C25.175 23.875 24 26.7 24 30V51Z"
+                  fill="#D14334" />
+              </svg>
+            </div>
+            <h3>Oct, 2024</h3>
+            <p>Notifications</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <svg width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M11 55C9.4875 55 8.18125 54.4729 7.08125 53.4188C6.02708 52.3188 5.5 51.0125 5.5 49.5V16.5C5.5 14.9875 6.02708 13.7042 7.08125 12.65C8.18125 11.55 9.4875 11 11 11H44C45.5125 11 46.7958 11.55 47.85 12.65C48.95 13.7042 49.5 14.9875 49.5 16.5V28.875L60.5 17.875V48.125L49.5 37.125V49.5C49.5 51.0125 48.95 52.3188 47.85 53.4188C46.7958 54.4729 45.5125 55 44 55H11ZM11 49.5H44V16.5H11V49.5ZM11 49.5V16.5V49.5Z"
+                  fill="#DE5141" />
+              </svg>
+            </div>
+            <h3>Dec 8, 2024</h3>
+            <p>Camera Ready</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M0 52.5V47.9063C0 45.816 1.06944 44.1146 3.20833 42.8021C5.34722 41.4896 8.16667 40.8333 11.6667 40.8333C12.2986 40.8333 12.9063 40.8455 13.4896 40.8698C14.0729 40.8941 14.6319 40.9549 15.1667 41.0521C14.4861 42.0729 13.9757 43.1424 13.6354 44.2604C13.2951 45.3785 13.125 46.5451 13.125 47.7604V52.5H0ZM17.5 52.5V47.7604C17.5 46.2049 17.9253 44.783 18.776 43.4948C19.6267 42.2066 20.8299 41.0764 22.3854 40.1042C23.941 39.1319 25.8003 38.4028 27.9635 37.9167C30.1267 37.4306 32.4722 37.1875 35 37.1875C37.5764 37.1875 39.9462 37.4306 42.1094 37.9167C44.2726 38.4028 46.1319 39.1319 47.6875 40.1042C49.2431 41.0764 50.434 42.2066 51.2604 43.4948C52.0868 44.783 52.5 46.2049 52.5 47.7604V52.5H17.5ZM56.875 52.5V47.7604C56.875 46.4965 56.717 45.3056 56.401 44.1875C56.0851 43.0694 55.6111 42.0243 54.9792 41.0521C55.5139 40.9549 56.0608 40.8941 56.6198 40.8698C57.1788 40.8455 57.75 40.8333 58.3333 40.8333C61.8333 40.8333 64.6528 41.4774 66.7917 42.7656C68.9306 44.0538 70 45.7674 70 47.9063V52.5H56.875ZM23.6979 46.6667H46.375C45.8889 45.6944 44.5399 44.8438 42.3281 44.1146C40.1163 43.3854 37.6736 43.0208 35 43.0208C32.3264 43.0208 29.8837 43.3854 27.6719 44.1146C25.4601 44.8438 24.1354 45.6944 23.6979 46.6667ZM11.6667 37.9167C10.0625 37.9167 8.68924 37.3455 7.54688 36.2031C6.40451 35.0608 5.83333 33.6875 5.83333 32.0833C5.83333 30.4306 6.40451 29.0451 7.54688 27.9271C8.68924 26.809 10.0625 26.25 11.6667 26.25C13.3194 26.25 14.7049 26.809 15.8229 27.9271C16.941 29.0451 17.5 30.4306 17.5 32.0833C17.5 33.6875 16.941 35.0608 15.8229 36.2031C14.7049 37.3455 13.3194 37.9167 11.6667 37.9167ZM58.3333 37.9167C56.7292 37.9167 55.3559 37.3455 54.2135 36.2031C53.0712 35.0608 52.5 33.6875 52.5 32.0833C52.5 30.4306 53.0712 29.0451 54.2135 27.9271C55.3559 26.809 56.7292 26.25 58.3333 26.25C59.9861 26.25 61.3715 26.809 62.4896 27.9271C63.6076 29.0451 64.1667 30.4306 64.1667 32.0833C64.1667 33.6875 63.6076 35.0608 62.4896 36.2031C61.3715 37.3455 59.9861 37.9167 58.3333 37.9167ZM35 35C32.5694 35 30.5035 34.1493 28.8021 32.4479C27.1007 30.7465 26.25 28.6806 26.25 26.25C26.25 23.7708 27.1007 21.6927 28.8021 20.0156C30.5035 18.3385 32.5694 17.5 35 17.5C37.4792 17.5 39.5573 18.3385 41.2344 20.0156C42.9115 21.6927 43.75 23.7708 43.75 26.25C43.75 28.6806 42.9115 30.7465 41.2344 32.4479C39.5573 34.1493 37.4792 35 35 35ZM35 29.1667C35.8264 29.1667 36.5191 28.8872 37.0781 28.3281C37.6372 27.7691 37.9167 27.0764 37.9167 26.25C37.9167 25.4236 37.6372 24.7309 37.0781 24.1719C36.5191 23.6128 35.8264 23.3333 35 23.3333C34.1736 23.3333 33.4809 23.6128 32.9219 24.1719C32.3628 24.7309 32.0833 25.4236 32.0833 26.25C32.0833 27.0764 32.3628 27.7691 32.9219 28.3281C33.4809 28.8872 34.1736 29.1667 35 29.1667Z"
+                  fill="#961F12" />
+              </svg>
+            </div>
+            <h3>Mar 15-17, 2025</h3>
+            <p>Conference</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cffp-section">
+      <p>Findings of WSDM (New)</p>
+      <div>
+        In addition to the main conference track, WSDM will include a Findings track. This track aims to provide a venue
+        for disseminating solid, well-executed research that may not meet the selectivity criteria of the main
+        conference but is nonetheless valuable to the community.
+        Papers submitted to the main track will be considered for the Findings track through the standard review
+        process. Authors do not need to submit separately to this track.
+      </div>
+    </section>
+    <section class="cffp-section">
+      <p>Scope and Motivation</p>
+      <div>
+        The Findings track is intended to highlight contributions that:
+        <ul>
+          <li>Address relevant problems in web search and data mining</li>
+          <li>Demonstrate sound methodology and empirical evaluation</li>
+          <li>Offer useful insights, resources, or negative results</li>
+          <li>May be incremental, specialized, or narrower in scope than typical main-track papers</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cffp-section">
+      <p>Publication and Presentation</p>
+      <div>For papers accepted by findings track, authors have the option to commit or withdraw. Papers published in
+        findings track will be presented as posters (poster only) during the conference.</div>
+    </section>
+
+    <section class="cffp-section">
+      <p>List of Topics</p>
+      <div>Papers accepted to WSDM will be published in the ACM Digital Library. We invite submissions on a broad range
+        of topics related to search and data mining on the Web and Social Web. Areas of interest include, but are not
+        limited to, the following topics:</div>
+    </section>
+
+    <section class="cffp-section search-box">
+      <div class="search-box-container">
+        <p>Web Search</p>
+        <div>Algorithms for web-scale search; Adversarial search; Search user interfaces and interaction; Distributed
+          search, metasearch, peer-to-peer search; Local and mobile search; Multimedia web search, cross-lingual search;
+          Query analysis and query processing; Search benchmarking and evaluation; Search user behavior and log
+          analysis.</div>
+      </div>
+      <div class="search-box-container">
+        <p>Web Mining and Content Analysis</p>
+        <div>Crawling and indexing web content; Web recommender systems and algorithms; Agentic recommender systems;
+          Clustering, classification, and summarization of web data; Data, entity, event, and relationship extraction;
+          Knowledge acquisition and automatic construction of knowledge bases; Large-scale graph analysis; Semantic
+          search, faceted search, and knowledge graphs; Scalable algorithms for mining web data; Opinion mining and
+          sentiment analysis; Web traffic and log analysis; Web measurements, web evolution, and web models; Generative
+          web applications;</div>
+      </div>
+      <div class="search-box-container">
+        <p>Foundation Models and Agentic Systems</p>
+        <div>LLMs and multimodal foundation models for web tasks; Generative question answering and reasoning;
+          Retrieval, indexing, and ranking with foundation models; Evaluation and benchmarking of foundation models in
+          search/mining; Web agents; GUI agents/multi-agent systems in Web search, recommendation, and interactive
+          information retrieval; Continual learning and self-evolution; Memory systems of foundation models; User
+          interfaces and experiences powered by foundation models.</div>
+      </div>
+      <div class="search-box-container">
+        <p>Web of Things, Ubiquitous and Mobile Computing</p>
+        <div>Algorithms for web-scale search; Adversarial search; Search user interfaces and interaction; Distributed
+          search, metasearch, peer-to-peer search; Local and mobile search; Multimedia web search, cross-lingual search;
+          Query analysis and query processing; Search benchmarking and evaluation; Search user behavior and log
+          analysis.</div>
+      </div>
+      <div class="search-box-container">
+        <p>Privacy, Fairness, Interpretability</p>
+        <div>Fairness and accountability in ranking, recommendations and advertising; Explainability in web systems;
+          Model and algorithm transparency; Web search and data mining under privacy constraints; Fairness and
+          interpretability in applications of web mining for social good.</div>
+      </div>
+      <div class="search-box-container">
+        <p>Social Networks</p>
+        <div>Link prediction and community detection; Social network analysis and graph algorithms; Computational social
+          science; Influence and viral marketing in social networks; Social sensing; Searching social and real-time
+          content; Social network dynamics; Sampling, experiments, and evaluation in social networks; Social media
+          analysis: blogs and friendship networks; Social network analysis, theories, models and applications; Social
+          reputation and trust.</div>
+      </div>
+      <div class="search-box-container">
+        <p>Intelligent Assistants</p>
+        <div>Voice search, conversational search, and dialog systems; Personal assistants, dialogue models, and
+          conversational interaction; Task-driven search; Zero-query and implicit search.</div>
+      </div>
+      <div class="search-box-container">
+        <p>Crowdsourcing and Human Computation</p>
+        <div>Collaborative search and question answering; Human-in-the-Loop and Collaborative Human-AI systems.</div>
+      </div>
+      <div class="search-box-container">
+        <p>Information Integrity</p>
+        <div>Systems and algorithms for monitoring and detection of misinformation and fake news; Prevalence and
+          virality of misinformation; Misinformation sources and origins; Source and content credibility; Detecting and
+          combating spamming, trolling, aggression, dog whistles, and toxic online behaviors; Methods for detecting and
+          mitigating low quality and offensive content, bullying and hate speech, and coordinated behavior;
+          Polarization, extremism and radicalization; Echo chambers and filter bubbles.</div>
+      </div>
+      <div class="search-box-container">
+        <p>Emerging and Creative Applications</p>
+        <div>Systems and algorithms for urban applications such as smart cities/digital twins; Climate, sustainability,
+          and environmental intelligence systems; Online education systems; Monitoring and prevention of epidemics;
+          Healthcare and clinical decision support; Embodied AI systems interacting with web and real-world
+          environments; AI for Data-rich Science; Scientific Foundation Models.</div>
+      </div>
+    </section>
+    <section class="cfp-section cffp-section-overview">
+      <h2>Submission Guidelines</h2>
+    </section>
+
+    <section class="cffp-section">
+      <p>Link for Submissions Papers: TBD.</p>
+      <div></div>
+    </section>
+
+    <section class="cffp-section">
+      <p>Originality of Submissions</p>
+      <div>Submissions must represent new and original work. Concurrent submissions to other venues are not allowed.
+        Papers that have been published in or accepted to any peer-reviewed journal or conference or workshop with
+        published proceedings, or that are currently under review, or that will be submitted to other meetings or
+        publications while under review, may not be submitted to WSDM 2027. However, submissions that are available
+        online (e.g., on a preprint server such as Arxiv) and/or have been previously presented orally or as posters in
+        non peer-reviewed venues with no formal proceedings, are allowed. Additionally, the ACM has a strict policy
+        against plagiarism and self-plagiarism. All prior work must be appropriately cited. Please also see the <a
+          href="https://www.acm.org/publications/policies/frequently-asked-questions">ACM
+          guide</a> on the use of Generative AI.</div>
+    </section>
+
+
+    <section class="cffp-section">
+      <p>Format of Submissions</p>
+      <div>Manuscripts must be submitted in PDF according to the new ACM format published in <a
+          href="https://www.acm.org/publications/proceedings-template">ACM guidelines</a>(use
+        documentclass [sigconf,anonymous,review]{acmart}). Submissions should not exceed 9 pages including diagrams,
+        tables, appendices, etc. plus unrestricted space for references and an ethical consideration section (see
+        below). The PDF files must have all non-standard fonts embedded. Submissions must be self-contained and in
+        English. After uploading your submission, please verify the copy stored on the submission site. Submissions that
+        do not follow these guidelines, or do not view or print properly, may be rejected without review.
+        PDF files submitted to WSDM 2027 must be anonymized: the submitted document should not include the author
+        information and should not include citations or discussion of related work that would make the authorship
+        apparent. Explicitly revealing the manuscript authorship will result in rejection without review. Note, however,
+        that it is acceptable to explicitly refer in the manuscript to companies or organizations that provided
+        datasets, hosted experiments, or deployed solutions. The reviewers will be informed that it does not necessarily
+        imply that the authors are currently affiliated with the mentioned organization. To support the identification
+        of reviewers with conflicts of interest, the full author list must be specified at submission time. To support
+        faster dissemination of scientific results, we allow submissions that had earlier versions or code posted on
+        preprint servers such as Arxiv.org or GitHub (with the understanding that these materials cannot be anonymous).
+        In such cases, authors should exercise extra care and should not explicitly associate their submission with such
+        publicly posted materials.</div>
+    </section>
+
+    <section class="cffp-section">
+      <p>Supplementary Material & Reproducibility</p>
+      <div>Authors may include references to external repositories containing resources and methods, full theoretical
+        proofs and derivations, detailed descriptions of experimental setup, hyperparameter configurations, test
+        datasets, datasets or source code, but should only do so if strict author anonymity can be maintained. Looking
+        at supplementary material is at the discretion of the reviewers, in other words, the paper should be
+        self-contained as much as possible.<br />
+        Wherever appropriate, the authors are encouraged to use publicly available test collections and state-of-the-art
+        baselines, and are encouraged to share the experimental results, data, and code with the research community.In
+        their submission, authors may refer to an anonymized GitHub repository, though this is not strictly required.
+      </div>
+    </section>
+
+    <section class="cffp-section">
+      <p>Authorship</p>
+      <div>Submitted manuscripts must adhere to the <a
+          href="https://www.acm.org/publications/policies/new-acm-policy-on-authorship">ACM
+          authorship policy</a>. In particular, (i) each author must be the creator or originator of an idea in the
+        work;
+        (ii) each author must make substantial contributions to the work; and (iii) each author must be accountable for
+        the work that was done and its presentation in a publication. The
+        policy was recently updated to govern the use of generative AI tools in authoring papers.<br />
+        If an author submits numerous manuscripts to the same conference, it is less likely that one has materially
+        contributed to all such submissions. To this end, we limit the number of full paper submissions per author to 10
+        maximum. If more than 10 full paper manuscripts are submitted with the same person listed as an author, the
+        additional manuscripts submitted after the initial 10, will be rejected without review.
+      </div>
+    </section>
+
+    <section class="cffp-section">
+      <p>Review Process</p>
+      <div>Each manuscript will be reviewed by at least three PC members and a senior PC member. The acceptance
+        decisions will take into account manuscript novelty, technical depth, elegance, practical or theoretical impact,
+        and presentation. WSDM 2027 will use a combination of single-blind reviewing and double-blind reviewing. The
+        manuscripts will be double-blind to regular PC members and Senior PC members, but the metadata (including
+        authorship) of the manuscripts will be available to Associate Chairs to check for undisclosed conflicts of
+        interest and to help assure the integrity of the review process. Note that papers not related to the conference
+        main theme and topics will be desk-rejected without review.
+      </div>
+    </section>
+
+    <section class="cffp-section">
+      <p>ACM Instructions for Authors</p>
+      <div>By submitting your article to an ACM Publication, you are hereby acknowledging that you and your co-authors
+        are subject to all <a href="https://www.acm.org/publications/policies">ACM Publications Policies</a> , including
+        <a href="https://www.acm.org/publications/policies/research-involving-human-participants-and-subjects">ACM's new
+          Publications Policy on Research Involving
+          Human Participants and Subjects</a>. Alleged violations of this policy or any ACM Publications Policy will be
+        investigated by ACM and may result in a full retraction of your paper, in addition to other potential penalties,
+        as per ACM Publications Policy.
+        Please ensure that you and your co-authors obtain an <a href="https://orcid.org/register">ORCID ID</a>, so you
+        can complete the publishing process for
+        your accepted paper. ACM has been involved in ORCID from the start and we have recently made a <a
+          href="https://authors.acm.org/author-resources/orcid-faqs">commitment to
+          collect ORCID IDs from all of our published authors</a>. ORCID IDs are required for all authors. We are
+        committed to
+        improve author discoverability, ensure proper attribution and contribute to ongoing community efforts around
+        name normalization; your ORCID ID will help in these efforts.
+      </div>
+    </section>
+
+    <section class="cffp-section">
+      <p>Ethical Considerations</p>
+      <div>Submitted manuscripts should include a section on the ethical implications of the proposed research. This
+        section will not be counted toward the nine-page limit, and should be placed before the references. In this
+        section, authors are asked to reflect and discuss the potential negative societal impact of their work, as they
+        consider appropriate. Examples of negative societal impact include fairness considerations, privacy
+        considerations, security considerations, safety considerations, misuse of the technology by malicious actors, as
+        well as possible harms that could arise even when the technology is being used as intended and functioning
+        correctly. If there are negative societal impacts, authors should discuss appropriate mitigation strategies.
+      </div>
+    </section>
+    <section class="cffp-section">
+      <p>Acceptance</p>
+      <div>For each accepted paper (including main, findings, and short tracks), at least one author must register for
+        the conference (with either a 3-day or 5-day registration) and present the paper at the conference in person.
+        Each paper requires its own 3-day or 5-day registration. If a single registration is used to cover more than one
+        main-track paper, an additional paper presentation fee will apply for each extra paper. WSDM 2027 will be an
+        in-person conference, with no provisions for remote presentations. If authors are unable to present their work
+        for any reason, they are expected to find a proxy to present the work on their behalf. The organizers reserve
+        the right to remove any paper that is not presented during the conference from the proceedings.
+      </div>
+    </section>
+    <section class="cffp-section">
+      <p>Conflict of Interest (COI) Policy</p>
+      <div>All authors and reviewers must declare conflicts of interest in OpenReview. A domain conflict (entered in
+        Education & Career History) must be declared for employment at the same institution or company, regardless of
+        geography/location, currently or in the last 12 months. A personal conflict should be declared when the
+        following associations exist:
+      </div>
+      <div class="coi">
+        – candidate for employment at the same institution or company<br />
+        – received an honorarium, stipend, or grant from the institution or company within the last 12 months (except
+        where of a modest nature, such as reimbursement of seminar expenses, honorarium for examination of a thesis, and
+        so on).<br />
+        – co-author on book or paper in the last 24 months<br />
+        – co-principal investigator on a funded grant or research proposal in the last 24 months<br />
+        – actively working on any project together<br />
+        – family relationship or close personal relationship<br />
+        – graduate advisee/advisor relationship, regardless of time elapsed since graduation<br />
+        – deep personal animosity<br />
+      </div>
+      <div>
+        In general, we expect authors, PC, the organizing committee, and other volunteers to adhere to ACM’s Conflict of
+        Interest Policy as well as the ACM’s Code of Ethics and Professional Conduct.
+      </div>
+    </section>
+    <section class="cffp-section">
+      <p>Violations of Originality, Dual Submission or Conflicts of Interest</p>
+      <div>Submitted manuscripts that do not meet the length, formatting or originality requirements, or are
+        concurrently submitted to two venues (including manuscripts with significant overlap), are subject to desk
+        rejection without review. At the discretion of the PC Chairs and the Steering Committee, egregious violations
+        (including plagiarism) may lead to additional penalties such as a temporary or permanent ban from the venue and
+        sponsoring SIGs venues, as well as an escalation to the ACM Committee on Professional Ethics (COPE). Likewise,
+        failure of an author to disclose all COIs, or cases of a referee providing a review on a paper for which they
+        have an undisclosed COI, may lead to similar penalties. You are encouraged to contact the PC Chairs if you have
+        questions as to the originality conditions, dual submission, or conflict of interest policy.
+      </div>
+    </section>
+
+    <section class="cffp-section">
+      <p>Submission</p>
+      <div>TBD
+      </div>
+    </section>
+    <section class="cffp-section">
+      <p>ACM Open Access Policy</p>
+      <div>Starting January 1, 2026, ACM will fully transition to Open Access. All ACM publications, including those
+        from ACM-sponsored conferences, will be 100% Open Access. Authors will have two primary options for publishing
+        Open Access articles with ACM: the ACM Open institutional model or by paying Article Processing Charges (APCs).
+        With over 1,800 institutions already part of ACM Open, the majority of ACM-sponsored conference papers will not
+        require APCs from authors or conferences (currently, around 70-75%).<br />
+        Authors from institutions not participating in ACM Open will need to pay an APC to publish their papers, unless
+        they qualify for a financial or discretionary waiver. To find out whether an APC applies to your article, please
+        consult the list of participating institutions in ACM Open and review the APC Waivers and Discounts Policy. Keep
+        in mind that waivers are rare and are granted based on specific criteria set by ACM.
+        Understanding that this change could present financial challenges, ACM has approved a temporary subsidy for 2027
+        to ease the transition and allow more time for institutions to join ACM Open.
+      </div>
+    </section>
+    <section class="cffp-section">
+      <p>The subsidy will offer:</p>
+      <div class="subsidy">
+        – $250 APC for ACM/SIG members<br/>
+        – $350 for non-members<br/>
+        <br/>
+        <span>
+        This represents a 65% discount, funded directly by ACM. Authors are encouraged to help advocate for their
+        institutions to join ACM Open during this transition period.</span><br/>
+        <span>
+        This temporary subsidized pricing will apply to all conferences scheduled for 2027.</span>
+      </div>
+    </section>
+    <section class="cffp-section">
+      <p>Contact Information</p>
+      <div>
+        <span class="cffp-section-title">Associate Program Chairs</span>
+        <ul>
+          <li>Raymond Wong, Hong Kong University of Science and Technology</li>
+          <li>Ninghao Liu, The Hong Kong Polytechnic University</li>
+          <li>Jing Shao, Shanghai AI Lab/Shanghai Jiao Tong University</li>
+        </ul>
+         <span class="cffp-section-title">Program Chairs</span>
+        <ul>
+          <li>Xia Hu, Shanghai AI Lab</li>
+          <li>James Caverlee, Texas A&M University</li>
+          <li>Yi Chang, Jilin University</li>
+        </ul>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+      <h2>WSDM 2027</h2>
+      <div class="footer-bottom">
+        <p>© 2027, WSDM 2027. All right reserved.</p>
+        <div class="footer-links">
+          <a href="#">Contact Us</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const mobileMenuBtn = document.querySelector('.mobile-menu-button');
+        const closeBtn = document.querySelector('.close-button');
+        const mobileNav = document.querySelector('.mobile-nav');
+
+        if (mobileMenuBtn) {
+          mobileMenuBtn.addEventListener('click', function () {
+            mobileNav.classList.add('active');
+          });
+        }
+
+        if (closeBtn) {
+          closeBtn.addEventListener('click', function () {
+            mobileNav.classList.remove('active');
+          });
+        }
+
+        // 点击菜单外部关闭菜单
+        document.addEventListener('click', function (event) {
+          if (mobileNav.classList.contains('active') &&
+            !mobileNav.contains(event.target) &&
+            !mobileMenuBtn.contains(event.target)) {
+            mobileNav.classList.remove('active');
+          }
+        });
+
+        // 移动端下拉菜单切换
+        const mobileNavItems = document.querySelectorAll('.mobile-nav-item');
+        mobileNavItems.forEach(item => {
+          const link = item.querySelector('a');
+          if (link.nextElementSibling && link.nextElementSibling.classList.contains('mobile-dropdown')) {
+            link.addEventListener('click', function (e) {
+              e.preventDefault();
+              item.classList.toggle('active');
+            });
+          }
+        });
+      });
+    </script>
+</body>
+
+</html>

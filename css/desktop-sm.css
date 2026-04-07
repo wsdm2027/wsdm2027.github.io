@@ -79,7 +79,7 @@
     
     .cfp-section h2 {
         font-size: 31px; /* 40 * 0.7656 ≈ 31px */
-        margin-bottom: 115px; /* 150 * 0.7656 ≈ 115px */
+        margin-bottom: 85px; /* 150 * 0.7656 ≈ 115px */
     }
     
     .cfp-section h2::after {
