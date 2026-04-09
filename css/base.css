@@ -1695,12 +1695,12 @@ line-height: normal;
 /* cffp base css */
 .cffp-section {
   background: #FFFFFF;
-  padding: 2rem 4rem;
+  padding: 1rem 4rem;
 }
 .cffp-section p{
   color: #000;
   font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
-  font-size: 26px;
+  font-size: 20px;
   font-weight: 600;
   line-height: normal;
 }
@@ -1708,7 +1708,7 @@ line-height: normal;
 .cffp-section div{
   color: #000;
   font-family: Inter;
-  font-size: 24px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -1721,7 +1721,7 @@ line-height: normal;
   /* background-color: #961F12; */
 }
 .cffp-section .search-box-container{
-  padding: 2rem;
+  padding: 0.5rem 2rem;
 }
 
 .cffp-section .dates-timeline p{
@@ -1735,7 +1735,7 @@ line-height: normal;
 .cffp-section .search-box-container p{
   color: #D9D9D9;
   font-family: Inter;
-  font-size: 24px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -1745,13 +1745,13 @@ line-height: normal;
 .cffp-section .search-box-container div{
   color: #D9D9D9;
   font-family: Inter;
-  font-size: 24px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
 .cffp-section-overview{
-  padding: 4rem 0;
+  padding: 3rem 0 1rem 0;
  
 }
 .cffp-section-overview h2{
@@ -1778,7 +1778,7 @@ line-height: normal;
   margin-bottom: 1rem;
   color: #000;
 font-family: Inter;
-font-size: 24px;
+font-size: 18px;
 font-style: normal;
 font-weight: 600;
 line-height: normal;
@@ -1786,12 +1786,12 @@ line-height: normal;
 
 .cffp-section .subsidy{
   margin-top: 1rem;
-  padding: 2rem 2rem;
+  padding: 1rem 2rem;
   background-color: #961F12;
   margin-bottom: 1rem;
   color: #F5F5F5;
   font-family: Inter;
-  font-size: 24px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -1804,8 +1804,11 @@ line-height: normal;
 .cffp-section .cffp-section-title{
   color: #000;
 font-family: Inter;
-font-size: 26px;
+font-size: 18px;
 font-style: normal;
 font-weight: 600;
 line-height: normal;
+}
+.cffp-section .timeline-item{
+  min-height: 250px;
 }
