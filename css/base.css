@@ -1610,7 +1610,8 @@ body {
 
 .overview-section h2 {
   color: #FFF;
-  font-family: Inter;
+  font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+  
   font-size: 40px;
   font-style: normal;
   font-weight: 900;
@@ -1638,7 +1639,7 @@ body {
 .overview-content-section h2 {
   text-align: center;
   color: #7A1207;
-  font-family: Inter;
+    font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
   font-size: 40px;
   font-style: normal;
   font-weight: 900;
@@ -1659,7 +1660,7 @@ body {
 .overview-content p {
   color: #000;
   text-align: center;
-  font-family: Inter;
+  font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
@@ -1669,7 +1670,7 @@ body {
 .overview-content div {
   color: #000;
 text-align: center;
-font-family: Inter;
+font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
 font-size: 24px;
 font-style: normal;
 font-weight: 600;
@@ -1678,7 +1679,7 @@ line-height: normal;
 .overview-content a{
   color: #7A1207;
   text-align: center;
-  font-family: Inter;
+    font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
   font-size: 40px;
   font-style: normal;
   font-weight: 900;
@@ -1696,10 +1697,13 @@ line-height: normal;
 .cffp-section {
   background: #FFFFFF;
   padding: 1rem 4rem;
+  font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+  
 }
 .cffp-section p{
   color: #000;
   font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+  
   font-size: 20px;
   font-weight: 600;
   line-height: normal;
@@ -1707,7 +1711,8 @@ line-height: normal;
 
 .cffp-section div{
   color: #000;
-  font-family: Inter;
+  font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+  
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -1717,24 +1722,24 @@ line-height: normal;
 .cffp-section div ul{
   padding-left: 2rem;
 }
-.search-box{
-  /* background-color: #961F12; */
-}
+
 .cffp-section .search-box-container{
   padding: 0.5rem 2rem;
 }
 
 .cffp-section .dates-timeline p{
   color: #ffffff;
-  font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+ font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+  
   font-size: 18px;
   margin: 0;
   text-align: center;
 }
 
 .cffp-section .search-box-container p{
-  color: #D9D9D9;
-  font-family: Inter;
+  color: #000000;
+  font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+  
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
@@ -1743,8 +1748,9 @@ line-height: normal;
 }
 
 .cffp-section .search-box-container div{
-  color: #D9D9D9;
-  font-family: Inter;
+  color: #000000;
+  font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+  
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -1777,7 +1783,8 @@ line-height: normal;
   background-color: #F5F5F5;
   margin-bottom: 1rem;
   color: #000;
-font-family: Inter;
+font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+  
 font-size: 16px;
 font-style: normal;
 font-weight: 600;
@@ -1790,7 +1797,8 @@ line-height: normal;
   background-color: #961F12;
   margin-bottom: 1rem;
   color: #F5F5F5;
-  font-family: Inter;
+  font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+  
   font-size: 18px;
   font-style: normal;
   font-weight: 600;
@@ -1803,7 +1811,8 @@ line-height: normal;
 
 .cffp-section .cffp-section-title{
   color: #000;
-font-family: Inter;
+font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+  
 font-size: 18px;
 font-style: normal;
 font-weight: 600;
