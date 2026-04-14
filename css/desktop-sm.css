@@ -267,6 +267,13 @@
     .how-to-reach-item {
         flex-direction: row;
         gap: 1.5rem;
+        width: 100%;
+        max-width: 1200px;
+    }
+    
+    .item-image {
+        flex: 0 0 40%;
+        overflow: hidden;
     }
     
     .item-title {

@@ -1393,7 +1393,7 @@ body {
 }
 
 .conference-Venue {
-  padding: 4rem 2rem;
+  padding: 1rem 2rem;
   background: #ffffff;
 }
 
@@ -1417,7 +1417,7 @@ body {
 .venue-image {
   width: 100%;
   height: auto;
-  max-height: 600px;
+  max-height: 500px;
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 1rem;
@@ -1426,7 +1426,7 @@ body {
 .venue-image-title {
   color: #000000;
   font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
-  font-size: 26px;
+  font-size: 20px;
   font-weight: 600;
   text-align: center;
   margin: 0;
@@ -1440,7 +1440,7 @@ body {
 .venue-title {
   color: #000000;
   font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 700;
   margin-bottom: 1.5rem;
 }
@@ -1448,7 +1448,7 @@ body {
 .venue-description  {
   color: #000000;
   font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
-  font-size: 22px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 1.5;
   margin-bottom: 1.5rem;
@@ -1468,13 +1468,13 @@ body {
 .venue-location p {
   color: #961F12;
   font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
-  font-size: 26px;
+  font-size: 18px;
   font-weight: 600;
   margin: 0;
 }
 
 .conference-reach {
-  padding: 4rem 2rem;
+  padding: 2rem 2rem;
   background: #F2F2F2;
 }
 
@@ -1491,7 +1491,7 @@ body {
   letter-spacing: 0;
   color: #961f12;
   font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
-  font-size: 40px;
+  font-size: 24px;
   font-weight: 900;
   margin: 0 auto;
   position: relative;
@@ -1500,10 +1500,10 @@ body {
   justify-content: center;
 }
 .how-to-reach-sub-title{
-  margin-top: 20px;
+  margin-top: 18px;
   color: #000;
   font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
-  font-size: 26px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -1538,10 +1538,12 @@ body {
   border-radius: 8px;
   overflow: hidden;
   margin: 0 auto;
+  width: 100%;
+  max-width: 1600px;
 }
 
 .item-image {
-  flex: 1;
+  flex: 0 0 50%;
   overflow: hidden;
 }
 
@@ -1563,7 +1565,7 @@ body {
 .item-title {
   color: #961F12;
     font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
-    font-size: 32px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 900;
     line-height: normal;
@@ -1573,7 +1575,7 @@ body {
 .item-text {
   color: #000;
   font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
-  font-size: 26px;
+  font-size: 16px;
   margin-bottom: 1rem;
   font-weight: 600;
   font-style: normal;
@@ -1585,7 +1587,7 @@ body {
 .item-note {
   color: #000;
   font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
-  font-size: 26px;
+  font-size: 16px;
   font-weight: 600;
 }
 
