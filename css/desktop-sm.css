@@ -9,7 +9,7 @@
         margin-top: 153px; /* 200 * 0.7656 ≈ 153px */
     }
     .timeline-item h3 {
-        font-size: 16px;
+        font-size: 18px;
         padding: 0.2rem 0.4rem;
     }
 	.timeline-item p {
@@ -56,7 +56,7 @@
     
     .intro-section {
         height: auto;
-        min-height: 493px; /* 644 * 0.7656 ≈ 493px */
+        min-height: 380px; /* 644 * 0.7656 ≈ 493px */
     }
     
     .intro-section h3 {
@@ -69,7 +69,7 @@
     
     /* 保持其他元素的比例适配 */
     .hero {
-        min-height: 919px; /* 1200 * 0.7656 ≈ 919px */
+        min-height: 750px; /* 1200 * 0.7656 ≈ 919px */
     }
     
     .cfp-section {
@@ -95,10 +95,16 @@
     .speakers-grid {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
+	
     .speaker img {
         width: 250px; /* 327 * 0.7656 ≈ 250px */
         height: 250px;
+		margin-bottom:0;
     }
+	
+	.speaker p{
+		font-size:22px;
+	}
     
     /* 主席区域适配 */
     .chairs-grid {
@@ -110,7 +116,14 @@
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         max-width: 100%;
     }
-    
+    .timeline-item{
+		min-height:120px
+	}
+	.timeline-item:not(:last-child) {
+		margin-right: 100px;
+		clip-path: polygon(0 0, calc(100% - 40px) 0, 95% 50%, calc(100% - 40px) 100%, 0 100%);
+	}
+	
     .chair-card {
         width: 100%;
         max-width: 351px;
@@ -132,7 +145,7 @@
     /* 新增：当前区域适配 */
     .program-chairs .container {
         max-width: 1599px;
-        padding: 0 1.5rem;
+        padding: 0 ;
     }
     
     .chairs-row {
@@ -287,6 +300,15 @@
     .item-note {
         font-size: 20px; /* 26 * 0.7656 ≈ 20px */
     }
+	.cffp-section .timeline-item{
+		min-height: 200px;
+	}
+	.cffp-section .dates-timeline p{
+		font-size: 16px;
+	}
+	.cffp-section .deadline-note p{
+		color:#FFF;
+	}
 
 }
 @media (max-width: 1200px) {

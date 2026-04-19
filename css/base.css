@@ -298,7 +298,7 @@ body {
 .hero {
   position: relative;
   width: 100%;
-  min-height: 1200px;
+  min-height: 800px;
   background-image: url('../images/bg1.png');
   background-position: center;
   background-size: cover;
@@ -320,7 +320,7 @@ body {
 .hero p {
   font-size: 1.2rem;
   font-weight: 600;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 
 /* 信息容器 */
@@ -731,7 +731,7 @@ body {
   position: relative;
   flex: 1;
   padding: 2rem 1rem;
-  min-height: 313px;
+  min-height: 260px;
   z-index: 1;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -771,7 +771,7 @@ body {
 /* 时间线箭头形状 */
 .timeline-item:not(:last-child) {
   margin-right: 50px;
-  clip-path: polygon(0 0, calc(100% - 80px) 0, 100% 50%, calc(100% - 80px) 100%, 0 100%);
+  clip-path: polygon(0 0, calc(100% - 80px) 0, 95% 50%, calc(100% - 80px) 100%, 0 100%);
 }
 
 .timeline-item:not(:first-child) {
@@ -1706,7 +1706,7 @@ line-height: normal;
   color: #000;
   font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
   
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 600;
   line-height: normal;
 }
@@ -1715,7 +1715,7 @@ line-height: normal;
   color: #000;
   font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
   
-  font-size: 16px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -1737,12 +1737,16 @@ line-height: normal;
   margin: 0;
   text-align: center;
 }
+.cffp-section .deadline-note p{
+	color: #ffffff;
+}
+
 
 .cffp-section .search-box-container p{
   color: #000000;
   font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
   
-  font-size: 20px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -1753,7 +1757,7 @@ line-height: normal;
   color: #000000;
   font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
   
-  font-size: 16px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -1787,7 +1791,7 @@ line-height: normal;
   color: #000;
 font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
   
-font-size: 16px;
+font-size: 20px;
 font-style: normal;
 font-weight: 600;
 line-height: normal;
@@ -1815,7 +1819,7 @@ line-height: normal;
   color: #000;
 font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
   
-font-size: 18px;
+font-size: 22px;
 font-style: normal;
 font-weight: 600;
 line-height: normal;
