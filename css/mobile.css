@@ -649,7 +649,7 @@ padding: 2rem 2rem 0 2rem;
   }
   
   .venue-description {
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 0.8rem;
     line-height: 1.4;
   }
@@ -661,7 +661,9 @@ padding: 2rem 2rem 0 2rem;
   .venue-location p {
     font-size: 16px;
   }
-  
+  .hotel-location .to-hotel p {
+		font-size: 16px;
+	}
   .conference-reach {
     padding: 1.5rem 0.8rem;
   }

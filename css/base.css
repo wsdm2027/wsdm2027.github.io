@@ -1448,17 +1448,29 @@ body {
 .venue-description  {
   color: #000000;
   font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
   line-height: 1.5;
   margin-bottom: 1.5rem;
 }
-
+.hotel-location{
+  background:#F5F5F5;
+  padding: 0 3% 2% 3%;
+}
+.hotel-location .to-hotel{
+	padding-left:2.5rem;
+	margin-top:.5rem;
+}
+.hotel-location .to-hotel p{
+	font-size: 20px;
+    font-weight: 400;
+	
+}
 .venue-location {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding-top: 2rem;
+  padding-top: 1rem;
 }
 
 .location-icon {
@@ -1468,7 +1480,7 @@ body {
 .venue-location p {
   color: #961F12;
   font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   margin: 0;
 }
@@ -1483,6 +1495,30 @@ body {
   padding: 0 2rem;
   text-align: center;
 }
+.conference-reach .mtr-note{
+	background: #E7E7E7;
+	padding: 2rem 1.5rem;
+	margin-left: 1.5rem;
+	margin-top:  2rem;
+	border-left: solid 8px #761C12;
+}
+.conference-reach .mtr-note p:first-child{
+	color: #000;
+	font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+	font-size: 22px;
+	font-style: normal;
+	font-weight: 900;
+	line-height: normal;
+	margin-bottom: 1rem;
+}
+.conference-reach .mtr-note p:not(:first-child) {
+	color: #000;
+	font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+}
 
 .how-to-reach-title {
   width: 617px;
@@ -1491,7 +1527,7 @@ body {
   letter-spacing: 0;
   color: #961f12;
   font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 900;
   margin: 0 auto;
   position: relative;
@@ -1533,24 +1569,28 @@ body {
 }
 
 .how-to-reach-item {
-  display: flex;
-  gap: 2rem;
+   display: flex;
   border-radius: 8px;
   overflow: hidden;
   margin: 0 auto;
   width: 100%;
-  max-width: 1600px;
+  align-items: stretch; /* 确保子项等高 */
+}
+
+.how-to-reach-item  h3.second-item {
+	margin-top:2rem;
 }
 
 .item-image {
   flex: 0 0 50%;
-  overflow: hidden;
+  overflow: hidden; 
 }
 
 .transport-image {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: 100%;      /* 占满父容器 */
+  display: block;
+  object-fit: contain;      /* 或 contain */
 }
 
 .item-content {
@@ -1558,7 +1598,6 @@ body {
   padding: 0 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   text-align: left;
 }
 
@@ -1575,7 +1614,7 @@ body {
 .item-text {
   color: #000;
   font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   margin-bottom: 1rem;
   font-weight: 600;
   font-style: normal;
@@ -1587,7 +1626,7 @@ body {
 .item-note {
   color: #000;
   font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
 }
 

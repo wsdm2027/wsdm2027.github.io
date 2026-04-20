@@ -491,7 +491,7 @@
     }
     
     .venue-description {
-        font-size: 16px;
+        font-size: 18px;
         margin-bottom: 1rem;
     }
     
@@ -502,6 +502,9 @@
     .venue-location p {
         font-size: 18px;
     }
+	.hotel-location .to-hotel p {
+		font-size: 18px;
+	}
     
     .conference-reach {
         padding: 2rem 1rem;
@@ -523,11 +526,11 @@
         margin-top: 15px;
     }
     .how-to-reach-title::before{
-        left: 50px;
+        left: -50px;
     }
     
     .how-to-reach-title::after {
-        right: 50px;
+        right: -50px;
     }
     
     .how-to-reach-item {
@@ -567,4 +570,16 @@
     .item-note {
         font-size: 16px;
     }
+	.conference-reach .mtr-note{
+		padding: 0.75rem 1rem;
+		margin-left: 1rem;
+		margin-top:  .75rem;
+	}
+	.conference-reach .mtr-note p:first-child{
+		font-size: 16px;
+		margin-bottom: .5rem;
+	}
+	.conference-reach .mtr-note p:not(:first-child) {
+		font-size: 14px;
+	}
 }  
