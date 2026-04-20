@@ -1870,7 +1870,27 @@ line-height: normal;
 .cffp-section .visa-table{
   margin-top: 1.5rem;
   border: 1px solid #e3e3e3;
+  border-collapse: collapse;
+}
+.cffp-section .visa-table th{
+  padding: .5rem 1rem;
+  text-align: left;
+  background-color: #F5F5F5;
 }
 .cffp-section .visa-table td{
   padding: .5rem 1rem;
+}
+.cffp-section .note{
+  background: #E7E7E7;
+  font-size: 18px;
+	padding: 1rem 1rem;
+	margin-top:  1rem;
+	border-left: solid 8px #761C12;
+  width: fit-content;
+}
+.cffp-section .note .note-title{
+  font-size: 18px;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 1rem;
 }
