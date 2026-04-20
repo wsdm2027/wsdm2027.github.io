@@ -1866,3 +1866,11 @@ line-height: normal;
 .cffp-section .timeline-item{
   min-height: 250px;
 }
+
+.cffp-section .visa-table{
+  margin-top: 1.5rem;
+  border: 1px solid #e3e3e3;
+}
+.cffp-section .visa-table td{
+  padding: .5rem 1rem;
+}
