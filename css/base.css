@@ -1570,7 +1570,6 @@ body {
 
 .how-to-reach-item {
    display: flex;
-  border-radius: 8px;
   overflow: hidden;
   margin: 0 auto;
   width: 100%;
@@ -1581,9 +1580,11 @@ body {
 	margin-top:2rem;
 }
 
+
 .item-image {
   flex: 0 0 50%;
   overflow: hidden; 
+  border-radius:8px;
 }
 
 .transport-image {
