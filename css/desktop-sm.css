@@ -6,7 +6,8 @@
     .info-container {
         flex-direction: row;
         align-items: flex-start;
-        margin-top: 153px; /* 200 * 0.7656 ≈ 153px */
+        margin-top: 10px; /* 200 * 0.7656 ≈ 153px */
+		min-height:500px;
     }
     .timeline-item h3 {
         font-size: 18px;

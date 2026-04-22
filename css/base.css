@@ -329,7 +329,8 @@ body {
   width: 100%;
   display: flex;
   gap: 2rem;
-  margin-top: 200px;
+  margin-top: 100px;
+  min-height:600px;
 }
 
 .info-left {
@@ -552,7 +553,7 @@ body {
 .intro-section p {
   color: #EEE;
   font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
-  font-size: 28px;
+  font-size: 26px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
