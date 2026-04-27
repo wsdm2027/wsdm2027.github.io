@@ -331,6 +331,35 @@
 		font-size: 16px;
 	}
 
+    /* 表格响应式样式 */
+    .pc-table {
+        width: 100%;
+    }
+    
+    .pc-table th,
+    .pc-table td {
+        padding: 12px 8px;
+        font-size: 14px;
+    }
+    
+    .pc-table td:first-child {
+        min-width: 100px;
+    }
+    
+    /* overview-content-section 响应式样式 */
+    .overview-content-section h2 {
+        font-size: 31px;
+    }
+    
+    .overview-content p,
+    .overview-content div {
+        font-size: 18px;
+    }
+    
+    .overview-content {
+        padding: 0 1.5rem;
+    }
+
 }
 @media (max-width: 1200px) {
     /* 按照1920px的比例缩放 (1200/1920 = 0.625) */

@@ -315,9 +315,38 @@
       height: 410.179px;
     }
     .best-paper-award-chairs .chair-card .chair-image,
-    .org-program-chairs .chair-card .chair-image, 
-    .org-general-chairs .chair-card .chair-image{
-      width: 153px;
-      height: 153px;
+.org-program-chairs .chair-card .chair-image, 
+.org-general-chairs .chair-card .chair-image{
+  width: 153px;
+  height: 153px;
+}
+
+    /* 表格响应式样式 */
+    .pc-table {
+        width: 100%;
+    }
+    
+    .pc-table th,
+    .pc-table td {
+        padding: 14px 10px;
+        font-size: 15px;
+    }
+    
+    .pc-table td:first-child {
+        min-width: 110px;
+    }
+    
+    /* overview-content-section 响应式样式 */
+    .overview-content-section h2 {
+        font-size: 33px;
+    }
+    
+    .overview-content p,
+    .overview-content div {
+        font-size: 20px;
+    }
+    
+    .overview-content {
+        padding: 0 2rem;
     }
 }

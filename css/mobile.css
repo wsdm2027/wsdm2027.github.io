@@ -714,4 +714,85 @@ padding: 2rem 2rem 0 2rem;
   .cffp-section{
     padding: 1.5rem 1rem;
   }
-}  
+
+  /* ====== 表格响应式样式 ====== */
+  .pc-table {
+    display: none;
+  }
+
+  .mobile-tables {
+    display: block;
+  }
+
+  .mobile-table-container {
+    margin-bottom: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .mobile-table-container h3 {
+    font-size: 16px;
+    padding: 10px;
+    margin: 0;
+    background-color: #7A1207;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .mobile-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .mobile-table th,
+  .mobile-table td {
+    padding: 4px;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .mobile-table th {
+    font-size: 16px;
+    background-color: #f9f9f9;
+    font-weight: bold;
+  }
+
+  /* 时间列样式 */
+  .mobile-table td:first-child {
+    white-space: nowrap;
+    min-width: 100px;
+    vertical-align: top;
+  }
+
+  
+
+  /* 确保表格内容在移动端正确换行 */
+  .mobile-table td {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+  }
+
+  /* 最后一行的单元格不显示下边框 */
+  .mobile-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  /* ====== Program Overview 页面移动端适配 ====== */
+  .overview-content-section h2 {
+    font-size: 24px;
+  }
+
+  .overview-content a {
+    font-size: 18px;
+    line-height: 36px;
+  }
+
+  .overview-content div {
+    font-size: 16px;
+  }
+
+  .overview-content p {
+    font-size: 16px;
+  }
+}   

@@ -1682,7 +1682,7 @@ body {
   text-align: center;
   color: #7A1207;
     font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
-  font-size: 40px;
+  font-size: 32px;
   font-style: normal;
   font-weight: 900;
   line-height: normal;
@@ -1691,6 +1691,8 @@ body {
 .overview-content {
   margin: 2rem auto;
   text-align: center;
+  padding: 0 4rem;
+  box-sizing: border-box;
 }
 
 .overview-content img {
@@ -1722,10 +1724,10 @@ line-height: normal;
   color: #7A1207;
   text-align: center;
     font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
-  font-size: 40px;
+  font-size: 24px;
   font-style: normal;
-  font-weight: 900;
-  line-height: 80px; /* 200% */
+  font-weight: 700;
+  line-height: 48px; /* 200% */
   text-decoration-line: underline;
   text-decoration-style: solid;
   text-decoration-skip-ink: auto;
@@ -1894,4 +1896,188 @@ line-height: normal;
   font-weight: 600;
   line-height: normal;
   margin-bottom: 1rem;
+}
+
+/* ====== 表格样式 ====== */
+.pc-table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin: 2rem auto;
+}
+
+.pc-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+  table-layout: auto;
+}
+
+.pc-table th,
+.pc-table td {
+  padding: 16px;
+  text-align: center;
+  border: 1px solid #ddd;
+  vertical-align: middle;
+  white-space: normal;
+  word-wrap: break-word;
+  font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.pc-table th {
+  background-color: #2c3e50;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.pc-table td:first-child {
+  white-space: nowrap;
+  font-weight: 700;
+  min-width: 120px;
+  background-color: #ecf0f1;
+}
+
+/* 活动类型颜色 */
+.pc-table .registration {
+  background-color: #ffffff;
+}
+
+.pc-table .tutorials {
+  background-color: #DCE6F1;
+  color: #000;
+}
+
+.pc-table .industry-day {
+  background-color: #C5D9F1;
+  color: #000;
+}
+
+.pc-table .doctoral-consortium {
+  background-color: #DAEEF3;
+  color: #000;
+}
+
+.pc-table .opening-remarks {
+  background-color: #FDE9D9;
+  color: #000;
+}
+
+.pc-table .keynote {
+  background-color: #CCC0DA;
+  color: #000;
+}
+
+.pc-table .coffee-break {
+  background-color: #FFF;
+  color: #000;
+}
+
+.pc-table .poster-session {
+  background-color: #F2F2F2;
+  color: #000;
+}
+
+.pc-table .paper-presentations {
+  background-color: #FDE9D9;
+  color: #000;
+}
+
+.pc-table .demo {
+  background-color: #DAEEF3;
+  color: #000;
+}
+
+.pc-table .lunch {
+  background-color: #FFF;
+  color: #000;
+}
+
+.pc-table .wsdm-business-lunch {
+  background-color: #FFF;
+    color: #000;
+}
+
+.pc-table .wsdm-cup {
+  background-color: #C4BD97;
+  color: #000;
+}
+
+.pc-table .workshops {
+  background-color: #C5D9F1;
+  color: #000;
+}
+
+.pc-table .wsdm-day {
+  background-color: #B7DeE8;
+  color: #000;
+}
+
+.pc-table .closing {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.pc-table .trunover {
+  background-color: #F2F2F2;
+  color: #000;
+}
+
+.pc-table .welcome-reception {
+  background-color: #34495e;
+  color: white;
+}
+
+.pc-table .banquet {
+  background-color: #DCE6F1;
+  color: #000;
+}
+
+/* 移动端表格容器 */
+.mobile-tables {
+  display: none;
+}
+
+.mobile-table-container {
+  margin-bottom: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.mobile-table-container h3 {
+  background-color: #961F12;
+  color: white;
+  padding: 12px;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.mobile-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+}
+
+.mobile-table th,
+.mobile-table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  vertical-align: middle;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+.mobile-table th {
+  background-color: #f2f2f2;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.mobile-table tr:hover {
+  background-color: #e8f4f8;
 }

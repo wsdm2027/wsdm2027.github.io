@@ -582,4 +582,8 @@
 	.conference-reach .mtr-note p:not(:first-child) {
 		font-size: 14px;
 	}
+
+  .overview-content{
+    padding: 0 1rem;
+  }
 }  
