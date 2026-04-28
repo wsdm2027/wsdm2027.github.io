@@ -761,7 +761,6 @@ padding: 2rem 2rem 0 2rem;
   .mobile-table td:first-child {
     white-space: nowrap;
     min-width: 100px;
-    vertical-align: top;
   }
 
   
