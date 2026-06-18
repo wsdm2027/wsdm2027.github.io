@@ -94,7 +94,7 @@
         height: 454px; /* 593 * 0.7656 ≈ 454px */
     }
     .speakers-grid {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(2,  1fr);
     }
 	
     .speaker img {
@@ -529,7 +529,7 @@
     }
     
     .speakers-grid {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(2,  1fr);
     }
     
     .speaker h3 {
