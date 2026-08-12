@@ -176,7 +176,9 @@
     .cfp-section {
         padding: 3rem 1.5rem;
     }
-    
+    .cfp-section:nth-of-type(n+2) {
+        padding: 3rem 1rem 0.5rem 1rem;
+    }
     .topics-section {
         padding: 3rem 1.5rem;
         margin: 20px 1.5rem 0;

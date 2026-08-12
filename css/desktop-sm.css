@@ -82,7 +82,10 @@
         font-size: 31px; /* 40 * 0.7656 ≈ 31px */
         margin-bottom: 85px; /* 150 * 0.7656 ≈ 115px */
     }
-    
+    .cfp-section:nth-of-type(n+2) h2 {
+        font-size: 31px; /* 40 * 0.7656 ≈ 31px */
+        margin-bottom: 20px; /* 150 * 0.7656 ≈ 115px */
+    }
     .cfp-section h2::after {
         width: 67px; /* 88 * 0.7656 ≈ 67px */
         bottom: -38px; /* -50 * 0.7656 ≈ -38px */
