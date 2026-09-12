@@ -1,0 +1,98 @@
+/* Shared presentation for the Calls pages; other conference pages are unaffected. */
+@font-face {
+  font-family: "WSDM Calls Inter";
+  src: url("../fonts/inter/inter-latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+.calls-typography {
+  --call-wine: #961f12;
+  --call-ink: #333;
+  --call-line: #e7dcd7;
+  --call-font: "WSDM Calls Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+.calls-typography :is(.nav-item > a, .dropdown-menu a, .mobile-nav a) { font-family: var(--call-font); }
+.calls-typography .nav-item > a { font-size: 15px; font-weight: 500; }
+.calls-typography .dropdown-menu a { font-size: 14px; font-weight: 400; }
+.call-page { color: var(--call-ink); background: #fff; padding-top: 0; }
+.call-page, .call-page * { box-sizing: border-box; }
+.call-page :is(h1,h2,h3,p,div,span,li,a,dt,dd,th,td,b,strong) { font-family: var(--call-font); }
+.call-page .call-hero { padding: 42px 24px 28px; text-align: center; background: #fff; }
+.call-page .call-hero h1 { color: var(--call-wine); font-size: 32px; font-weight: 600; line-height: 1.3; letter-spacing: -.02em; margin: 0; }
+.call-content { max-width: 1200px; padding: 0 48px; margin: 0 auto; }
+.call-jump-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 24px; padding: 0 0 26px; margin: 0 0 24px; border-bottom: 1px solid var(--call-line); }
+.call-page a { color: var(--call-wine); text-underline-offset: 3px; overflow-wrap: anywhere; word-break: normal; }
+.call-page a:hover { text-decoration: underline; }
+.call-jump-nav a { font-size: 14px; line-height: 1.6; text-decoration: none; }
+.call-page a:focus-visible { outline: 2px solid var(--call-wine); outline-offset: 4px; border-radius: 2px; }
+.call-page :is(h2,h3)[id] { scroll-margin-top: 88px; }
+.call-page .cffp-section { padding: 0; margin: 0 0 28px; background: transparent; }
+.call-page .cffp-section :is(div,p,li) { font-size: 16px; font-weight: 400; line-height: 1.75; color: var(--call-ink); }
+.call-page .cffp-section :is(h2,h3), .call-page .cffp-section-title { color: var(--call-wine); font-weight: 600; line-height: 1.4; }
+.call-page .cffp-section h2 { font-size: 22px; margin: 0 0 14px; }
+.call-page .cffp-section h3 { font-size: 18px; margin: 0 0 8px; }
+.call-page .cffp-section-title { display: block; font-size: 18px; margin: 20px 0 8px; }
+.call-page .cffp-section ul { padding-left: 24px; margin: 12px 0; }
+.call-page .cffp-section li + li { margin-top: 8px; }
+.call-page .cffp-section p { margin: 0 0 12px; }
+.call-page .cffp-section > div + div { margin-top: 14px; }
+.call-page .cffp-section-overview { padding: 28px 0 0; margin: 0 0 18px; text-align: left; background: transparent; border-top: 1px solid var(--call-line); }
+.call-page .cffp-section-overview h2 { text-align: left; font-size: 26px; font-weight: 600; line-height: 1.35; color: var(--call-wine); margin: 0; letter-spacing: -.015em; }
+.call-page .cffp-section-overview h2::before, .call-page .cffp-section-overview h2::after { display: none; }
+.call-page .call-deadlines { margin-bottom: 36px; }
+.call-page .call-dates { display: grid; grid-template-columns: repeat(auto-fit,minmax(155px,1fr)); gap: 1px; background: var(--call-line); border: 1px solid var(--call-line); margin: 0; }
+.call-page .call-date { background: #faf5f2; padding: 18px 16px; border-top: 3px solid var(--call-wine); }
+.call-date dt { font-size: 13px; line-height: 1.5; color: #65514b; margin: 0 0 8px; }
+.call-date dd { font-size: 17px; line-height: 1.5; font-weight: 600; color: var(--call-wine); margin: 0; }
+.call-page .call-date-note p { font-size: 13px; color: #666; line-height: 1.6; margin: 12px 0 0; }
+.call-page .call-date-group + .call-date-group { margin-top: 20px; }
+.call-page .search-box > div { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; background: transparent; }
+.call-page .cffp-section .search-box-container { background: #f8f5f3; padding: 22px 24px; border-top: 2px solid #d9b9af; }
+.call-page .search-box-container div { font-size: 15px; line-height: 1.75; }
+.call-page .cffp-section:not(.search-box) .search-box-container { margin-top: 14px; }
+.call-page .call-findings { padding: 24px 28px; background: #4a4a4a; color: #fff; position: relative; }
+.call-findings::after { content: ""; position: absolute; top: 0; right: 0; border-top: 18px solid #fff; border-left: 18px solid transparent; }
+.call-page .call-findings :is(h2,div,li) { color: #fff; }
+.call-page .cffp-section .coi { background: #f8f5f3; padding: 20px 24px; margin: 18px 0; font-size: 15px; font-weight: 400; line-height: 1.8; }
+.call-page .visa-table { width: 100%; table-layout: fixed; border-collapse: collapse; margin: 0; font-size: 15px; }
+.call-page .visa-table :is(th,td) { padding: 14px 18px; text-align: left; border: 1px solid var(--call-line); font-size: 15px; line-height: 1.6; overflow-wrap: anywhere; }
+.call-page .visa-table th { color: #fff; background: var(--call-wine); font-weight: 600; }
+.call-page .visa-table td { background: #faf5f2; color: var(--call-ink); }
+.call-page .note { background: transparent; padding: 0; margin: 12px 0 0; border: 0; }
+.call-page .call-deadlines .note div { font-size: 13px; color: #666; }
+.call-footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding: 24px 0; margin-top: 48px; border-top: 1px solid var(--call-line); font-size: 13px; line-height: 1.6; color: #666; }
+@media (max-width: 900px) {
+  .call-content { padding: 0 32px; }
+  .call-page .search-box > div { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .call-content { padding: 0 20px; }
+  .call-page .call-hero { padding: 32px 20px 24px; }
+  .call-page .call-hero h1 { font-size: 28px; }
+  .call-jump-nav { gap: 8px 18px; padding-bottom: 20px; margin-bottom: 24px; }
+  .call-page .call-dates { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .call-page .call-date { padding: 14px 12px; }
+  .call-date dd { font-size: 16px; }
+  .call-page .cffp-section h2 { font-size: 21px; }
+  .call-page .cffp-section-overview h2 { text-align: left; font-size: 23px; }
+  .call-page .call-findings, .call-page .cffp-section .search-box-container { padding: 20px; }
+  .call-page .visa-table :is(th,td) { padding: 12px; font-size: 14px; }
+}
+@media print {
+  .calls-typography .header, .call-jump-nav { display: none; }
+  .call-page { padding-top: 0; }
+  .call-content { max-width: none; padding: 0; }
+  .call-page .call-hero { padding: 0 0 24px; }
+  .call-date, .call-page .search-box-container { break-inside: avoid; }
+}
+
+.call-page .call-status { font-size: 14px; color: #666; margin: 12px 0 0; line-height: 1.6; }
+.call-page .call-submit { margin-top: 20px; }
+.call-page .call-submit a { display: inline-block; padding: 10px 18px; background: var(--call-wine); color: #fff; text-decoration: none; font-size: 15px; font-weight: 500; }
+.call-page .call-submit a:hover { background: #7a1207; }
+
+.call-page .call-introduction > div > div + div { margin-top: 18px; }
+@media (max-width: 600px) {
+  .call-dates > .call-date:last-child:nth-child(odd) { grid-column: 1 / -1; }
+}

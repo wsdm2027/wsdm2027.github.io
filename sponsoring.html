@@ -3,8 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>WSDM 2027</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sponsoring | WSDM 2027</title>
   <!-- 基础样式（无媒体查询） -->
   <link rel="stylesheet" href="css/base.css">
 
@@ -15,11 +15,17 @@
   <link rel="stylesheet" href="css/desktop-sm.css" media="(min-width: 1200px)">
   <link rel="stylesheet" href="css/tablet.css" media="(max-width: 1199px)">
   <link rel="stylesheet" href="css/mobile.css" media="(max-width: 480px)">
+  <link rel="preload" href="fonts/inter/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/sponsoring.css?v=21b986f4226c">
+  <link rel="stylesheet" href="css/navigation.css?v=59f08a024e03">
+  <link rel="stylesheet" href="css/page-layout.css?v=a0d41ef0bf81">
+  <link rel="stylesheet" href="css/readability.css?v=209e7ea4b887">
+  <link rel="stylesheet" href="css/footer.css?v=2d027e2271c1">
 </head>
 
 <body>
   <!-- Header -->
-  <header class="header">
+  <header class="header" id="site-top">
     <div class="logo">
       <a href="./index.html">
         <div class="logo-container">
@@ -31,6 +37,9 @@
     <!-- Desktop navigation -->
     <div class="nav">
       <div class="nav-item">
+        <a href="./index.html">Home</a>
+      </div>
+      <div class="nav-item">
         <a href="#">Program</a>
         <span class="dropdown-icon"></span>
         <div class="dropdown-menu">
@@ -39,14 +48,6 @@
       </div>
       <div class="nav-item">
         <a href="./cfwc.html">WSDM Cup</a>
-      </div>
-      <div class="nav-item">
-        <a href="#">Attending</a>
-        <span class="dropdown-icon"></span>
-        <div class="dropdown-menu">
-          <a href="#">Menu-1</a>
-          <a href="#">Menu-2</a>
-        </div>
       </div>
       <div class="nav-item">
         <a href="#">Calls</a>
@@ -59,6 +60,7 @@
           <a href="./cftutorial.html">Call for Tutorials</a>
           <a href="./cfidt.html">Call for Industry Day Talks</a>
 		  <a href="./cfdc.html">Call for Doctoral Consortium</a>
+		  <a href="./cfwc.html">Call for WSDM Cup Proposals</a>
         </div>
       </div>
       <div class="nav-item">
@@ -66,7 +68,7 @@
 
       </div>
       <div class="nav-item">
-        <a href="./sponsoring.html">Sponsoring</a>
+        <a href="./sponsoring.html" aria-current="page">Sponsoring</a>
 
       </div>
       <div class="nav-item">
@@ -116,7 +118,7 @@
       </div>
       <div class="mobile-nav-items">
         <div class="mobile-nav-item">
-          <a href="./index.html">WSDM 2027</a>
+          <a href="./index.html">Home</a>
         </div>
         <div class="mobile-nav-item">
           <a href="#">Program</a>
@@ -128,13 +130,6 @@
           <a href="./cfwc.html">WSDM Cup</a>
         </div>
         <div class="mobile-nav-item">
-          <a href="#">Attending</a>
-          <div class="mobile-dropdown">
-            <a href="#">Menu-1</a>
-            <a href="#">Menu-2</a>
-          </div>
-        </div>
-        <div class="mobile-nav-item">
           <a href="#">Calls</a>
           <div class="mobile-dropdown">
             <a href="./cffp.html">Call for Full Papers</a>
@@ -144,13 +139,14 @@
             <a href="./cftutorial.html">Call for Tutorials</a>
             <a href="./cfidt.html">Call for Industry Day Talks</a>
 			<a href="./cfdc.html">Call for Doctoral Consortium</a>
+			<a href="./cfwc.html">Call for WSDM Cup Proposals</a>
           </div>
         </div>
         <div class="mobile-nav-item">
           <a href="./organizers.html">Organizers</a>
         </div>
         <div class="mobile-nav-item">
-          <a href="./sponsoring.html">Sponsoring</a>
+          <a href="./sponsoring.html" aria-current="page">Sponsoring</a>
         </div>
         <div class="mobile-nav-item">
           <a href="#">Venue & Travel</a>
@@ -168,160 +164,76 @@
 
 
   <!-- Main content -->
-  <main class="main-content overview-main-content">
-
-    <!-- Call for Papers -->
-    <section class="cfp-section conference-overview">
-      <h2>Become a Sponsor</h2>
-    </section>
-
-    <section class="cffp-section">
+  <main class="sponsor-page" id="main-content">
+    <section class="sponsor-hero">
       <div>
-        WSDM serves as an international forum for presenting and discussing research in search and data mining on the
-        Web and the Social Web, with an emphasis on practical yet principled novel models of search and data mining,
-        algorithm design and analysis, economic implications, and in-depth experimental analysis of accuracy and
-        performance. The conference aims to address challenging issues in the development of future web and information
-        systems and to guide forthcoming research directions by reviewing high-quality applied and theoretical research
-        outcomes.<br />
-        Being a prestigious ACM conference, WSDM draws in leading researchers and influencers from academia and
-        industry. A significant aspect of the conference is its Workshops program, which targets current research
-        challenges and endeavors. WSDM has a rich history of workshops dedicated to emerging domains of AI, database
-        management, information retrieval, data mining, and related fields. Since 2016, WSDM has also hosted an industry
-        day where industrial research advancements are shared with the community. Moreover, WSDM offers the chance to
-        network with and recruit top Ph.D. students, making it an ideal platform to enhance your organization’s
-        visibility among globally influential thought leaders. Sponsors stand to gain extensive exposure to this
-        community through conference promotion, activities during the event, and the possibility of synergies with other
-        industry partners.<br />
-        We eagerly anticipate your participation in WSDM 2027 which will be hosted in Hong Kong, and encourage you to
-        explore the advantages of sponsoring WSDM 2027.
+        <p class="sponsor-eyebrow">Partner with WSDM 2027</p>
+        <h1>Become a Sponsor</h1>
+        <p class="sponsor-lead">Connect your organization with the people shaping the future of web search and data mining.</p>
+        <p>Join researchers and industry leaders in Hong Kong. Build visibility, share opportunities, and support the next generation of research.</p>
+        <div class="sponsor-actions"><a class="sponsor-button" href="#sponsorship-levels">Explore sponsorship levels <span aria-hidden="true">↓</span></a><a href="#sponsorship-contact">Discuss a partnership <span aria-hidden="true">↗</span></a></div>
       </div>
+      <aside class="sponsor-facts" aria-label="Conference information">
+        <p class="sponsor-eyebrow">A meeting point for research &amp; industry</p>
+        <h2>WSDM 2027</h2>
+        <dl><div><dt>When</dt><dd>February 15–19, 2027</dd></div><div><dt>Where</dt><dd><a href="./travel-venue.html">Hong Kong</a></dd></div><div><dt>Focus</dt><dd>Web Search &amp; Data Mining</dd></div></dl>
+      </aside>
     </section>
-
-
-
-
-
-    <section class="cffp-section">
-      <p>Diamond Level Sponsorship (price on request, minimum USD $30,000)</p>
-      <div>
-        <ul>
-          <li>Advance recognition as a Diamond supporter on the conference website.</li>
-          <li>Recognized as a Diamond supporter on the conference program, and during the conference opening and closing
-            events.</li>
-          <li>Seven complimentary registrations for the conference.</li>
-          <li>WSDM will send two emails on behalf of the sponsor to all attendees. The content of the sponsor message is
-            to be approved and sent by WSDM.</li>
-          <li>Participation in a Job Matching program. WSDM shares your job descriptions (up to 10) with opt-in
-            attendees who can choose to contact you or to be contacted by you.</li>
-          <li>One-page company advertisement to be included in the conference program booklet, subject to content
-            approval by WSDM.</li>
-          <li> Exhibit table in the conference foyer (upon request).</li>
-          <li>Priority selection of meal/event sponsorship if desired.</li>
-        </ul>
-      </div>
+    <section class="sponsor-values" aria-label="Why sponsor WSDM">
+      <article><h2>Build your visibility</h2><p>Put your organization in front of researchers and practitioners through conference recognition and sponsor activities.</p></article>
+      <article><h2>Connect with talent</h2><p>Meet Ph.D. students and leading researchers, with recruitment opportunities available through selected sponsorship levels.</p></article>
+      <article><h2>Support new ideas</h2><p>Engage with a community spanning AI, information retrieval, data mining, and the next generation of web systems.</p></article>
     </section>
-
-    <section class="cffp-section">
-      <p>Platinum Level Sponsorship (USD $15,000)</p>
-      <div>
-        <ul>
-          <li>Advance recognition as Platinum supporter on the conference website.</li>
-          <li>Recognized as a Platinum supporter on the conference program, and during the conference opening and
-            closing events.</li>
-          <li>Five complimentary registrations for the conference.</li>
-          <li>WSDM will send two emails on behalf of the sponsor to all attendees. The content of the sponsor message is
-            to be approved and sent by WSDM.</li>
-          <li>Participation in a Job Matching program. WSDM shares your job descriptions (up to 5) with opt-in attendees
-            who can choose to contact you or to be contacted by you.</li>
-          <li>Half-page company advertisement to be included in the conference program booklet, subject to content
-            approval by WSDM.</li>
-          <li>Exhibit table in the conference foyer (upon request).</li>
+    <section class="sponsor-section" id="sponsorship-levels">
+      <div class="sponsor-section-heading"><p class="sponsor-eyebrow">Sponsorship levels</p><h2>Find the right partnership</h2></div>
+      <p class="sponsor-table-hint">All amounts in USD. On smaller screens, scroll horizontally to compare all five levels.</p>
+      <div class="sponsor-table-scroll" tabindex="0" role="region" aria-label="Sponsorship level comparison">
+      <table class="sponsor-table"><caption class="sponsor-sr-only">WSDM 2027 sponsorship levels and key benefits</caption>
+      <thead><tr><th scope="col">Your partnership</th><th scope="col" class="sponsor-diamond">Diamond<strong>$30,000+</strong><small>Price on request</small></th><th scope="col">Platinum<strong>$15,000</strong></th><th scope="col">Gold<strong>$10,000</strong></th><th scope="col">Silver<strong>$6,000</strong></th><th scope="col">Bronze<strong>$3,000</strong></th></tr></thead>
+      <tbody>
+      <tr><th scope="row">Website &amp; event recognition</th><td>Included</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td></tr>
+      <tr><th scope="row">Complimentary registrations</th><td>7</td><td>5</td><td>3</td><td>2</td><td>1</td></tr>
+      <tr><th scope="row">Attendee emails <small>Sent by WSDM; content approval required</small></th><td>2</td><td>2</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr><th scope="row">Job Matching <small>With opt-in attendees</small></th><td>Up to 10 jobs</td><td>Up to 5 jobs</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr><th scope="row">Program booklet advertisement <small>Content approval required</small></th><td>One page</td><td>Half page</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr><th scope="row">Exhibit table</th><td>On request</td><td>On request</td><td>On request, subject to availability</td><td>On request, subject to availability</td><td>—</td></tr>
+      <tr><th scope="row">Meal / event priority selection</th><td>Included</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+      </tbody></table></div>
+      <p class="sponsor-note">Diamond sponsorship has a minimum contribution of $30,000; pricing is available on request. A dash indicates a benefit is not listed for that level. Full terms are provided below.</p>
+      <div class="sponsor-details" aria-label="Full sponsorship benefits">
+<details><summary><span>Diamond<small>Price on request · minimum USD $30,000</small></span><span class="sponsor-details-label">Full benefits</span></summary><ul><li>Advance recognition as a Diamond supporter on the conference website.</li><li>Recognized as a Diamond supporter on the conference program, and during the conference opening and closing
+            events.</li><li>Seven complimentary registrations for the conference.</li><li>WSDM will send two emails on behalf of the sponsor to all attendees. The content of the sponsor message is
+            to be approved and sent by WSDM.</li><li>Participation in a Job Matching program. WSDM shares your job descriptions (up to 10) with opt-in
+            attendees who can choose to contact you or to be contacted by you.</li><li>One-page company advertisement to be included in the conference program booklet, subject to content
+            approval by WSDM.</li><li>Exhibit table in the conference foyer (upon request).</li><li>Priority selection of meal/event sponsorship if desired.</li></ul></details>
+<details><summary><span>Platinum<small>USD $15,000</small></span><span class="sponsor-details-label">Full benefits</span></summary><ul><li>Advance recognition as Platinum supporter on the conference website.</li><li>Recognized as a Platinum supporter on the conference program, and during the conference opening and
+            closing events.</li><li>Five complimentary registrations for the conference.</li><li>WSDM will send two emails on behalf of the sponsor to all attendees. The content of the sponsor message is
+            to be approved and sent by WSDM.</li><li>Participation in a Job Matching program. WSDM shares your job descriptions (up to 5) with opt-in attendees
+            who can choose to contact you or to be contacted by you.</li><li>Half-page company advertisement to be included in the conference program booklet, subject to content
+            approval by WSDM.</li><li>Exhibit table in the conference foyer (upon request).</li></ul></details>
+<details><summary><span>Gold<small>USD $10,000</small></span><span class="sponsor-details-label">Full benefits</span></summary><ul><li>Advance recognition as Gold supporter on the conference website.</li><li>Recognized as a Gold supporter on the conference program, and during the conference opening and closing
+            events.</li><li>Three complimentary registrations for the conference.</li><li>Exhibit table in the conference foyer (upon request and availability).</li></ul></details>
+<details><summary><span>Silver<small>USD $6,000</small></span><span class="sponsor-details-label">Full benefits</span></summary><ul><li>Advance recognition as Silver supporter on the conference website.</li><li>Recognized as a Silver supporter on the conference program, and during the conference opening and closing
+            events.</li><li>Two complimentary registrations for the conference.</li><li>Exhibit table in the conference foyer (upon request and availability).</li></ul></details>
+<details><summary><span>Bronze<small>USD $3,000</small></span><span class="sponsor-details-label">Full benefits</span></summary><ul><li>Advance recognition as Bronze supporter on the conference website.</li><li>Recognized as a Bronze supporter on the conference program, and during the conference opening and closing
+            events.</li><li>One complimentary registration for the conference.</li></ul></details>
+</div></section>
+    <section class="sponsor-section sponsor-opportunities" id="additional-opportunities">
+      <div class="sponsor-section-heading"><p class="sponsor-eyebrow">Beyond the sponsorship levels</p><h2>Make a focused contribution</h2><p>Diamond, Platinum, and Gold sponsors are invited to support these additional activities.</p></div>
+      <ul class="sponsor-activity-grid"><li>WSDM Cup competition</li><li>Student Travel Grants</li><li>Doctoral Consortium</li><li>Best Paper Award, Best Student Paper Award, and/or Test of Time Award</li><li>Welcome reception</li><li>Conference banquet</li><li>Conference/Workshop/Tutorial lunches</li><li>Conference/Workshop/Tutorial morning/afternoon tea breaks</li><li>USB Memory Sticks for Proceedings</li></ul>
+      <div class="sponsor-opportunity-note"><p>Pricing is available on request. Benefits may include video advertisements before a session, lunch, or activity; prominent logo placement during breaks; and the opportunity to host a lunch.</p><p>Have another idea? We welcome suggestions for other ways to contribute to WSDM 2027.</p></div>
     </section>
-
-    <section class="cffp-section">
-      <p>Gold Level Sponsorship (USD $10,000)</p>
-      <div>
-        <ul>
-          <li>Advance recognition as Gold supporter on the conference website.</li>
-          <li>Recognized as a Gold supporter on the conference program, and during the conference opening and closing
-            events.</li>
-          <li>Three complimentary registrations for the conference.</li>
-          <li>Exhibit table in the conference foyer (upon request and availability).</li>
-        </ul>
-      </div>
+    <section class="sponsor-section sponsor-contact" id="sponsorship-contact">
+      <div class="sponsor-contact-intro"><p class="sponsor-eyebrow">Start a conversation</p><h2>Let’s discuss your partnership</h2><p>Contact us to explore sponsorship levels, request pricing for additional activities, or share a proposal.</p><a class="sponsor-button" href="mailto:wsdm2027@gmail.com?subject=WSDM%202027%20Sponsorship">Contact WSDM 2027 <span aria-hidden="true">↗</span></a><a class="sponsor-email" href="mailto:wsdm2027@gmail.com">wsdm2027@gmail.com</a></div>
+      <div class="sponsor-chairs"><h3>Sponsorship Chairs</h3><article><img src="./images/chairs/xujianliang.png" alt="Jianliang Xu" width="80" height="80" loading="lazy"><div><h4>Jianliang Xu</h4><p>Hong Kong Baptist University</p></div></article><article><img src="./images/chairs/carlyang.jpg" alt="Carl Yang" width="80" height="80" loading="lazy"><div><h4>Carl Yang</h4><p>Emory University</p></div></article></div>
     </section>
-    <section class="cffp-section">
-      <p>Silver Level Sponsorship (USD $6,000)</p>
-      <div>
-        <ul>
-          <li>Advance recognition as Silver supporter on the conference website.</li>
-          <li>Recognized as a Silver supporter on the conference program, and during the conference opening and closing
-            events.</li>
-          <li>Two complimentary registrations for the conference.</li>
-          <li>Exhibit table in the conference foyer (upon request and availability).</li>
-        </ul>
-      </div>
-    </section>
-    <section class="cffp-section">
-      <p>Bronze Level Sponsorship (USD $3,000)</p>
-      <div>
-        <ul>
-          <li>Advance recognition as Bronze supporter on the conference website.</li>
-          <li>Recognized as a Bronze supporter on the conference program, and during the conference opening and closing
-            events.</li>
-          <li>One complimentary registration for the conference.</li>
-        </ul>
-      </div>
-    </section>
-    <section class="cffp-section">
-      <div>
-        Additional Meal & Event Opportunities for Diamond, Platinum, and Gold Level Sponsors<br />
-        Sponsors at the Diamond, Platinum, and Gold levels are invited to further support one or more of the following
-        specific activities:
-      </div>
-      <div style="margin-top: 1%;">
-        <ul>
-          <li>WSDM Cup competition</li>
-          <li>Student Travel Grants</li>
-          <li>Doctoral Consortium</li>
-          <li>Best Paper Award, Best Student Paper Award, and/or Test of Time Award</li>
-          <li>Welcome reception</li>
-          <li>Conference banquet</li>
-          <li>Conference/Workshop/Tutorial lunches</li>
-          <li>Conference/Workshop/Tutorial morning/afternoon tea breaks</li>
-          <li>USB Memory Sticks for Proceedings</li>
-        </ul>
-      </div>
-      <div style="margin-top: 1%;">
-        Pricing for these activities is available upon request. Sponsorship benefits may include the display of video
-        advertisements prior to a session, lunch, or activity; prominent logo placement during breaks; and the
-        opportunity to host a lunch.
-      </div>
-      <div style="margin-top: 1%;">
-        In addition to the levels of sponsorship, other opportunities to contribute to WSDM 2027 may be possible, and we
-        welcome your suggestions. Please do not hesitate to contact us for more information on the sponsorship plans.
-      </div>
-      <div style="margin-top: 1%;">
-        Sponsorship Chairs<br />
-        Jianliang Xu, Hong Kong Baptist University<br />
-        Carl Yang, Emory University<br />
-      </div>
-    </section>
-
-
-
-
-    <!-- Footer -->
-    <footer class="footer">
-      <h2>WSDM 2027</h2>
-      <div class="footer-bottom">
-        <p>© 2027, WSDM 2027. All right reserved.</p>
-        <div class="footer-links">
-          <a href="mailto:wsdm2027@gmail.com">Contact Us</a>
-        </div>
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <p class="site-footer-copyright">© 2027 WSDM 2027. All rights reserved.</p>
+        <a class="site-footer-top" href="#site-top">Back to top ↑</a>
       </div>
     </footer>
-
+  </main>
     <script>
       document.addEventListener('DOMContentLoaded', function () {
         const mobileMenuBtn = document.querySelector('.mobile-menu-button');

@@ -3,8 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>WSDM 2027</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visa Information | WSDM 2027</title>
   <!-- 基础样式（无媒体查询） -->
   <link rel="stylesheet" href="css/base.css">
 
@@ -15,11 +15,17 @@
   <link rel="stylesheet" href="css/desktop-sm.css" media="(min-width: 1200px)">
   <link rel="stylesheet" href="css/tablet.css" media="(max-width: 1199px)">
   <link rel="stylesheet" href="css/mobile.css" media="(max-width: 480px)">
+  <link rel="preload" href="fonts/inter/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/visa.css?v=90302a25b4b6">
+  <link rel="stylesheet" href="css/navigation.css?v=59f08a024e03">
+  <link rel="stylesheet" href="css/page-layout.css?v=a0d41ef0bf81">
+  <link rel="stylesheet" href="css/readability.css?v=209e7ea4b887">
+  <link rel="stylesheet" href="css/footer.css?v=2d027e2271c1">
 </head>
 
 <body>
   <!-- Header -->
-  <header class="header">
+  <header class="header" id="site-top">
     <div class="logo">
       <a href="./index.html">
         <div class="logo-container">
@@ -31,6 +37,9 @@
     <!-- Desktop navigation -->
     <div class="nav">
       <div class="nav-item">
+        <a href="./index.html">Home</a>
+      </div>
+      <div class="nav-item">
         <a href="#">Program</a>
         <span class="dropdown-icon"></span>
         <div class="dropdown-menu">
@@ -39,14 +48,6 @@
       </div>
       <div class="nav-item">
         <a href="./cfwc.html">WSDM Cup</a>
-      </div>
-      <div class="nav-item">
-        <a href="#">Attending</a>
-        <span class="dropdown-icon"></span>
-        <div class="dropdown-menu">
-          <a href="#">Menu-1</a>
-          <a href="#">Menu-2</a>
-        </div>
       </div>
       <div class="nav-item">
         <a href="#">Calls</a>
@@ -59,6 +60,7 @@
           <a href="./cftutorial.html">Call for Tutorials</a>
           <a href="./cfidt.html">Call for Industry Day Talks</a>
 		  <a href="./cfdc.html">Call for Doctoral Consortium</a>
+		  <a href="./cfwc.html">Call for WSDM Cup Proposals</a>
         </div>
       </div>
       <div class="nav-item">
@@ -69,12 +71,12 @@
         <a href="sponsoring.html">Sponsoring</a>
 
       </div>
-      <div class="nav-item">
+      <div class="nav-item is-current">
         <a href="#">Venue & Travel</a>
         <span class="dropdown-icon"></span>
         <div class="dropdown-menu">
           <a href="./travel-venue.html">Venue and Hotels</a>
-          <a href="./visa.html">Visa</a>
+          <a href="./visa.html" aria-current="page">Visa</a>
           <a href="https://partnernet.hktb.com/en/destination/hong_kong_experiences/index.html" target="_blank">What to
             do in HK</a>
         </div>
@@ -116,7 +118,7 @@
       </div>
       <div class="mobile-nav-items">
         <div class="mobile-nav-item">
-          <a href="./index.html">WSDM 2027</a>
+          <a href="./index.html">Home</a>
         </div>
         <div class="mobile-nav-item">
           <a href="#">Program</a>
@@ -128,13 +130,6 @@
           <a href="./cfwc.html">WSDM Cup</a>
         </div>
         <div class="mobile-nav-item">
-          <a href="#">Attending</a>
-          <div class="mobile-dropdown">
-            <a href="#">Menu-1</a>
-            <a href="#">Menu-2</a>
-          </div>
-        </div>
-        <div class="mobile-nav-item">
           <a href="#">Calls</a>
           <div class="mobile-dropdown">
             <a href="./cffp.html">Call for Full Papers</a>
@@ -144,6 +139,7 @@
             <a href="./cftutorial.html">Call for Tutorials</a>
             <a href="./cfidt.html">Call for Industry Day Talks</a>
 			<a href="./cfdc.html">Call for Doctoral Consortium</a>
+			<a href="./cfwc.html">Call for WSDM Cup Proposals</a>
           </div>
         </div>
         <div class="mobile-nav-item">
@@ -157,7 +153,7 @@
           <a href="#">Venue & Travel</a>
           <div class="mobile-dropdown">
             <a href="./travel-venue.html">Venue and Hotels</a>
-            <a href="./visa.html">Visa</a>
+            <a href="./visa.html" aria-current="page">Visa</a>
             <a href="https://partnernet.hktb.com/en/destination/hong_kong_experiences/index.html" target="_blank">What
               to do in HK</a>
           </div>
@@ -169,131 +165,94 @@
 
 
   <!-- Main content -->
-  <main class="main-content overview-main-content">
+  <main class="main-content overview-main-content visa-page" id="main-content">
 
-    <!-- Call for Papers -->
-    <section class="cfp-section conference-overview">
-      <h2>WSDM 2027 Visa Information</h2>
+    <!-- Page title -->
+    <section class="visa-heading">
+      <h1>WSDM 2027 Visa Information</h1>
     </section>
+    <div class="visa-content">
 
-    <section class="cffp-section">
-      <p>Visa Requirements</p>
+    <section class="visa-section">
+      <h2>Visa Requirements</h2>
       <div>
-        <span class="cffp-section-title">Visa-Free Entry</span>
-        <div style="margin: 10px 0;"> Citizens from over 170 countries and territories can enter Hong Kong without a
-          visa for tourism purposes,
-          including conference attendance. Key eligible regions include:</div>
+        <h3>Visa-Free Entry</h3>
+        <p>Nationals of about 170 countries and territories may visit Hong Kong visa-free for periods ranging from 7 to 180 days. Eligibility and length of stay depend on nationality and travel document type. Examples include:</p>
         <ul>
-          <li>United States, Canada, and most European Union countries (90 days stay)</li>
-          <li>United Kingdom (180 days stay)</li>
-          <li>Japan, South Korea, Singapore, Australia, and New Zealand (90 days stay)</li>
-          <li>Many Latin American and Middle Eastern countries (30-90 days stay)</li>
-          <li>India (14 days stay, pre-arrival registration required)</li>
+          <li>United States ordinary passport holders, Canada, and European Union member states: up to 90 days</li>
+          <li>British citizens: up to 180 days; other British nationality categories have different arrangements</li>
+          <li>Japan, South Korea, Singapore, Australia, and New Zealand: up to 90 days</li>
+          <li>India: up to 14 days, normally subject to successful online pre-arrival registration (PAR). Exemptions apply; see the <a href="https://webapp.es2.immd.gov.hk/applies2-client/static/faq/i-par-reg/en-US/i-par-reg-faq.html" target="_blank" rel="noopener">official PAR requirements</a>.</li>
         </ul>
-        <div style="margin-top: 10px;">
-          <b>Requirements:</b> Passport valid for at least 6 months, proof of onward/return travel, and sufficient funds
-          for
-          your stay. We recommend carrying your conference registration confirmation and invitation letter.
-        </div>
-        <div style="margin: 10px 0;">
-          <a href="https://www.immd.gov.hk/eng/services/visas/visit-transit/visit-visa-entry-permit.html"
-            target="_blank">[Check Full Visa-Free Country List]</a>
-        </div>
-        <span class="cffp-section-title">Visa-Required Countries</span>
-        <div style="margin: 10px 0;">Nationals from certain countries must obtain a visa before traveling to Hong Kong.
-          This includes citizens of:
-        </div>
-        <ul>
-          <li>Mainland China (unless holding a Two-Way Permit)</li>
-          <li>Pakistan, Bangladesh, Sri Lanka</li>
-          <li>Most African countries</li>
-          <li>Some Southeast Asian nations including Vietnam and Laos</li>
-        </ul>
+        <p>Check the <a href="https://www.immd.gov.hk/eng/services/visas/visit-transit/visit-visa-entry-permit.html" target="_blank" rel="noopener">official visa requirements by nationality and travel document</a> before travelling. Visa-free eligibility does not guarantee admission.</p>
+        <h3>Travel Documents and Conference Attendance</h3>
+        <p>Carry a valid travel document, sufficient funds, and onward or return tickets where required. Confirm the document validity requirements for your circumstances; a six-month rule should not be assumed to apply to every visitor.</p>
+        <p>Visitors may generally attend short-term seminars or business meetings. Giving a speech or presentation is subject to additional conditions, including remuneration and event-duration limits. Refer to the <a href="https://www.immd.gov.hk/eng/services/visas/permissible-activities.html" target="_blank" rel="noopener">permissible activities for visitors</a> for details.</p>
+        <h3>If You Require a Visa or Entry Permit</h3>
+        <p>Obtain the appropriate visa or entry permit before travelling if your nationality, travel document, or intended stay requires one. Mainland, Macao, Taiwan, and overseas Chinese residents should consult the separate arrangements below.</p>
       </div>
     </section>
 
-    <section class="cffp-section">
-      <p>Visa Application Process</p>
+    <section class="visa-section">
+      <h2>Visa Application Process</h2>
       <div>
-        <span class="cffp-section-title">Electronic Visa Application</span>
-        <div style="margin: 10px 0;"> Since January 2025, Hong Kong has implemented a fully digital visa application
-          system:</div>
-        <div>
-          <table class="visa-table">
-            <tr>
-              <td>Application Portal</td>
-              <td><a href="https://www.immd.gov.hk/eng/evisaonline.html" target="_blank">Hong Kong e-Visa System</a>
-              </td>
-            </tr>
-            <tr>
-              <td>Required Documents</td>
-              <td>Passport copy, invitation letter (provided upon request), travel itinerary, proof of accommodation,
-                financial statements</td>
-            </tr>
-            <tr>
-              <td>Processing Time</td>
-              <td>4-6 weeks (recommend applying at least 2 months before travel)</td>
-            </tr>
-            <tr>
-              <td>Fee</td>
-              <td>HKD 330</td>
-            </tr>
-          </table>
-        </div>
-        <span class="cffp-section-title">Conference Invitation Letter</span>
-        <div style="margin: 10px 0;">Registered attendees requiring an official invitation letter for visa applications
-          may request one by contacting <a href="mailto:wsdm2027@gmail.com">wsdm2027@gmail.com</a> with your
-          registration confirmation number.
-        </div>
+        <h3>Electronic Visa Application</h3>
+        <p>Online services allow applicants to submit a visa application and supporting documents, pay the relevant fee after approval, and download the e-Visa. See the <a href="https://www.immd.gov.hk/eng/evisaonline.html" target="_blank" rel="noopener">electronic visa application services</a> for the applicable application route.</p>
+        <table class="visa-table" aria-label="Visa application details">
+          <tr>
+            <th scope="row">Application Information</th>
+            <td><a href="https://www.immd.gov.hk/eng/services/visas/visit_transit.html" target="_blank" rel="noopener">Visit / Transit visa and entry permit applications</a></td>
+          </tr>
+          <tr>
+            <th scope="row">Required Documents</th>
+            <td>Application details, a recent photograph, travel document copy, financial evidence, and proof of the proposed visit. Sponsor forms and supporting documents may also apply. Follow the <a href="https://www.immd.gov.hk/eng/services/visas/visit_transit.html" target="_blank" rel="noopener">official document checklist</a>; additional evidence may be requested.</td>
+          </tr>
+          <tr>
+            <th scope="row">Processing Time</th>
+            <td>Normally about four weeks after all required documents and information have been received. As a conference planning recommendation, allow at least two months before travel.</td>
+          </tr>
+          <tr>
+            <th scope="row">Visa Fee</th>
+            <td>Ordinary visit visa: HKD 330. Transit visa: HKD 170. Check the <a href="https://www.immd.gov.hk/eng/services/fee-tables/" target="_blank" rel="noopener">current official fee table</a> for the applicable category.</td>
+          </tr>
+        </table>
       </div>
     </section>
 
-    <section class="cffp-section">
-      <p>Special Considerations</p>
+    <section class="visa-section">
+      <h2>Special Considerations</h2>
       <div>
-        <span class="cffp-section-title">Chinese Mainland Visitors</span>
-        <div style="margin: 10px 0;"> Mainland Chinese citizens must apply for an Exit-Entry Permit for Hong Kong and
-          Macao (往来港澳通行证) and an endorsement (签注) through local Public Security Bureau offices.
-        </div>
+        <h3>Mainland and Other Chinese Residents</h3>
+        <p>Mainland residents visiting Hong Kong generally need a valid Exit-Entry Permit for Travelling to and from Hong Kong and Macao (往来港澳通行证) with an appropriate valid exit endorsement (签注), issued by the relevant Mainland authorities.</p>
+        <p>Separate provisions apply to Macao, Taiwan, and overseas Chinese residents. Consult the <a href="https://www.immd.gov.hk/eng/services/visas/overseas-chinese-entry-arrangement.html" target="_blank" rel="noopener">official entry arrangements</a> for your residence and travel document.</p>
       </div>
       <div>
-        <span class="cffp-section-title">Transit Without Visa</span>
-        <div style="margin: 10px 0;">Some nationalities may transit through Hong Kong for up to 7 days without a visa if
-          holding confirmed onward tickets. Check with your airline and <a
-            href="https://www.immd.gov.hk/eng/services/visas/visit-transit/visit-visa-entry-permit.html"
-            target="_blank">[Official Requirements]</a>.
-        </div>
+        <h3>Transit Arrangements</h3>
+        <p>PRC passport holders transiting through Hong Kong to or from another country or territory may be granted up to seven days on each landing without obtaining an entry permit in advance. This is subject to normal immigration requirements, including valid entry facilities for the destination and a confirmed onward booking for the overseas journey.</p>
+        <p>This is not a general seven-day exemption for all travellers. Other passport holders should check the <a href="https://www.immd.gov.hk/eng/services/visas/visit-transit/visit-visa-entry-permit.html" target="_blank" rel="noopener">visa and transit requirements</a>, including any restrictions that apply even when remaining in the airport transit area.</p>
       </div>
     </section>
-    <section class="cffp-section">
-      <p>Important Notes</p>
-      <div>
-        <ul>
-          <li>Electronic visas must be printed and presented with your passport at immigration</li>
-          <li>Hong Kong has separate immigration policies from Mainland China</li>
-          <li>Customs regulations prohibit certain medications (including some CBD products) - check <a
-              href="https://www.customs.gov.hk/en/service-enforcement-information/passenger-clearance/prohibited-controlled-items/index.html"
-              target="_blank">[Customs
-              Guidelines]</a></li>
-          <li>Carry cash exceeding HKD 120,000 (or equivalent) requires declaration</li>
-        </ul>
-      </div>
-      <div style="margin-top: 20px;">
-        For further assistance, please contact the Hong Kong Immigration Department or your nearest Chinese
-        embassy/consulate.
 
-      </div>
+    <section class="visa-section">
+      <h2>Important Notes</h2>
+      <ul>
+        <li>For immigration clearance, present your valid travel document together with your e-Visa saved on a mobile device or printed on A4 white paper. See the <a href="https://www.immd.gov.hk/eng/e-visa.html" target="_blank" rel="noopener">official e-Visa guidance</a>.</li>
+        <li>Hong Kong has separate immigration arrangements from Mainland China. Check the requirements for every destination in your itinerary.</li>
+        <li>Products containing CBD are controlled under Hong Kong’s dangerous drugs legislation; import is prohibited unless the relevant statutory requirements are met. See the <a href="https://www.customs.gov.hk/en/customs-announcement/press-release/index_id_3635.html" target="_blank" rel="noopener">official CBD notice</a> and <a href="https://www.customs.gov.hk/en/service-enforcement-information/passenger-clearance/prohibited-controlled-items/index.html" target="_blank" rel="noopener">restricted items guidance</a>.</li>
+        <li>When arriving through a specified control point, declare physical currency and bearer negotiable instruments with a combined value exceeding HKD 120,000 (or equivalent), using the Red Channel. See the <a href="https://www.customs.gov.hk/en/faqs/currency-and-bearer-negotiable-instruments/index.html" target="_blank" rel="noopener">official declaration requirements</a>.</li>
+      </ul>
+      <p>For individual immigration enquiries, contact the <a href="mailto:enquiry@immd.gov.hk">Hong Kong Immigration Department</a>. Requirements may change; consult the linked official guidance before applying and travelling.</p>
     </section>
+    </div>
     <!-- Footer -->
-    <footer class="footer">
-      <h2>WSDM 2027</h2>
-      <div class="footer-bottom">
-        <p>© 2027, WSDM 2027. All right reserved.</p>
-        <div class="footer-links">
-          <a href="mailto:wsdm2027@gmail.com">Contact Us</a>
-        </div>
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <p class="site-footer-copyright">© 2027 WSDM 2027. All rights reserved.</p>
+        <a class="site-footer-top" href="#site-top">Back to top ↑</a>
       </div>
     </footer>
+
+  </main>
 
     <script>
       document.addEventListener('DOMContentLoaded', function () {

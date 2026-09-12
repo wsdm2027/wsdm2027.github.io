@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WSDM 2027</title>
   <!-- 基础样式（无媒体查询） -->
   <link rel="stylesheet" href="css/base.css">
@@ -15,11 +15,15 @@
   <link rel="stylesheet" href="css/desktop-sm.css" media="(min-width: 1200px)">
   <link rel="stylesheet" href="css/tablet.css" media="(max-width: 1199px)">
   <link rel="stylesheet" href="css/mobile.css" media="(max-width: 480px)">
+  <link rel="preload" href="fonts/inter/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/organizers-refinements.css?v=b24683910d78">
+  <link rel="stylesheet" href="css/navigation.css?v=59f08a024e03">
+  <link rel="stylesheet" href="css/footer.css?v=2d027e2271c1">
 </head>
 
-<body>
+<body class="organizers-refined">
   <!-- Header -->
-  <header class="header">
+  <header class="header" id="site-top">
     <div class="logo">
       <a href="./index.html">
         <div class="logo-container">
@@ -31,6 +35,9 @@
     <!-- Desktop navigation -->
     <div class="nav">
       <div class="nav-item">
+        <a href="./index.html">Home</a>
+      </div>
+      <div class="nav-item">
         <a href="#">Program</a>
         <span class="dropdown-icon"></span>
         <div class="dropdown-menu">
@@ -39,14 +46,6 @@
       </div>
       <div class="nav-item">
         <a href="./cfwc.html">WSDM Cup</a>
-      </div>
-      <div class="nav-item">
-        <a href="#">Attending</a>
-        <span class="dropdown-icon"></span>
-        <div class="dropdown-menu">
-          <a href="#">Menu-1</a>
-          <a href="#">Menu-2</a>
-        </div>
       </div>
       <div class="nav-item">
         <a href="#">Calls</a>
@@ -59,10 +58,11 @@
           <a href="./cftutorial.html">Call for Tutorials</a>
           <a href="./cfidt.html">Call for Industry Day Talks</a>
 		  <a href="./cfdc.html">Call for Doctoral Consortium</a>
+		  <a href="./cfwc.html">Call for WSDM Cup Proposals</a>
         </div>
       </div>
       <div class="nav-item">
-        <a href="./organizers.html">Organizers</a>
+        <a href="./organizers.html" aria-current="page">Organizers</a>
 
       </div>
       <div class="nav-item">
@@ -116,7 +116,7 @@
       </div>
       <div class="mobile-nav-items">
         <div class="mobile-nav-item">
-          <a href="./index.html">WSDM 2027</a>
+          <a href="./index.html">Home</a>
         </div>
         <div class="mobile-nav-item">
           <a href="#">Program</a>
@@ -128,13 +128,6 @@
           <a href="./cfwc.html">WSDM Cup</a>
         </div>
         <div class="mobile-nav-item">
-          <a href="#">Attending</a>
-          <div class="mobile-dropdown">
-            <a href="#">Menu-1</a>
-            <a href="#">Menu-2</a>
-          </div>
-        </div>
-        <div class="mobile-nav-item">
           <a href="#">Calls</a>
           <div class="mobile-dropdown">
             <a href="./cffp.html">Call for Full Papers</a>
@@ -144,10 +137,11 @@
             <a href="./cftutorial.html">Call for Tutorials</a>
             <a href="./cfidt.html">Call for Industry Day Talks</a>
 			<a href="./cfdc.html">Call for Doctoral Consortium</a>
+			<a href="./cfwc.html">Call for WSDM Cup Proposals</a>
           </div>
         </div>
         <div class="mobile-nav-item">
-          <a href="./organizers.html">Organizers</a>
+          <a href="./organizers.html" aria-current="page">Organizers</a>
         </div>
         <div class="mobile-nav-item">
           <a href="sponsoring.html">Sponsoring</a>
@@ -284,7 +278,7 @@
                   <img src="./images/chairs/zhaoxiangyu.jpg" alt="Xiangyu Zhao">
                 </div>
                 <h3 class="chair-name">Xiangyu Zhao</h3>
-                <p class="chair-affiliation">The Hong Kong City University</p>
+                <p class="chair-affiliation">City University of Hong Kong</p>
               </div>
             </div>
           </div>
@@ -303,7 +297,7 @@
                   <img src="./images/chairs/HarrieOosterhuis.jpg" alt="Harrie Oosterhuis">
                 </div>
                 <h3 class="chair-name">Harrie Oosterhuis</h3>
-                <p class="chair-affiliation">Radboud University</p>
+                <p class="chair-affiliation">University of Amsterdam</p>
               </div>
             </div>
           </div>
@@ -544,15 +538,14 @@
       </div>
     </section>
     <!-- Footer -->
-    <footer class="footer">
-      <h2>WSDM 2027</h2>
-      <div class="footer-bottom">
-        <p>© 2027, WSDM 2027. All right reserved.</p>
-        <div class="footer-links">
-          <a href="mailto:wsdm2027@gmail.com">Contact Us</a>
-        </div>
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <p class="site-footer-copyright">© 2027 WSDM 2027. All rights reserved.</p>
+        <a class="site-footer-top" href="#site-top">Back to top ↑</a>
       </div>
     </footer>
+
+  </main>
 
     <script>
       document.addEventListener('DOMContentLoaded', function () {

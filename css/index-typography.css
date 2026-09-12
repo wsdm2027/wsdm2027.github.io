@@ -1,0 +1,220 @@
+/* Homepage typography only. Inter is self-hosted under the SIL Open Font License. */
+@font-face {
+  font-family: "WSDM Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../fonts/inter/inter-latin.woff2") format("woff2");
+}
+
+body.home-typography {
+  --home-font: "WSDM Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --home-section-size: clamp(24px, 2.2vw, 30px);
+  --home-name-size: clamp(18px, 1.55vw, 21px);
+  --home-body-size: 16px;
+  font-family: var(--home-font);
+  font-size: var(--home-body-size);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.home-typography :is(h1, h2, h3, p, a, span, time, button) {
+  font-family: var(--home-font);
+}
+
+.home-typography .nav-item > a {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.home-typography .dropdown-menu a {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.home-typography .mobile-nav :is(a, span) {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.home-typography .hero h1 {
+  font-size: clamp(26px, 2.6vw, 36px);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+}
+
+.home-typography .hero > p {
+  font-size: clamp(16px, 1.3vw, 18px);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.home-typography .hero .info-content p,
+.home-typography .hero :is(.info-label, .info-value) {
+  font-size: clamp(16px, 1.3vw, 18px);
+  line-height: 1.6;
+}
+
+.home-typography .hero .info-label {
+  font-weight: 600;
+}
+
+.home-typography .hero .info-value {
+  font-weight: 400;
+}
+
+.home-typography .hero .intro-section p {
+  font-size: clamp(16px, 1.3vw, 18px);
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.home-typography :is(.speakers-section, .home-calls, .home-authors, .homepage-chairs) h2 {
+  font-size: var(--home-section-size);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+
+.home-typography :is(.speaker, .homepage-chairs) h3 {
+  font-size: var(--home-name-size);
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+}
+
+.home-typography .speakers-section .speaker p {
+  font-size: clamp(16px, 1.25vw, 18px);
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+.home-typography .homepage-chairs .chair-affiliation {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.home-typography .home-calls .calls-intro {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+.home-typography :is(.home-calls, .home-authors) h3 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.015em;
+}
+
+.home-typography .home-calls .call-description,
+.home-typography .home-authors p {
+  font-size: var(--home-body-size);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.home-typography .home-calls .call-deadline {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  font-variant-numeric: tabular-nums;
+}
+
+.home-typography .home-calls .deadline-label {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+
+.home-typography .home-calls :is(.tentative-label, .calls-note) {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.home-typography .home-authors .notification-date {
+  font-size: clamp(22px, 1.8vw, 26px);
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -0.015em;
+  font-variant-numeric: tabular-nums;
+}
+
+.home-typography .home-calls .call-link,
+.home-typography .home-authors a,
+.home-typography .homepage-chairs .home-organizers-link {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.home-typography .home-contact h2 {
+  font-size: clamp(18px, 1.4vw, 20px);
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.015em;
+}
+
+.home-typography .home-contact .contact-content p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.home-typography .home-contact .contact-email {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.home-typography .home-footer .footer-name {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.home-typography .home-footer .footer-copyright {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+  .home-typography .home-calls .calls-intro {
+    font-size: 16px;
+  }
+
+  .home-typography :is(.home-calls, .home-authors) h3 {
+    font-size: 18px;
+  }
+
+  .home-typography .homepage-chairs .chair-affiliation {
+    font-size: 14px;
+  }
+}
+
+/* Compact Date / Location / Contact card; retain the surrounding hero layout. */
+.home-typography .hero .box1 {
+  min-height: 0;
+  height: auto;
+  padding: 20px 22px;
+  justify-content: flex-start;
+  gap: 12px;
+}
+.home-typography .hero .box1 .info-item { flex-direction: row; align-items: flex-start; gap: 10px; }
+.home-typography .hero .box1 .info-icon { width: 24px; height: 24px; margin: 0; }
+.home-typography .hero .box1 .info-icon svg { width: 22px; height: 22px; }
+.home-typography .hero .box1 .info-content { min-width: 0; }
+.home-typography .hero .box1 :is(.info-content p,.info-label,.info-value) { font-size: 16px; line-height: 1.5; }
+@media (max-width: 600px) {
+  .home-typography .hero .box1 { padding: 16px; gap: 10px; }
+  .home-typography .hero .box1 :is(.info-content p,.info-label,.info-value) { font-size: 15px; }
+  .home-typography .hero .box1 .info-link { overflow-wrap: anywhere; }
+}

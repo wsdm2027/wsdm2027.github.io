@@ -1,0 +1,43 @@
+/* Wider homepage information and a shared row for the two chair groups. */
+.home-typography { --home-content-max: 1504px; --home-gutter: 48px; }
+.home-typography .home-calls { padding-left: var(--home-gutter); padding-right: var(--home-gutter); }
+.home-typography .home-calls .calls-container { max-width: var(--home-content-max); }
+.home-typography .home-authors {
+  width: calc(100% - 2 * var(--home-gutter));
+  max-width: var(--home-content-max);
+  margin-left: auto;
+  margin-right: auto;
+}
+.home-chair-overview {
+  max-width: calc(var(--home-content-max) + 2 * var(--home-gutter));
+  margin: 0 auto;
+  padding: 40px var(--home-gutter);
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 24px 40px;
+}
+.home-chair-overview .homepage-chairs { padding: 0; min-width: 0; background: transparent; }
+.home-chair-overview .homepage-chairs .container { max-width: none; padding: 0; margin: 0; }
+.home-chair-overview .chairs-category { min-width: 0; max-width: none; }
+.home-chair-overview .homepage-chairs .chairs-grid { gap: 16px; }
+.home-chair-overview .homepage-chairs .chair-card {
+  min-width: 0;
+  min-height: 320px;
+  padding: 24px 16px 28px;
+}
+.home-chair-overview .homepage-chairs .chair-card .chair-image { width: 112px; height: 112px; }
+.home-chair-overview .homepage-chairs .chairs-title { gap: 16px; }
+.home-chair-overview .more-organizers { grid-column: 1 / -1; margin: 0; padding: 0; text-align: center; }
+.home-chair-overview .home-organizers-link { display: inline-block; padding: 10px 4px; color: #961f12; font-size: 16px; font-weight: 500; text-decoration: underline; text-underline-offset: 5px; }
+@media(max-width:1199px) {
+  .home-typography { --home-gutter: 32px; }
+  .home-chair-overview { grid-template-columns: 1fr; gap: 36px; }
+  .home-chair-overview .homepage-chairs .chair-card { min-height: 290px; }
+}
+@media(max-width:700px) {
+  .home-typography { --home-gutter: 20px; }
+  .home-chair-overview { padding-top: 24px; padding-bottom: 32px; gap: 28px; }
+  .home-chair-overview .homepage-chairs .chairs-grid { margin: 0 auto; }
+  .home-chair-overview .homepage-chairs .chair-card { min-height: 144px; padding: 24px; }
+  .home-chair-overview .homepage-chairs .chair-card .chair-image { width: 88px; height: 88px; }
+}

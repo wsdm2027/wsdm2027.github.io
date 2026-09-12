@@ -1,0 +1,82 @@
+/* Tutorials pilot: uses the Calls palette and self-hosted font. */
+.tutorial-page { font-family: var(--call-font); font-size: 16px; line-height: 1.75; }
+.tutorial-page h1, .tutorial-page h2, .tutorial-page h3 { letter-spacing: -.025em; line-height: 1.25; font-weight: 600; }
+.tutorial-page h1 { font-size: clamp(34px, 3.6vw, 48px); margin: 0 0 20px; color: var(--call-wine); }
+.tutorial-page h2 { font-size: 28px; color: #333; margin: 0 0 16px; }
+.tutorial-page h3 { font-size: 21px; color: #333; margin: 0 0 14px; }
+.tutorial-page p { margin: 0 0 16px; }
+.tutorial-page .tutorial-eyebrow { font-size: 12px; font-weight: 600; color: var(--call-wine); letter-spacing: .09em; text-transform: uppercase; margin-bottom: 14px; }
+.tutorial-hero { display: grid; grid-template-columns: minmax(0,1fr) 340px; gap: 64px; align-items: center; padding: 64px 0 48px; }
+.tutorial-lead { max-width: 540px; font-size: 19px; line-height: 1.65; color: #555; }
+.tutorial-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 18px 24px; margin: 28px 0 14px; }
+.tutorial-page .tutorial-button { display: inline-flex; align-items: center; gap: 24px; padding: 13px 20px; color: #fff; background: var(--call-wine); font-size: 15px; font-weight: 500; text-decoration: none; border-radius: 4px; }
+.tutorial-page .tutorial-button:hover { background: #7a1207; }
+.tutorial-secondary { font-size: 14px; text-decoration: none; }
+.tutorial-page .tutorial-meta { font-size: 12px; color: #777; margin: 0; }
+.tutorial-dates { border: 1px solid var(--call-line); border-top: 3px solid var(--call-wine); padding: 24px; border-radius: 4px; }
+.tutorial-dates h2 { font-size: 18px; letter-spacing: 0; }
+.tutorial-dates dl { margin: 0; }
+.tutorial-dates dl > div { padding: 12px 0; border-bottom: 1px solid #eee7e3; }
+.tutorial-dates dt { font-size: 13px; color: #666; }
+.tutorial-dates dt span { font-size: 12px; }
+.tutorial-dates dd { margin: 3px 0 0; font-size: 18px; font-weight: 600; color: var(--call-wine); }
+.tutorial-page .tutorial-dates > p { margin: 16px 0 0; font-size: 12px; line-height: 1.6; color: #777; }
+.tutorial-page .call-jump-nav { justify-content: flex-start; margin-bottom: 32px; padding-bottom: 20px; }
+.tutorial-summary { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 28px; margin-bottom: 48px; }
+.tutorial-summary > div { padding-right: 24px; border-right: 1px solid var(--call-line); }
+.tutorial-summary > div:last-child { border: 0; padding-right: 0; }
+.tutorial-summary span { display: block; font-size: 12px; color: #777; margin-bottom: 8px; }
+.tutorial-summary strong { display: block; font-weight: 600; font-size: 19px; margin-bottom: 6px; }
+.tutorial-summary p { font-size: 14px; line-height: 1.65; color: #666; margin: 0; }
+.tutorial-section { padding: 40px 0; border-top: 1px solid var(--call-line); }
+.tutorial-section > p { max-width: 940px; }
+.tutorial-section-heading { margin-bottom: 26px; }
+.tutorial-section-heading > p:last-child { color: #666; }
+.tutorial-section-heading .tutorial-eyebrow { color: var(--call-wine); }
+.tutorial-requirements { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; }
+.tutorial-requirement { border: 1px solid var(--call-line); border-radius: 6px; padding: 28px; }
+.tutorial-card-heading { display: flex; align-items: center; justify-content: space-between; margin-bottom: 22px; }
+.tutorial-limit { padding: 4px 10px; background: #faf5f2; color: var(--call-wine); font-size: 12px; border-radius: 3px; }
+.tutorial-requirement ul { padding-left: 20px; font-size: 15px; margin: 0; }
+.tutorial-requirement li { padding-left: 3px; margin-top: 12px; }
+.tutorial-requirement li::marker { color: #b69a91; }
+.tutorial-format-note { margin-top: 24px; padding: 18px 22px; border-left: 3px solid #d9b9af; background: #faf8f6; font-size: 14px; }
+.tutorial-format-note strong { font-weight: 600; }
+.tutorial-format-note p { margin: 4px 0 0; }
+.tutorial-schedule { display: grid; grid-template-columns: minmax(0,1.2fr) minmax(0,1fr); gap: 64px; }
+.tutorial-page .tutorial-muted { font-size: 14px; color: #777; }
+.tutorial-session-times { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 0; align-self: center; }
+.tutorial-session-times > div { border-top: 2px solid #d9b9af; padding-top: 18px; }
+.tutorial-session-times dt { font-size: 14px; color: #777; }
+.tutorial-session-times dd { font-size: 20px; line-height: 1.85; font-variant-numeric: tabular-nums; margin: 8px 0 0; }
+.tutorial-chairs { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.tutorial-chairs article { display: flex; align-items: center; gap: 18px; padding: 18px 0; border-top: 1px solid var(--call-line); }
+.tutorial-chair-photo { display: block; flex: 0 0 80px; width: 80px; height: 80px; object-fit: cover; object-position: center top; border-radius: 6px; }
+.tutorial-chair-info { min-width: 0; }
+.tutorial-chairs h3 { margin-bottom: 6px; font-size: 19px; }
+.tutorial-chairs p { font-size: 14px; color: #777; margin-bottom: 6px; }
+.tutorial-chairs a { font-size: 14px; }
+.tutorial-page .call-footer { margin-top: 12px; }
+@media (max-width: 1000px) {
+  .tutorial-hero { grid-template-columns: minmax(0,1fr) 290px; gap: 32px; }
+  .tutorial-schedule { gap: 32px; }
+}
+@media (max-width: 700px) {
+  .tutorial-hero { grid-template-columns: 1fr; gap: 28px; padding: 36px 0 28px; }
+  .tutorial-lead { font-size: 17px; }
+  .tutorial-dates { padding: 20px; }
+  .tutorial-dates dl > div { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+  .tutorial-dates dd { font-size: 16px; white-space: nowrap; }
+  .tutorial-summary { gap: 20px; grid-template-columns: 1fr; margin-bottom: 32px; }
+  .tutorial-summary > div { border-right: 0; border-bottom: 1px solid #eee7e3; padding: 0 0 18px; }
+  .tutorial-requirements, .tutorial-schedule, .tutorial-chairs { grid-template-columns: 1fr; gap: 24px; }
+  .tutorial-section { padding: 30px 0; }
+  .tutorial-page h2 { font-size: 24px; }
+  .tutorial-dates h2 { font-size: 18px; }
+  .tutorial-requirement { padding: 22px; }
+}
+@media print {
+  .tutorial-hero { padding: 20px 0; }
+  .tutorial-actions { display: none; }
+  .tutorial-requirement, .tutorial-chairs article { break-inside: avoid; }
+}

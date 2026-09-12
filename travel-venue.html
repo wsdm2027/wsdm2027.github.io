@@ -3,8 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>WSDM 2027</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Venue &amp; Hotels | WSDM 2027</title>
   <!-- 基础样式（无媒体查询） -->
   <link rel="stylesheet" href="css/base.css">
 
@@ -15,11 +15,17 @@
   <link rel="stylesheet" href="css/desktop-sm.css" media="(min-width: 1200px)">
   <link rel="stylesheet" href="css/tablet.css" media="(max-width: 1199px)">
   <link rel="stylesheet" href="css/mobile.css" media="(max-width: 480px)">
+  <link rel="preload" href="fonts/inter/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/venue-refinements.css?v=5dd0e436b7f4">
+  <link rel="stylesheet" href="css/navigation.css?v=59f08a024e03">
+  <link rel="stylesheet" href="css/page-layout.css?v=a0d41ef0bf81">
+  <link rel="stylesheet" href="css/readability.css?v=209e7ea4b887">
+  <link rel="stylesheet" href="css/footer.css?v=2d027e2271c1">
 </head>
 
 <body>
   <!-- Header -->
-  <header class="header">
+  <header class="header" id="site-top">
     <div class="logo">
       <a href="./index.html">
         <div class="logo-container">
@@ -31,6 +37,9 @@
     <!-- Desktop navigation -->
     <div class="nav">
       <div class="nav-item">
+        <a href="./index.html">Home</a>
+      </div>
+      <div class="nav-item">
         <a href="#">Program</a>
         <span class="dropdown-icon"></span>
         <div class="dropdown-menu">
@@ -39,14 +48,6 @@
       </div>
       <div class="nav-item">
         <a href="./cfwc.html">WSDM Cup</a>
-      </div>
-      <div class="nav-item">
-        <a href="#">Attending</a>
-        <span class="dropdown-icon"></span>
-        <div class="dropdown-menu">
-          <a href="#">Menu-1</a>
-          <a href="#">Menu-2</a>
-        </div>
       </div>
       <div class="nav-item">
         <a href="#">Calls</a>
@@ -59,6 +60,7 @@
           <a href="./cftutorial.html">Call for Tutorials</a>
           <a href="./cfidt.html">Call for Industry Day Talks</a>
 		  <a href="./cfdc.html">Call for Doctoral Consortium</a>
+		  <a href="./cfwc.html">Call for WSDM Cup Proposals</a>
         </div>
       </div>
       <div class="nav-item">
@@ -66,14 +68,14 @@
 
       </div>
       <div class="nav-item">
-        <a href="./Sponsoring.html">Sponsoring</a>
+        <a href="./sponsoring.html">Sponsoring</a>
 
       </div>
-      <div class="nav-item">
+      <div class="nav-item is-current">
         <a href="#">Venue & Travel</a>
         <span class="dropdown-icon"></span>
         <div class="dropdown-menu">
-          <a href="./travel-venue.html">Venue and Hotels</a>
+          <a href="./travel-venue.html" aria-current="page">Venue and Hotels</a>
           <a href="./visa.html">Visa</a>
           <a href="https://partnernet.hktb.com/en/destination/hong_kong_experiences/index.html" target="_blank">What to
             do in HK</a>
@@ -116,7 +118,7 @@
       </div>
       <div class="mobile-nav-items">
         <div class="mobile-nav-item">
-          <a href="./index.html">WSDM 2027</a>
+          <a href="./index.html">Home</a>
         </div>
         <div class="mobile-nav-item">
           <a href="#">Program</a>
@@ -128,13 +130,6 @@
           <a href="./cfwc.html">WSDM Cup</a>
         </div>
         <div class="mobile-nav-item">
-          <a href="#">Attending</a>
-          <div class="mobile-dropdown">
-            <a href="#">Menu-1</a>
-            <a href="#">Menu-2</a>
-          </div>
-        </div>
-        <div class="mobile-nav-item">
           <a href="#">Calls</a>
           <div class="mobile-dropdown">
             <a href="./cffp.html">Call for Full Papers</a>
@@ -144,6 +139,7 @@
             <a href="./cftutorial.html">Call for Tutorials</a>
             <a href="./cfidt.html">Call for Industry Day Talks</a>
 			<a href="./cfdc.html">Call for Doctoral Consortium</a>
+			<a href="./cfwc.html">Call for WSDM Cup Proposals</a>
           </div>
         </div>
         <div class="mobile-nav-item">
@@ -156,7 +152,7 @@
         <div class="mobile-nav-item">
           <a href="#">Venue & Travel</a>
           <div class="mobile-dropdown">
-            <a href="./travel-venue.html">Venue and Hotels</a>
+            <a href="./travel-venue.html" aria-current="page">Venue and Hotels</a>
             <a href="./visa.html">Visa</a>
             <a href="https://partnernet.hktb.com/en/destination/hong_kong_experiences/index.html" target="_blank">What
               to do in HK</a>
@@ -169,26 +165,26 @@
 
 
   <!-- Main content -->
-  <main class="main-content overview-main-content">
+  <main class="main-content overview-main-content venue-refined" id="main-content">
 
     <!-- Call for Papers -->
     <section class="cfp-section conference-overview">
-      <h2>Venue & Hotels</h2>
+      <h1>Venue &amp; Hotels</h1>
     </section>
     <!-- Overview -->
-    <section class="conference-Venue">
+    <section class="conference-Venue" id="conference-venue">
       <div class="container">
         <div class="venue-layout">
           <div class="venue-left">
-            <img src="./images/hotel.jpg" alt="Outside view of Cordis" class="venue-image">
+            <img src="./images/hotel.jpg" alt="Cordis Hong Kong exterior and location map" class="venue-image" width="1558" height="1124">
 
           </div>
           <div class="venue-right">
             <h2 class="venue-title">Conference Venue</h2>
             <div class="venue-description">
-              <div style="margin-bottom:8px;">
-                <span style="background:#A92E20;padding:5px 5px;border-radius:5px;color:#FFF;">Hotel</span>
-                <span style="color:#A92E20;font-size:22px;">Cordis, Hong Kong, 555 Shanghai St, Mong Kok</span>
+              <div class="venue-hotel-heading">
+                <span class="venue-hotel-tag">Hotel</span>
+                <span class="venue-hotel-name">Cordis, Hong Kong, 555 Shanghai St, Mong Kok</span>
               </div>
               WSDM 2027 will be held at the Cordis, Hong Kong. Rising over busy central Kowloon, the upscale 5-star
               Cordis Hong Kong enjoys direct access to Mongkok MTR Station and Langham Place Mall. The hotel also houses
@@ -216,26 +212,26 @@
         </div>
       </div>
     </section>
-    <section class="conference-reach">
+    <section class="conference-reach venue-transport" id="getting-here">
       <div class="container">
-        <div class="how-to-reach-title">How to reach the venue?</div>
+        <h2 class="how-to-reach-title">Getting here</h2>
         <div class="how-to-reach-sub-title">
           Cordis, Hong Kong is conveniently located in the heart of Mong Kok, with excellent transport connections.
         </div>
         <div class="how-to-reach-content">
           <div class="how-to-reach-item">
             <div class="item-image">
-              <img src="./images/mtr.png" alt="Hong Kong MTR" class="transport-image">
+              <a class="venue-image-link" href="./images/mtr.png" target="_blank" rel="noopener"><img src="./images/mtr.png" alt="Hong Kong MTR route map" class="transport-image" width="1558" height="1258" loading="lazy"><span class="venue-image-caption">View full-size transport map ↗</span></a>
             </div>
             <div class="item-content">
               <h3 class="item-title">From Hong Kong International Airport (HKG)</h3>
               <p class="item-text">
                 Option 1: Take the Airport Express to Tsing Yi Station, then take the Tung Chung Line to Lai King
-                Station, then take Tsuen Wan Line to Mong Kok Station (HK$73, approx. 52 minutes).</p>
-              <p class="item-text">Option 2: Take the Airport Express to Kowloon Station (HK$105, approx. 29 minutes),
-                then take a taxi (approx. 10 minutes)</p>
+                Station, then take the Tsuen Wan Line to Mong Kok Station (allow approx. 52 minutes overall). The Airport Express segment to Tsing Yi costs HK$73 with Octopus or HK$80 with a single-journey Smart Ticket; connecting MTR fares depend on the applicable ticket and transfer conditions.</p>
+              <p class="item-text">Option 2: Take the Airport Express to Kowloon Station (approx. 22 minutes; HK$105 with Octopus or HK$115 with a single-journey Smart Ticket),
+                then take a taxi (approx. 10 minutes; fare charged separately).</p>
               <p class="item-text">
-                Option 3: take a taxi directly from the airport to the hotel (journey duration: 31km, approx. 30-40
+                Option 3: Take a taxi directly from the airport to the hotel (journey duration: 31km, approx. 30-40
                 minutes, depending on traffic).
               </p>
               <h3 class="item-title second-item">From Hong Kong West Kowloon Station (High-speed rail terminal)</h3>
@@ -247,36 +243,38 @@
       </div>
       <div class="mtr-note">
         <p>Note:</p>
-        <p>For MTR schedules and route planning, visit <a href="https://mtr.com.hk" target="_blank">mtr.com.hk</a></p>
+        <p>Check the current <a href="https://www.mtr.com.hk/en/customer/tickets/tf_index.html" target="_blank" rel="noopener">Airport Express fares</a>, <a href="https://www.mtr.com.hk/en/customer/services/timetable_index.html" target="_blank" rel="noopener">timetable</a>, and <a href="https://mtr.com.hk" target="_blank" rel="noopener">MTR route information</a> before travelling. Journey estimates exclude waiting time and may vary with traffic and transfers.</p>
         <p>For cross-border transport and ferry information, please refer to the respective operator websites.</p>
-        <div>
+      </div>
     </section>
 
 
-    <section class="conference-reach">
+    <section class="conference-reach venue-hotels" id="hotels">
       <div class="container">
-        <div class="how-to-reach-title">Hotels</div>
+        <h2 class="how-to-reach-title">Hotels</h2>
 
         <div class="how-to-reach-content">
           <div class="how-to-reach-item">
             <div class="item-image">
-              <img src="./images/cordis-venue.png" alt="cordis-venue" class="transport-image">
+              <img src="./images/cordis-venue.png" alt="Cordis Hong Kong hotel facilities" class="transport-image" width="824" height="617" loading="lazy">
             </div>
             <div class="item-content">
               <h3 class="item-title">Cordis, Hong Kong, 555 Shanghai St, Mong Kok</h3>
               <p class="item-text">
-                All rooms and suites at Cordis Hong Kong are equipped with high-speed WiFi and a LED TV.The luxurious
+                All rooms and suites at Cordis Hong Kong are equipped with high-speed WiFi and an LED TV. The luxurious
                 marble bathrooms come with separate bathtub and rainshowers. Cordis Hong Kong is less than 1 km from
-                Ladies Market, Temple Street Night Market and Flower Market. The wellness facilities include a fully
+                Ladies Market, Temple Street Night Market and Flower Market.</p>
+              <p class="item-text">The wellness facilities include a fully
                 equipped fitness centre, two fitness studios and an outdoor heated pool, along with the Chuan Spa, which
-                features over 60 unique treatments. Dining options include a contemporary Cantonese restaurant, Ming
+                features over 60 unique treatments.</p>
+              <p class="item-text">Dining options include a contemporary Cantonese restaurant, Ming
                 Court, the trendy European restaurant and bar, Alibi – Wine Dine Be Social, and The Garage Bar, the new
                 outdoor food truck destination bar, as well as The Place, the hotel’s all day dining restaurant. If you
                 wish to elevate your stay, the spacious Club Lounge offers premium privileges and services for the
                 jetset.
               </p>
 
-              <h3 class="item-title second-item">WSDM special group rate: TDB</h3>
+              <div class="venue-rate"><span>WSDM special group rate</span><strong>To be announced</strong></div>
             </div>
           </div>
 
@@ -286,15 +284,14 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-      <h2>WSDM 2027</h2>
-      <div class="footer-bottom">
-        <p>© 2027, WSDM 2027. All right reserved.</p>
-        <div class="footer-links">
-          <a href="mailto:wsdm2027@gmail.com">Contact Us</a>
-        </div>
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <p class="site-footer-copyright">© 2027 WSDM 2027. All rights reserved.</p>
+        <a class="site-footer-top" href="#site-top">Back to top ↑</a>
       </div>
     </footer>
+
+  </main>
 
     <script>
       document.addEventListener('DOMContentLoaded', function () {

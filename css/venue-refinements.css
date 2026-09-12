@@ -1,0 +1,105 @@
+/* Venue & Hotels: retain the existing sections and imagery, refine their scale. */
+@font-face {
+  font-family: 'WSDM Venue Inter';
+  src: url('../fonts/inter/inter-latin.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+.venue-refined {
+  --venue-font: 'WSDM Venue Inter', Arial, sans-serif;
+  --venue-wine: #961f12;
+  --venue-line: #e7dcd7;
+  font-family: var(--venue-font);
+  color: #333;
+}
+.venue-refined :is(h1,h2,h3,p,a,div,span) { font-family: var(--venue-font); }
+.venue-refined :is(h1,h2,h3) { font-weight: 600; letter-spacing: -.025em; line-height: 1.3; }
+.venue-refined a { color: var(--venue-wine); text-underline-offset: 4px; }
+.venue-refined a:focus-visible { outline: 2px solid var(--venue-wine); outline-offset: 5px; }
+.venue-refined section[id] { scroll-margin-top: 28px; }
+.venue-refined .conference-overview { padding: 48px 24px 32px; margin: 0; background: #fff; }
+.venue-refined .conference-overview h1 { font-size: clamp(32px,3.2vw,42px); color: var(--venue-wine); text-align: center; margin: 0; }
+.venue-refined .conference-overview h1::after { content: ''; display: block; width: 48px; height: 3px; margin: 20px auto 0; background: var(--venue-wine); }
+.venue-jump-nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px 28px; margin-top: 24px; }
+.venue-jump-nav a { font-size: 13px; text-decoration: none; }
+.venue-jump-nav a:hover { text-decoration: underline; }
+.venue-refined :is(.conference-Venue,.conference-reach) { padding: 40px 32px; }
+.venue-refined .conference-Venue { padding-top: 16px; padding-bottom: 48px; }
+.venue-refined :is(.conference-Venue,.conference-reach) .container { max-width: 1136px; padding: 0; margin: 0 auto; }
+.venue-refined .venue-layout { display: grid; grid-template-columns: minmax(0,.85fr) minmax(0,1.15fr); gap: 40px; align-items: center; margin: 0; }
+.venue-refined :is(.venue-left,.venue-right) { min-width: 0; width: auto; }
+.venue-refined .venue-image { display: block; width: 100%; height: auto; max-height: none; object-fit: contain; border-radius: 6px; margin: 0; }
+.venue-refined .venue-title { font-size: 27px; color: #333; margin-bottom: 16px; }
+.venue-refined .venue-description { font-size: 15px; font-weight: 400; line-height: 1.8; color: #555; margin-bottom: 20px; }
+.venue-refined .venue-hotel-heading { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.venue-refined .venue-hotel-tag { flex-shrink: 0; background: #f6eae5; color: var(--venue-wine); font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 3px; }
+.venue-refined .venue-hotel-name { color: var(--venue-wine); font-size: 17px; font-weight: 600; }
+.venue-refined .hotel-location { padding: 16px 18px; border: 1px solid var(--venue-line); border-radius: 5px; background: #faf8f6; }
+.venue-refined .venue-location { padding: 0; gap: 10px; align-items: flex-start; }
+.venue-refined .location-icon svg { width: 19px; height: 19px; margin-top: 2px; }
+.venue-refined .venue-location p { font-size: 13px; line-height: 1.6; font-weight: 500; }
+.venue-refined .hotel-location .to-hotel { padding: 12px 0 0; margin: 12px 0 0; border-top: 1px solid var(--venue-line); }
+.venue-refined .hotel-location .to-hotel p { font-size: 13px; line-height: 1.75; margin: 0 0 6px; color: #555; }
+.venue-refined .hotel-location .to-hotel p:last-child { margin-bottom: 0; }
+.venue-refined b { font-weight: 500; color: #333; }
+.venue-refined .conference-reach { background: #f5f5f5; }
+.venue-refined .venue-hotels { background: #fff; }
+.venue-refined .how-to-reach-title { font-size: 28px; font-weight: 600; width: auto; height: auto; gap: 20px; margin: 0 auto; }
+.venue-refined .how-to-reach-title::before,.venue-refined .how-to-reach-title::after { position: static; width: 44px; height: 2px; flex: 0 0 44px; background: #c4a098; }
+.venue-refined .how-to-reach-sub-title { color: #666; font-size: 15px; font-weight: 400; line-height: 1.7; margin-top: 14px; }
+.venue-refined .how-to-reach-content { margin-top: 30px; gap: 24px; }
+.venue-refined .how-to-reach-item { display: grid; grid-template-columns: minmax(0,.85fr) minmax(0,1.15fr); gap: 40px; align-items: center; overflow: visible; }
+.venue-refined .item-image { width: 100%; height: auto; min-width: 0; border-radius: 6px; overflow: hidden; }
+.venue-refined .transport-image { width: 100%; height: auto; max-height: none; object-fit: contain; }
+.venue-refined .venue-image-link { display: block; text-decoration: none; }
+.venue-refined .venue-image-caption { display: block; text-align: left; font-size: 12px; padding-top: 10px; }
+.venue-refined .item-content { padding: 0; min-width: 0; width: 100%; }
+.venue-refined .item-title { font-size: 19px; line-height: 1.5; font-weight: 600; color: #333; margin-bottom: 14px; }
+.venue-refined :is(.item-text,.item-note) { color: #555; font-size: 15px; font-weight: 400; line-height: 1.8; margin-bottom: 12px; }
+.venue-refined .venue-transport .item-text { padding: 0 0 12px; border-bottom: 1px solid #e2deda; }
+.venue-refined .how-to-reach-item h3.second-item { margin-top: 16px; }
+.venue-refined .conference-reach .mtr-note { max-width: 1136px; margin: 28px auto 0; padding: 16px 20px; border-left: 3px solid #b7877a; background: #eceae8; }
+.venue-refined .conference-reach .mtr-note p:first-child { font-size: 13px; font-weight: 600; line-height: 1.7; margin-bottom: 4px; color: #333; }
+.venue-refined .conference-reach .mtr-note p:not(:first-child) { font-size: 13px; font-weight: 400; line-height: 1.7; color: #666; }
+.venue-refined .venue-rate { padding: 16px 18px; background: #faf6f3; border: 1px solid var(--venue-line); border-left: 3px solid var(--venue-wine); border-radius: 4px; margin-top: 8px; }
+.venue-refined .venue-rate span { display: block; color: #666; font-size: 12px; margin-bottom: 4px; }
+.venue-refined .venue-rate strong { color: var(--venue-wine); font-size: 17px; font-weight: 600; }
+.venue-refined .footer { background: #f5f5f5; padding: 28px 32px; margin: 0; }
+.venue-refined .footer h2 { max-width: 1136px; margin: 0 auto 14px; font-size: 22px; color: var(--venue-wine); }
+.venue-refined .footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1136px;
+  margin: 0 auto;
+  padding: 16px 0 0;
+  border-top: 1px solid var(--venue-line);
+  background: transparent;
+  color: #666;
+  gap: 12px 24px;
+}
+.venue-refined .footer-bottom p { text-align: left; }
+.venue-refined .footer-links { gap: 0; flex-shrink: 0; }
+.venue-refined .footer-links a { color: var(--venue-wine); }
+.venue-refined .footer-links a:hover { color: #79180e; text-decoration: underline; }
+.venue-refined .footer :is(p,a) { font-size: 12px; line-height: 1.7; font-weight: 400; }
+@media(max-width:800px) {
+  .venue-refined .venue-layout,.venue-refined .how-to-reach-item { grid-template-columns: 1fr; gap: 26px; }
+  .venue-refined .venue-left,.venue-refined .item-image { max-width: 560px; margin: 0 auto; }
+  .venue-refined .venue-image,.venue-refined .transport-image { max-height: 380px; object-fit: contain; }
+}
+@media(max-width:480px) {
+  .venue-refined .conference-overview { padding: 32px 20px 24px; }
+  .venue-refined :is(.conference-Venue,.conference-reach) { padding: 28px 20px; }
+  .venue-refined .conference-Venue { padding-top: 4px; }
+  .venue-refined .venue-title { font-size: 24px; }
+  .venue-refined .how-to-reach-title { font-size: 24px; gap: 12px; }
+  .venue-refined .how-to-reach-title::before,.venue-refined .how-to-reach-title::after { width: 20px; flex-basis: 20px; }
+  .venue-refined .venue-hotel-heading { align-items: flex-start; }
+  .venue-refined .venue-hotel-name { font-size: 16px; }
+  .venue-refined .hotel-location { padding: 14px; }
+  .venue-refined .footer { padding: 24px 20px; }
+  .venue-refined .footer-bottom { align-items: center; gap: 8px; }
+  .venue-refined .footer-bottom p { text-align: center; }
+}

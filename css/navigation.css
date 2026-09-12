@@ -1,0 +1,20 @@
+/* Shared navigation: explicit Home entry and a quiet current-page indicator. */
+.header .nav { flex-wrap: nowrap; gap: clamp(14px, 1.65vw, 26px); }
+.header .nav-item { flex-shrink: 0; }
+.header .nav-item > a { white-space: nowrap; }
+.header .nav-item > a[aria-current="page"],
+.header .nav-item.is-current > a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 7px;
+}
+.dropdown-menu a[aria-current="page"],
+.mobile-nav-items a[aria-current="page"] {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+@media (min-width: 1200px) and (max-width: 1350px) {
+  .header .nav { gap: 14px; }
+  .header .nav-item > a { font-size: 14px; }
+}

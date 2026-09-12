@@ -1,0 +1,39 @@
+/* Adapt long Calls documents to the approved Tutorials components. */
+.call-pilot .tutorial-hero { align-items: center; }
+.call-pilot .tutorial-dates .call-date-note p { font-size: 12px; line-height: 1.6; color: #777; margin: 16px 0 0; }
+.call-pilot .pilot-status { display: inline-block; color: var(--call-wine); background: #faf5f2; padding: 5px 10px; font-size: 13px; margin: 0; border-radius: 3px; }
+.call-pilot .pilot-pending { display: inline-block; color: #65514b; background: #f8f5f3; padding: 12px 18px; border: 1px solid var(--call-line); border-radius: 4px; font-size: 14px; }
+.call-pilot .cffp-section { margin-bottom: 32px; }
+.call-pilot .cffp-section :is(div,p,li) { line-height: 1.75; }
+.call-pilot .cffp-section h2 { color: #333; font-size: 23px; margin: 0 0 16px; }
+.call-pilot .cffp-section h3 { color: #333; font-size: 19px; }
+.call-pilot .cffp-section-overview { padding-top: 36px; margin-bottom: 24px; }
+.call-pilot .cffp-section-overview h2 { color: #333; font-size: 28px; }
+.call-pilot .cffp-section .cffp-section-title { color: #666; font-size: 16px; margin: 28px 0 16px; font-weight: 500; }
+.call-pilot .search-box > div { gap: 24px; }
+.call-pilot .cffp-section .search-box-container { border: 1px solid var(--call-line); background: #fff; border-radius: 6px; padding: 24px; }
+.call-pilot .cffp-section .search-box-container div { font-size: 15px; }
+.call-pilot .call-findings { background: #faf8f6; border-left: 3px solid #d9b9af; padding: 24px 28px; }
+.call-pilot .call-findings::after { display: none; }
+.call-pilot .call-findings :is(h2,div,li) { color: #333; }
+.call-pilot .call-deadlines { padding: 28px 0; border-top: 1px solid var(--call-line); }
+.call-pilot .call-date { background: #fff; border-top-width: 2px; border-top-color: #d9b9af; }
+.call-pilot .visa-table td { background: #fff; }
+.call-pilot .cffp-section .coi { background: #faf8f6; font-size: 15px; border-left: 3px solid #d9b9af; }
+.call-pilot .cffp-section .tutorial-chairs { margin: 12px 0 24px; }
+.call-pilot .cffp-section .tutorial-chair-info h3 { font-size: 19px; margin: 0 0 6px; }
+.call-pilot .cffp-section .tutorial-chair-info p { font-size: 14px; color: #777; margin: 0 0 6px; }
+.call-pilot .pilot-chair-section { margin-bottom: 12px; }
+.call-pilot .cffp-section ul.pilot-checklist { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; list-style: none; padding: 0; }
+.call-pilot .pilot-checklist > li { border: 1px solid var(--call-line); border-radius: 6px; padding: 20px 24px; margin: 0; font-size: 15px; }
+.call-pilot .pilot-part-title { display: block; padding: 18px 22px; border: 1px solid var(--call-line); border-left: 3px solid #d9b9af; border-radius: 4px; font-size: 17px; font-weight: 500; margin: 14px 0; }
+@media (max-width: 700px) {
+  .call-pilot .cffp-section-overview h2 { font-size: 24px; }
+  .call-pilot .cffp-section h2 { font-size: 22px; }
+  .call-pilot .cffp-section ul.pilot-checklist { grid-template-columns: 1fr; }
+  .call-pilot .call-findings, .call-pilot .cffp-section .search-box-container { padding: 20px; }
+  .call-pilot .tutorial-dates dt { max-width: 55%; }
+}
+@media (min-width: 1100px) {
+  .call-pilot .tutorial-chairs:has(> article:nth-child(3)) { grid-template-columns: repeat(3,minmax(0,1fr)); }
+}

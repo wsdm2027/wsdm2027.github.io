@@ -1,0 +1,89 @@
+/* Shared inner-page rhythm. Home and Organizers retain their original layouts. */
+:root {
+  --page-wide: 1440px;
+  --page-reading: 960px;
+  --page-gutter: 48px;
+  --page-heading-space: 56px;
+}
+/* Wide areas share an outer boundary; paragraphs retain a readable line length. */
+.call-content,
+.sponsor-page {
+  max-width: var(--page-wide);
+  padding-left: var(--page-gutter);
+  padding-right: var(--page-gutter);
+  margin-left: auto;
+  margin-right: auto;
+}
+.tutorial-hero,
+.sponsor-hero { padding-top: var(--page-heading-space); padding-bottom: 48px; }
+.tutorial-hero { grid-template-columns: minmax(0,1fr) 360px; }
+.call-page .cffp-section,
+.call-page .cffp-section-overview,
+.call-page .tutorial-section > p { max-width: none; }
+.sponsor-page .sponsor-opportunity-note { max-width: var(--page-reading); }
+.program-hero,
+.program-schedule,
+.program-resources,
+.program-footer {
+  max-width: var(--page-wide);
+  padding-left: var(--page-gutter);
+  padding-right: var(--page-gutter);
+}
+.program-week-scroll { position: relative; }
+.program-hero { padding-top: var(--page-heading-space); }
+.venue-refined :is(.conference-Venue,.conference-reach) {
+  padding-left: var(--page-gutter);
+  padding-right: var(--page-gutter);
+}
+.venue-refined :is(.conference-Venue,.conference-reach) .container,
+.venue-refined .conference-reach .mtr-note {
+  max-width: calc(var(--page-wide) - 2 * var(--page-gutter));
+}
+.venue-refined .venue-layout,
+.venue-refined .how-to-reach-item {
+  grid-template-columns: minmax(0,.8fr) minmax(0,1.2fr);
+  gap: 48px;
+}
+.venue-refined .conference-overview,
+.visa-page .visa-heading { padding-top: var(--page-heading-space); padding-bottom: 36px; }
+.visa-content {
+  max-width: var(--page-wide);
+  padding-left: var(--page-gutter);
+  padding-right: var(--page-gutter);
+}
+/* Extend footer backgrounds to the viewport without extending text or causing overflow. */
+.call-footer,
+.sponsor-footer,
+.program-footer {
+  background: #f5f5f5;
+  box-shadow: 0 0 0 100vmax #f5f5f5;
+  clip-path: inset(0 -100vmax);
+  padding-top: 24px;
+  padding-bottom: 28px;
+  margin-bottom: 0;
+  font-size: 12px;
+  line-height: 1.7;
+  color: #666;
+}
+.venue-refined .footer,
+.visa-page .footer { padding-left: var(--page-gutter); padding-right: var(--page-gutter); }
+.venue-refined .footer h2,
+.venue-refined .footer-bottom,
+.visa-page .footer-bottom { max-width: calc(var(--page-wide) - 2 * var(--page-gutter)); }
+@media(max-width:1000px) {
+  :root { --page-gutter: 32px; --page-heading-space: 40px; }
+  .tutorial-hero { grid-template-columns: minmax(0,1fr) 300px; gap: 32px; }
+  .venue-refined .venue-layout,.venue-refined .how-to-reach-item { gap: 32px; }
+}
+@media(max-width:800px) {
+  .venue-refined .venue-layout,.venue-refined .how-to-reach-item { grid-template-columns: 1fr; gap: 26px; }
+}
+@media(max-width:700px) {
+  :root { --page-gutter: 20px; --page-heading-space: 32px; }
+  .tutorial-hero,.sponsor-hero { grid-template-columns: 1fr; padding-bottom: 28px; }
+  .program-hero { padding-bottom: 32px; }
+}
+@media print {
+  :root { --page-gutter: 0px; --page-heading-space: 20px; }
+  .call-footer,.sponsor-footer,.program-footer { box-shadow: none; clip-path: none; }
+}

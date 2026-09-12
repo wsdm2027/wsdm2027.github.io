@@ -3,8 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>WSDM 2027</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WSDM Cup 2027: Call for Proposals | WSDM 2027</title>
   <!-- 基础样式（无媒体查询） -->
   <link rel="stylesheet" href="css/base.css">
 
@@ -15,21 +15,32 @@
   <link rel="stylesheet" href="css/desktop-sm.css" media="(min-width: 1200px)">
   <link rel="stylesheet" href="css/tablet.css" media="(max-width: 1199px)">
   <link rel="stylesheet" href="css/mobile.css" media="(max-width: 480px)">
+  <link rel="preload" href="fonts/inter/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/calls.css?v=df449f176995">
+  <link rel="stylesheet" href="css/tutorials.css?v=69aff56db13d">
+  <link rel="stylesheet" href="css/calls-editorial.css?v=220a00589c56">
+  <link rel="stylesheet" href="css/navigation.css?v=59f08a024e03">
+  <link rel="stylesheet" href="css/page-layout.css?v=a0d41ef0bf81">
+  <link rel="stylesheet" href="css/readability.css?v=209e7ea4b887">
+  <link rel="stylesheet" href="css/footer.css?v=2d027e2271c1">
 </head>
 
-<body>
+<body class="calls-typography">
   <!-- Header -->
-  <header class="header">
+  <header class="header" id="site-top">
     <div class="logo">
       <a href="./index.html">
         <div class="logo-container">
-          <img src="./images/logo.png" alt="Rectangle 19" class="logo-rectangle">
+          <img src="./images/logo.png" alt="WSDM 2027" class="logo-rectangle">
         </div>
       </a>
     </div>
 
     <!-- Desktop navigation -->
     <div class="nav">
+      <div class="nav-item">
+        <a href="./index.html">Home</a>
+      </div>
       <div class="nav-item">
         <a href="#">Program</a>
         <span class="dropdown-icon"></span>
@@ -38,15 +49,7 @@
         </div>
       </div>
       <div class="nav-item">
-        <a href="./cfwc.html">WSDM Cup</a>
-      </div>
-      <div class="nav-item">
-        <a href="#">Attending</a>
-        <span class="dropdown-icon"></span>
-        <div class="dropdown-menu">
-          <a href="#">Menu-1</a>
-          <a href="#">Menu-2</a>
-        </div>
+        <a href="./cfwc.html" aria-current="page">WSDM Cup</a>
       </div>
       <div class="nav-item">
         <a href="#">Calls</a>
@@ -59,6 +62,7 @@
           <a href="./cftutorial.html">Call for Tutorials</a>
           <a href="./cfidt.html">Call for Industry Day Talks</a>
 		  <a href="./cfdc.html">Call for Doctoral Consortium</a>
+		  <a href="./cfwc.html">Call for WSDM Cup Proposals</a>
         </div>
       </div>
       <div class="nav-item">
@@ -116,7 +120,7 @@
       </div>
       <div class="mobile-nav-items">
         <div class="mobile-nav-item">
-          <a href="./index.html">WSDM 2027</a>
+          <a href="./index.html">Home</a>
         </div>
         <div class="mobile-nav-item">
           <a href="#">Program</a>
@@ -125,14 +129,7 @@
           </div>
         </div>
         <div class="mobile-nav-item">
-          <a href="./cfwc.html">WSDM Cup</a>
-        </div>
-        <div class="mobile-nav-item">
-          <a href="#">Attending</a>
-          <div class="mobile-dropdown">
-            <a href="#">Menu-1</a>
-            <a href="#">Menu-2</a>
-          </div>
+          <a href="./cfwc.html" aria-current="page">WSDM Cup</a>
         </div>
         <div class="mobile-nav-item">
           <a href="#">Calls</a>
@@ -144,6 +141,7 @@
             <a href="./cftutorial.html">Call for Tutorials</a>
             <a href="./cfidt.html">Call for Industry Day Talks</a>
 			<a href="./cfdc.html">Call for Doctoral Consortium</a>
+			<a href="./cfwc.html">Call for WSDM Cup Proposals</a>
           </div>
         </div>
         <div class="mobile-nav-item">
@@ -169,52 +167,12 @@
 
 
   <!-- Main content -->
-  <main class="main-content overview-main-content">
-
-    <!-- Call for Papers -->
-    <section class="cfp-section conference-overview">
-      <h2>WSDM Cup 2027: Call for Proposals</h2>
-    </section>
-
-    <section class="cffp-section">
-      <div>
-        <div style="margin: 10px 0;">
-          We are pleased to open the call for proposals for hosting challenge problems for the <b>WSDM Cup 2027</b>, a
-          high-impact ML/AI competition event co-located with the WSDM 2027 main conference.
-        </div>
-        <div style="margin: 10px 0;">
-          Competitions of this form are a crucial part of the research ecosystem, bringing together world-class experts
-          from around the world to independently evaluate their best ideas on important problems. Past experience has
-          shown this process to generate remarkable progress on specific challenges while achieving a depth of
-          validation that lives up to the highest ideals of empirical rigor for AI and ML as research fields.
-        </div>
-        <div style="margin: 10px 0;">
-          We are seeking proposals for challenge problems and datasets from both industrial and academic institutions,
-          with an emphasis on novel challenges that address the most topical and pressing issues facing the WSDM
-          community today.
-        </div>
-        <div style="margin: 10px 0" ;>
-          We are particularly interested in — but do not limit our attention to — tasks that leverage new insights and
-          solutions aided by Generative AI and emerging agentic systems. Much like many similar shared tasks, we view
-          these challenges as competitions that allow academic and industry practitioners to come together to explore
-          interesting problems and discuss successes, challenges, and future directions. Past WSDM Cup tasks have
-          provided new datasets and evaluation methodologies, and have introduced important tasks to audiences who may
-          have been previously unfamiliar with them.
-        </div>
-        <div style="margin: 10px 0" ;>
-          We strongly encourage all interested institutions and research groups to submit proposals and be part of this
-          important challenge. Hosting a challenge is a fantastic way to bring a strong spotlight to under-studied areas
-          or emerging topics, to showcase expertise, to establish new benchmarks, and to contribute to advancing the
-          field on real-world problems. The winning proposal for the WSDM Cup Challenge will be an archival submission
-          included in a companion volume for WSDM workshops.
-        </div>
-        <p>Important Dates</p>
-        <div>
-          <div>
-            <table class="visa-table">
+  <main class="readable-call call-page tutorial-page call-pilot" id="main-content"><div class="call-content"><section class="tutorial-hero" aria-labelledby="call-title"><div class="tutorial-intro"><p class="tutorial-eyebrow">WSDM 2027 · Hong Kong</p><h1 id="call-title">WSDM Cup 2027: Call for Proposals</h1><p class="tutorial-lead">Propose a challenge that brings researchers and practitioners together around meaningful problems and new datasets.</p><div class="tutorial-actions"><a class="tutorial-button" href="https://cmt3.research.microsoft.com/WSDM2027/Track/4/Submission/Create">Submit a Proposal <span aria-hidden="true">↗</span></a><a class="tutorial-secondary" href="#requirements">Submission guidelines <span aria-hidden="true">↓</span></a></div><p class="tutorial-meta">Submit through Microsoft CMT.</p></div><aside class="tutorial-dates" aria-labelledby="key-dates"><h2 id="key-dates">Important dates</h2><dl><div><dt>Proposals due</dt><dd>Oct 20, 2026</dd></div><div><dt>Notification</dt><dd>Oct 27, 2026</dd></div></dl><p>Dates are tentative. See the complete timeline below.</p></aside></section>
+<nav class="call-jump-nav" aria-label="On this page"><a href="#important-dates">Dates</a><a href="#requirements">Requirements</a><a href="#submission">Submission</a><a href="#wsdm-cup-chairs">Chairs</a></nav><section class="tutorial-summary" aria-label="Submission at a glance"><div><span>Who can propose</span><strong>Industry &amp; academia</strong><p>Challenge proposals from institutions and research groups.</p></div><div><span>Challenge design</span><strong>Data &amp; evaluation</strong><p>Describe the problem, data, metrics, and timeline.</p></div><div><span>Publication</span><strong>Archival proposal</strong><p>In a companion volume for WSDM workshops.</p></div></section>
+<section class="cffp-section call-deadlines"><h2 id="important-dates">Important Dates</h2><table class="visa-table">
               <tr>
-                <th>Milestone</th>
-                <th>Date</th>
+                <th scope="col">Milestone</th>
+                <th scope="col">Date</th>
               </tr>
               <tr>
                 <td>Proposals due</td>
@@ -230,92 +188,136 @@
               </tr>
               <tr>
                 <td>Cup starts</td>
-                <td>Nov. 16 (Monday)</td>
+                <td>Nov 16, 2026 (Monday)</td>
               </tr>
               <tr>
                 <td>Cup ends</td>
-                <td>Feb. 5 (Friday)</td>
+                <td>Feb 5, 2027 (Friday)</td>
               </tr>
               <tr>
                 <td>Winners announced</td>
                 <td>WSDM 2027 conference</td>
               </tr>
-            </table>
-          </div>
-          <div class="note">
+            </table><div class="note">
             <div class="note-title">Note:</div>
             <div>Exact dates will be confirmed upon finalization of the WSDM 2027 conference schedule.</div>
-          </div>
+          </div></section>
+<section class="cffp-section call-introduction"><h2 id="call-overview">Overview</h2>
+      <div>
+        <div>
+          We are pleased to open the call for proposals for hosting challenge problems for the <b>WSDM Cup 2027</b>, a
+          high-impact ML/AI competition event co-located with the WSDM 2027 main conference.
         </div>
-    </section>
-    <section class="cffp-section">
-      <p>Requirements</p>
+        <div>
+          Competitions of this form are a crucial part of the research ecosystem, bringing together world-class experts
+          from around the world to independently evaluate their best ideas on important problems. Past experience has
+          shown this process to generate remarkable progress on specific challenges while achieving a depth of
+          validation that lives up to the highest ideals of empirical rigor for AI and ML as research fields.
+        </div>
+        <div>
+          We are seeking proposals for challenge problems and datasets from both industrial and academic institutions,
+          with an emphasis on novel challenges that address the most topical and pressing issues facing the WSDM
+          community today.
+        </div>
+        <div>
+          We are particularly interested in — but do not limit our attention to — tasks that leverage new insights and
+          solutions aided by Generative AI and emerging agentic systems. Much like many similar shared tasks, we view
+          these challenges as competitions that allow academic and industry practitioners to come together to explore
+          interesting problems and discuss successes, challenges, and future directions. Past WSDM Cup tasks have
+          provided new datasets and evaluation methodologies, and have introduced important tasks to audiences who may
+          have been previously unfamiliar with them.
+        </div>
+        <div>
+          We strongly encourage all interested institutions and research groups to submit proposals and be part of this
+          important challenge. Hosting a challenge is a fantastic way to bring a strong spotlight to under-studied areas
+          or emerging topics, to showcase expertise, to establish new benchmarks, and to contribute to advancing the
+          field on real-world problems. The winning proposal for the WSDM Cup Challenge will be an archival submission
+          included in a companion volume for WSDM workshops.
+        </div>
+
+        <div>
+          <div>
+
+          </div>
+
+        </div>
+    </div></section>
+<section class="cffp-section">
+      <h2 id="requirements">Requirements</h2>
       <div>Submissions will be reviewed on their ability to meet the following requirements:</div>
-      <div style="background: #F5F5F5;margin-top: 10px;">
+      <div>
         <div class="search-box-container">
-          <div><b>Problem Description</b></div>
+          <h3 id="problem-description"><b>Problem Description</b></h3>
           <div>A clear, well-justified description of the problem, including why it is broadly important for the WSDM
             community in terms of novelty, significance, or timeliness.</div>
         </div>
         <div class="search-box-container">
-          <div><b>Scope and Feasibility</b></div>
+          <h3 id="scope-and-feasibility"><b>Scope and Feasibility</b></h3>
           <div>A challenging but manageable and well-scoped problem. There should be a reasonable assessment that the
             problem is both approachable and has sufficient headroom for advances and discoveries. An ideal challenge
             will address new problems that have arisen due to the increasing prevalence of generative and agentic
             systems, or offer a meaningful twist on an existing problem area that was previously infeasible.</div>
         </div>
         <div class="search-box-container">
-          <div><b>Data Description</b></div>
+          <h3 id="data-description"><b>Data Description</b></h3>
           <div>A concise and well-defined description of any data to be provided, including collection timelines (which
             should allow adequate time for verification and leakage checks well in advance of the competition start
             date), licensing considerations, and confirmation that any private test data has never appeared in any
             published or internet-accessible form.</div>
         </div>
         <div class="search-box-container">
-          <div><b>Accessibility</b></div>
+          <h3 id="accessibility"><b>Accessibility</b></h3>
           <div>The proposal should describe how researchers who are generally familiar with AI and ML, but not
             necessarily the specific problem domain, may engage with the challenge, and what additional materials will
             be provided for context. Domain-specific tasks are welcome, provided that in-depth domain knowledge is not
             required to analyze failure cases.</div>
         </div>
         <div class="search-box-container">
-          <div><b>Evaluation</b></div>
+          <h3 id="evaluation"><b>Evaluation</b></h3>
           <div>A clear description of evaluation metrics and protocols. Metrics and evaluation procedures must be
             carefully thought through and described in exact detail. Automated evaluation is strongly preferred due to
             considerations of cost, scale, and repeatability.</div>
         </div>
         <div class="search-box-container">
-          <div><b>Timeline</b></div>
+          <h3 id="timeline"><b>Timeline</b></h3>
           <div>A complete competition timeline covering data collection, preparation and validation, the competition
             period, post-competition verification, and knowledge sharing following the close of the competition.</div>
         </div>
       </div>
 
     </section>
-
-    <section class="cffp-section">
+<section class="cffp-section">
+      <h2 id="submission">Submission</h2>
+      <h3 id="submission-format">Submission Format</h3>
       <div>
-        Please submit your proposals via CMT3 <a
-          style="overflow-wrap: break-word;word-break: break-all;" href="https://cmt3.research.microsoft.com/WSDM2027/Track/4/Submission/Create">
-           https://cmt3.research.microsoft.com/WSDM2027/Track/4/Submission/Create</a>.
+        Proposals are not anonymous. Please include the names, affiliations, and contact information of all organizers
+        in your submission. This information helps us assess the team's expertise and capacity to run the challenge,
+        including data preparation, infrastructure support, and participant engagement throughout the competition period.
+      </div>
+      <div>
+        Please submit your proposals via CMT3 <a href="https://cmt3.research.microsoft.com/WSDM2027/Track/4/Submission/Create">Microsoft CMT</a>.
         Your submission will form an archival submission to a
         companion volume for WSDM 2027 workshops, further broadening awareness of your efforts.
       </div>
-      <div style="margin-top: 10px;font-style: italic;">
+      <div>
         We look forward to your proposals and to another exciting WSDM Cup.
       </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <h2>WSDM 2027</h2>
-      <div class="footer-bottom">
-        <p>© 2027, WSDM 2027. All right reserved.</p>
-        <div class="footer-links">
-          <a href="mailto:wsdm2027@gmail.com">Contact Us</a>
-        </div>
+<section class="cfp-section cffp-section-overview pilot-chair-section">
+      <h2 id="wsdm-cup-chairs">WSDM Cup Chairs</h2>
+    </section>
+<section class="cffp-section pilot-chair-section">
+      <div>
+        <div class="tutorial-chairs"><article><img class="tutorial-chair-photo" src="./images/chairs/kyuminlee.jpg" alt="Kyumin Lee" width="80" height="80" loading="lazy"><div class="tutorial-chair-info"><h3>Kyumin Lee</h3><p>Worcester Polytechnic Institute</p></div></article><article><img class="tutorial-chair-photo" src="./images/chairs/wangxinrun.jpg" alt="Xinrun Wang" width="80" height="80" loading="lazy"><div class="tutorial-chair-info"><h3>Xinrun Wang</h3><p>Singapore Management University</p></div></article></div>
+      </div>
+    </section>
+<footer class="site-footer">
+      <div class="site-footer-inner">
+        <p class="site-footer-copyright">© 2027 WSDM 2027. All rights reserved.</p>
+        <a class="site-footer-top" href="#site-top">Back to top ↑</a>
       </div>
     </footer>
+</div></main>
 
     <script>
       document.addEventListener('DOMContentLoaded', function () {

@@ -3,8 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>WSDM 2027</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Call for Tutorials | WSDM 2027</title>
   <!-- 基础样式（无媒体查询） -->
   <link rel="stylesheet" href="css/base.css">
 
@@ -15,21 +15,31 @@
   <link rel="stylesheet" href="css/desktop-sm.css" media="(min-width: 1200px)">
   <link rel="stylesheet" href="css/tablet.css" media="(max-width: 1199px)">
   <link rel="stylesheet" href="css/mobile.css" media="(max-width: 480px)">
+  <link rel="preload" href="fonts/inter/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/calls.css?v=df449f176995">
+  <link rel="stylesheet" href="css/tutorials.css?v=69aff56db13d">
+  <link rel="stylesheet" href="css/navigation.css?v=59f08a024e03">
+  <link rel="stylesheet" href="css/page-layout.css?v=a0d41ef0bf81">
+  <link rel="stylesheet" href="css/readability.css?v=209e7ea4b887">
+  <link rel="stylesheet" href="css/footer.css?v=2d027e2271c1">
 </head>
 
-<body>
+<body class="calls-typography">
   <!-- Header -->
-  <header class="header">
+  <header class="header" id="site-top">
     <div class="logo">
       <a href="./index.html">
         <div class="logo-container">
-          <img src="./images/logo.png" alt="Rectangle 19" class="logo-rectangle">
+          <img src="./images/logo.png" alt="WSDM 2027" class="logo-rectangle">
         </div>
       </a>
     </div>
 
     <!-- Desktop navigation -->
     <div class="nav">
+      <div class="nav-item">
+        <a href="./index.html">Home</a>
+      </div>
       <div class="nav-item">
         <a href="#">Program</a>
         <span class="dropdown-icon"></span>
@@ -40,15 +50,7 @@
       <div class="nav-item">
         <a href="./cfwc.html">WSDM Cup</a>
       </div>
-      <div class="nav-item">
-        <a href="#">Attending</a>
-        <span class="dropdown-icon"></span>
-        <div class="dropdown-menu">
-          <a href="#">Menu-1</a>
-          <a href="#">Menu-2</a>
-        </div>
-      </div>
-      <div class="nav-item">
+      <div class="nav-item is-current">
         <a href="#">Calls</a>
         <span class="dropdown-icon"></span>
         <div class="dropdown-menu">
@@ -56,9 +58,10 @@
           <a href="./cfsp.html">Call for Short Papers</a>
           <a href="./cfdemo.html">Call for Demonstrations</a>
           <a href="./cfworkshops.html">Call for Workshops</a>
-          <a href="./cftutorial.html">Call for Tutorials</a>
+          <a href="./cftutorial.html" aria-current="page">Call for Tutorials</a>
           <a href="./cfidt.html">Call for Industry Day Talks</a>
 		  <a href="./cfdc.html">Call for Doctoral Consortium</a>
+		  <a href="./cfwc.html">Call for WSDM Cup Proposals</a>
         </div>
       </div>
       <div class="nav-item">
@@ -116,7 +119,7 @@
       </div>
       <div class="mobile-nav-items">
         <div class="mobile-nav-item">
-          <a href="./index.html">WSDM 2027</a>
+          <a href="./index.html">Home</a>
         </div>
         <div class="mobile-nav-item">
           <a href="#">Program</a>
@@ -128,22 +131,16 @@
           <a href="./cfwc.html">WSDM Cup</a>
         </div>
         <div class="mobile-nav-item">
-          <a href="#">Attending</a>
-          <div class="mobile-dropdown">
-            <a href="#">Menu-1</a>
-            <a href="#">Menu-2</a>
-          </div>
-        </div>
-        <div class="mobile-nav-item">
           <a href="#">Calls</a>
           <div class="mobile-dropdown">
             <a href="./cffp.html">Call for Full Papers</a>
             <a href="./cfsp.html">Call for Short Papers</a>
             <a href="./cfdemo.html">Call for Demonstrations</a>
             <a href="./cfworkshops.html">Call for Workshops</a>
-            <a href="./cftutorial.html">Call for Tutorials</a>
+            <a href="./cftutorial.html" aria-current="page">Call for Tutorials</a>
             <a href="./cfidt.html">Call for Industry Day Talks</a>
 			<a href="./cfdc.html">Call for Doctoral Consortium</a>
+			<a href="./cfwc.html">Call for WSDM Cup Proposals</a>
           </div>
         </div>
         <div class="mobile-nav-item">
@@ -169,174 +166,100 @@
 
 
   <!-- Main content -->
-  <main class="main-content overview-main-content">
-
-    <!-- Call for Papers -->
-    <section class="cfp-section conference-overview">
-      <h2>Call for Tutorials</h2>
-    </section>
-
-
-
-    <section class="cffp-section">
-      <div>
-        We invite proposals for half-day and full-day tutorials to be held at the 20th ACM International Conference on
-        Web Search and Data Mining (WSDM 2027). The conference will take place in Hong Kong, China, from February 15 to
-        February 19, 2027. The tutorial day is tentatively scheduled for February 15, 2027.
-      </div><br />
-      <div>
-        The WSDM 2027 Tutorial Program is intended to disseminate information on recently emerging topics and trends,
-        provide surveys of techniques that complement those commonly studied at WSDM, and inform industrial
-        practitioners about the state of the art. We encourage proposals on topics in the broad areas of web search,
-        data mining, information retrieval, social search, and other subjects relevant to the WSDM community.
-      </div><br />
-      <div>
-        WSDM historically attracts participants from both academia and industry. Proposals should take this diverse
-        audience into consideration. Tutorials should be presented by experts in the subject matter and should offer
-        attendees a clear, well-structured, and engaging learning experience.
-      </div>
-      </div><br />
-      <div>
-        Tutorials may be proposed as half-day or full-day events. According to the tentative program, the tutorial
-        sessions are scheduled as follows:<br />
-        <ul>
-          <li> <b>Morning</b>: 8:30-10:00 and 10:30-12:00</li>
-          <li> <b>Afternoon</b>: 13:30-15:00 and 15:30-16:30</li>
-        </ul>
-      </div><br />
-      <div>
-        The final schedule and room allocation will be determined after the proposals have been selected. Organizers may
-        be asked to make minor adjustments to their proposed schedules to fit the final conference program.
-        <div>
-    </section>
-	
-	<section class="cffp-section">
-
-      <div class="dates-container">
-        <div class="dates-timeline">
-          <div class="timeline-item">
-            <div class="timeline-icon">
-              <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M32.6666 4.66675H13.9999C12.7622 4.66675 11.5753 5.15841 10.7001 6.03358C9.82492 6.90875 9.33325 8.09574 9.33325 9.33342V46.6668C9.33325 47.9044 9.82492 49.0914 10.7001 49.9666C11.5753 50.8418 12.7622 51.3334 13.9999 51.3334H41.9999C43.2376 51.3334 44.4246 50.8418 45.2997 49.9666C46.1749 49.0914 46.6666 47.9044 46.6666 46.6668V18.6667M32.6666 4.66675L46.6666 18.6667M32.6666 4.66675V18.6667H46.6666M37.3333 30.3334H18.6666M37.3333 39.6668H18.6666M23.3333 21.0001H18.6666"
-                  stroke="#BE3323" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </div>
-            <h3>October 6, 2026</h3>
-            <p>Tutorial proposal deadline</p>
+  <main class="readable-call call-page tutorial-page" id="main-content">
+    <div class="call-content">
+      <section class="tutorial-hero" aria-labelledby="tutorial-title">
+        <div class="tutorial-intro">
+          <p class="tutorial-eyebrow">WSDM 2027 · Hong Kong</p>
+          <h1 id="tutorial-title">Call for Tutorials</h1>
+          <p class="tutorial-lead">Share emerging ideas and practical expertise with the web search and data mining community.</p>
+          <div class="tutorial-actions">
+            <a class="tutorial-button" href="https://cmt3.research.microsoft.com/WSDM2027/Track/3/Submission/Create">Submit a Proposal <span aria-hidden="true">↗</span></a>
+            <a class="tutorial-secondary" href="#submission-guidelines">Submission guidelines <span aria-hidden="true">↓</span></a>
           </div>
-
-          <div class="timeline-item">
-            <div class="timeline-icon">
-              <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M12 57V51H18V30C18 25.85 19.25 22.175 21.75 18.975C24.25 15.725 27.5 13.6 31.5 12.6V10.5C31.5 9.25 31.925 8.2 32.775 7.35C33.675 6.45 34.75 6 36 6C37.25 6 38.3 6.45 39.15 7.35C40.05 8.2 40.5 9.25 40.5 10.5V12.6C44.5 13.6 47.75 15.725 50.25 18.975C52.75 22.175 54 25.85 54 30V51H60V57H12ZM36 66C34.35 66 32.925 65.425 31.725 64.275C30.575 63.075 30 61.65 30 60H42C42 61.65 41.4 63.075 40.2 64.275C39.05 65.425 37.65 66 36 66ZM24 51H48V30C48 26.7 46.825 23.875 44.475 21.525C42.125 19.175 39.3 18 36 18C32.7 18 29.875 19.175 27.525 21.525C25.175 23.875 24 26.7 24 30V51Z"
-                  fill="#D14334" />
-              </svg>
-            </div>
-            <h3>November 5, 2026</h3>
-            <p>Notifications</p>
-          </div>
-
-
-
-          <div class="timeline-item">
-            <div class="timeline-icon">
-              <svg width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M11 55C9.4875 55 8.18125 54.4729 7.08125 53.4188C6.02708 52.3188 5.5 51.0125 5.5 49.5V16.5C5.5 14.9875 6.02708 13.7042 7.08125 12.65C8.18125 11.55 9.4875 11 11 11H44C45.5125 11 46.7958 11.55 47.85 12.65C48.95 13.7042 49.5 14.9875 49.5 16.5V28.875L60.5 17.875V48.125L49.5 37.125V49.5C49.5 51.0125 48.95 52.3188 47.85 53.4188C46.7958 54.4729 45.5125 55 44 55H11ZM11 49.5H44V16.5H11V49.5ZM11 49.5V16.5V49.5Z"
-                  fill="#DE5141" />
-              </svg>
-            </div>
-            <h3>February 15, 2027</h3>
-            <p>Tutorial day</p>
-          </div>
-
-
+          <p class="tutorial-meta">Microsoft CMT · Select the “Tutorial” track</p>
         </div>
-        <div class="deadline-note">
-          <p>All deadlines are 11:59 pm anywhere on earth.</p>
+        <aside class="tutorial-dates" aria-labelledby="important-dates">
+          <h2 id="important-dates">Important dates</h2>
+          <dl>
+            <div><dt>Proposal deadline</dt><dd><time datetime="2026-10-06">Oct 6, 2026</time></dd></div>
+            <div><dt>Notification</dt><dd><time datetime="2026-11-05">Nov 5, 2026</time></dd></div>
+            <div><dt>Tutorial day <span>(tentative)</span></dt><dd><time datetime="2027-02-15">Feb 15, 2027</time></dd></div>
+          </dl>
+          <p>All deadlines are 11:59 pm Anywhere on Earth (AoE).</p>
+        </aside>
+      </section>
+
+      <nav class="call-jump-nav" aria-label="On this page">
+        <a href="#tutorial-overview">Overview</a><a href="#submission-guidelines">Proposal requirements</a><a href="#tutorial-format">Format &amp; schedule</a><a href="#tutorial-chairs">Chairs</a>
+      </nav>
+
+      <section class="tutorial-summary" aria-label="Proposal at a glance">
+        <div><span>Tutorial format</span><strong>Half-day or full-day</strong><p>For an audience from academia and industry.</p></div>
+        <div><span>Proposal length</span><strong>Up to 1 + 3 pages</strong><p>Cover sheet plus extended abstract, each with its own page limit.</p></div>
+        <div><span>Submission format</span><strong>PDF · English</strong><p>Use the ACM sigconf proceedings template.</p></div>
+      </section>
+
+      <section class="tutorial-section" aria-labelledby="tutorial-overview">
+        <div class="tutorial-section-heading"><p class="tutorial-eyebrow">The opportunity</p><h2 id="tutorial-overview">Contribute to the tutorial program</h2></div>
+        <p>We invite proposals for half-day and full-day tutorials at the 20th ACM International Conference on Web Search and Data Mining (WSDM 2027), taking place in Hong Kong, China, February 15–19, 2027. The tutorial day is tentatively scheduled for February 15.</p>
+        <p>The program welcomes recently emerging topics and trends, surveys of techniques that complement those commonly studied at WSDM, and state-of-the-art guidance for industrial practitioners. Topics may span web search, data mining, information retrieval, social search, and other areas relevant to the WSDM community.</p>
+        <p>Tutorials should be presented by experts and offer a clear, well-structured, engaging learning experience. Proposals should consider WSDM’s diverse audience from both academia and industry.</p>
+      </section>
+
+      <section class="tutorial-section" aria-labelledby="submission-guidelines">
+        <div class="tutorial-section-heading"><p class="tutorial-eyebrow">Prepare your proposal</p><h2 id="submission-guidelines">Two parts. One submission.</h2><p>Each proposal must contain a cover sheet and an extended abstract.</p></div>
+        <div class="tutorial-requirements">
+          <article class="tutorial-requirement">
+            <div class="tutorial-card-heading"><span class="tutorial-limit">Up to 1 page</span></div>
+            <h3>Cover sheet</h3>
+            <ul>
+              <li>The tutorial title and requested length (half-day or full-day).</li>
+              <li>A short abstract of no more than 300 words.</li>
+              <li>The intended audience level (introductory, intermediate, or advanced) and any prerequisite knowledge or skills.</li>
+              <li>Information about previous offerings of this tutorial and closely related tutorials, if any.</li>
+              <li>Full contact information for all presenters, with the primary contact person clearly identified.</li>
+            </ul>
+          </article>
+          <article class="tutorial-requirement">
+            <div class="tutorial-card-heading"><span class="tutorial-limit">Up to 3 pages</span></div>
+            <h3>Extended abstract</h3>
+            <ul>
+              <li>The motivation for the tutorial and its target audience.</li>
+              <li>A clear outline of the topics to be covered.</li>
+              <li>The tutorial’s relevance to WSDM, with references to related resources and tutorials at relevant conferences.</li>
+              <li>The proposed format and a detailed schedule.</li>
+              <li>The support materials that will be provided to attendees.</li>
+              <li>For tutorials offered previously, the relationship to earlier versions, including substantive differences, additions, changes, audience feedback, and how that feedback has been addressed.</li>
+            </ul>
+          </article>
         </div>
+        <div class="tutorial-format-note"><strong>Before you submit</strong><p>Submit your proposal in English as a PDF using the generic <a href="https://www.acm.org/publications/proceedings-template">ACM sigconf proceedings template</a>. Placeholder titles or abstracts that do not provide meaningful information, including “TBD”, may be desk-rejected.</p></div>
+      </section>
 
+      <section class="tutorial-section tutorial-schedule" aria-labelledby="tutorial-format">
+        <div><p class="tutorial-eyebrow">Plan your session</p><h2 id="tutorial-format">Format &amp; schedule</h2><p>Propose a half-day or full-day tutorial. The following session times are tentative.</p><p class="tutorial-muted">The final schedule and room allocation will be determined after selection. Organizers may be asked to make minor adjustments to fit the final conference program.</p></div>
+        <dl class="tutorial-session-times">
+          <div><dt>Morning</dt><dd>08:30–10:00<br>10:30–12:00</dd></div>
+          <div><dt>Afternoon</dt><dd>13:30–15:00<br>15:30–17:00</dd></div>
+        </dl>
+      </section>
 
-
-    </section>
-	
-    <section class="cfp-section cffp-section-overview">
-      <h2>Submission Guidelines</h2>
-    </section>
-    <section class="cffp-section">
-      <div>
-        Each submission must contain a cover sheet and an extended abstract.
-      </div>
-      <br />
-      <p>Cover sheet</p>
-      <div>The cover sheet must be no longer than one page and should include:
-        <ul>
-          <li>The tutorial title and requested length (half-day or full-day).</li>
-          <li>A short abstract of no more than 300 words.</li>
-          <li>The intended audience level (introductory, intermediate, or advanced) and any prerequisite knowledge or
-            skills.</li>
-          <li>Information about previous offerings of this tutorial and closely related tutorials, if any.</li>
-          <li>Full contact information for all presenters, with the primary contact person clearly identified.</li>
-          <li>Full contact information for all presenters, with the primary contact person clearly identified.</li>
-        </ul>
-      </div>
-    </section>
-    <section class="cffp-section">
-      <p>Extended abstract</p>
-      <div>The extended abstract must be no longer than three pages and should include:
-        <ul>
-          <li>The motivation for the tutorial and its target audience.</li>
-          <li>A clear outline of the topics to be covered.</li>
-          <li>The tutorial's relevance to the WSDM community, with references to related resources and tutorials at relevant conferences.</li>
-          <li>The proposed format and a detailed schedule.</li>
-          <li>The support materials that will be provided to attendees.</li>
-          <li>For tutorials offered previously, a description of the relationship to earlier versions, including substantive differences, additions, changes, audience feedback, and how that feedback has been addressed.</li>
-        </ul>
-      </div>
-      <br />
-      <div>Tutorial proposals must be submitted in English as PDF files using the generic 
-        ACM sigconf proceedings template available from the <a href="https://www.acm.org/publications/proceedings-template"> ACM Proceedings Template page.</a></div>
-      <div>Placeholder titles or abstracts that do not provide meaningful information, including entries such as 'TBD' may be desk-rejected.</div>
-    </section>
-    <section class="cfp-section cffp-section-overview">
-      <h2>Submission</h2>
-    </section>
-
-    <section class="cffp-section">
-      <div>Tutorial proposals can be submitted via Microsoft CMT, choosing the "Tutorial" track: <a
-          style="overflow-wrap: break-word;word-break: break-all;" href="https://cmt3.research.microsoft.com/WSDM2027/Track/3/Submission/Create">
-          https://cmt3.research.microsoft.com/WSDM2027/Track/3/Submission/Create</a>.
-      </div>
-    </section>
-
-    <section class="cfp-section cffp-section-overview">
-      <h2>Tutorial Chairs</h2>
-    </section>
-
-
-
-    <section class="cffp-section">
-      <div>
-        For questions, please contact the WSDM 2027 Tutorial Chairs:
-        <ul>
-          <li><b>Zhaochun Ren</b>, Leiden University - z.ren@liacs.leidenuniv.nl</li>
-          <li><b>Harrie Oosterhuis</b>, University of Amsterdam - h.oosterhuis@uva.nl</li>
-        </ul>
-
-      </div>
-    </section>
-    <!-- Footer -->
-    <footer class="footer">
-      <h2>WSDM 2027</h2>
-      <div class="footer-bottom">
-        <p>© 2027, WSDM 2027. All right reserved.</p>
-        <div class="footer-links">
-          <a href="mailto:wsdm2027@gmail.com">Contact Us</a>
+      <section class="tutorial-section" aria-labelledby="tutorial-chairs">
+        <div class="tutorial-section-heading"><p class="tutorial-eyebrow">Get in touch</p><h2 id="tutorial-chairs">Tutorial Chairs</h2><p>For questions about your proposal, contact the Tutorial Chairs.</p></div>
+        <div class="tutorial-chairs">
+          <article><img class="tutorial-chair-photo" src="images/chairs/renzhaochun.jpg" alt="Zhaochun Ren" width="80" height="80" loading="lazy"><div class="tutorial-chair-info"><h3>Zhaochun Ren</h3><p>Leiden University</p><a href="mailto:z.ren@liacs.leidenuniv.nl">z.ren@liacs.leidenuniv.nl</a></div></article>
+          <article><img class="tutorial-chair-photo" src="images/chairs/HarrieOosterhuis.jpg" alt="Harrie Oosterhuis" width="80" height="80" loading="lazy"><div class="tutorial-chair-info"><h3>Harrie Oosterhuis</h3><p>University of Amsterdam</p><a href="mailto:h.oosterhuis@uva.nl">h.oosterhuis@uva.nl</a></div></article>
         </div>
+      </section>
+      <footer class="site-footer">
+      <div class="site-footer-inner">
+        <p class="site-footer-copyright">© 2027 WSDM 2027. All rights reserved.</p>
+        <a class="site-footer-top" href="#site-top">Back to top ↑</a>
       </div>
     </footer>
+    </div>
+  </main>
 
     <script>
       document.addEventListener('DOMContentLoaded', function () {

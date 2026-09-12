@@ -3,8 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>WSDM 2027</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Program Overview | WSDM 2027</title>
   <!-- 基础样式（无媒体查询） -->
   <link rel="stylesheet" href="css/base.css">
 
@@ -15,11 +15,16 @@
   <link rel="stylesheet" href="css/desktop-sm.css" media="(min-width: 1200px)">
   <link rel="stylesheet" href="css/tablet.css" media="(max-width: 1199px)">
   <link rel="stylesheet" href="css/mobile.css" media="(max-width: 480px)">
+  <link rel="stylesheet" href="css/program-overview.css?v=d4b24c850be2">
+  <link rel="stylesheet" href="css/navigation.css?v=59f08a024e03">
+  <link rel="stylesheet" href="css/page-layout.css?v=a0d41ef0bf81">
+  <link rel="stylesheet" href="css/readability.css?v=209e7ea4b887">
+  <link rel="stylesheet" href="css/footer.css?v=2d027e2271c1">
 </head>
 
 <body>
   <!-- Header -->
-  <header class="header">
+  <header class="header" id="site-top">
     <div class="logo">
       <a href="./index.html">
         <div class="logo-container">
@@ -31,22 +36,17 @@
     <!-- Desktop navigation -->
     <div class="nav">
       <div class="nav-item">
+        <a href="./index.html">Home</a>
+      </div>
+      <div class="nav-item is-current">
         <a href="#">Program</a>
         <span class="dropdown-icon"></span>
         <div class="dropdown-menu">
-          <a href="./program-overview.html">Overview</a>
+          <a href="./program-overview.html" aria-current="page">Overview</a>
         </div>
       </div>
       <div class="nav-item">
         <a href="./cfwc.html">WSDM Cup</a>
-      </div>
-      <div class="nav-item">
-        <a href="#">Attending</a>
-        <span class="dropdown-icon"></span>
-        <div class="dropdown-menu">
-          <a href="#">Menu-1</a>
-          <a href="#">Menu-2</a>
-        </div>
       </div>
       <div class="nav-item">
         <a href="#">Calls</a>
@@ -59,6 +59,7 @@
           <a href="./cftutorial.html">Call for Tutorials</a>
           <a href="./cfidt.html">Call for Industry Day Talks</a>
 		  <a href="./cfdc.html">Call for Doctoral Consortium</a>
+		  <a href="./cfwc.html">Call for WSDM Cup Proposals</a>
         </div>
       </div>
       <div class="nav-item">
@@ -115,23 +116,16 @@
       </div>
       <div class="mobile-nav-items">
         <div class="mobile-nav-item">
-          <a href="./index.html">WSDM 2027</a>
+          <a href="./index.html">Home</a>
         </div>
         <div class="mobile-nav-item">
           <a href="#">Program</a>
           <div class="mobile-dropdown">
-            <a href="./program-overview.html">Overview</a>
+            <a href="./program-overview.html" aria-current="page">Overview</a>
           </div>
         </div>
         <div class="mobile-nav-item">
           <a href="./cfwc.html">WSDM Cup</a>
-        </div>
-        <div class="mobile-nav-item">
-          <a href="#">Attending</a>
-          <div class="mobile-dropdown">
-            <a href="#">Menu-1</a>
-            <a href="#">Menu-2</a>
-          </div>
         </div>
         <div class="mobile-nav-item">
           <a href="#">Calls</a>
@@ -143,6 +137,7 @@
             <a href="./cftutorial.html">Call for Tutorials</a>
             <a href="./cfidt.html">Call for Industry Day Talks</a>
 			<a href="./cfdc.html">Call for Doctoral Consortium</a>
+			<a href="./cfwc.html">Call for WSDM Cup Proposals</a>
           </div>
         </div>
         <div class="mobile-nav-item">
@@ -170,591 +165,653 @@
   <!-- Main content -->
   <main class="main-content overview-main-content">
 
-    <!-- Call for Papers -->
-    <section class="cfp-section overview-section">
-      <h2>Program Overview</h2>
-    </section>
-
-    <div class="overview-line">
-    </div>
-    <section class="overview-content-section">
-      <h2>The 5-day Overview (February 15th - 19th, tentative)</h2>
-      <div class="overview-content">
-        <table class="pc-table">
-          <thead>
-            <tr>
-              <th>Hong Kong Time</th>
-              <th colspan="3">15 Feb, Mon</th>
-              <th colspan="2">16 Feb, Tue</th>
-              <th colspan="2">17 Feb, Wed</th>
-              <th colspan="2">18 Feb, Thu</th>
-              <th colspan="3">19 Feb, Fri</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>7:30 - 8:30</td>
-              <td colspan="3" class="registration">Registration</td>
-              <td colspan="2" class="registration">Registration</td>
-              <td colspan="2" rowspan="2" class="registration">Registration</td>
-              <td colspan="2" rowspan="2" class="registration">Registration</td>
-              <td colspan="3" class="registration">Registration</td>
-            </tr>
-            <tr>
-              <td>8:30 - 9:00</td>
-              <td rowspan="3" class="tutorials">Tutorials</td>
-              <td rowspan="3" class="industry-day">Industry Day</td>
-              <td rowspan="3" class="doctoral-consortium">Doctoral Consortium</td>
-              <td colspan="2" class="opening-remarks">Opening Remarks</td>
-              <td rowspan="3" class="wsdm-cup">WSDM Cup</td>
-              <td rowspan="3" class="workshops">Workshops</td>
-              <td rowspan="3" class="wsdm-day">WSDM Day</td>
-            </tr>
-            <tr>
-              <td>9:00 - 9:30</td>
-              <td colspan="2" rowspan="2" class="keynote">Keynote 1</td>
-              <td colspan="2" rowspan="2" class="keynote">Keynote 3</td>
-              <td colspan="2" rowspan="2" class="keynote">Keynote 5</td>
-            </tr>
-
-            <tr>
-              <td>9:30 - 10:00</td>
-            </tr>
-            <tr>
-              <td>10:00 - 10:30</td>
-              <td colspan="3" class="coffee-break">Coffee Break</td>
-              <td class="coffee-break">Coffee Break</td>
-              <td rowspan="2" class="poster-session">Poster Session 1</td>
-              <td class="coffee-break">Coffee Break</td>
-              <td rowspan="2" class="poster-session">Poster Session 5</td>
-              <td class="coffee-break">Coffee Break</td>
-              <td rowspan="2" class="poster-session">Poster Session 7</td>
-              <td colspan="3" class="coffee-break">Coffee Break</td>
-            </tr>
-            <tr>
-              <td>10:30 - 12:00</td>
-              <td class="tutorials">Tutorials</td>
-              <td class="industry-day">Industry Day</td>
-              <td class="doctoral-consortium">Doctoral Consortium</td>
-              <td class="paper-presentations">Paper Presentations #1</td>
-              <td class="paper-presentations">Paper Presentations #4</td>
-              <td class="paper-presentations">Paper Presentations #7</td>
-              <td class="demo">Demo 3</td>
-              <td class="workshops">Workshops</td>
-              <td class="wsdm-day">WSDM Day</td>
-            </tr>
-            <tr>
-              <td>12:00 - 13:30</td>
-              <td colspan="3" class="lunch">Lunch (buffet)</td>
-              <td colspan="2" class="lunch">Lunch (buffet)</td>
-              <td colspan="2" class="lunch">Lunch (buffet)</td>
-              <td colspan="2" class="wsdm-business-lunch">WSDM Business Lunch (buffet)</td>
-              <td colspan="3" class="lunch">Lunch (buffet)</td>
-            </tr>
-            <tr>
-              <td>13:30 - 15:00</td>
-              <td class="tutorials">Tutorials</td>
-              <td class="industry-day">Industry Day</td>
-              <td class="demo">Demo 1</td>
-              <td class="paper-presentations">Paper Presentations #2</td>
-              <td rowspan="2" class="poster-session">Poster Session 2</td>
-              <td class="paper-presentations">Paper Presentations #5</td>
-              <td rowspan="2" class="poster-session">Poster Session 6</td>
-              <td class="paper-presentations">Paper Presentations #8</td>
-              <td rowspan="2" class="poster-session">Poster Session 8</td>
-              <td class="demo">Demo 4</td>
-              <td class="workshops">Workshops</td>
-              <td class="wsdm-day">WSDM Day</td>
-            </tr>
-            <tr>
-              <td>15:00 - 15:30</td>
-              <td colspan="3" class="coffee-break">Coffee Break</td>
-              <td class="coffee-break">Coffee Break</td>
-              <td class="coffee-break">Coffee Break</td>
-              <td class="coffee-break">Coffee Break</td>
-              <td colspan="3" class="coffee-break">Coffee Break</td>
-            </tr>
-            <tr>
-              <td>15:30 - 16:30</td>
-              <td rowspan="2" class="tutorials">Tutorials</td>
-              <td rowspan="2" class="industry-day">Industry Day</td>
-              <td rowspan="2" class="demo">Demo 2</td>
-              <td colspan="2" class="keynote">Keynote 2</td>
-              <td colspan="2" class="keynote">Keynote 4</td>
-              <td rowspan="2" colspan="2" class="paper-presentations">Paper Presentations #9<br />16:50-17:00 Closing
-              </td>
-              <td rowspan="2" colspan="2" class="workshops">Workshops</td>
-              <td rowspan="2" class="wsdm-day">WSDM Day</td>
-            </tr>
-            <tr>
-              <td rowspan="2">16:30 - 17:00</td>
-              <td rowspan="3" class="paper-presentations">Paper Presentations #3</td>
-              <td rowspan="4" class="poster-session">Poster Session 3</td>
-              <td colspan="2" class="paper-presentations">Paper Presentations #6</td>
-
-            </tr>
-            <tr>
-            </tr>
-            <tr>
-              <td>17:00 - 17:30</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>17:30 - 18:00</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td rowspan="2" class="trunover">Trunover</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>18:00 - 18:30</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td class="trunover"></td>
-              <td rowspan="4" colspan="2" class="banquet">Banquet</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>18:30 - 19:30</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td rowspan="3" class="banquet">Welcome Reception (Cocktail)</td>
-              <td rowspan="3" class="trunover">Poster Session 4</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>19:30 - 20:00</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>20:00 - 20:30</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
-
-        <!-- 移动端表格 -->
-        <div class="mobile-tables">
-          <!-- 2月15日 -->
-          <div class="mobile-table-container">
-            <h3>15 Feb, Mon</h3>
-            <table class="mobile-table">
-              <thead>
-                <tr>
-                  <th>Time</th>
-                  <th colspan="3">Activity</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>7:30 - 8:30</td>
-                  <td colspan="3">Registration</td>
-                </tr>
-                <tr>
-                  <td>8:30 - 9:00</td>
-                  <td rowspan="3">Tutorials</td>
-                  <td rowspan="3">Industry Day</td>
-                  <td rowspan="3">Doctoral Consortium</td>
-                </tr>
-                <tr>
-                  <td>9:00 - 9:30</td>
-                </tr>
-                <tr>
-                  <td>9:30 - 10:00</td>
-                </tr>
-                <tr>
-                  <td>10:00 - 10:30</td>
-                  <td colspan="3">Coffee Break</td>
-                </tr>
-                <tr>
-                  <td>10:30 - 12:00</td>
-                  <td>Tutorials</td>
-                  <td>Industry Day</td>
-                  <td>Doctoral Consortium</td>
-                </tr>
-                <tr>
-                  <td>12:00 - 13:30</td>
-                  <td colspan="3">Lunch (buffet)</td>
-                </tr>
-                <tr>
-                  <td>13:30 - 15:00</td>
-                  <td>Tutorials</td>
-                  <td>Industry Day</td>
-                  <td>Demo 1</td>
-                </tr>
-                <tr>
-                  <td>15:00 - 15:30</td>
-                  <td colspan="3">Coffee Break</td>
-                </tr>
-                <tr>
-                  <td>15:30 - 16:30</td>
-                  <td rowspan="2">Tutorials</td>
-                  <td rowspan="2">Industry Day</td>
-                  <td rowspan="2">Demo 2</td>
-                </tr>
-                <tr>
-                  <td>16:30 - 17:00</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <!-- 2月16日 -->
-          <div class="mobile-table-container">
-            <h3>16 Feb, Tue</h3>
-            <table class="mobile-table">
-              <thead>
-                <tr>
-                  <th>Time</th>
-                  <th colspan="2">Activity</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>7:30 - 8:30</td>
-                  <td colspan="2">Registration</td>
-                </tr>
-                <tr>
-                  <td>8:30 - 9:00</td>
-                  <td colspan="2">Opening Remarks</td>
-                </tr>
-                <tr>
-                  <td>9:00 - 9:30</td>
-                  <td colspan="2" rowspan="2">Keynote 1</td>
-                </tr>
-                <tr>
-                  <td>9:30 - 10:00</td>
-                </tr>
-                <tr>
-                  <td>10:00 - 10:30</td>
-                  <td>Coffee Break</td>
-                  <td rowspan="2">Poster Session 1</td>
-                </tr>
-                <tr>
-                  <td>10:30 - 12:00</td>
-                  <td>Paper Presentations #1</td>
-                </tr>
-                <tr>
-                  <td>12:00 - 13:30</td>
-                  <td colspan="2">Lunch (buffet)</td>
-                </tr>
-                <tr>
-                  <td>13:30 - 15:00</td>
-                  <td>Paper Presentations #2</td>
-                  <td rowspan="2">Poster Session 2</td>
-                </tr>
-                <tr>
-                  <td>15:00 - 15:30</td>
-                  <td>Coffee Break</td>
-                </tr>
-                <tr>
-                  <td>15:30 - 16:30</td>
-                  <td colspan="2">Keynote 2</td>
-                </tr>
-                <tr>
-                  <td>16:30 - 17:00</td>
-                  <td rowspan="2">Paper Presentations #3</td>
-                  <td rowspan="3">Poster Session 3</td>
-                </tr>
-                <tr>
-                  <td>17:00 - 17:30</td>
-                  <td colspan="2"></td>
-                </tr>
-                <tr>
-                  <td>17:30 - 18:00</td>
-                  <td rowspan="2">Trunover</td>
-                </tr>
-                <tr>
-                  <td>18:00 - 18:30</td>
-                  <td colspan="2"></td>
-                </tr>
-                <tr>
-                  <td>18:30 - 19:30</td>
-                  <td rowspan="3">Welcome Reception (Cocktail)</td>
-                  <td rowspan="3">Poster Session 4</td>
-                </tr>
-                <tr>
-                  <td>19:30 - 20:00</td>
-                </tr>
-                <tr>
-                  <td>20:00 - 20:30</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <!-- 2月17日 -->
-          <div class="mobile-table-container">
-            <h3>17 Feb, Wed</h3>
-            <table class="mobile-table">
-              <thead>
-                <tr>
-                  <th>Time</th>
-                  <th colspan="2">Activity</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>7:30 - 8:30</td>
-                  <td colspan="2" rowspan="2">Registration</td>
-                </tr>
-                <tr>
-                  <td>8:30 - 9:00</td>
-                </tr>
-                <tr>
-                  <td>9:00 - 9:30</td>
-                  <td colspan="2" rowspan="2">Keynote 3</td>
-                </tr>
-                <tr>
-                  <td>9:30 - 10:00</td>
-                </tr>
-                <tr>
-                  <td>10:00 - 10:30</td>
-                  <td>Coffee Break</td>
-                  <td rowspan="2">Poster Session 5</td>
-                </tr>
-                <tr>
-                  <td>10:30 - 12:00</td>
-                  <td>Paper Presentations #4</td>
-                </tr>
-                <tr>
-                  <td>12:00 - 13:30</td>
-                  <td colspan="2">Lunch (buffet)</td>
-                </tr>
-                <tr>
-                  <td>13:30 - 15:00</td>
-                  <td>Paper Presentations #5</td>
-                  <td rowspan="2">Poster Session 6</td>
-                </tr>
-                <tr>
-                  <td>15:00 - 15:30</td>
-                  <td>Coffee Break</td>
-                </tr>
-                <tr>
-                  <td>15:30 - 16:30</td>
-                  <td colspan="2">Keynote 4</td>
-                </tr>
-                <tr>
-                  <td>16:30 - 17:00</td>
-                  <td colspan="2">Paper Presentations #6</td>
-                </tr>
-                <tr>
-                  <td>17:00 - 17:30</td>
-                  <td colspan="2"></td>
-                </tr>
-                <tr>
-                  <td>17:30 - 18:00</td>
-                  <td colspan="2"></td>
-                </tr>
-                <tr>
-                  <td>18:00 - 18:30</td>
-                  <td colspan="2" rowspan="4">Banquet</td>
-                </tr>
-                <tr>
-                  <td>18:30 - 19:30</td>
-                </tr>
-                <tr>
-                  <td>19:30 - 20:00</td>
-                </tr>
-                <tr>
-                  <td>20:00 - 20:30</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <!-- 2月18日 -->
-          <div class="mobile-table-container">
-            <h3>18 Feb, Thu</h3>
-            <table class="mobile-table">
-              <thead>
-                <tr>
-                  <th>Time</th>
-                  <th colspan="2">Activity</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>7:30 - 8:30</td>
-                  <td colspan="2" rowspan="2">Registration</td>
-                </tr>
-                <tr>
-                  <td>8:30 - 9:00</td>
-                </tr>
-                <tr>
-                  <td>9:00 - 9:30</td>
-                  <td colspan="2" rowspan="2">Keynote 5</td>
-                </tr>
-                <tr>
-                  <td>9:30 - 10:00</td>
-                </tr>
-                <tr>
-                  <td>10:00 - 10:30</td>
-                  <td>Coffee Break</td>
-                  <td rowspan="2">Poster Session 7</td>
-                </tr>
-                <tr>
-                  <td>10:30 - 12:00</td>
-                  <td>Paper Presentations #7</td>
-                </tr>
-                <tr>
-                  <td>12:00 - 13:30</td>
-                  <td colspan="2">WSDM Business Lunch (buffet)</td>
-                </tr>
-                <tr>
-                  <td>13:30 - 15:00</td>
-                  <td>Paper Presentations #8</td>
-                  <td rowspan="2">Poster Session 8</td>
-                </tr>
-                <tr>
-                  <td>15:00 - 15:30</td>
-                  <td>Coffee Break</td>
-                </tr>
-                <tr>
-                  <td>15:30 - 16:30</td>
-                  <td colspan="2" rowspan="2">Paper Presentations #9<br>16:50-17:00 Closing</td>
-                </tr>
-                <tr>
-                  <td>16:30 - 17:00</td>
-                </tr>
-
-              </tbody>
-            </table>
-          </div>
-
-          <!-- 2月19日 -->
-          <div class="mobile-table-container">
-            <h3>19 Feb, Fri</h3>
-            <table class="mobile-table">
-              <thead>
-                <tr>
-                  <th>Time</th>
-                  <th colspan="3">Activity</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>7:30 - 8:30</td>
-                  <td colspan="3">Registration</td>
-                </tr>
-                <tr>
-                  <td>8:30 - 9:00</td>
-                  <td rowspan="3">WSDM Cup</td>
-                  <td rowspan="3">Workshops</td>
-                  <td rowspan="3">WSDM Day</td>
-                </tr>
-                <tr>
-                  <td>9:00 - 9:30</td>
-                </tr>
-                <tr>
-                  <td>9:30 - 10:00</td>
-                </tr>
-                <tr>
-                  <td>10:00 - 10:30</td>
-                  <td colspan="3">Coffee Break</td>
-                </tr>
-                <tr>
-                  <td>10:30 - 12:00</td>
-                  <td>Demo 3</td>
-                  <td>Workshops</td>
-                  <td>WSDM Day</td>
-                </tr>
-                <tr>
-                  <td>12:00 - 13:30</td>
-                  <td colspan="3">Lunch (buffet)</td>
-                </tr>
-                <tr>
-                  <td>13:30 - 15:00</td>
-                  <td>Demo 4</td>
-                  <td>Workshops</td>
-                  <td>WSDM Day</td>
-                </tr>
-                <tr>
-                  <td>15:00 - 15:30</td>
-                  <td colspan="3">Coffee Break</td>
-                </tr>
-                <tr>
-                  <td>15:30 - 16:30</td>
-                  <td colspan="2" rowspan="2">Workshops</td>
-                  <td rowspan="2">WSDM Day</td>
-                </tr>
-                <tr>
-                  <td>16:30 - 17:00</td>
-                </tr>
-              </tbody>
-            </table>
+    <div class="program-redesign">
+      <section class="program-hero" aria-labelledby="program-title">
+        <div>
+          <p class="program-section-label">WSDM 2027 · Hong Kong</p>
+          <h1 id="program-title">Program Overview</h1>
+          <p class="program-hero-intro">Explore the conference schedule, from research sessions and keynotes to workshops and community events.</p>
+          <div class="program-hero-actions">
+            <a class="program-primary-link" href="#full-schedule">View full schedule <span aria-hidden="true">↓</span></a>
+            <a href="#daily-program-title">Explore daily program <span aria-hidden="true">↓</span></a>
           </div>
         </div>
-      </div>
-      <div class="overview-content">
-        <p>TBD</p>
-      </div>
-    </section>
-    <div class="overview-line">
-    </div>
-    <section class="overview-content-section">
-      <h2>Further Information about WSDM 2027 Events</h2>
-      <div class="overview-content">
-        <a href="#">Tutorials</a>
-        <a href="#">Industry Day</a>
-        <a href="#">Doctoral Consortium</a>
-        <a href="#">Keynotes</a>
-        <a href="#">Poster Sessions</a>
-        <a href="#">WSDM Cup</a>
-        <a href="#">WSDM Day</a>
-        <a href="#">Workshops</a>
-      </div>
-    </section>
-    <!-- Footer -->
-    <footer class="footer">
-      <h2>WSDM 2027</h2>
-      <div class="footer-bottom">
-        <p>© 2027, WSDM 2027. All right reserved.</p>
-        <div class="footer-links">
-          <a href="mailto:wsdm2027@gmail.com">Contact Us</a>
+        <aside class="program-facts" aria-label="Conference information">
+          <span class="program-status">Tentative schedule</span>
+          <dl>
+            <div><dt>Conference dates</dt><dd>February 15–19, 2027</dd></div>
+            <div><dt>Location</dt><dd><a href="./travel-venue.html">Hong Kong <span aria-hidden="true">↗</span></a></dd></div>
+            <div><dt>Local time</dt><dd>HKT · UTC+8</dd></div>
+          </dl>
+        </aside>
+      </section>
+      <section class="program-week" id="full-schedule" aria-labelledby="full-schedule-title">
+        <div class="program-heading">
+          <h2 id="full-schedule-title">Full schedule</h2>
+          <a class="program-section-link" href="#daily-program-title">Browse by day <span aria-hidden="true">↓</span></a>
         </div>
+        <div class="program-legend" aria-label="Overview schedule colors">
+          <span class="legend-keynote">Keynotes</span><span class="legend-session">Sessions</span>
+          <span class="legend-break">Breaks &amp; registration</span><span class="legend-social">Social events</span>
+        </div>
+        <div class="program-week-scroll" role="region" aria-label="Five-day program table" tabindex="0">
+        <!-- WEEK GRID START -->
+<table class="program-week-table">
+  <caption class="program-visually-hidden">WSDM 2027 tentative five-day schedule, February 15–19. Each time row represents 30 minutes in Hong Kong time (UTC+8). Simultaneous sessions appear side by side.</caption>
+  <colgroup><col class="week-time-column"></colgroup>
+  <colgroup class="week-day-columns lanes-3"><col span="3"></colgroup>
+  <colgroup class="week-day-columns lanes-2"><col span="2"></colgroup>
+  <colgroup class="week-day-columns lanes-2"><col span="2"></colgroup>
+  <colgroup class="week-day-columns lanes-2"><col span="2"></colgroup>
+  <colgroup class="week-day-columns lanes-3"><col span="3"></colgroup>
+  <thead><tr><th scope="col" id="week-time">HKT<br><span>UTC+8</span></th>
+    <th scope="colgroup" colspan="3" id="week-day-0">15 Feb <span>Mon</span></th>
+    <th scope="colgroup" colspan="2" id="week-day-1">16 Feb <span>Tue</span></th>
+    <th scope="colgroup" colspan="2" id="week-day-2">17 Feb <span>Wed</span></th>
+    <th scope="colgroup" colspan="2" id="week-day-3">18 Feb <span>Thu</span></th>
+    <th scope="colgroup" colspan="3" id="week-day-4">19 Feb <span>Fri</span></th>
+  </tr></thead>
+  <tbody>
+    <tr><th scope="row" id="week-time-0">07:30–08:00</th>
+      <td class="week-event-break" rowspan="2" colspan="3" headers="week-day-0 week-time-0"><span class="week-event-title">Registration</span><span class="week-event-time">07:30–08:30</span></td>
+      <td class="week-event-break" rowspan="2" colspan="2" headers="week-day-1 week-time-0"><span class="week-event-title">Registration</span><span class="week-event-time">07:30–08:30</span></td>
+      <td class="week-event-break" rowspan="3" colspan="2" headers="week-day-2 week-time-0"><span class="week-event-title">Registration</span><span class="week-event-time">07:30–09:00</span></td>
+      <td class="week-event-break" rowspan="3" colspan="2" headers="week-day-3 week-time-0"><span class="week-event-title">Registration</span><span class="week-event-time">07:30–09:00</span></td>
+      <td class="week-event-break" rowspan="2" colspan="3" headers="week-day-4 week-time-0"><span class="week-event-title">Registration</span><span class="week-event-time">07:30–08:30</span></td>
+    </tr>
+    <tr><th scope="row" id="week-time-1">08:00–08:30</th>
+    </tr>
+    <tr><th scope="row" id="week-time-2">08:30–09:00</th>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-0 week-time-2"><span class="week-event-title">Tutorials</span><span class="week-event-time">08:30–10:00</span></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-0 week-time-2"><span class="week-event-title">Industry Day</span><span class="week-event-time">08:30–10:00</span></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-0 week-time-2"><span class="week-event-title">Doctoral Consortium</span><span class="week-event-time">08:30–10:00</span></td>
+      <td class="week-event-session" rowspan="1" colspan="2" headers="week-day-1 week-time-2"><span class="week-event-title">Opening Remarks</span><span class="week-event-time">08:30–09:00</span></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-4 week-time-2"><span class="week-event-title">WSDM Cup</span><span class="week-event-time">08:30–10:00</span></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-4 week-time-2"><span class="week-event-title">Workshops</span><span class="week-event-time">08:30–10:00</span></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-4 week-time-2"><span class="week-event-title">WSDM Day</span><span class="week-event-time">08:30–10:00</span></td>
+    </tr>
+    <tr><th scope="row" id="week-time-3">09:00–09:30</th>
+      <td class="week-event-keynote" rowspan="2" colspan="2" headers="week-day-1 week-time-3"><span class="week-event-title">Keynote 1</span><span class="week-event-time">09:00–10:00</span></td>
+      <td class="week-event-keynote" rowspan="2" colspan="2" headers="week-day-2 week-time-3"><span class="week-event-title">Keynote 3</span><span class="week-event-time">09:00–10:00</span></td>
+      <td class="week-event-keynote" rowspan="2" colspan="2" headers="week-day-3 week-time-3"><span class="week-event-title">Keynote 5<br>Speaker to be announced</span><span class="week-event-time">09:00–10:00</span></td>
+    </tr>
+    <tr><th scope="row" id="week-time-4">09:30–10:00</th>
+    </tr>
+    <tr><th scope="row" id="week-time-5">10:00–10:30</th>
+      <td class="week-event-break" rowspan="1" colspan="3" headers="week-day-0 week-time-5"><span class="week-event-title">Coffee Break</span><span class="week-event-time">10:00–10:30</span></td>
+      <td class="week-event-break" rowspan="1" colspan="1" headers="week-day-1 week-time-5"><span class="week-event-title">Coffee Break</span><span class="week-event-time">10:00–10:30</span></td>
+      <td class="week-event-session" rowspan="4" colspan="1" headers="week-day-1 week-time-5"><span class="week-event-title">Poster Session 1</span><span class="week-event-time">10:00–12:00</span></td>
+      <td class="week-event-break" rowspan="1" colspan="1" headers="week-day-2 week-time-5"><span class="week-event-title">Coffee Break</span><span class="week-event-time">10:00–10:30</span></td>
+      <td class="week-event-session" rowspan="4" colspan="1" headers="week-day-2 week-time-5"><span class="week-event-title">Poster Session 5</span><span class="week-event-time">10:00–12:00</span></td>
+      <td class="week-event-break" rowspan="1" colspan="1" headers="week-day-3 week-time-5"><span class="week-event-title">Coffee Break</span><span class="week-event-time">10:00–10:30</span></td>
+      <td class="week-event-session" rowspan="4" colspan="1" headers="week-day-3 week-time-5"><span class="week-event-title">Poster Session 7</span><span class="week-event-time">10:00–12:00</span></td>
+      <td class="week-event-break" rowspan="1" colspan="3" headers="week-day-4 week-time-5"><span class="week-event-title">Coffee Break</span><span class="week-event-time">10:00–10:30</span></td>
+    </tr>
+    <tr><th scope="row" id="week-time-6">10:30–11:00</th>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-0 week-time-6"><span class="week-event-title">Tutorials</span><span class="week-event-time">10:30–12:00</span></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-0 week-time-6"><span class="week-event-title">Industry Day</span><span class="week-event-time">10:30–12:00</span></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-0 week-time-6"><span class="week-event-title">Doctoral Consortium</span><span class="week-event-time">10:30–12:00</span></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-1 week-time-6"><span class="week-event-title">Paper Presentations #1</span><span class="week-event-time">10:30–12:00</span></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-2 week-time-6"><span class="week-event-title">Paper Presentations #4</span><span class="week-event-time">10:30–12:00</span></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-3 week-time-6"><span class="week-event-title">Paper Presentations #7</span><span class="week-event-time">10:30–12:00</span></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-4 week-time-6"><span class="week-event-title">Demo 3</span><span class="week-event-time">10:30–12:00</span></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-4 week-time-6"><span class="week-event-title">Workshops</span><span class="week-event-time">10:30–12:00</span></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-4 week-time-6"><span class="week-event-title">WSDM Day</span><span class="week-event-time">10:30–12:00</span></td>
+    </tr>
+    <tr><th scope="row" id="week-time-7">11:00–11:30</th>
+    </tr>
+    <tr><th scope="row" id="week-time-8">11:30–12:00</th>
+    </tr>
+    <tr><th scope="row" id="week-time-9">12:00–12:30</th>
+      <td class="week-event-break" rowspan="3" colspan="3" headers="week-day-0 week-time-9"><span class="week-event-title">Lunch (buffet)</span><span class="week-event-time">12:00–13:30</span></td>
+      <td class="week-event-break" rowspan="3" colspan="2" headers="week-day-1 week-time-9"><span class="week-event-title">Lunch (buffet)</span><span class="week-event-time">12:00–13:30</span></td>
+      <td class="week-event-break" rowspan="3" colspan="2" headers="week-day-2 week-time-9"><span class="week-event-title">Lunch (buffet)</span><span class="week-event-time">12:00–13:30</span></td>
+      <td class="week-event-break" rowspan="3" colspan="2" headers="week-day-3 week-time-9"><span class="week-event-title">WSDM Business Lunch (buffet)</span><span class="week-event-time">12:00–13:30</span></td>
+      <td class="week-event-break" rowspan="3" colspan="3" headers="week-day-4 week-time-9"><span class="week-event-title">Lunch (buffet)</span><span class="week-event-time">12:00–13:30</span></td>
+    </tr>
+    <tr><th scope="row" id="week-time-10">12:30–13:00</th>
+    </tr>
+    <tr><th scope="row" id="week-time-11">13:00–13:30</th>
+    </tr>
+    <tr><th scope="row" id="week-time-12">13:30–14:00</th>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-0 week-time-12"><span class="week-event-title">Tutorials</span><span class="week-event-time">13:30–15:00</span></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-0 week-time-12"><span class="week-event-title">Industry Day</span><span class="week-event-time">13:30–15:00</span></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-0 week-time-12"><span class="week-event-title">Demo 1</span><span class="week-event-time">13:30–15:00</span></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-1 week-time-12"><span class="week-event-title">Paper Presentations #2</span><span class="week-event-time">13:30–15:00</span></td>
+      <td class="week-event-session" rowspan="4" colspan="1" headers="week-day-1 week-time-12"><span class="week-event-title">Poster Session 2</span><span class="week-event-time">13:30–15:30</span></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-2 week-time-12"><span class="week-event-title">Paper Presentations #5</span><span class="week-event-time">13:30–15:00</span></td>
+      <td class="week-event-session" rowspan="4" colspan="1" headers="week-day-2 week-time-12"><span class="week-event-title">Poster Session 6</span><span class="week-event-time">13:30–15:30</span></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-3 week-time-12"><span class="week-event-title">Paper Presentations #8</span><span class="week-event-time">13:30–15:00</span></td>
+      <td class="week-event-session" rowspan="4" colspan="1" headers="week-day-3 week-time-12"><span class="week-event-title">Poster Session 8</span><span class="week-event-time">13:30–15:30</span></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-4 week-time-12"><span class="week-event-title">Demo 4</span><span class="week-event-time">13:30–15:00</span></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-4 week-time-12"><span class="week-event-title">Workshops</span><span class="week-event-time">13:30–15:00</span></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-4 week-time-12"><span class="week-event-title">WSDM Day</span><span class="week-event-time">13:30–15:00</span></td>
+    </tr>
+    <tr><th scope="row" id="week-time-13">14:00–14:30</th>
+    </tr>
+    <tr><th scope="row" id="week-time-14">14:30–15:00</th>
+    </tr>
+    <tr><th scope="row" id="week-time-15">15:00–15:30</th>
+      <td class="week-event-break" rowspan="1" colspan="3" headers="week-day-0 week-time-15"><span class="week-event-title">Coffee Break</span><span class="week-event-time">15:00–15:30</span></td>
+      <td class="week-event-break" rowspan="1" colspan="1" headers="week-day-1 week-time-15"><span class="week-event-title">Coffee Break</span><span class="week-event-time">15:00–15:30</span></td>
+      <td class="week-event-break" rowspan="1" colspan="1" headers="week-day-2 week-time-15"><span class="week-event-title">Coffee Break</span><span class="week-event-time">15:00–15:30</span></td>
+      <td class="week-event-break" rowspan="1" colspan="1" headers="week-day-3 week-time-15"><span class="week-event-title">Coffee Break</span><span class="week-event-time">15:00–15:30</span></td>
+      <td class="week-event-break" rowspan="1" colspan="3" headers="week-day-4 week-time-15"><span class="week-event-title">Coffee Break</span><span class="week-event-time">15:00–15:30</span></td>
+    </tr>
+    <tr><th scope="row" id="week-time-16">15:30–16:00</th>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-0 week-time-16"><span class="week-event-title">Tutorials</span><span class="week-event-time">15:30–17:00</span></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-0 week-time-16"><span class="week-event-title">Industry Day</span><span class="week-event-time">15:30–17:00</span></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-0 week-time-16"><span class="week-event-title">Demo 2</span><span class="week-event-time">15:30–17:00</span></td>
+      <td class="week-event-keynote" rowspan="2" colspan="2" headers="week-day-1 week-time-16"><span class="week-event-title">Keynote 2</span><span class="week-event-time">15:30–16:30</span></td>
+      <td class="week-event-keynote" rowspan="2" colspan="2" headers="week-day-2 week-time-16"><span class="week-event-title">Keynote 4</span><span class="week-event-time">15:30–16:30</span></td>
+      <td class="week-event-session" rowspan="3" colspan="2" headers="week-day-3 week-time-16"><span class="week-event-title">Paper Presentations #9<br>16:50-17:00 Closing</span><span class="week-event-time">15:30–17:00</span></td>
+      <td class="week-event-session" rowspan="3" colspan="2" headers="week-day-4 week-time-16"><span class="week-event-title">Workshops</span><span class="week-event-time">15:30–17:00</span></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-4 week-time-16"><span class="week-event-title">WSDM Day</span><span class="week-event-time">15:30–17:00</span></td>
+    </tr>
+    <tr><th scope="row" id="week-time-17">16:00–16:30</th>
+    </tr>
+    <tr><th scope="row" id="week-time-18">16:30–17:00</th>
+      <td class="week-event-session" rowspan="2" colspan="1" headers="week-day-1 week-time-18"><span class="week-event-title">Paper Presentations #3</span><span class="week-event-time">16:30–17:30</span></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-1 week-time-18"><span class="week-event-title">Poster Session 3</span><span class="week-event-time">16:30–18:00</span></td>
+      <td class="week-event-session" rowspan="1" colspan="2" headers="week-day-2 week-time-18"><span class="week-event-title">Paper Presentations #6</span><span class="week-event-time">16:30–17:00</span></td>
+    </tr>
+    <tr><th scope="row" id="week-time-19">17:00–17:30</th>
+      <td class="week-empty" colspan="3" headers="week-day-0 week-time-19"><span class="program-visually-hidden">No session scheduled</span></td>
+      <td class="week-empty" colspan="2" headers="week-day-2 week-time-19"><span class="program-visually-hidden">No session scheduled</span></td>
+      <td class="week-empty" colspan="2" headers="week-day-3 week-time-19"><span class="program-visually-hidden">No session scheduled</span></td>
+      <td class="week-empty" colspan="3" headers="week-day-4 week-time-19"><span class="program-visually-hidden">No session scheduled</span></td>
+    </tr>
+    <tr><th scope="row" id="week-time-20">17:30–18:00</th>
+      <td class="week-empty" colspan="3" headers="week-day-0 week-time-20"><span class="program-visually-hidden">No session scheduled</span></td>
+      <td class="week-event-break" rowspan="2" colspan="1" headers="week-day-1 week-time-20"><span class="week-event-title">Turnover</span><span class="week-event-time">17:30–18:30</span></td>
+      <td class="week-empty" colspan="2" headers="week-day-2 week-time-20"><span class="program-visually-hidden">No session scheduled</span></td>
+      <td class="week-empty" colspan="2" headers="week-day-3 week-time-20"><span class="program-visually-hidden">No session scheduled</span></td>
+      <td class="week-empty" colspan="3" headers="week-day-4 week-time-20"><span class="program-visually-hidden">No session scheduled</span></td>
+    </tr>
+    <tr><th scope="row" id="week-time-21">18:00–18:30</th>
+      <td class="week-empty" colspan="3" headers="week-day-0 week-time-21"><span class="program-visually-hidden">No session scheduled</span></td>
+      <td class="week-empty" colspan="1" headers="week-day-1 week-time-21"><span class="program-visually-hidden">No session scheduled</span></td>
+      <td class="week-event-social" rowspan="5" colspan="2" headers="week-day-2 week-time-21"><span class="week-event-title">Banquet</span><span class="week-event-time">18:00–20:30</span></td>
+      <td class="week-empty" colspan="2" headers="week-day-3 week-time-21"><span class="program-visually-hidden">No session scheduled</span></td>
+      <td class="week-empty" colspan="3" headers="week-day-4 week-time-21"><span class="program-visually-hidden">No session scheduled</span></td>
+    </tr>
+    <tr><th scope="row" id="week-time-22">18:30–19:00</th>
+      <td class="week-empty" colspan="3" headers="week-day-0 week-time-22"><span class="program-visually-hidden">No session scheduled</span></td>
+      <td class="week-event-social" rowspan="4" colspan="1" headers="week-day-1 week-time-22"><span class="week-event-title">Welcome Reception (Cocktail)</span><span class="week-event-time">18:30–20:30</span></td>
+      <td class="week-event-session" rowspan="4" colspan="1" headers="week-day-1 week-time-22"><span class="week-event-title">Poster Session 4</span><span class="week-event-time">18:30–20:30</span></td>
+      <td class="week-empty" colspan="2" headers="week-day-3 week-time-22"><span class="program-visually-hidden">No session scheduled</span></td>
+      <td class="week-empty" colspan="3" headers="week-day-4 week-time-22"><span class="program-visually-hidden">No session scheduled</span></td>
+    </tr>
+    <tr><th scope="row" id="week-time-23">19:00–19:30</th>
+      <td class="week-empty" colspan="3" headers="week-day-0 week-time-23"><span class="program-visually-hidden">No session scheduled</span></td>
+      <td class="week-empty" colspan="2" headers="week-day-3 week-time-23"><span class="program-visually-hidden">No session scheduled</span></td>
+      <td class="week-empty" colspan="3" headers="week-day-4 week-time-23"><span class="program-visually-hidden">No session scheduled</span></td>
+    </tr>
+    <tr><th scope="row" id="week-time-24">19:30–20:00</th>
+      <td class="week-empty" colspan="3" headers="week-day-0 week-time-24"><span class="program-visually-hidden">No session scheduled</span></td>
+      <td class="week-empty" colspan="2" headers="week-day-3 week-time-24"><span class="program-visually-hidden">No session scheduled</span></td>
+      <td class="week-empty" colspan="3" headers="week-day-4 week-time-24"><span class="program-visually-hidden">No session scheduled</span></td>
+    </tr>
+    <tr><th scope="row" id="week-time-25">20:00–20:30</th>
+      <td class="week-empty" colspan="3" headers="week-day-0 week-time-25"><span class="program-visually-hidden">No session scheduled</span></td>
+      <td class="week-empty" colspan="2" headers="week-day-3 week-time-25"><span class="program-visually-hidden">No session scheduled</span></td>
+      <td class="week-empty" colspan="3" headers="week-day-4 week-time-25"><span class="program-visually-hidden">No session scheduled</span></td>
+    </tr>
+  </tbody>
+</table>
+        <!-- WEEK GRID END -->
+        </div>
+      </section>
+      <section class="program-schedule" aria-labelledby="daily-program-title">
+        <h2 class="program-daily-title" id="daily-program-title">Daily program</h2>
+        <div class="program-day-picker" role="group" aria-label="Choose a program day" hidden>
+          <button type="button" data-program-day="0" aria-pressed="false" aria-controls="program-day-0"><span>Mon</span><strong>15 Feb</strong></button>
+          <button type="button" data-program-day="1" aria-pressed="false" aria-controls="program-day-1"><span>Tue</span><strong>16 Feb</strong></button>
+          <button type="button" data-program-day="2" aria-pressed="false" aria-controls="program-day-2"><span>Wed</span><strong>17 Feb</strong></button>
+          <button type="button" data-program-day="3" aria-pressed="false" aria-controls="program-day-3"><span>Thu</span><strong>18 Feb</strong></button>
+          <button type="button" data-program-day="4" aria-pressed="false" aria-controls="program-day-4"><span>Fri</span><strong>19 Feb</strong></button>
+        </div>
+        <p class="program-reading-note">Sessions with overlapping times run in parallel. Each session shows its full time range.</p>
+        <div class="program-legend" aria-label="Activity types">
+          <span class="legend-keynote">Keynotes</span><span class="legend-session">Sessions</span>
+          <span class="legend-break">Breaks &amp; registration</span><span class="legend-social">Social events</span>
+        </div>
+        <div id="program-days">
+          <section class="program-day" id="program-day-0" aria-labelledby="program-day-title-0">
+            <div class="program-day-heading">
+              <h3 id="program-day-title-0">Monday, 15 February</h3>
+              <p>Tutorials, industry &amp; doctoral research</p>
+            </div>
+            <ol class="program-agenda">
+              <li class="program-slot" data-start="7:30" data-end="8:30">
+                <div class="program-time"><time datetime="2027-02-15T07:30:00+08:00">07:30</time><span aria-hidden="true">–</span><time datetime="2027-02-15T08:30:00+08:00">08:30</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-break" data-event-title="Registration"><span class="program-event-label">Break / registration</span><span class="program-event-name">Registration</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="8:30" data-end="10:00">
+                <div class="program-time"><time datetime="2027-02-15T08:30:00+08:00">08:30</time><span aria-hidden="true">–</span><time datetime="2027-02-15T10:00:00+08:00">10:00</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-session" data-event-title="Tutorials"><span class="program-event-label">Session</span><span class="program-event-name">Tutorials</span></li>
+                  <li class="program-event event-session" data-event-title="Industry Day"><span class="program-event-label">Session</span><span class="program-event-name">Industry Day</span></li>
+                  <li class="program-event event-session" data-event-title="Doctoral Consortium"><span class="program-event-label">Session</span><span class="program-event-name">Doctoral Consortium</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="10:00" data-end="10:30">
+                <div class="program-time"><time datetime="2027-02-15T10:00:00+08:00">10:00</time><span aria-hidden="true">–</span><time datetime="2027-02-15T10:30:00+08:00">10:30</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-break" data-event-title="Coffee Break"><span class="program-event-label">Break / registration</span><span class="program-event-name">Coffee Break</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="10:30" data-end="12:00">
+                <div class="program-time"><time datetime="2027-02-15T10:30:00+08:00">10:30</time><span aria-hidden="true">–</span><time datetime="2027-02-15T12:00:00+08:00">12:00</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-session" data-event-title="Tutorials"><span class="program-event-label">Session</span><span class="program-event-name">Tutorials</span></li>
+                  <li class="program-event event-session" data-event-title="Industry Day"><span class="program-event-label">Session</span><span class="program-event-name">Industry Day</span></li>
+                  <li class="program-event event-session" data-event-title="Doctoral Consortium"><span class="program-event-label">Session</span><span class="program-event-name">Doctoral Consortium</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="12:00" data-end="13:30">
+                <div class="program-time"><time datetime="2027-02-15T12:00:00+08:00">12:00</time><span aria-hidden="true">–</span><time datetime="2027-02-15T13:30:00+08:00">13:30</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-break" data-event-title="Lunch (buffet)"><span class="program-event-label">Break / registration</span><span class="program-event-name">Lunch (buffet)</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="13:30" data-end="15:00">
+                <div class="program-time"><time datetime="2027-02-15T13:30:00+08:00">13:30</time><span aria-hidden="true">–</span><time datetime="2027-02-15T15:00:00+08:00">15:00</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-session" data-event-title="Tutorials"><span class="program-event-label">Session</span><span class="program-event-name">Tutorials</span></li>
+                  <li class="program-event event-session" data-event-title="Industry Day"><span class="program-event-label">Session</span><span class="program-event-name">Industry Day</span></li>
+                  <li class="program-event event-session" data-event-title="Demo 1"><span class="program-event-label">Session</span><span class="program-event-name">Demo 1</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="15:00" data-end="15:30">
+                <div class="program-time"><time datetime="2027-02-15T15:00:00+08:00">15:00</time><span aria-hidden="true">–</span><time datetime="2027-02-15T15:30:00+08:00">15:30</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-break" data-event-title="Coffee Break"><span class="program-event-label">Break / registration</span><span class="program-event-name">Coffee Break</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="15:30" data-end="17:00">
+                <div class="program-time"><time datetime="2027-02-15T15:30:00+08:00">15:30</time><span aria-hidden="true">–</span><time datetime="2027-02-15T17:00:00+08:00">17:00</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-session" data-event-title="Tutorials"><span class="program-event-label">Session</span><span class="program-event-name">Tutorials</span></li>
+                  <li class="program-event event-session" data-event-title="Industry Day"><span class="program-event-label">Session</span><span class="program-event-name">Industry Day</span></li>
+                  <li class="program-event event-session" data-event-title="Demo 2"><span class="program-event-label">Session</span><span class="program-event-name">Demo 2</span></li>
+                </ul>
+              </li>
+            </ol>
+          </section>
+          <section class="program-day" id="program-day-1" aria-labelledby="program-day-title-1">
+            <div class="program-day-heading">
+              <h3 id="program-day-title-1">Tuesday, 16 February</h3>
+              <p>Research sessions &amp; welcome reception</p>
+            </div>
+            <ol class="program-agenda">
+              <li class="program-slot" data-start="7:30" data-end="8:30">
+                <div class="program-time"><time datetime="2027-02-16T07:30:00+08:00">07:30</time><span aria-hidden="true">–</span><time datetime="2027-02-16T08:30:00+08:00">08:30</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-break" data-event-title="Registration"><span class="program-event-label">Break / registration</span><span class="program-event-name">Registration</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="8:30" data-end="9:00">
+                <div class="program-time"><time datetime="2027-02-16T08:30:00+08:00">08:30</time><span aria-hidden="true">–</span><time datetime="2027-02-16T09:00:00+08:00">09:00</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-session" data-event-title="Opening Remarks"><span class="program-event-label">Session</span><span class="program-event-name">Opening Remarks</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="9:00" data-end="10:00">
+                <div class="program-time"><time datetime="2027-02-16T09:00:00+08:00">09:00</time><span aria-hidden="true">–</span><time datetime="2027-02-16T10:00:00+08:00">10:00</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-keynote" data-event-title="Keynote 1"><span class="program-event-label">Keynote</span><span class="program-event-name">Keynote 1</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="10:00" data-end="10:30">
+                <div class="program-time"><time datetime="2027-02-16T10:00:00+08:00">10:00</time><span aria-hidden="true">–</span><time datetime="2027-02-16T10:30:00+08:00">10:30</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-break" data-event-title="Coffee Break"><span class="program-event-label">Break / registration</span><span class="program-event-name">Coffee Break</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="10:00" data-end="12:00">
+                <div class="program-time"><time datetime="2027-02-16T10:00:00+08:00">10:00</time><span aria-hidden="true">–</span><time datetime="2027-02-16T12:00:00+08:00">12:00</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-session" data-event-title="Poster Session 1"><span class="program-event-label">Session</span><span class="program-event-name">Poster Session 1</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="10:30" data-end="12:00">
+                <div class="program-time"><time datetime="2027-02-16T10:30:00+08:00">10:30</time><span aria-hidden="true">–</span><time datetime="2027-02-16T12:00:00+08:00">12:00</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-session" data-event-title="Paper Presentations #1"><span class="program-event-label">Session</span><span class="program-event-name">Paper Presentations #1</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="12:00" data-end="13:30">
+                <div class="program-time"><time datetime="2027-02-16T12:00:00+08:00">12:00</time><span aria-hidden="true">–</span><time datetime="2027-02-16T13:30:00+08:00">13:30</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-break" data-event-title="Lunch (buffet)"><span class="program-event-label">Break / registration</span><span class="program-event-name">Lunch (buffet)</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="13:30" data-end="15:00">
+                <div class="program-time"><time datetime="2027-02-16T13:30:00+08:00">13:30</time><span aria-hidden="true">–</span><time datetime="2027-02-16T15:00:00+08:00">15:00</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-session" data-event-title="Paper Presentations #2"><span class="program-event-label">Session</span><span class="program-event-name">Paper Presentations #2</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="13:30" data-end="15:30">
+                <div class="program-time"><time datetime="2027-02-16T13:30:00+08:00">13:30</time><span aria-hidden="true">–</span><time datetime="2027-02-16T15:30:00+08:00">15:30</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-session" data-event-title="Poster Session 2"><span class="program-event-label">Session</span><span class="program-event-name">Poster Session 2</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="15:00" data-end="15:30">
+                <div class="program-time"><time datetime="2027-02-16T15:00:00+08:00">15:00</time><span aria-hidden="true">–</span><time datetime="2027-02-16T15:30:00+08:00">15:30</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-break" data-event-title="Coffee Break"><span class="program-event-label">Break / registration</span><span class="program-event-name">Coffee Break</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="15:30" data-end="16:30">
+                <div class="program-time"><time datetime="2027-02-16T15:30:00+08:00">15:30</time><span aria-hidden="true">–</span><time datetime="2027-02-16T16:30:00+08:00">16:30</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-keynote" data-event-title="Keynote 2"><span class="program-event-label">Keynote</span><span class="program-event-name">Keynote 2</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="16:30" data-end="17:30">
+                <div class="program-time"><time datetime="2027-02-16T16:30:00+08:00">16:30</time><span aria-hidden="true">–</span><time datetime="2027-02-16T17:30:00+08:00">17:30</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-session" data-event-title="Paper Presentations #3"><span class="program-event-label">Session</span><span class="program-event-name">Paper Presentations #3</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="16:30" data-end="18:00">
+                <div class="program-time"><time datetime="2027-02-16T16:30:00+08:00">16:30</time><span aria-hidden="true">–</span><time datetime="2027-02-16T18:00:00+08:00">18:00</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-session" data-event-title="Poster Session 3"><span class="program-event-label">Session</span><span class="program-event-name">Poster Session 3</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="17:30" data-end="18:30">
+                <div class="program-time"><time datetime="2027-02-16T17:30:00+08:00">17:30</time><span aria-hidden="true">–</span><time datetime="2027-02-16T18:30:00+08:00">18:30</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-break" data-event-title="Turnover"><span class="program-event-label">Break / registration</span><span class="program-event-name">Turnover</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="18:30" data-end="20:30">
+                <div class="program-time"><time datetime="2027-02-16T18:30:00+08:00">18:30</time><span aria-hidden="true">–</span><time datetime="2027-02-16T20:30:00+08:00">20:30</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-social" data-event-title="Welcome Reception (Cocktail)"><span class="program-event-label">Social event</span><span class="program-event-name">Welcome Reception (Cocktail)</span></li>
+                  <li class="program-event event-session" data-event-title="Poster Session 4"><span class="program-event-label">Session</span><span class="program-event-name">Poster Session 4</span></li>
+                </ul>
+              </li>
+            </ol>
+          </section>
+          <section class="program-day" id="program-day-2" aria-labelledby="program-day-title-2">
+            <div class="program-day-heading">
+              <h3 id="program-day-title-2">Wednesday, 17 February</h3>
+              <p>Research sessions &amp; banquet</p>
+            </div>
+            <ol class="program-agenda">
+              <li class="program-slot" data-start="7:30" data-end="9:00">
+                <div class="program-time"><time datetime="2027-02-17T07:30:00+08:00">07:30</time><span aria-hidden="true">–</span><time datetime="2027-02-17T09:00:00+08:00">09:00</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-break" data-event-title="Registration"><span class="program-event-label">Break / registration</span><span class="program-event-name">Registration</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="9:00" data-end="10:00">
+                <div class="program-time"><time datetime="2027-02-17T09:00:00+08:00">09:00</time><span aria-hidden="true">–</span><time datetime="2027-02-17T10:00:00+08:00">10:00</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-keynote" data-event-title="Keynote 3"><span class="program-event-label">Keynote</span><span class="program-event-name">Keynote 3</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="10:00" data-end="10:30">
+                <div class="program-time"><time datetime="2027-02-17T10:00:00+08:00">10:00</time><span aria-hidden="true">–</span><time datetime="2027-02-17T10:30:00+08:00">10:30</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-break" data-event-title="Coffee Break"><span class="program-event-label">Break / registration</span><span class="program-event-name">Coffee Break</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="10:00" data-end="12:00">
+                <div class="program-time"><time datetime="2027-02-17T10:00:00+08:00">10:00</time><span aria-hidden="true">–</span><time datetime="2027-02-17T12:00:00+08:00">12:00</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-session" data-event-title="Poster Session 5"><span class="program-event-label">Session</span><span class="program-event-name">Poster Session 5</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="10:30" data-end="12:00">
+                <div class="program-time"><time datetime="2027-02-17T10:30:00+08:00">10:30</time><span aria-hidden="true">–</span><time datetime="2027-02-17T12:00:00+08:00">12:00</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-session" data-event-title="Paper Presentations #4"><span class="program-event-label">Session</span><span class="program-event-name">Paper Presentations #4</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="12:00" data-end="13:30">
+                <div class="program-time"><time datetime="2027-02-17T12:00:00+08:00">12:00</time><span aria-hidden="true">–</span><time datetime="2027-02-17T13:30:00+08:00">13:30</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-break" data-event-title="Lunch (buffet)"><span class="program-event-label">Break / registration</span><span class="program-event-name">Lunch (buffet)</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="13:30" data-end="15:00">
+                <div class="program-time"><time datetime="2027-02-17T13:30:00+08:00">13:30</time><span aria-hidden="true">–</span><time datetime="2027-02-17T15:00:00+08:00">15:00</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-session" data-event-title="Paper Presentations #5"><span class="program-event-label">Session</span><span class="program-event-name">Paper Presentations #5</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="13:30" data-end="15:30">
+                <div class="program-time"><time datetime="2027-02-17T13:30:00+08:00">13:30</time><span aria-hidden="true">–</span><time datetime="2027-02-17T15:30:00+08:00">15:30</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-session" data-event-title="Poster Session 6"><span class="program-event-label">Session</span><span class="program-event-name">Poster Session 6</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="15:00" data-end="15:30">
+                <div class="program-time"><time datetime="2027-02-17T15:00:00+08:00">15:00</time><span aria-hidden="true">–</span><time datetime="2027-02-17T15:30:00+08:00">15:30</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-break" data-event-title="Coffee Break"><span class="program-event-label">Break / registration</span><span class="program-event-name">Coffee Break</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="15:30" data-end="16:30">
+                <div class="program-time"><time datetime="2027-02-17T15:30:00+08:00">15:30</time><span aria-hidden="true">–</span><time datetime="2027-02-17T16:30:00+08:00">16:30</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-keynote" data-event-title="Keynote 4"><span class="program-event-label">Keynote</span><span class="program-event-name">Keynote 4</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="16:30" data-end="17:00">
+                <div class="program-time"><time datetime="2027-02-17T16:30:00+08:00">16:30</time><span aria-hidden="true">–</span><time datetime="2027-02-17T17:00:00+08:00">17:00</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-session" data-event-title="Paper Presentations #6"><span class="program-event-label">Session</span><span class="program-event-name">Paper Presentations #6</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="18:00" data-end="20:30">
+                <div class="program-time"><time datetime="2027-02-17T18:00:00+08:00">18:00</time><span aria-hidden="true">–</span><time datetime="2027-02-17T20:30:00+08:00">20:30</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-social" data-event-title="Banquet"><span class="program-event-label">Social event</span><span class="program-event-name">Banquet</span></li>
+                </ul>
+              </li>
+            </ol>
+          </section>
+          <section class="program-day" id="program-day-3" aria-labelledby="program-day-title-3">
+            <div class="program-day-heading">
+              <h3 id="program-day-title-3">Thursday, 18 February</h3>
+              <p>Research sessions &amp; closing</p>
+            </div>
+            <ol class="program-agenda">
+              <li class="program-slot" data-start="7:30" data-end="9:00">
+                <div class="program-time"><time datetime="2027-02-18T07:30:00+08:00">07:30</time><span aria-hidden="true">–</span><time datetime="2027-02-18T09:00:00+08:00">09:00</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-break" data-event-title="Registration"><span class="program-event-label">Break / registration</span><span class="program-event-name">Registration</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="9:00" data-end="10:00">
+                <div class="program-time"><time datetime="2027-02-18T09:00:00+08:00">09:00</time><span aria-hidden="true">–</span><time datetime="2027-02-18T10:00:00+08:00">10:00</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-keynote" data-event-title="Keynote 5 | Speaker to be announced"><span class="program-event-label">Keynote</span><span class="program-event-name">Keynote 5<br><span class="program-event-note">Speaker to be announced</span></span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="10:00" data-end="10:30">
+                <div class="program-time"><time datetime="2027-02-18T10:00:00+08:00">10:00</time><span aria-hidden="true">–</span><time datetime="2027-02-18T10:30:00+08:00">10:30</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-break" data-event-title="Coffee Break"><span class="program-event-label">Break / registration</span><span class="program-event-name">Coffee Break</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="10:00" data-end="12:00">
+                <div class="program-time"><time datetime="2027-02-18T10:00:00+08:00">10:00</time><span aria-hidden="true">–</span><time datetime="2027-02-18T12:00:00+08:00">12:00</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-session" data-event-title="Poster Session 7"><span class="program-event-label">Session</span><span class="program-event-name">Poster Session 7</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="10:30" data-end="12:00">
+                <div class="program-time"><time datetime="2027-02-18T10:30:00+08:00">10:30</time><span aria-hidden="true">–</span><time datetime="2027-02-18T12:00:00+08:00">12:00</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-session" data-event-title="Paper Presentations #7"><span class="program-event-label">Session</span><span class="program-event-name">Paper Presentations #7</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="12:00" data-end="13:30">
+                <div class="program-time"><time datetime="2027-02-18T12:00:00+08:00">12:00</time><span aria-hidden="true">–</span><time datetime="2027-02-18T13:30:00+08:00">13:30</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-break" data-event-title="WSDM Business Lunch (buffet)"><span class="program-event-label">Break / registration</span><span class="program-event-name">WSDM Business Lunch (buffet)</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="13:30" data-end="15:00">
+                <div class="program-time"><time datetime="2027-02-18T13:30:00+08:00">13:30</time><span aria-hidden="true">–</span><time datetime="2027-02-18T15:00:00+08:00">15:00</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-session" data-event-title="Paper Presentations #8"><span class="program-event-label">Session</span><span class="program-event-name">Paper Presentations #8</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="13:30" data-end="15:30">
+                <div class="program-time"><time datetime="2027-02-18T13:30:00+08:00">13:30</time><span aria-hidden="true">–</span><time datetime="2027-02-18T15:30:00+08:00">15:30</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-session" data-event-title="Poster Session 8"><span class="program-event-label">Session</span><span class="program-event-name">Poster Session 8</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="15:00" data-end="15:30">
+                <div class="program-time"><time datetime="2027-02-18T15:00:00+08:00">15:00</time><span aria-hidden="true">–</span><time datetime="2027-02-18T15:30:00+08:00">15:30</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-break" data-event-title="Coffee Break"><span class="program-event-label">Break / registration</span><span class="program-event-name">Coffee Break</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="15:30" data-end="17:00">
+                <div class="program-time"><time datetime="2027-02-18T15:30:00+08:00">15:30</time><span aria-hidden="true">–</span><time datetime="2027-02-18T17:00:00+08:00">17:00</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-session" data-event-title="Paper Presentations #9 | 16:50-17:00 Closing"><span class="program-event-label">Session</span><span class="program-event-name">Paper Presentations #9<br><span class="program-event-note">16:50-17:00 Closing</span></span></li>
+                </ul>
+              </li>
+            </ol>
+          </section>
+          <section class="program-day" id="program-day-4" aria-labelledby="program-day-title-4">
+            <div class="program-day-heading">
+              <h3 id="program-day-title-4">Friday, 19 February</h3>
+              <p>Workshops, WSDM Cup &amp; WSDM Day</p>
+            </div>
+            <ol class="program-agenda">
+              <li class="program-slot" data-start="7:30" data-end="8:30">
+                <div class="program-time"><time datetime="2027-02-19T07:30:00+08:00">07:30</time><span aria-hidden="true">–</span><time datetime="2027-02-19T08:30:00+08:00">08:30</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-break" data-event-title="Registration"><span class="program-event-label">Break / registration</span><span class="program-event-name">Registration</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="8:30" data-end="10:00">
+                <div class="program-time"><time datetime="2027-02-19T08:30:00+08:00">08:30</time><span aria-hidden="true">–</span><time datetime="2027-02-19T10:00:00+08:00">10:00</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-session" data-event-title="WSDM Cup"><span class="program-event-label">Session</span><span class="program-event-name">WSDM Cup</span></li>
+                  <li class="program-event event-session" data-event-title="Workshops"><span class="program-event-label">Session</span><span class="program-event-name">Workshops</span></li>
+                  <li class="program-event event-session" data-event-title="WSDM Day"><span class="program-event-label">Session</span><span class="program-event-name">WSDM Day</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="10:00" data-end="10:30">
+                <div class="program-time"><time datetime="2027-02-19T10:00:00+08:00">10:00</time><span aria-hidden="true">–</span><time datetime="2027-02-19T10:30:00+08:00">10:30</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-break" data-event-title="Coffee Break"><span class="program-event-label">Break / registration</span><span class="program-event-name">Coffee Break</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="10:30" data-end="12:00">
+                <div class="program-time"><time datetime="2027-02-19T10:30:00+08:00">10:30</time><span aria-hidden="true">–</span><time datetime="2027-02-19T12:00:00+08:00">12:00</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-session" data-event-title="Demo 3"><span class="program-event-label">Session</span><span class="program-event-name">Demo 3</span></li>
+                  <li class="program-event event-session" data-event-title="Workshops"><span class="program-event-label">Session</span><span class="program-event-name">Workshops</span></li>
+                  <li class="program-event event-session" data-event-title="WSDM Day"><span class="program-event-label">Session</span><span class="program-event-name">WSDM Day</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="12:00" data-end="13:30">
+                <div class="program-time"><time datetime="2027-02-19T12:00:00+08:00">12:00</time><span aria-hidden="true">–</span><time datetime="2027-02-19T13:30:00+08:00">13:30</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-break" data-event-title="Lunch (buffet)"><span class="program-event-label">Break / registration</span><span class="program-event-name">Lunch (buffet)</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="13:30" data-end="15:00">
+                <div class="program-time"><time datetime="2027-02-19T13:30:00+08:00">13:30</time><span aria-hidden="true">–</span><time datetime="2027-02-19T15:00:00+08:00">15:00</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-session" data-event-title="Demo 4"><span class="program-event-label">Session</span><span class="program-event-name">Demo 4</span></li>
+                  <li class="program-event event-session" data-event-title="Workshops"><span class="program-event-label">Session</span><span class="program-event-name">Workshops</span></li>
+                  <li class="program-event event-session" data-event-title="WSDM Day"><span class="program-event-label">Session</span><span class="program-event-name">WSDM Day</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="15:00" data-end="15:30">
+                <div class="program-time"><time datetime="2027-02-19T15:00:00+08:00">15:00</time><span aria-hidden="true">–</span><time datetime="2027-02-19T15:30:00+08:00">15:30</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-break" data-event-title="Coffee Break"><span class="program-event-label">Break / registration</span><span class="program-event-name">Coffee Break</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="15:30" data-end="17:00">
+                <div class="program-time"><time datetime="2027-02-19T15:30:00+08:00">15:30</time><span aria-hidden="true">–</span><time datetime="2027-02-19T17:00:00+08:00">17:00</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-session" data-event-title="Workshops"><span class="program-event-label">Session</span><span class="program-event-name">Workshops</span></li>
+                  <li class="program-event event-session" data-event-title="WSDM Day"><span class="program-event-label">Session</span><span class="program-event-name">WSDM Day</span></li>
+                </ul>
+              </li>
+            </ol>
+          </section>
+        </div>
+        <p class="program-schedule-note">Detailed session information will be added as it is confirmed.</p>
+      </section>
+
+      <section class="program-resources" aria-labelledby="program-resources-title">
+        <div class="program-resources-heading">
+          <h2 id="program-resources-title">Explore the events</h2>
+          <p>Current calls and background information. Detailed event programs will follow.</p>
+        </div>
+        <div class="program-resource-grid">
+          <article class="program-resource">
+            <h3>Tutorials</h3>
+            <p>Tutorial proposals and participation guidelines.</p>
+            <a href="./cftutorial.html">View the call &rarr;</a>
+          </article>
+          <article class="program-resource">
+            <h3>Industry Day</h3>
+            <p>Themes and submission guidelines for industry talks.</p>
+            <a href="./cfidt.html">View the call &rarr;</a>
+          </article>
+          <article class="program-resource">
+            <h3>Doctoral Consortium</h3>
+            <p>Participation and submission information for doctoral researchers.</p>
+            <a href="./cfdc.html">View the call &rarr;</a>
+          </article>
+          <article class="program-resource">
+            <h3>Keynotes</h3>
+            <p>Meet the invited speakers on the conference homepage.</p>
+            <a href="./index.html">Meet the speakers &rarr;</a>
+          </article>
+          <article class="program-resource">
+            <h3>WSDM Cup</h3>
+            <p>Challenge proposals and the planned competition timeline.</p>
+            <a href="./cfwc.html">Explore WSDM Cup &rarr;</a>
+          </article>
+          <article class="program-resource">
+            <h3>Workshops</h3>
+            <p>Workshop proposals and information for organizers.</p>
+            <a href="./cfworkshops.html">View the call &rarr;</a>
+          </article>
+          <article class="program-resource">
+            <h3>Poster Sessions</h3>
+            <p>Paper assignments and session details will be announced.</p>
+            <span class="program-pending">Details to be announced</span>
+          </article>
+          <article class="program-resource">
+            <h3>WSDM Day</h3>
+            <p>Event details will be announced.</p>
+            <span class="program-pending">Details to be announced</span>
+          </article>
+        </div>
+      </section>
+      <footer class="site-footer">
+      <div class="site-footer-inner">
+        <p class="site-footer-copyright">© 2027 WSDM 2027. All rights reserved.</p>
+        <a class="site-footer-top" href="#site-top">Back to top ↑</a>
       </div>
     </footer>
+    </div>
+  </main>
+  <script src="js/program-overview.js" defer></script>
 
     <script>
       document.addEventListener('DOMContentLoaded', function () {

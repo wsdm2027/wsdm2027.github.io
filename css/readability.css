@@ -1,0 +1,99 @@
+/* Final readability pass: keep headings, wide layouts and dense paper calls intact. */
+:root { --readable-body: 17px; }
+body.home-typography { --home-body-size: 17px; }
+.home-typography .home-calls .calls-intro { font-size: 18px; }
+.home-typography .home-calls .call-deadline { font-size: 17px; }
+.home-typography .home-calls :is(.deadline-label,.tentative-label,.calls-note,.call-notification) { font-size: 14px; }
+.home-typography .home-calls .call-link,
+.home-typography .home-authors a,
+.home-typography .homepage-chairs .home-organizers-link { font-size: 16px; }
+.home-typography .homepage-chairs .chair-affiliation { font-size: 16px; }
+.home-typography .home-contact .contact-content p,
+.home-typography .home-contact .contact-email { font-size: 16px; }
+/* More spacious Calls use larger body text. Full / Short / Demo keep 15–16px. */
+.call-page.readable-call { font-size: var(--readable-body); }
+.readable-call .cffp-section :is(div,p,li),
+.readable-call .cffp-section .search-box-container div,
+.readable-call .cffp-section .coi,
+.readable-call .pilot-checklist > li,
+.readable-call .tutorial-requirement ul,
+.readable-call .tutorial-format-note { font-size: var(--readable-body); line-height: 1.75; }
+.call-page .tutorial-summary p { font-size: 16px; }
+.call-page .tutorial-summary span,
+.call-page .tutorial-meta,
+.call-page .tutorial-dates dt,
+.call-page .tutorial-dates > p,
+.call-page .tutorial-dates .call-date-note p,
+.call-page .call-date-note p,
+.call-page .call-date dt,
+.call-page .tutorial-muted,
+.call-page .pilot-status { font-size: 14px; line-height: 1.65; }
+.call-page .tutorial-secondary,
+.call-page .tutorial-button,
+.call-page .call-jump-nav a { font-size: 16px; }
+.call-page .tutorial-chairs .tutorial-chair-info p,
+.call-page .tutorial-chairs .tutorial-chair-info a { font-size: 15px; line-height: 1.65; }
+.call-page .cffp-section p { margin-bottom: 16px; }
+.call-page .cffp-section li + li { margin-top: 10px; }
+/* Sponsor details and comparison conditions remain easy to read at wide sizes. */
+.sponsor-page { font-size: var(--readable-body); }
+.sponsor-page .sponsor-values p,
+.sponsor-page .sponsor-details ul,
+.sponsor-page .sponsor-activity-grid li,
+.sponsor-page .sponsor-opportunity-note,
+.sponsor-page .sponsor-contact-intro > p:not(.sponsor-eyebrow) { font-size: var(--readable-body); line-height: 1.75; }
+.sponsor-page .sponsor-table { font-size: 15px; }
+.sponsor-page .sponsor-table tbody th { font-size: 15px; }
+.sponsor-page .sponsor-table small { font-size: 14px; }
+.sponsor-page .sponsor-table-hint,
+.sponsor-page .sponsor-note,
+.sponsor-page .sponsor-details summary small,
+.sponsor-page .sponsor-details-label,
+.sponsor-page .sponsor-facts dt { font-size: 14px; }
+.sponsor-page .sponsor-chairs p,
+.sponsor-page .sponsor-email { font-size: 15px; }
+.sponsor-page .sponsor-button,
+.sponsor-page .sponsor-actions { font-size: 16px; }
+/* Venue and visa body text; captions and travel estimates stay compact. */
+.venue-refined :is(.venue-description,.item-text,.item-note,.how-to-reach-sub-title) { font-size: var(--readable-body); line-height: 1.75; }
+.venue-refined .hotel-location .to-hotel p,
+.venue-refined .venue-location p,
+.venue-refined .venue-image-caption,
+.venue-refined .conference-reach .mtr-note p:first-child,
+.venue-refined .conference-reach .mtr-note p:not(:first-child),
+.venue-refined .venue-rate span { font-size: 14px; line-height: 1.7; }
+.visa-page .visa-section,
+.visa-page .visa-table,
+.visa-page .visa-table :is(th,td) { font-size: var(--readable-body); line-height: 1.75; }
+/* Keep the dense five-day matrix unchanged; enlarge daily program information. */
+.program-redesign .program-event { font-size: var(--readable-body); line-height: 1.6; }
+.program-redesign .program-time,
+.program-redesign .program-event-note,
+.program-redesign .program-schedule-note,
+.program-redesign .program-facts dt,
+.program-redesign .program-facts .program-status { font-size: 14px; }
+.program-redesign .program-event-label { font-size: 12px; }
+.program-redesign .program-resource p,
+.program-redesign .program-resource a,
+.program-redesign .program-resources-heading p,
+.program-redesign .program-day-heading p,
+.program-redesign .program-hero-actions a { font-size: 16px; }
+.program-redesign .program-facts dd { font-size: 17px; }
+/* Footer links are functional content; copyright remains secondary. */
+.call-page .call-footer a,
+.sponsor-page .sponsor-footer a,
+.program-redesign .program-footer a,
+.venue-refined .footer a,
+.visa-page .footer a { font-size: 14px; }
+.call-footer-links { display: flex; flex-wrap: wrap; gap: 12px 24px; }
+@media(max-width:700px) {
+  :root { --readable-body: 16px; }
+  body.home-typography { --home-body-size: 16px; }
+  .home-typography .home-calls .calls-intro { font-size: 17px; }
+  .home-typography .homepage-chairs .chair-affiliation { font-size: 15px; }
+  .sponsor-page .sponsor-table { font-size: 14px; }
+  .sponsor-page .sponsor-table tbody th { font-size: 14px; }
+  .call-page .tutorial-dates dl > div { flex-wrap: wrap; }
+  .call-page .tutorial-dates dd { white-space: normal; }
+  .call-page .tutorial-dates dt { max-width: 100%; }
+}
