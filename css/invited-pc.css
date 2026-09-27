@@ -1,0 +1,33 @@
+@font-face {
+  font-family: "Invited Inter";
+  src: url("../fonts/inter/inter-latin.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+.invited-page { background: #fcfaf8; }
+.invited-main { max-width: 1120px; margin: 0 auto; padding: 64px 32px 80px; font-family: "Invited Inter", sans-serif; }
+.invited-eyebrow { color: #961f12; font-weight: 600; letter-spacing: .1em; font-size: 14px; }
+.invited-intro h1 { font-size: clamp(32px, 5vw, 52px); line-height: 1.15; letter-spacing: -.035em; margin: 12px 0 24px; }
+.invited-note { max-width: 760px; border-left: 3px solid #961f12; padding: 12px 20px; background: #f5eae5; font-size: 16px; }
+.invited-jumps { display: flex; flex-wrap: wrap; gap: 12px 28px; margin: 26px 0; }
+.invited-jumps a { color: #961f12; text-underline-offset: 4px; font-weight: 600; }
+#member-search label { display: block; margin-bottom: 8px; font-weight: 600; }
+#member-query { width: 100%; max-width: 580px; padding: 13px 16px; border: 1px solid #b9aca5; border-radius: 6px; background: white; font: inherit; }
+#member-query:focus { outline: 2px solid #961f12; outline-offset: 3px; }
+#search-status { margin-top: 10px; color: #61554f; font-size: 14px; }
+.invited-group { margin-top: 48px; scroll-margin-top: 24px; }
+.invited-group h2 { font-size: clamp(23px, 3vw, 30px); line-height: 1.3; letter-spacing: -.025em; }
+.member-count { margin: 8px 0 18px; color: #61554f; }
+.invited-group table { width: 100%; border-collapse: collapse; table-layout: fixed; background: white; text-align: left; font-size: 15px; }
+.invited-group th { background: #961f12; color: white; font-weight: 600; }
+.invited-group th:first-child { width: 34%; }
+.invited-group :is(th, td) { padding: 13px 20px; vertical-align: top; overflow-wrap: anywhere; }
+.invited-group td { border-bottom: 1px solid #e8dfd9; }
+.invited-group td:first-child { font-weight: 500; }
+.no-matches { padding: 20px; background: white; }
+[hidden] { display: none !important; }
+@media (max-width: 600px) {
+  .invited-main { padding: 36px 18px 48px; }
+  .invited-group :is(th, td) { padding: 12px 10px; font-size: 14px; }
+  .invited-group th:first-child { width: 40%; }
+}
