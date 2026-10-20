@@ -2,6 +2,8 @@
 .call-pilot .tutorial-hero { align-items: center; }
 .call-pilot .tutorial-dates .call-date-note p { font-size: 12px; line-height: 1.6; color: #777; margin: 16px 0 0; }
 .call-pilot .pilot-status { display: inline-block; color: var(--call-wine); background: #faf5f2; padding: 5px 10px; font-size: 13px; margin: 0; border-radius: 3px; }
+.call-pilot .tutorial-button.is-disabled,
+.call-pilot .tutorial-button.is-disabled:hover { background: #d8d2cf; color: #fff; cursor: not-allowed; pointer-events: none; }
 .call-pilot .pilot-pending { display: inline-block; color: #65514b; background: #f8f5f3; padding: 12px 18px; border: 1px solid var(--call-line); border-radius: 4px; font-size: 14px; }
 .call-pilot .cffp-section { margin-bottom: 32px; }
 .call-pilot .cffp-section :is(div,p,li) { line-height: 1.75; }
