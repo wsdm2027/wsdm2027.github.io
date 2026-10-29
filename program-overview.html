@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="css/desktop-sm.css" media="(min-width: 1200px)">
   <link rel="stylesheet" href="css/tablet.css" media="(max-width: 1199px)">
   <link rel="stylesheet" href="css/mobile.css" media="(max-width: 480px)">
-  <link rel="stylesheet" href="css/program-overview.css?v=d4b24c850be2">
+  <link rel="stylesheet" href="css/program-overview.css?v=fa1e655f9fcb">
   <link rel="stylesheet" href="css/navigation.css?v=7c41d9e2a8f5">
   <link rel="stylesheet" href="css/page-layout.css?v=a0d41ef0bf81">
   <link rel="stylesheet" href="css/readability.css?v=209e7ea4b887">
@@ -197,11 +197,12 @@
         <div class="program-legend" aria-label="Overview schedule colors">
           <span class="legend-keynote">Keynotes</span><span class="legend-session">Sessions</span>
           <span class="legend-break">Breaks &amp; registration</span><span class="legend-social">Social events</span>
+          <span class="legend-concurrent">Coffee break &amp; posters &mdash; concurrent</span>
         </div>
         <div class="program-week-scroll" role="region" aria-label="Five-day program table" tabindex="0">
         <!-- WEEK GRID START -->
 <table class="program-week-table">
-  <caption class="program-visually-hidden">WSDM 2027 tentative five-day schedule, February 15–19. Each time row represents 30 minutes in Hong Kong time (UTC+8). Simultaneous sessions appear side by side.</caption>
+  <caption class="program-visually-hidden">WSDM 2027 tentative five-day schedule, February 15–19. Times are in Hong Kong time (UTC+8). Equal-height rows represent 30 minutes, except the 07:30–08:30, 12:00–13:30 and 18:30–20:30 rows, which are each 1.5 times as tall. Simultaneous sessions appear side by side.</caption>
   <colgroup><col class="week-time-column"></colgroup>
   <colgroup class="week-day-columns lanes-3"><col span="3"></colgroup>
   <colgroup class="week-day-columns lanes-2"><col span="2"></colgroup>
@@ -216,150 +217,129 @@
     <th scope="colgroup" colspan="3" id="week-day-4">19 Feb <span>Fri</span></th>
   </tr></thead>
   <tbody>
-    <tr><th scope="row" id="week-time-0">07:30–08:00</th>
-      <td class="week-event-break" rowspan="2" colspan="3" headers="week-day-0 week-time-0"><span class="week-event-title">Registration</span><span class="week-event-time">07:30–08:30</span></td>
-      <td class="week-event-break" rowspan="2" colspan="2" headers="week-day-1 week-time-0"><span class="week-event-title">Registration</span><span class="week-event-time">07:30–08:30</span></td>
-      <td class="week-event-break" rowspan="3" colspan="2" headers="week-day-2 week-time-0"><span class="week-event-title">Registration</span><span class="week-event-time">07:30–09:00</span></td>
-      <td class="week-event-break" rowspan="3" colspan="2" headers="week-day-3 week-time-0"><span class="week-event-title">Registration</span><span class="week-event-time">07:30–09:00</span></td>
-      <td class="week-event-break" rowspan="2" colspan="3" headers="week-day-4 week-time-0"><span class="week-event-title">Registration</span><span class="week-event-time">07:30–08:30</span></td>
+    <tr class="week-compressed-row"><th scope="row" id="week-time-0">07:30–08:30</th>
+      <td class="week-event-break" rowspan="1" colspan="3" headers="week-day-0 week-time-0"><div class="week-event-content"><span class="week-event-title">Registration</span><span class="week-event-time">07:30–08:30</span></div></td>
+      <td class="week-event-break" rowspan="1" colspan="2" headers="week-day-1 week-time-0"><div class="week-event-content"><span class="week-event-title">Registration</span><span class="week-event-time">07:30–08:30</span></div></td>
+      <td class="week-event-break" rowspan="2" colspan="2" headers="week-day-2 week-time-0"><div class="week-event-content"><span class="week-event-title">Registration</span><span class="week-event-time">07:30–09:00</span></div></td>
+      <td class="week-event-break" rowspan="2" colspan="2" headers="week-day-3 week-time-0"><div class="week-event-content"><span class="week-event-title">Registration</span><span class="week-event-time">07:30–09:00</span></div></td>
+      <td class="week-event-break" rowspan="1" colspan="3" headers="week-day-4 week-time-0"><div class="week-event-content"><span class="week-event-title">Registration</span><span class="week-event-time">07:30–08:30</span></div></td>
     </tr>
-    <tr><th scope="row" id="week-time-1">08:00–08:30</th>
+    <tr><th scope="row" id="week-time-1">08:30–09:00</th>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-0 week-time-1"><div class="week-event-content"><span class="week-event-title">Tutorials</span><span class="week-event-time">08:30–10:00</span></div></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-0 week-time-1"><div class="week-event-content"><span class="week-event-title">Industry Day</span><span class="week-event-time">08:30–10:00</span></div></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-0 week-time-1"><div class="week-event-content"><span class="week-event-title">Doctoral Consortium</span><span class="week-event-time">08:30–10:00</span></div></td>
+      <td class="week-event-session" rowspan="1" colspan="2" headers="week-day-1 week-time-1"><div class="week-event-content"><span class="week-event-title">Opening Remarks</span><span class="week-event-time">08:30–09:00</span></div></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-4 week-time-1"><div class="week-event-content"><span class="week-event-title">WSDM Cup</span><span class="week-event-time">08:30–10:00</span></div></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-4 week-time-1"><div class="week-event-content"><span class="week-event-title">Workshops</span><span class="week-event-time">08:30–10:00</span></div></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-4 week-time-1"><div class="week-event-content"><span class="week-event-title">WSDM Day</span><span class="week-event-time">08:30–10:00</span></div></td>
     </tr>
-    <tr><th scope="row" id="week-time-2">08:30–09:00</th>
-      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-0 week-time-2"><span class="week-event-title">Tutorials</span><span class="week-event-time">08:30–10:00</span></td>
-      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-0 week-time-2"><span class="week-event-title">Industry Day</span><span class="week-event-time">08:30–10:00</span></td>
-      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-0 week-time-2"><span class="week-event-title">Doctoral Consortium</span><span class="week-event-time">08:30–10:00</span></td>
-      <td class="week-event-session" rowspan="1" colspan="2" headers="week-day-1 week-time-2"><span class="week-event-title">Opening Remarks</span><span class="week-event-time">08:30–09:00</span></td>
-      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-4 week-time-2"><span class="week-event-title">WSDM Cup</span><span class="week-event-time">08:30–10:00</span></td>
-      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-4 week-time-2"><span class="week-event-title">Workshops</span><span class="week-event-time">08:30–10:00</span></td>
-      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-4 week-time-2"><span class="week-event-title">WSDM Day</span><span class="week-event-time">08:30–10:00</span></td>
+    <tr><th scope="row" id="week-time-2">09:00–09:30</th>
+      <td class="week-event-keynote" rowspan="2" colspan="2" headers="week-day-1 week-time-2"><div class="week-event-content"><span class="week-event-title">Keynote 1</span><span class="week-event-time">09:00–10:00</span></div></td>
+      <td class="week-event-keynote" rowspan="2" colspan="2" headers="week-day-2 week-time-2"><div class="week-event-content"><span class="week-event-title">Keynote 3</span><span class="week-event-time">09:00–10:00</span></div></td>
+      <td class="week-event-keynote" rowspan="2" colspan="2" headers="week-day-3 week-time-2"><div class="week-event-content"><span class="week-event-title">Keynote 5<br>Speaker to be announced</span><span class="week-event-time">09:00–10:00</span></div></td>
     </tr>
-    <tr><th scope="row" id="week-time-3">09:00–09:30</th>
-      <td class="week-event-keynote" rowspan="2" colspan="2" headers="week-day-1 week-time-3"><span class="week-event-title">Keynote 1</span><span class="week-event-time">09:00–10:00</span></td>
-      <td class="week-event-keynote" rowspan="2" colspan="2" headers="week-day-2 week-time-3"><span class="week-event-title">Keynote 3</span><span class="week-event-time">09:00–10:00</span></td>
-      <td class="week-event-keynote" rowspan="2" colspan="2" headers="week-day-3 week-time-3"><span class="week-event-title">Keynote 5<br>Speaker to be announced</span><span class="week-event-time">09:00–10:00</span></td>
+    <tr><th scope="row" id="week-time-3">09:30–10:00</th>
     </tr>
-    <tr><th scope="row" id="week-time-4">09:30–10:00</th>
+    <tr><th scope="row" id="week-time-4">10:00–10:30</th>
+      <td class="week-event-break" rowspan="1" colspan="3" headers="week-day-0 week-time-4"><div class="week-event-content"><span class="week-event-title">Coffee Break</span><span class="week-event-time">10:00–10:30</span></div></td>
+      <td class="week-event-break week-coffee-concurrent" rowspan="1" colspan="1" headers="week-day-1 week-time-4"><div class="week-event-content"><span class="week-event-title">Coffee Break</span><span class="week-event-time">10:00–10:30</span></div></td>
+      <td class="week-event-session" rowspan="4" colspan="1" headers="week-day-1 week-time-4"><div class="week-event-content"><span class="week-event-title">Poster Session 1</span><span class="week-event-time">10:00–12:00</span></div></td>
+      <td class="week-event-break week-coffee-concurrent" rowspan="1" colspan="1" headers="week-day-2 week-time-4"><div class="week-event-content"><span class="week-event-title">Coffee Break</span><span class="week-event-time">10:00–10:30</span></div></td>
+      <td class="week-event-session" rowspan="4" colspan="1" headers="week-day-2 week-time-4"><div class="week-event-content"><span class="week-event-title">Poster Session 5</span><span class="week-event-time">10:00–12:00</span></div></td>
+      <td class="week-event-break week-coffee-concurrent" rowspan="1" colspan="1" headers="week-day-3 week-time-4"><div class="week-event-content"><span class="week-event-title">Coffee Break</span><span class="week-event-time">10:00–10:30</span></div></td>
+      <td class="week-event-session" rowspan="4" colspan="1" headers="week-day-3 week-time-4"><div class="week-event-content"><span class="week-event-title">Poster Session 7</span><span class="week-event-time">10:00–12:00</span></div></td>
+      <td class="week-event-break" rowspan="1" colspan="3" headers="week-day-4 week-time-4"><div class="week-event-content"><span class="week-event-title">Coffee Break</span><span class="week-event-time">10:00–10:30</span></div></td>
     </tr>
-    <tr><th scope="row" id="week-time-5">10:00–10:30</th>
-      <td class="week-event-break" rowspan="1" colspan="3" headers="week-day-0 week-time-5"><span class="week-event-title">Coffee Break</span><span class="week-event-time">10:00–10:30</span></td>
-      <td class="week-event-break" rowspan="1" colspan="1" headers="week-day-1 week-time-5"><span class="week-event-title">Coffee Break</span><span class="week-event-time">10:00–10:30</span></td>
-      <td class="week-event-session" rowspan="4" colspan="1" headers="week-day-1 week-time-5"><span class="week-event-title">Poster Session 1</span><span class="week-event-time">10:00–12:00</span></td>
-      <td class="week-event-break" rowspan="1" colspan="1" headers="week-day-2 week-time-5"><span class="week-event-title">Coffee Break</span><span class="week-event-time">10:00–10:30</span></td>
-      <td class="week-event-session" rowspan="4" colspan="1" headers="week-day-2 week-time-5"><span class="week-event-title">Poster Session 5</span><span class="week-event-time">10:00–12:00</span></td>
-      <td class="week-event-break" rowspan="1" colspan="1" headers="week-day-3 week-time-5"><span class="week-event-title">Coffee Break</span><span class="week-event-time">10:00–10:30</span></td>
-      <td class="week-event-session" rowspan="4" colspan="1" headers="week-day-3 week-time-5"><span class="week-event-title">Poster Session 7</span><span class="week-event-time">10:00–12:00</span></td>
-      <td class="week-event-break" rowspan="1" colspan="3" headers="week-day-4 week-time-5"><span class="week-event-title">Coffee Break</span><span class="week-event-time">10:00–10:30</span></td>
+    <tr><th scope="row" id="week-time-5">10:30–11:00</th>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-0 week-time-5"><div class="week-event-content"><span class="week-event-title">Tutorials</span><span class="week-event-time">10:30–12:00</span></div></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-0 week-time-5"><div class="week-event-content"><span class="week-event-title">Industry Day</span><span class="week-event-time">10:30–12:00</span></div></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-0 week-time-5"><div class="week-event-content"><span class="week-event-title">Doctoral Consortium</span><span class="week-event-time">10:30–12:00</span></div></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-1 week-time-5"><div class="week-event-content"><span class="week-event-title">Paper Presentations #1</span><span class="week-event-time">10:30–12:00</span></div></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-2 week-time-5"><div class="week-event-content"><span class="week-event-title">Paper Presentations #4</span><span class="week-event-time">10:30–12:00</span></div></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-3 week-time-5"><div class="week-event-content"><span class="week-event-title">Paper Presentations #7</span><span class="week-event-time">10:30–12:00</span></div></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-4 week-time-5"><div class="week-event-content"><span class="week-event-title">Demo 3</span><span class="week-event-time">10:30–12:00</span></div></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-4 week-time-5"><div class="week-event-content"><span class="week-event-title">Workshops</span><span class="week-event-time">10:30–12:00</span></div></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-4 week-time-5"><div class="week-event-content"><span class="week-event-title">WSDM Day</span><span class="week-event-time">10:30–12:00</span></div></td>
     </tr>
-    <tr><th scope="row" id="week-time-6">10:30–11:00</th>
-      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-0 week-time-6"><span class="week-event-title">Tutorials</span><span class="week-event-time">10:30–12:00</span></td>
-      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-0 week-time-6"><span class="week-event-title">Industry Day</span><span class="week-event-time">10:30–12:00</span></td>
-      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-0 week-time-6"><span class="week-event-title">Doctoral Consortium</span><span class="week-event-time">10:30–12:00</span></td>
-      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-1 week-time-6"><span class="week-event-title">Paper Presentations #1</span><span class="week-event-time">10:30–12:00</span></td>
-      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-2 week-time-6"><span class="week-event-title">Paper Presentations #4</span><span class="week-event-time">10:30–12:00</span></td>
-      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-3 week-time-6"><span class="week-event-title">Paper Presentations #7</span><span class="week-event-time">10:30–12:00</span></td>
-      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-4 week-time-6"><span class="week-event-title">Demo 3</span><span class="week-event-time">10:30–12:00</span></td>
-      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-4 week-time-6"><span class="week-event-title">Workshops</span><span class="week-event-time">10:30–12:00</span></td>
-      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-4 week-time-6"><span class="week-event-title">WSDM Day</span><span class="week-event-time">10:30–12:00</span></td>
+    <tr><th scope="row" id="week-time-6">11:00–11:30</th>
     </tr>
-    <tr><th scope="row" id="week-time-7">11:00–11:30</th>
+    <tr><th scope="row" id="week-time-7">11:30–12:00</th>
     </tr>
-    <tr><th scope="row" id="week-time-8">11:30–12:00</th>
+    <tr class="week-compressed-row"><th scope="row" id="week-time-8">12:00–13:30</th>
+      <td class="week-event-break" rowspan="1" colspan="3" headers="week-day-0 week-time-8"><div class="week-event-content"><span class="week-event-title">Lunch (buffet)</span><span class="week-event-time">12:00–13:30</span></div></td>
+      <td class="week-event-break" rowspan="1" colspan="2" headers="week-day-1 week-time-8"><div class="week-event-content"><span class="week-event-title">Lunch (buffet)</span><span class="week-event-time">12:00–13:30</span></div></td>
+      <td class="week-event-break" rowspan="1" colspan="2" headers="week-day-2 week-time-8"><div class="week-event-content"><span class="week-event-title">Lunch (buffet)</span><span class="week-event-time">12:00–13:30</span></div></td>
+      <td class="week-event-break" rowspan="1" colspan="2" headers="week-day-3 week-time-8"><div class="week-event-content"><span class="week-event-title">WSDM Business Lunch (buffet)</span><span class="week-event-time">12:00–13:30</span></div></td>
+      <td class="week-event-break" rowspan="1" colspan="3" headers="week-day-4 week-time-8"><div class="week-event-content"><span class="week-event-title">Lunch (buffet)</span><span class="week-event-time">12:00–13:30</span></div></td>
     </tr>
-    <tr><th scope="row" id="week-time-9">12:00–12:30</th>
-      <td class="week-event-break" rowspan="3" colspan="3" headers="week-day-0 week-time-9"><span class="week-event-title">Lunch (buffet)</span><span class="week-event-time">12:00–13:30</span></td>
-      <td class="week-event-break" rowspan="3" colspan="2" headers="week-day-1 week-time-9"><span class="week-event-title">Lunch (buffet)</span><span class="week-event-time">12:00–13:30</span></td>
-      <td class="week-event-break" rowspan="3" colspan="2" headers="week-day-2 week-time-9"><span class="week-event-title">Lunch (buffet)</span><span class="week-event-time">12:00–13:30</span></td>
-      <td class="week-event-break" rowspan="3" colspan="2" headers="week-day-3 week-time-9"><span class="week-event-title">WSDM Business Lunch (buffet)</span><span class="week-event-time">12:00–13:30</span></td>
-      <td class="week-event-break" rowspan="3" colspan="3" headers="week-day-4 week-time-9"><span class="week-event-title">Lunch (buffet)</span><span class="week-event-time">12:00–13:30</span></td>
+    <tr><th scope="row" id="week-time-9">13:30–14:00</th>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-0 week-time-9"><div class="week-event-content"><span class="week-event-title">Tutorials</span><span class="week-event-time">13:30–15:00</span></div></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-0 week-time-9"><div class="week-event-content"><span class="week-event-title">Industry Day</span><span class="week-event-time">13:30–15:00</span></div></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-0 week-time-9"><div class="week-event-content"><span class="week-event-title">Demo 1</span><span class="week-event-time">13:30–15:00</span></div></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-1 week-time-9"><div class="week-event-content"><span class="week-event-title">Paper Presentations #2</span><span class="week-event-time">13:30–15:00</span></div></td>
+      <td class="week-event-session" rowspan="4" colspan="1" headers="week-day-1 week-time-9"><div class="week-event-content"><span class="week-event-title">Poster Session 2</span><span class="week-event-time">13:30–15:30</span></div></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-2 week-time-9"><div class="week-event-content"><span class="week-event-title">Paper Presentations #5</span><span class="week-event-time">13:30–15:00</span></div></td>
+      <td class="week-event-session" rowspan="4" colspan="1" headers="week-day-2 week-time-9"><div class="week-event-content"><span class="week-event-title">Poster Session 6</span><span class="week-event-time">13:30–15:30</span></div></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-3 week-time-9"><div class="week-event-content"><span class="week-event-title">Paper Presentations #8</span><span class="week-event-time">13:30–15:00</span></div></td>
+      <td class="week-event-session" rowspan="4" colspan="1" headers="week-day-3 week-time-9"><div class="week-event-content"><span class="week-event-title">Poster Session 8</span><span class="week-event-time">13:30–15:30</span></div></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-4 week-time-9"><div class="week-event-content"><span class="week-event-title">Demo 4</span><span class="week-event-time">13:30–15:00</span></div></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-4 week-time-9"><div class="week-event-content"><span class="week-event-title">Workshops</span><span class="week-event-time">13:30–15:00</span></div></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-4 week-time-9"><div class="week-event-content"><span class="week-event-title">WSDM Day</span><span class="week-event-time">13:30–15:00</span></div></td>
     </tr>
-    <tr><th scope="row" id="week-time-10">12:30–13:00</th>
+    <tr><th scope="row" id="week-time-10">14:00–14:30</th>
     </tr>
-    <tr><th scope="row" id="week-time-11">13:00–13:30</th>
+    <tr><th scope="row" id="week-time-11">14:30–15:00</th>
     </tr>
-    <tr><th scope="row" id="week-time-12">13:30–14:00</th>
-      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-0 week-time-12"><span class="week-event-title">Tutorials</span><span class="week-event-time">13:30–15:00</span></td>
-      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-0 week-time-12"><span class="week-event-title">Industry Day</span><span class="week-event-time">13:30–15:00</span></td>
-      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-0 week-time-12"><span class="week-event-title">Demo 1</span><span class="week-event-time">13:30–15:00</span></td>
-      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-1 week-time-12"><span class="week-event-title">Paper Presentations #2</span><span class="week-event-time">13:30–15:00</span></td>
-      <td class="week-event-session" rowspan="4" colspan="1" headers="week-day-1 week-time-12"><span class="week-event-title">Poster Session 2</span><span class="week-event-time">13:30–15:30</span></td>
-      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-2 week-time-12"><span class="week-event-title">Paper Presentations #5</span><span class="week-event-time">13:30–15:00</span></td>
-      <td class="week-event-session" rowspan="4" colspan="1" headers="week-day-2 week-time-12"><span class="week-event-title">Poster Session 6</span><span class="week-event-time">13:30–15:30</span></td>
-      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-3 week-time-12"><span class="week-event-title">Paper Presentations #8</span><span class="week-event-time">13:30–15:00</span></td>
-      <td class="week-event-session" rowspan="4" colspan="1" headers="week-day-3 week-time-12"><span class="week-event-title">Poster Session 8</span><span class="week-event-time">13:30–15:30</span></td>
-      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-4 week-time-12"><span class="week-event-title">Demo 4</span><span class="week-event-time">13:30–15:00</span></td>
-      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-4 week-time-12"><span class="week-event-title">Workshops</span><span class="week-event-time">13:30–15:00</span></td>
-      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-4 week-time-12"><span class="week-event-title">WSDM Day</span><span class="week-event-time">13:30–15:00</span></td>
+    <tr><th scope="row" id="week-time-12">15:00–15:30</th>
+      <td class="week-event-break" rowspan="1" colspan="3" headers="week-day-0 week-time-12"><div class="week-event-content"><span class="week-event-title">Coffee Break</span><span class="week-event-time">15:00–15:30</span></div></td>
+      <td class="week-event-break week-coffee-concurrent" rowspan="1" colspan="1" headers="week-day-1 week-time-12"><div class="week-event-content"><span class="week-event-title">Coffee Break</span><span class="week-event-time">15:00–15:30</span></div></td>
+      <td class="week-event-break week-coffee-concurrent" rowspan="1" colspan="1" headers="week-day-2 week-time-12"><div class="week-event-content"><span class="week-event-title">Coffee Break</span><span class="week-event-time">15:00–15:30</span></div></td>
+      <td class="week-event-break week-coffee-concurrent" rowspan="1" colspan="1" headers="week-day-3 week-time-12"><div class="week-event-content"><span class="week-event-title">Coffee Break</span><span class="week-event-time">15:00–15:30</span></div></td>
+      <td class="week-event-break" rowspan="1" colspan="3" headers="week-day-4 week-time-12"><div class="week-event-content"><span class="week-event-title">Coffee Break</span><span class="week-event-time">15:00–15:30</span></div></td>
     </tr>
-    <tr><th scope="row" id="week-time-13">14:00–14:30</th>
+    <tr><th scope="row" id="week-time-13">15:30–16:00</th>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-0 week-time-13"><div class="week-event-content"><span class="week-event-title">Tutorials</span><span class="week-event-time">15:30–17:00</span></div></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-0 week-time-13"><div class="week-event-content"><span class="week-event-title">Industry Day</span><span class="week-event-time">15:30–17:00</span></div></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-0 week-time-13"><div class="week-event-content"><span class="week-event-title">Demo 2</span><span class="week-event-time">15:30–17:00</span></div></td>
+      <td class="week-event-keynote" rowspan="2" colspan="2" headers="week-day-1 week-time-13"><div class="week-event-content"><span class="week-event-title">Keynote 2</span><span class="week-event-time">15:30–16:30</span></div></td>
+      <td class="week-event-keynote" rowspan="2" colspan="2" headers="week-day-2 week-time-13"><div class="week-event-content"><span class="week-event-title">Keynote 4</span><span class="week-event-time">15:30–16:30</span></div></td>
+      <td class="week-event-keynote" rowspan="2" colspan="2" headers="week-day-3 week-time-13"><div class="week-event-content"><span class="week-event-title">Keynote 6</span><span class="week-event-time">15:30–16:30</span></div></td>
+      <td class="week-event-session" rowspan="3" colspan="2" headers="week-day-4 week-time-13"><div class="week-event-content"><span class="week-event-title">Workshops</span><span class="week-event-time">15:30–17:00</span></div></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-4 week-time-13"><div class="week-event-content"><span class="week-event-title">WSDM Day</span><span class="week-event-time">15:30–17:00</span></div></td>
     </tr>
-    <tr><th scope="row" id="week-time-14">14:30–15:00</th>
+    <tr><th scope="row" id="week-time-14">16:00–16:30</th>
     </tr>
-    <tr><th scope="row" id="week-time-15">15:00–15:30</th>
-      <td class="week-event-break" rowspan="1" colspan="3" headers="week-day-0 week-time-15"><span class="week-event-title">Coffee Break</span><span class="week-event-time">15:00–15:30</span></td>
-      <td class="week-event-break" rowspan="1" colspan="1" headers="week-day-1 week-time-15"><span class="week-event-title">Coffee Break</span><span class="week-event-time">15:00–15:30</span></td>
-      <td class="week-event-break" rowspan="1" colspan="1" headers="week-day-2 week-time-15"><span class="week-event-title">Coffee Break</span><span class="week-event-time">15:00–15:30</span></td>
-      <td class="week-event-break" rowspan="1" colspan="1" headers="week-day-3 week-time-15"><span class="week-event-title">Coffee Break</span><span class="week-event-time">15:00–15:30</span></td>
-      <td class="week-event-break" rowspan="1" colspan="3" headers="week-day-4 week-time-15"><span class="week-event-title">Coffee Break</span><span class="week-event-time">15:00–15:30</span></td>
+    <tr><th scope="row" id="week-time-15">16:30–17:00</th>
+      <td class="week-event-session" rowspan="2" colspan="1" headers="week-day-1 week-time-15"><div class="week-event-content"><span class="week-event-title">Paper Presentations #3</span><span class="week-event-time">16:30–17:30</span></div></td>
+      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-1 week-time-15"><div class="week-event-content"><span class="week-event-title">Poster Session 3</span><span class="week-event-time">16:30–18:00</span></div></td>
+      <td class="week-event-session" rowspan="2" colspan="2" headers="week-day-2 week-time-15"><div class="week-event-content"><span class="week-event-title">Paper Presentations #6</span><span class="week-event-time">16:30–17:30</span></div></td>
+      <td class="week-event-session week-event-with-closing" rowspan="2" colspan="2" headers="week-day-3 week-time-15"><div class="week-event-content"><span class="week-event-title">Paper Presentations #9</span><span class="week-event-time">16:30–17:20</span><span class="week-event-closing">Closing<span class="week-event-time">17:20–17:30</span></span></div></td>
     </tr>
-    <tr><th scope="row" id="week-time-16">15:30–16:00</th>
-      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-0 week-time-16"><span class="week-event-title">Tutorials</span><span class="week-event-time">15:30–17:00</span></td>
-      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-0 week-time-16"><span class="week-event-title">Industry Day</span><span class="week-event-time">15:30–17:00</span></td>
-      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-0 week-time-16"><span class="week-event-title">Demo 2</span><span class="week-event-time">15:30–17:00</span></td>
-      <td class="week-event-keynote" rowspan="2" colspan="2" headers="week-day-1 week-time-16"><span class="week-event-title">Keynote 2</span><span class="week-event-time">15:30–16:30</span></td>
-      <td class="week-event-keynote" rowspan="2" colspan="2" headers="week-day-2 week-time-16"><span class="week-event-title">Keynote 4</span><span class="week-event-time">15:30–16:30</span></td>
-      <td class="week-event-session" rowspan="3" colspan="2" headers="week-day-3 week-time-16"><span class="week-event-title">Paper Presentations #9<br>16:50-17:00 Closing</span><span class="week-event-time">15:30–17:00</span></td>
-      <td class="week-event-session" rowspan="3" colspan="2" headers="week-day-4 week-time-16"><span class="week-event-title">Workshops</span><span class="week-event-time">15:30–17:00</span></td>
-      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-4 week-time-16"><span class="week-event-title">WSDM Day</span><span class="week-event-time">15:30–17:00</span></td>
+    <tr><th scope="row" id="week-time-16">17:00–17:30</th>
+      <td class="week-empty" colspan="3" headers="week-day-0 week-time-16"><span class="program-visually-hidden">No session scheduled</span></td>
+      <td class="week-empty" colspan="3" headers="week-day-4 week-time-16"><span class="program-visually-hidden">No session scheduled</span></td>
     </tr>
-    <tr><th scope="row" id="week-time-17">16:00–16:30</th>
+    <tr><th scope="row" id="week-time-17">17:30–18:00</th>
+      <td class="week-empty" colspan="3" headers="week-day-0 week-time-17"><span class="program-visually-hidden">No session scheduled</span></td>
+      <td class="week-event-break" rowspan="2" colspan="1" headers="week-day-1 week-time-17"><div class="week-event-content"><span class="week-event-title">Turnover</span><span class="week-event-time">17:30–18:30</span></div></td>
+      <td class="week-empty" colspan="2" headers="week-day-2 week-time-17"><span class="program-visually-hidden">No session scheduled</span></td>
+      <td class="week-empty" colspan="2" headers="week-day-3 week-time-17"><span class="program-visually-hidden">No session scheduled</span></td>
+      <td class="week-empty" colspan="3" headers="week-day-4 week-time-17"><span class="program-visually-hidden">No session scheduled</span></td>
     </tr>
-    <tr><th scope="row" id="week-time-18">16:30–17:00</th>
-      <td class="week-event-session" rowspan="2" colspan="1" headers="week-day-1 week-time-18"><span class="week-event-title">Paper Presentations #3</span><span class="week-event-time">16:30–17:30</span></td>
-      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-1 week-time-18"><span class="week-event-title">Poster Session 3</span><span class="week-event-time">16:30–18:00</span></td>
-      <td class="week-event-session" rowspan="1" colspan="2" headers="week-day-2 week-time-18"><span class="week-event-title">Paper Presentations #6</span><span class="week-event-time">16:30–17:00</span></td>
+    <tr><th scope="row" id="week-time-18">18:00–18:30</th>
+      <td class="week-empty" colspan="3" headers="week-day-0 week-time-18"><span class="program-visually-hidden">No session scheduled</span></td>
+      <td class="week-empty" colspan="1" headers="week-day-1 week-time-18"><span class="program-visually-hidden">No session scheduled</span></td>
+      <td class="week-empty" colspan="2" headers="week-day-2 week-time-18"><span class="program-visually-hidden">No session scheduled</span></td>
+      <td class="week-empty" colspan="2" headers="week-day-3 week-time-18"><span class="program-visually-hidden">No session scheduled</span></td>
+      <td class="week-empty" colspan="3" headers="week-day-4 week-time-18"><span class="program-visually-hidden">No session scheduled</span></td>
     </tr>
-    <tr><th scope="row" id="week-time-19">17:00–17:30</th>
+    <tr class="week-compressed-row"><th scope="row" id="week-time-19">18:30–20:30</th>
       <td class="week-empty" colspan="3" headers="week-day-0 week-time-19"><span class="program-visually-hidden">No session scheduled</span></td>
-      <td class="week-empty" colspan="2" headers="week-day-2 week-time-19"><span class="program-visually-hidden">No session scheduled</span></td>
+      <td class="week-event-social" rowspan="1" colspan="1" headers="week-day-1 week-time-19"><div class="week-event-content"><span class="week-event-title">Welcome Reception (Cocktail)</span><span class="week-event-time">18:30–20:30</span></div></td>
+      <td class="week-event-session" rowspan="1" colspan="1" headers="week-day-1 week-time-19"><div class="week-event-content"><span class="week-event-title">Poster Session 4</span><span class="week-event-time">18:30–20:30</span></div></td>
+      <td class="week-event-social" rowspan="1" colspan="2" headers="week-day-2 week-time-19"><div class="week-event-content"><span class="week-event-title">Banquet</span><span class="week-event-time">18:30–20:30</span></div></td>
       <td class="week-empty" colspan="2" headers="week-day-3 week-time-19"><span class="program-visually-hidden">No session scheduled</span></td>
       <td class="week-empty" colspan="3" headers="week-day-4 week-time-19"><span class="program-visually-hidden">No session scheduled</span></td>
-    </tr>
-    <tr><th scope="row" id="week-time-20">17:30–18:00</th>
-      <td class="week-empty" colspan="3" headers="week-day-0 week-time-20"><span class="program-visually-hidden">No session scheduled</span></td>
-      <td class="week-event-break" rowspan="2" colspan="1" headers="week-day-1 week-time-20"><span class="week-event-title">Turnover</span><span class="week-event-time">17:30–18:30</span></td>
-      <td class="week-empty" colspan="2" headers="week-day-2 week-time-20"><span class="program-visually-hidden">No session scheduled</span></td>
-      <td class="week-empty" colspan="2" headers="week-day-3 week-time-20"><span class="program-visually-hidden">No session scheduled</span></td>
-      <td class="week-empty" colspan="3" headers="week-day-4 week-time-20"><span class="program-visually-hidden">No session scheduled</span></td>
-    </tr>
-    <tr><th scope="row" id="week-time-21">18:00–18:30</th>
-      <td class="week-empty" colspan="3" headers="week-day-0 week-time-21"><span class="program-visually-hidden">No session scheduled</span></td>
-      <td class="week-empty" colspan="1" headers="week-day-1 week-time-21"><span class="program-visually-hidden">No session scheduled</span></td>
-      <td class="week-event-social" rowspan="5" colspan="2" headers="week-day-2 week-time-21"><span class="week-event-title">Banquet</span><span class="week-event-time">18:00–20:30</span></td>
-      <td class="week-empty" colspan="2" headers="week-day-3 week-time-21"><span class="program-visually-hidden">No session scheduled</span></td>
-      <td class="week-empty" colspan="3" headers="week-day-4 week-time-21"><span class="program-visually-hidden">No session scheduled</span></td>
-    </tr>
-    <tr><th scope="row" id="week-time-22">18:30–19:00</th>
-      <td class="week-empty" colspan="3" headers="week-day-0 week-time-22"><span class="program-visually-hidden">No session scheduled</span></td>
-      <td class="week-event-social" rowspan="4" colspan="1" headers="week-day-1 week-time-22"><span class="week-event-title">Welcome Reception (Cocktail)</span><span class="week-event-time">18:30–20:30</span></td>
-      <td class="week-event-session" rowspan="4" colspan="1" headers="week-day-1 week-time-22"><span class="week-event-title">Poster Session 4</span><span class="week-event-time">18:30–20:30</span></td>
-      <td class="week-empty" colspan="2" headers="week-day-3 week-time-22"><span class="program-visually-hidden">No session scheduled</span></td>
-      <td class="week-empty" colspan="3" headers="week-day-4 week-time-22"><span class="program-visually-hidden">No session scheduled</span></td>
-    </tr>
-    <tr><th scope="row" id="week-time-23">19:00–19:30</th>
-      <td class="week-empty" colspan="3" headers="week-day-0 week-time-23"><span class="program-visually-hidden">No session scheduled</span></td>
-      <td class="week-empty" colspan="2" headers="week-day-3 week-time-23"><span class="program-visually-hidden">No session scheduled</span></td>
-      <td class="week-empty" colspan="3" headers="week-day-4 week-time-23"><span class="program-visually-hidden">No session scheduled</span></td>
-    </tr>
-    <tr><th scope="row" id="week-time-24">19:30–20:00</th>
-      <td class="week-empty" colspan="3" headers="week-day-0 week-time-24"><span class="program-visually-hidden">No session scheduled</span></td>
-      <td class="week-empty" colspan="2" headers="week-day-3 week-time-24"><span class="program-visually-hidden">No session scheduled</span></td>
-      <td class="week-empty" colspan="3" headers="week-day-4 week-time-24"><span class="program-visually-hidden">No session scheduled</span></td>
-    </tr>
-    <tr><th scope="row" id="week-time-25">20:00–20:30</th>
-      <td class="week-empty" colspan="3" headers="week-day-0 week-time-25"><span class="program-visually-hidden">No session scheduled</span></td>
-      <td class="week-empty" colspan="2" headers="week-day-3 week-time-25"><span class="program-visually-hidden">No session scheduled</span></td>
-      <td class="week-empty" colspan="3" headers="week-day-4 week-time-25"><span class="program-visually-hidden">No session scheduled</span></td>
     </tr>
   </tbody>
 </table>
@@ -610,14 +590,14 @@
                   <li class="program-event event-keynote" data-event-title="Keynote 4"><span class="program-event-label">Keynote</span><span class="program-event-name">Keynote 4</span></li>
                 </ul>
               </li>
-              <li class="program-slot" data-start="16:30" data-end="17:00">
-                <div class="program-time"><time datetime="2027-02-17T16:30:00+08:00">16:30</time><span aria-hidden="true">–</span><time datetime="2027-02-17T17:00:00+08:00">17:00</time></div>
+              <li class="program-slot" data-start="16:30" data-end="17:30">
+                <div class="program-time"><time datetime="2027-02-17T16:30:00+08:00">16:30</time><span aria-hidden="true">–</span><time datetime="2027-02-17T17:30:00+08:00">17:30</time></div>
                 <ul class="program-events">
                   <li class="program-event event-session" data-event-title="Paper Presentations #6"><span class="program-event-label">Session</span><span class="program-event-name">Paper Presentations #6</span></li>
                 </ul>
               </li>
-              <li class="program-slot" data-start="18:00" data-end="20:30">
-                <div class="program-time"><time datetime="2027-02-17T18:00:00+08:00">18:00</time><span aria-hidden="true">–</span><time datetime="2027-02-17T20:30:00+08:00">20:30</time></div>
+              <li class="program-slot" data-start="18:30" data-end="20:30">
+                <div class="program-time"><time datetime="2027-02-17T18:30:00+08:00">18:30</time><span aria-hidden="true">–</span><time datetime="2027-02-17T20:30:00+08:00">20:30</time></div>
                 <ul class="program-events">
                   <li class="program-event event-social" data-event-title="Banquet"><span class="program-event-label">Social event</span><span class="program-event-name">Banquet</span></li>
                 </ul>
@@ -684,10 +664,16 @@
                   <li class="program-event event-break" data-event-title="Coffee Break"><span class="program-event-label">Break / registration</span><span class="program-event-name">Coffee Break</span></li>
                 </ul>
               </li>
-              <li class="program-slot" data-start="15:30" data-end="17:00">
-                <div class="program-time"><time datetime="2027-02-18T15:30:00+08:00">15:30</time><span aria-hidden="true">–</span><time datetime="2027-02-18T17:00:00+08:00">17:00</time></div>
+              <li class="program-slot" data-start="15:30" data-end="16:30">
+                <div class="program-time"><time datetime="2027-02-18T15:30:00+08:00">15:30</time><span aria-hidden="true">–</span><time datetime="2027-02-18T16:30:00+08:00">16:30</time></div>
                 <ul class="program-events">
-                  <li class="program-event event-session" data-event-title="Paper Presentations #9 | 16:50-17:00 Closing"><span class="program-event-label">Session</span><span class="program-event-name">Paper Presentations #9<br><span class="program-event-note">16:50-17:00 Closing</span></span></li>
+                  <li class="program-event event-keynote" data-event-title="Keynote 6"><span class="program-event-label">Keynote</span><span class="program-event-name">Keynote 6</span></li>
+                </ul>
+              </li>
+              <li class="program-slot" data-start="16:30" data-end="17:30">
+                <div class="program-time"><time datetime="2027-02-18T16:30:00+08:00">16:30</time><span aria-hidden="true">–</span><time datetime="2027-02-18T17:20:00+08:00">17:20</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-session" data-event-title="Paper Presentations #9" data-closing-start="17:20"><span class="program-event-label">Session</span><span class="program-event-name">Paper Presentations #9</span><span class="program-event-note">Closing: <time datetime="2027-02-18T17:20:00+08:00">17:20</time>–<time datetime="2027-02-18T17:30:00+08:00">17:30</time></span></li>
                 </ul>
               </li>
             </ol>

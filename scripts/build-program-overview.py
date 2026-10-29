@@ -1,4 +1,4 @@
-"""Rebuild the 30-minute overview from the daily agendas in program-overview.html.
+"""Rebuild the overview from the daily agendas in program-overview.html.
 Run with --check to verify that the two views are synchronized.
 """
 from html import escape
@@ -29,31 +29,48 @@ class AgendaParser(HTMLParser):
             self.start = minutes(attrs['data-start'])
             self.end = minutes(attrs['data-end'])
         if 'data-event-title' in attrs:
-            self.days[-1].append(dict(start=self.start, end=self.end,
-                title=attrs['data-event-title'], kind=attrs['class'].split()[-1]))
+            event = dict(start=self.start, end=self.end,
+                title=attrs['data-event-title'], kind=attrs['class'].split()[-1])
+            if 'data-closing-start' in attrs:
+                event['closing_start'] = minutes(attrs['data-closing-start'])
+                assert self.start < event['closing_start'] < self.end
+            self.days[-1].append(event)
 
 def build(source):
     parser = AgendaParser()
     parser.feed(source)
     assert len(parser.days) == 5
     beginning, finish, step = 450, 1230, 30
-    row_count = (finish - beginning) // step
+    # Half-hour rows, with registration, lunch and the evening compressed.
+    boundaries = [time for time in range(beginning, 1110 + 1, step)
+        if time != 480 and not 720 < time < 810] + [finish]
+    row_count = len(boundaries) - 1
+    row_for_time = {time: row for row, time in enumerate(boundaries)}
     lanes = [3, 2, 2, 2, 3]
     grids = []
     cells = {}
     for day, events in enumerate(parser.days):
+        for coffee in events:
+            if coffee['title'] != 'Coffee Break':
+                continue
+            for poster in events:
+                if not poster['title'].startswith('Poster Session '):
+                    continue
+                overlap_start = max(coffee['start'], poster['start'])
+                overlap_end = min(coffee['end'], poster['end'])
+                if overlap_start < overlap_end:
+                    coffee['concurrent_poster'] = True
         grid = [[None] * lanes[day] for _ in range(row_count)]
         for number, event in enumerate(events):
             start, end = event['start'], event['end']
             assert beginning <= start < end <= finish
-            assert start % step == end % step == 0
             concurrent = [other for other in events if other is not event
                 and other['start'] < end and other['end'] > start]
             span = lanes[day] if not concurrent else 1
             # Friday's final workshop block occupies two of the three lanes.
             if lanes[day] == 3 and len(concurrent) == 1 and event['title'] == 'Workshops':
                 span = 2
-            first, last = (start - beginning) // step, (end - beginning) // step
+            first, last = row_for_time[start], row_for_time[end]
             available = [col for col in range(lanes[day] - span + 1)
                 if all(grid[row][c] is None for row in range(first, last)
                     for c in range(col, col + span))]
@@ -66,7 +83,7 @@ def build(source):
         grids.append(grid)
 
     output = ['<table class="program-week-table">',
-        '  <caption class="program-visually-hidden">WSDM 2027 tentative five-day schedule, February 15–19. Each time row represents 30 minutes in Hong Kong time (UTC+8). Simultaneous sessions appear side by side.</caption>',
+        '  <caption class="program-visually-hidden">WSDM 2027 tentative five-day schedule, February 15–19. Times are in Hong Kong time (UTC+8). Equal-height rows represent 30 minutes, except the 07:30–08:30, 12:00–13:30 and 18:30–20:30 rows, which are each 1.5 times as tall. Simultaneous sessions appear side by side.</caption>',
         '  <colgroup><col class="week-time-column"></colgroup>']
     for day, count in enumerate(lanes):
         output.append(f'  <colgroup class="week-day-columns lanes-{count}"><col span="{count}"></colgroup>')
@@ -75,8 +92,9 @@ def build(source):
         output.append(f'    <th scope="colgroup" colspan="{lanes[day]}" id="week-day-{day}">{15 + day} Feb <span>{name}</span></th>')
     output += ['  </tr></thead>', '  <tbody>']
     for row in range(row_count):
-        start = beginning + row * step
-        output.append(f'    <tr><th scope="row" id="week-time-{row}">{clock(start)}–{clock(start + step)}</th>')
+        start, end = boundaries[row:row + 2]
+        row_class = ' class="week-compressed-row"' if end - start > step else ''
+        output.append(f'    <tr{row_class}><th scope="row" id="week-time-{row}">{clock(start)}–{clock(end)}</th>')
         for day, grid in enumerate(grids):
             col = 0
             while col < lanes[day]:
@@ -84,7 +102,14 @@ def build(source):
                 if cell:
                     event, rowspan, colspan = cell
                     title = escape(event['title']).replace(' | ', '<br>')
-                    output.append(f'      <td class="week-{event["kind"]}" rowspan="{rowspan}" colspan="{colspan}" headers="week-day-{day} week-time-{row}"><span class="week-event-title">{title}</span><span class="week-event-time">{clock(event["start"])}–{clock(event["end"])}</span></td>')
+                    closing_start = event.get('closing_start')
+                    closing = ''
+                    extra_class = ' week-coffee-concurrent' if event.get('concurrent_poster') else ''
+                    if closing_start is not None:
+                        extra_class += ' week-event-with-closing'
+                        closing = f'<span class="week-event-closing">Closing<span class="week-event-time">{clock(closing_start)}–{clock(event["end"])}</span></span>'
+                    presentation_end = closing_start if closing_start is not None else event['end']
+                    output.append(f'      <td class="week-{event["kind"]}{extra_class}" rowspan="{rowspan}" colspan="{colspan}" headers="week-day-{day} week-time-{row}"><div class="week-event-content"><span class="week-event-title">{title}</span><span class="week-event-time">{clock(event["start"])}–{clock(presentation_end)}</span>{closing}</div></td>')
                     col += colspan
                 elif grid[row][col] is None:
                     span = 1
@@ -106,6 +131,6 @@ if __name__ == '__main__':
     updated = source[:start] + '\n' + generated + '\n        ' + source[end:]
     if '--check' in sys.argv:
         assert updated == source, 'Week grid is out of date; run scripts/build-program-overview.py'
-        print('Week grid matches all daily sessions at 30-minute resolution.')
+        print('Week grid matches all daily session times.')
     else:
         PAGE.write_text(updated)
