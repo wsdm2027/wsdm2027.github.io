@@ -3,6 +3,7 @@ Run with --check to verify that the two views are synchronized.
 """
 from html import escape
 from html.parser import HTMLParser
+from bisect import bisect_left
 from pathlib import Path
 import sys
 
@@ -70,7 +71,7 @@ def build(source):
             # Friday's final workshop block occupies two of the three lanes.
             if lanes[day] == 3 and len(concurrent) == 1 and event['title'] == 'Workshops':
                 span = 2
-            first, last = row_for_time[start], row_for_time[end]
+            first, last = row_for_time[start], bisect_left(boundaries, end)
             available = [col for col in range(lanes[day] - span + 1)
                 if all(grid[row][c] is None for row in range(first, last)
                     for c in range(col, col + span))]
@@ -105,11 +106,19 @@ def build(source):
                     closing_start = event.get('closing_start')
                     closing = ''
                     extra_class = ' week-coffee-concurrent' if event.get('concurrent_poster') else ''
+                    partial_style = ''
+                    if event['end'] not in row_for_time:
+                        last = row + rowspan
+                        row_duration = boundaries[last] - boundaries[last - 1]
+                        row_height = 1.5 if row_duration > step else 1
+                        trim = (boundaries[last] - event['end']) / row_duration * row_height
+                        extra_class += ' week-event-partial'
+                        partial_style = f' style="--event-trim: {trim:.9f}"'
                     if closing_start is not None:
                         extra_class += ' week-event-with-closing'
                         closing = f'<span class="week-event-closing">Closing<span class="week-event-time">{clock(closing_start)}–{clock(event["end"])}</span></span>'
                     presentation_end = closing_start if closing_start is not None else event['end']
-                    output.append(f'      <td class="week-{event["kind"]}{extra_class}" rowspan="{rowspan}" colspan="{colspan}" headers="week-day-{day} week-time-{row}"><div class="week-event-content"><span class="week-event-title">{title}</span><span class="week-event-time">{clock(event["start"])}–{clock(presentation_end)}</span>{closing}</div></td>')
+                    output.append(f'      <td class="week-{event["kind"]}{extra_class}" rowspan="{rowspan}" colspan="{colspan}" headers="week-day-{day} week-time-{row}"{partial_style}><div class="week-event-content"><span class="week-event-title">{title}</span><span class="week-event-time">{clock(event["start"])}–{clock(presentation_end)}</span>{closing}</div></td>')
                     col += colspan
                 elif grid[row][col] is None:
                     span = 1

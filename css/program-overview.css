@@ -269,6 +269,14 @@
 .program-week-table .week-event-title { display: block; font-weight: 500; flex-shrink: 0; }
 .program-week-table .week-event-time { display: block; font-size: 11px; font-weight: 400; line-height: 1.2; margin-top: 1px; font-variant-numeric: tabular-nums; white-space: nowrap; flex-shrink: 0; }
 .program-week-table .week-event-session { background: #faf0eb; color: #653d32; }
+.program-week-table .week-event-session.week-event-partial { background: #fff; }
+.program-week-table .week-event-session.week-event-partial .week-event-content {
+  bottom: auto;
+  /* End within the last half-hour row without changing the time axis. */
+  height: calc(100% + 1px - var(--event-trim) * var(--week-row-height));
+  background: #faf0eb;
+  border-bottom: 1px solid #e9dfda;
+}
 .program-week-table .week-event-keynote { background: #961f12; color: #fff; }
 .program-week-table .week-event-break { background: #f3f3f3; color: #555; }
 .program-week-table .week-coffee-concurrent {
