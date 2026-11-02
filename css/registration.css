@@ -1,0 +1,69 @@
+/* Registration: restrained commercial presentation within the WSDM site shell. */
+@font-face{font-family:'WSDM Registration Inter';src:url('../fonts/inter/inter-latin.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:swap}
+.registration-page{--wine:#961f12;--line:#ddceC7;--muted:#626262;max-width:var(--page-wide,1440px);padding:0 var(--page-gutter,48px);margin:0 auto;color:#333;font:15px/1.65 'WSDM Registration Inter',Arial,sans-serif}
+.registration-page :is(h1,h2,h3){font-weight:600;line-height:1.25;letter-spacing:-.025em}
+.registration-page h1{font-size:clamp(38px,4vw,52px);color:var(--wine);margin:0 0 14px}
+.registration-page h2{font-size:28px;margin:0 0 12px}
+.registration-page h3{font-size:19px;margin:0 0 10px}
+.registration-page p{margin:0 0 14px}
+.registration-page a{color:var(--wine);text-underline-offset:4px}
+.registration-page :is(a,summary,[tabindex]):focus-visible{outline:2px solid var(--wine);outline-offset:4px}
+.registration-page [id]{scroll-margin-top:24px}
+.registration-page .reg-eyebrow{color:var(--wine);font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px}
+.reg-hero{display:grid;grid-template-columns:minmax(0,1fr) 360px;align-items:center;gap:56px;padding:var(--page-heading-space,56px) 0 34px}
+.registration-page .reg-lead{font-size:19px;line-height:1.6;color:var(--muted);max-width:640px}
+.reg-meta{color:var(--muted);font-size:14px}
+.reg-actions{display:flex;align-items:center;flex-wrap:wrap;gap:14px 24px;margin-top:22px;font-size:14px}
+.reg-actions button{font:500 14px/1.5 'WSDM Registration Inter',Arial,sans-serif;border:1px solid #d7c4bd;background:#f4eeeb;color:#654a43;padding:12px 18px;border-radius:4px;cursor:not-allowed;opacity:1}
+.reg-actions a{font-weight:500;text-decoration:none}
+.reg-actions a:hover{text-decoration:underline}
+.reg-deadline{border:1px solid var(--line);border-top:3px solid var(--wine);border-radius:4px;background:#faf7f5;padding:24px 26px}
+.reg-deadline h2{font-size:30px;color:var(--wine);margin-bottom:8px}
+.reg-deadline p{font-size:14px}.reg-deadline p:last-child{font-size:12px;color:var(--muted);margin-bottom:0}
+.reg-jump-links{display:flex;flex-wrap:wrap;gap:12px 28px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;font-size:13px}
+.reg-jump-links a{text-decoration:none;font-weight:500}.reg-jump-links a:hover{text-decoration:underline}
+.reg-section{padding:34px 0;border-bottom:1px solid var(--line)}
+.reg-section-heading{margin-bottom:20px;max-width:960px}.reg-section-heading p{color:var(--muted);margin-bottom:0}
+.reg-pass-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.reg-pass{padding:22px 24px;border:1px solid var(--line);border-top:3px solid #b69a8e;border-radius:4px;background:#fff}
+.reg-pass--five{border-top-color:var(--wine);background:#fcfaf8}
+.reg-pass-header{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:6px}
+.reg-pass h3{font-size:24px;margin:0}.reg-pass-header span{font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);white-space:nowrap}
+.registration-page .reg-dates{font-size:13px;font-weight:600;color:var(--wine);margin-bottom:14px}
+.reg-pass ul{padding-left:18px;font-size:13px}.reg-pass li{margin:5px 0}.reg-pass li::marker{color:#aa8174}
+.registration-page .reg-note{font-size:12px;line-height:1.6;color:var(--muted);margin:12px 0 0}
+.reg-section-title{display:flex;align-items:baseline;justify-content:space-between;gap:16px}.reg-section-title>span{color:var(--muted);font-size:12px;white-space:nowrap}
+.reg-table-wrap{max-width:100%;overflow-x:auto;border:1px solid #cfbdb3;border-radius:4px}
+.reg-table{width:100%;border-collapse:collapse;min-width:680px;font-size:14px;line-height:1.5}
+.reg-table th,.reg-table td{padding:12px 18px;border-bottom:1px solid var(--line);border-right:1px solid #e9dfda;text-align:left;vertical-align:middle}
+.reg-table tr>:last-child{border-right:0}.reg-table tbody:last-child tr:last-child>*{border-bottom:0}
+.reg-table thead th{font-weight:600;background:#f5efeb;color:#673c31;font-size:13px}
+.reg-table thead th:first-child{width:40%}
+.reg-table thead th:not(:first-child){width:20%}
+.reg-table small{display:block;font-weight:400;font-size:11px;line-height:1.5;margin-top:4px;color:var(--muted)}
+.reg-table tbody th{font-weight:500}
+.reg-table tbody tr:nth-child(even)>*{background:#faf8f6}
+.reg-table .reg-group-start>*{border-top:2px solid #cfbdb3}
+.reg-fees td{font-variant-numeric:tabular-nums;font-size:16px;font-weight:500}
+.reg-fees .reg-pass-label{display:block;font-size:11px;color:var(--muted);font-weight:400;margin-top:2px}
+.reg-addons{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;margin-top:24px}
+.reg-addons h3{font-size:17px}.reg-flat-fees{border:1px solid var(--line);border-radius:4px;padding:2px 18px}
+.reg-flat-fees>div{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 0;border-bottom:1px solid var(--line)}
+.reg-flat-fees>div:last-child{border-bottom:0}.reg-flat-fees dt{font-size:13px}.reg-flat-fees dd{font-weight:600;white-space:nowrap;font-variant-numeric:tabular-nums}
+.reg-guest-table{min-width:0;font-size:13px}.reg-guest-table thead th:first-child,.reg-guest-table thead th:not(:first-child){width:33.333%}.reg-guest-table td{font-size:16px;font-weight:500}
+.reg-status-table{font-size:13px}.reg-status-table th,.reg-status-table td{padding:12px 16px}
+.reg-table.reg-status-table td.reg-yes{background:#eef6ef;color:#285038}.reg-table.reg-status-table td.reg-no{background:#fbefed;color:#7c3831}
+.reg-status-table td small{color:inherit}.reg-status-table th:first-child{width:38%}.reg-status-table thead th:not(:first-child){width:20.666%}
+.reg-benefits thead th:first-child{width:27%}.reg-benefits thead th:nth-child(2){width:35%}.reg-benefits thead th:nth-child(n+3){width:19%}
+.reg-coverage-context{padding:15px 18px;margin:0 0 18px;border-left:3px solid var(--wine);background:#faf7f5;font-size:13px}
+.reg-coverage-context p{margin-bottom:6px}.reg-coverage-context p:last-child{margin-bottom:0}
+.reg-coverage-notes{font-size:13px;padding-left:20px;margin-top:16px;max-width:1080px}.reg-coverage-notes li{margin:7px 0}
+.reg-policy-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px 40px}
+.reg-policy-grid article{border-top:1px solid var(--line);padding-top:18px}.reg-policy-grid h3{font-size:17px}.reg-policy-grid p{font-size:13px;line-height:1.75}.reg-policy-grid p:last-child{margin-bottom:0}
+.reg-policy-contact{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 24px;margin-top:26px;background:#faf7f5;border:1px solid var(--line);border-radius:4px}
+.reg-policy-contact p{margin:0;font-size:14px}.reg-policy-contact a{font-size:14px;font-weight:500;white-space:nowrap}
+.registration-page>.site-footer{padding-left:0;padding-right:0}
+.reg-sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@media(max-width:1000px){.reg-hero{grid-template-columns:minmax(0,1fr) 300px;gap:28px}.reg-pass{padding:20px 18px}.reg-pass-header{display:block}.reg-pass-header span{display:block;margin-top:5px}}
+@media(max-width:700px){.reg-hero{grid-template-columns:1fr;gap:24px;padding-bottom:26px}.registration-page .reg-lead{font-size:17px}.reg-deadline{padding:20px}.reg-deadline h2{font-size:26px}.reg-jump-links{gap:10px 20px;font-size:12px}.reg-pass-grid{grid-template-columns:1fr;gap:12px}.reg-pass-header{display:flex}.reg-pass-header span{margin-top:0}.reg-pass{padding:18px 20px}.reg-pass h3{font-size:22px}.reg-section{padding:28px 0}.registration-page h2{font-size:25px}.reg-section-title{align-items:flex-start}.reg-section-title>span{padding-top:6px}.reg-addons,.reg-policy-grid{grid-template-columns:1fr;gap:24px}.reg-table{min-width:650px}.reg-table th,.reg-table td{padding:11px 13px}.reg-guest-table{min-width:0}.reg-policy-contact{align-items:flex-start;flex-direction:column;gap:10px;padding:20px}.reg-policy-grid article{padding-top:16px}}
+@media print{.header,.mobile-nav,.reg-jump-links,.reg-actions{display:none!important}.registration-page{max-width:none;padding:0;font-size:11px}.reg-hero{padding-top:10px;gap:20px;grid-template-columns:1fr 260px}.reg-section{padding:20px 0}.reg-table{min-width:0;font-size:10px}.reg-table th,.reg-table td{padding:7px}.reg-table-wrap{overflow:visible}.reg-fees td{font-size:12px}.reg-pass,.reg-policy-grid article,.reg-deadline,.reg-policy-contact{break-inside:avoid}.reg-status-table td{print-color-adjust:exact;-webkit-print-color-adjust:exact}}

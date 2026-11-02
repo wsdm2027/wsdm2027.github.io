@@ -2,6 +2,26 @@
 .header .nav { flex-wrap: nowrap; gap: clamp(14px, 1.65vw, 26px); }
 .header .nav-item { flex-shrink: 0; }
 .header .nav-item > a { white-space: nowrap; }
+.header .nav-item:focus-within > .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+}
+.header .nav-item.is-dismissed > .dropdown-menu {
+  opacity: 0;
+  visibility: hidden;
+}
+.header .nav a:focus-visible,
+.mobile-nav a:focus-visible,
+.mobile-menu-button:focus-visible,
+.mobile-nav .close-button:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+.header .dropdown-menu a:focus-visible {
+  background: #a92e20;
+  outline-offset: -3px;
+}
 .header .nav-item > a[aria-current="page"],
 .header .nav-item.is-current > a {
   text-decoration: underline;
@@ -9,10 +29,14 @@
   text-underline-offset: 7px;
 }
 .dropdown-menu a[aria-current="page"],
-.mobile-nav-items a[aria-current="page"] {
+.mobile-nav-items a[aria-current="page"],
+.mobile-nav-item.is-current > a {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 4px;
+}
+.mobile-nav .mobile-dropdown a::after {
+  content: none;
 }
 @media (min-width: 1200px) and (max-width: 1350px) {
   .header .nav { gap: 14px; }
