@@ -9,6 +9,9 @@
 .organizers-refined { --organizers-font: "WSDM Organizers Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
 .organizers-refined :is(.org-section h2,.chairs-title,.chair-name,.chair-affiliation) { font-family: var(--organizers-font); }
 .organizers-refined .org-section h2 { font-weight: 600; letter-spacing: -.02em; }
+.organizers-refined .committee-link { margin: 24px 16px 0; text-align: center; font: 500 18px/1.5 var(--organizers-font); }
+.organizers-refined .committee-link a { color: #961f12; text-underline-offset: 4px; }
+.organizers-refined .committee-link a:focus-visible { outline: 2px solid #961f12; outline-offset: 4px; }
 .organizers-refined .chairs-title { font-size: clamp(26px,2.5vw,36px); font-weight: 600; line-height: 1.3; letter-spacing: -.02em; margin-bottom: 32px; }
 .organizers-refined .chairs-row .chairs-title { font-size: clamp(24px,2vw,30px); }
 .organizers-refined .chairs-section .chair-card {
