@@ -196,6 +196,19 @@
   padding: 0 48px 48px;
 }
 .program-grid-help { font-size: 13px; color: #666; margin: 0 0 12px; }
+.program-venue-note {
+  margin: 0 0 20px;
+  padding: 18px 20px;
+  border-left: 3px solid var(--program-wine);
+  border-radius: 4px;
+  background: #faf5f3;
+  color: #555;
+  font-size: 14px;
+}
+.program-venue-note h3 { margin: 0 0 8px; color: var(--program-wine); font-size: 16px; font-weight: 600; line-height: 1.4; }
+.program-venue-note p { margin: 0; }
+.program-venue-note p + p { margin-top: 8px; }
+.program-venue-note strong { font-weight: 600; }
 .program-week-scroll {
   overflow: auto;
   max-height: min(76vh, 840px);

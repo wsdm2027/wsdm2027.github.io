@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="css/desktop-sm.css" media="(min-width: 1200px)">
   <link rel="stylesheet" href="css/tablet.css" media="(max-width: 1199px)">
   <link rel="stylesheet" href="css/mobile.css" media="(max-width: 480px)">
-  <link rel="stylesheet" href="css/program-overview.css?v=e58883ce3116">
+  <link rel="stylesheet" href="css/program-overview.css?v=11623c7e6cc6">
   <link rel="stylesheet" href="css/navigation.css?v=fae76715e6fb">
   <link rel="stylesheet" href="css/page-layout.css?v=a0d41ef0bf81">
   <link rel="stylesheet" href="css/readability.css?v=209e7ea4b887">
@@ -199,6 +199,11 @@
           <h2 id="full-schedule-title">Full schedule</h2>
           <a class="program-section-link" href="#daily-program-title">Browse by day <span aria-hidden="true">↓</span></a>
         </div>
+        <aside class="program-venue-note" aria-labelledby="venue-access-title">
+          <h3 id="venue-access-title">Venue access &amp; closing times</h3>
+          <p><strong>15–18 Feb:</strong> All activities on the <strong>8th floor end at 17:00</strong> each day. Please leave the 8th floor <strong>before 17:30</strong>. The <strong>7th floor remains open</strong> (reserved overnight by WSDM).</p>
+          <p><strong>19 Feb:</strong> All activities on <strong>both the 7th and 8th floors end at 17:00</strong>. Please leave both floors <strong>before 17:30</strong>.</p>
+        </aside>
         <div class="program-legend" aria-label="Overview schedule colors">
           <span class="legend-keynote">Keynotes</span><span class="legend-session">Sessions</span>
           <span class="legend-break">Breaks &amp; registration</span><span class="legend-social">Social events</span>
@@ -303,7 +308,7 @@
       <td class="week-event-break" rowspan="1" colspan="3" headers="week-day-4 week-time-12"><div class="week-event-content"><span class="week-event-title">Coffee Break</span><span class="week-event-time">15:00–15:30</span></div></td>
     </tr>
     <tr><th scope="row" id="week-time-13">15:30–16:00</th>
-      <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-0 week-time-13"><div class="week-event-content"><span class="week-event-title">Tutorials</span><span class="week-event-time">15:30–17:00</span></div></td>
+      <td class="week-event-session" rowspan="5" colspan="1" headers="week-day-0 week-time-13"><div class="week-event-content"><span class="week-event-title">Tutorials</span><span class="week-event-time">15:30–18:00</span></div></td>
       <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-0 week-time-13"><div class="week-event-content"><span class="week-event-title">Industry Day</span><span class="week-event-time">15:30–17:00</span></div></td>
       <td class="week-event-session" rowspan="3" colspan="1" headers="week-day-0 week-time-13"><div class="week-event-content"><span class="week-event-title">Demo 2</span><span class="week-event-time">15:30–17:00</span></div></td>
       <td class="week-event-keynote" rowspan="2" colspan="2" headers="week-day-1 week-time-13"><div class="week-event-content"><span class="week-event-title">Keynote 2</span><span class="week-event-time">15:30–16:30</span></div></td>
@@ -321,11 +326,11 @@
       <td class="week-event-session week-event-partial week-event-with-closing" rowspan="3" colspan="2" headers="week-day-3 week-time-15" style="--event-trim: 0.666666667"><div class="week-event-content"><span class="week-event-title">Paper Presentations #9</span><span class="week-event-time">16:30–17:30</span><span class="week-event-closing">Closing<span class="week-event-time">17:30–17:40</span></span></div></td>
     </tr>
     <tr><th scope="row" id="week-time-16">17:00–17:30</th>
-      <td class="week-empty" colspan="3" headers="week-day-0 week-time-16"><span class="program-visually-hidden">No session scheduled</span></td>
+      <td class="week-empty" colspan="2" headers="week-day-0 week-time-16"><span class="program-visually-hidden">No session scheduled</span></td>
       <td class="week-empty" colspan="3" headers="week-day-4 week-time-16"><span class="program-visually-hidden">No session scheduled</span></td>
     </tr>
     <tr><th scope="row" id="week-time-17">17:30–18:00</th>
-      <td class="week-empty" colspan="3" headers="week-day-0 week-time-17"><span class="program-visually-hidden">No session scheduled</span></td>
+      <td class="week-empty" colspan="2" headers="week-day-0 week-time-17"><span class="program-visually-hidden">No session scheduled</span></td>
       <td class="week-event-break" rowspan="2" colspan="1" headers="week-day-1 week-time-17"><div class="week-event-content"><span class="week-event-title">Turnover</span><span class="week-event-time">17:30–18:30</span></div></td>
       <td class="week-empty" colspan="2" headers="week-day-2 week-time-17"><span class="program-visually-hidden">No session scheduled</span></td>
       <td class="week-empty" colspan="3" headers="week-day-4 week-time-17"><span class="program-visually-hidden">No session scheduled</span></td>
@@ -419,10 +424,15 @@
                   <li class="program-event event-break" data-event-title="Coffee Break"><span class="program-event-label">Break / registration</span><span class="program-event-name">Coffee Break</span></li>
                 </ul>
               </li>
+              <li class="program-slot" data-start="15:30" data-end="18:00">
+                <div class="program-time"><time datetime="2027-02-15T15:30:00+08:00">15:30</time><span aria-hidden="true">–</span><time datetime="2027-02-15T18:00:00+08:00">18:00</time></div>
+                <ul class="program-events">
+                  <li class="program-event event-session" data-event-title="Tutorials"><span class="program-event-label">Session</span><span class="program-event-name">Tutorials</span></li>
+                </ul>
+              </li>
               <li class="program-slot" data-start="15:30" data-end="17:00">
                 <div class="program-time"><time datetime="2027-02-15T15:30:00+08:00">15:30</time><span aria-hidden="true">–</span><time datetime="2027-02-15T17:00:00+08:00">17:00</time></div>
                 <ul class="program-events">
-                  <li class="program-event event-session" data-event-title="Tutorials"><span class="program-event-label">Session</span><span class="program-event-name">Tutorials</span></li>
                   <li class="program-event event-session" data-event-title="Industry Day"><span class="program-event-label">Session</span><span class="program-event-name">Industry Day</span></li>
                   <li class="program-event event-session" data-event-title="Demo 2"><span class="program-event-label">Session</span><span class="program-event-name">Demo 2</span></li>
                 </ul>
