@@ -1,0 +1,26 @@
+/* SIGIR Student Travel Grant page, layered on visa.css. */
+.tg-intro { border-top: 0; padding-top: 6px; }
+.visa-section .tg-lead { font-size: 18px; line-height: 1.7; color: #333; margin-bottom: 22px; }
+.tg-award { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin: 0 0 20px; }
+.tg-award > div { padding: 22px 24px; background: #faf7f5; border: 1px solid var(--visa-line); border-top: 3px solid var(--visa-wine); border-radius: 5px; }
+.tg-award strong { display: block; font-size: 26px; line-height: 1.2; font-weight: 600; letter-spacing: -.03em; color: var(--visa-wine); margin-bottom: 6px; }
+.tg-award span { display: block; font-size: 14px; line-height: 1.5; color: #666; }
+.visa-section .tg-dates { list-style: none; margin: 0 0 16px; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; counter-reset: tg; }
+.visa-section .tg-dates li { margin: 0; padding: 20px 22px; border: 1px solid var(--visa-line); border-radius: 5px; background: #fff; position: relative; }
+.visa-section .tg-dates li::before { counter-increment: tg; content: counter(tg); position: absolute; top: 18px; right: 20px; width: 24px; height: 24px; border-radius: 50%; background: #f3ebe8; color: var(--visa-wine); font-size: 12px; font-weight: 600; line-height: 24px; text-align: center; }
+.tg-dates time { display: block; font-size: 20px; font-weight: 600; color: #333; letter-spacing: -.02em; margin-bottom: 4px; }
+.tg-dates span { display: block; font-size: 13px; line-height: 1.5; color: #666; }
+.visa-section .tg-small { font-size: 13px; color: #777; }
+.visa-section .tg-notice { margin-top: 18px; padding: 16px 20px; background: #fdf6f4; border-left: 3px solid var(--visa-wine); border-radius: 0 4px 4px 0; font-size: 14px; }
+.tg-notice strong { color: var(--visa-wine); }
+.tg-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 20px; }
+.visa-page .tg-button { display: inline-flex; align-items: center; gap: 14px; padding: 13px 20px; border-radius: 4px; background: var(--visa-wine); color: #fff; border: 1px solid var(--visa-wine); font-size: 14px; font-weight: 500; text-decoration: none; }
+.visa-page .tg-button:hover { background: #79180e; border-color: #79180e; }
+.visa-page .tg-button-outline { background: #fff; color: var(--visa-wine); }
+.visa-page .tg-button-outline:hover { background: #fdf6f4; color: #79180e; }
+@media (max-width: 760px) {
+  .tg-award, .visa-section .tg-dates { grid-template-columns: 1fr; }
+  .tg-award strong { font-size: 22px; }
+  .tg-actions { flex-direction: column; }
+  .visa-page .tg-button { justify-content: space-between; }
+}

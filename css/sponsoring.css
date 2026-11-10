@@ -24,3 +24,25 @@
 @media(max-width:1000px){.sponsor-page{padding:0 32px}.sponsor-hero{gap:32px;grid-template-columns:minmax(0,1fr) 280px}.sponsor-contact{gap:30px;padding:28px}.sponsor-activity-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:700px){.sponsor-page{padding:0 20px}.sponsor-hero{grid-template-columns:1fr;padding:36px 0 32px;gap:28px}.sponsor-page h1{font-size:36px}.sponsor-page .sponsor-lead{font-size:18px}.sponsor-values{grid-template-columns:1fr;gap:22px;padding-bottom:32px}.sponsor-section{padding:32px 0}.sponsor-page h2{font-size:25px}.sponsor-values h2{font-size:20px}.sponsor-contact{grid-template-columns:1fr;padding:24px;gap:26px}.sponsor-activity-grid{grid-template-columns:1fr}.sponsor-footer{flex-direction:column;gap:8px}.sponsor-details-label{display:none}.sponsor-actions{gap:18px}.sponsor-button{max-width:100%}.sponsor-chairs article{gap:12px}.sponsor-chairs img{width:60px;height:60px}.sponsor-chairs h4{font-size:16px}}
 @media print{.sponsor-actions,.sponsor-button{display:none}.sponsor-page{max-width:none;padding:0}.sponsor-table{min-width:0;font-size:10px}.sponsor-table strong{font-size:16px}.sponsor-table th,.sponsor-table td{padding:8px 5px}.sponsor-table-scroll{overflow:visible}.sponsor-contact{break-inside:avoid}}
+
+/* Official Sponsors & Partners page */
+.sp-heading{text-align:center;padding:56px 0 8px}
+.sponsor-page .sp-heading h1{margin-bottom:0}
+.sp-heading h1::after{content:'';display:block;width:48px;height:3px;background:var(--wine);margin:20px auto 0}
+.sponsor-page .sp-heading p{color:#666;font-size:16px;margin:22px auto 0;max-width:620px}
+.sp-tier{padding:44px 0 8px}
+.sponsor-page .sp-tier h2{display:flex;align-items:center;gap:20px;font-size:15px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--wine);margin:0 0 36px}
+.sp-tier h2::before,.sp-tier h2::after{content:'';flex:1;height:1px;background:var(--line)}
+.sp-tier-gold h2 span{color:#9a7a12}
+.sp-logos{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;gap:40px 88px}
+.sp-logos li{display:flex;flex-direction:column;align-items:center;text-align:center;max-width:100%}
+.sp-logo-row{display:flex;align-items:center;justify-content:center;gap:28px;margin-bottom:18px}
+.sp-logos img{display:block;width:auto;max-width:100%;object-fit:contain}
+.sp-tier-gold .sp-logos img{height:96px}
+.sp-tier-silver .sp-logos img{height:70px}
+.sponsor-page .sp-logos .sp-name{font-size:16px;font-weight:600;line-height:1.4;color:#333;margin:0 0 2px}
+.sponsor-page .sp-logos .sp-org{font-size:13px;line-height:1.5;color:#777;margin:0}
+.sp-cta{text-align:center;padding:56px 0 48px}
+.sponsor-page .sp-cta p{margin:0;color:#666;font-size:15px}
+.sp-cta a{font-weight:500;margin-left:6px}
+@media(max-width:700px){.sp-heading{padding:36px 0 0}.sp-tier{padding:32px 0 4px}.sponsor-page .sp-tier h2{font-size:13px;margin-bottom:26px}.sp-logos{flex-direction:column;align-items:center;gap:36px}.sp-logo-row{gap:14px;margin-bottom:12px}.sp-logo-row img{min-width:0}.sp-tier-gold .sp-logos img{height:64px}.sp-tier-silver .sp-logos img{height:52px}.sp-tier-silver .sp-logo-row img+img{height:42px}.sp-cta{padding:40px 0 36px}}
