@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accepted Tutorials | WSDM 2027</title>
+  <!-- 基础样式（无媒体查询） -->
+  <link rel="stylesheet" href="css/base.css">
+
+  <!-- 响应式样式（按从大到小顺序） -->
+  <link rel="stylesheet" href="css/desktop-xl.css" media="(min-width: 2560px)">
+  <link rel="stylesheet" href="css/desktop-lg.css" media="(min-width: 1920px)">
+  <link rel="stylesheet" href="css/desktop-md.css" media="(min-width: 1600px)">
+  <link rel="stylesheet" href="css/desktop-sm.css" media="(min-width: 1200px)">
+  <link rel="stylesheet" href="css/tablet.css" media="(max-width: 1199px)">
+  <link rel="stylesheet" href="css/mobile.css" media="(max-width: 480px)">
+  <link rel="preload" href="fonts/inter/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/calls.css?v=df449f176995">
+  <link rel="stylesheet" href="css/tutorials.css?v=69aff56db13d">
+  <link rel="stylesheet" href="css/accepted-tutorials.css">
+  <link rel="stylesheet" href="css/calls-editorial.css?v=c1d7e4a9f3b2">
+  <link rel="stylesheet" href="css/navigation.css?v=fae76715e6fb">
+  <link rel="stylesheet" href="css/page-layout.css?v=a0d41ef0bf81">
+  <link rel="stylesheet" href="css/readability.css?v=209e7ea4b887">
+  <link rel="stylesheet" href="css/footer.css?v=2d027e2271c1">
+  <style>
+    /* Accepted workshops list */
+    .workshop-list { display: flex; flex-direction: column; gap: 1.5rem; }
+    .workshop-card {
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 14px;
+      padding: 1.75rem 2.25rem;
+      background: rgba(255, 255, 255, 0.72);
+      text-align: center;
+    }
+    .workshop-card h3 { margin: 0 0 0.75rem; font-size: 1.3rem; line-height: 1.35; }
+    .workshop-card .workshop-label {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(0, 0, 0, 0.5);
+      margin-bottom: 0.3rem;
+    }
+    .workshop-card .workshop-authors {
+      font-size: 0.95rem;
+      line-height: 1.65;
+      max-width: 46rem;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      margin-bottom: 0.55rem;
+      text-align: center;
+    }
+    .workshop-card .workshop-authors .author { display: inline-block; margin: 0 0.1em; }
+    .workshop-card .workshop-authors strong { font-weight: 700; }
+    .workshop-card .workshop-contact-mark { font-weight: 700; }
+    .workshop-card .workshop-correspondence {
+      font-size: 0.85rem;
+      color: rgba(0, 0, 0, 0.62);
+      margin-bottom: 1.1rem;
+      text-align: center;
+    }
+    .workshop-card .workshop-correspondence a { color: inherit; text-decoration: underline; }
+    .workshop-card .workshop-correspondence a:hover { color: #000; }
+    .workshop-card h4 {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(0, 0, 0, 0.5);
+      margin: 0 0 0.45rem;
+    }
+    .workshop-card .workshop-abstract { margin: 0; text-align: justify; }
+
+    /* 大屏 */
+    @media (min-width: 1920px) {
+      .workshop-card { padding: 2.1rem 2.75rem; }
+      .workshop-card h3 { font-size: 1.42rem; }
+      .workshop-card .workshop-authors { font-size: 1rem; max-width: 52rem; }
+      .workshop-card .workshop-abstract { font-size: 1.02rem; }
+    }
+    @media (min-width: 2560px) {
+      .workshop-card .workshop-authors { max-width: 58rem; }
+      .workshop-card .workshop-abstract { font-size: 1.08rem; }
+    }
+    /* 平板 */
+    @media (max-width: 1199px) {
+      .workshop-card { padding: 1.5rem 1.6rem; }
+    }
+    /* 窄屏：改为左对齐，避免两端对齐产生大间隙 */
+    @media (max-width: 768px) {
+      .workshop-card { padding: 1.35rem 1.25rem; text-align: left; }
+      .workshop-card h3 { font-size: 1.14rem; }
+      .workshop-card .workshop-authors { max-width: none; text-align: left; }
+      .workshop-card .workshop-correspondence { text-align: left; }
+      .workshop-card .workshop-abstract { text-align: left; }
+    }
+    /* 手机 */
+    @media (max-width: 480px) {
+      .workshop-list { gap: 1.1rem; }
+      .workshop-card { padding: 1.15rem 1rem; border-radius: 10px; }
+      .workshop-card h3 { font-size: 1.06rem; }
+      .workshop-card .workshop-authors { font-size: 0.9rem; line-height: 1.6; }
+      .workshop-card .workshop-authors .author { display: inline; margin: 0; }
+      .workshop-card .workshop-correspondence { font-size: 0.8rem; word-break: break-all; }
+      .workshop-card .workshop-abstract { font-size: 0.94rem; }
+    }
+  </style>
+  <script src="js/navigation.js?v=c21d33d245ab" defer></script>
+</head>
+
+<body class="calls-typography">
+  <!-- Header -->
+  <header class="header" id="site-top">
+    <div class="logo">
+      <a href="./index.html">
+        <div class="logo-container">
+          <img src="./images/logo.png" alt="WSDM 2027" class="logo-rectangle">
+        </div>
+      </a>
+    </div>
+
+    <!-- Desktop navigation -->
+    <div class="nav">
+      <div class="nav-item">
+        <a href="./index.html">Home</a>
+      </div>
+      <div class="nav-item is-current">
+        <a href="#">Program</a>
+        <span class="dropdown-icon"></span>
+        <div class="dropdown-menu">
+          <a href="./program-overview.html">Overview</a>
+          <a href="./program-committee.html">Program Committee</a>
+          <a href="./accepted-workshops.html">Accepted Workshops</a>
+          <a href="./accepted-tutorials.html" aria-current="page">Accepted Tutorials</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="#">Attend</a>
+        <span class="dropdown-icon"></span>
+        <div class="dropdown-menu">
+          <a href="./registration.html">Registration</a>
+          <a href="./travel-venue.html">Venue &amp; Hotels</a>
+          <a href="./visa.html">Visa</a>
+          <a href="https://partnernet.hktb.com/en/destination/hong_kong_experiences/index.html" target="_blank" rel="noopener noreferrer">What to
+            do in HK</a>
+          <a href="./sigir-travel-grant.html">SIGIR Travel Grant</a>
+        </div>
+
+      </div>
+      <div class="nav-item">
+        <a href="./cfwc.html">WSDM Cup</a>
+      </div>
+      <div class="nav-item">
+        <a href="#">Calls</a>
+        <span class="dropdown-icon"></span>
+        <div class="dropdown-menu">
+          <a href="./cffp.html">Call for Full Papers</a>
+          <a href="./cfsp.html">Call for Short Papers</a>
+          <a href="./cfdemo.html">Call for Demonstrations</a>
+          <a href="./cfworkshops.html">Call for Workshops</a>
+          <a href="./cftutorial.html">Call for Tutorials</a>
+          <a href="./cfidt.html">Call for Industry Day Talks</a>
+		  <a href="./cfdc.html">Call for Doctoral Consortium</a>
+		  <a href="./cfwc.html">Call for WSDM Cup Proposals</a>
+		  <a href="./cfp.html">Call for WSDM Day Presentations</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="#">Sponsors</a>
+        <span class="dropdown-icon"></span>
+        <div class="dropdown-menu">
+          <a href="./official-sponsors-partners.html">Official Sponsors &amp; Partners</a>
+          <a href="./sponsoring.html">Become a Sponsor</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="./organizers.html">Organizers</a>
+
+      </div>
+    </div>
+
+    <!-- Desktop search -->
+    <div class="desktop-search">
+      <div class="search">
+      </div>
+    </div>
+
+    <!-- Right side container for search and menu -->
+    <div class="header-right">
+      <div class="search">
+      </div>
+
+      <!-- Mobile menu button -->
+      <div class="mobile-menu-button">
+        <div class="menu-icon">
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav">
+    <div class="mobile-nav-content">
+      <div class="mobile-nav-header">
+        <div class="logo">
+          <a href="./index.html">WSDM 2027</a>
+        </div>
+        <div class="close-button">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="mobile-nav-items">
+        <div class="mobile-nav-item">
+          <a href="./index.html">Home</a>
+        </div>
+        <div class="mobile-nav-item">
+          <a href="#">Program</a>
+          <div class="mobile-dropdown">
+            <a href="./program-overview.html">Overview</a>
+            <a href="./program-committee.html">Program Committee</a>
+            <a href="./accepted-workshops.html">Accepted Workshops</a>
+            <a href="./accepted-tutorials.html" aria-current="page">Accepted Tutorials</a>
+          </div>
+        </div>
+        <div class="mobile-nav-item">
+          <a href="#">Attend</a>
+          <div class="mobile-dropdown">
+            <a href="./registration.html">Registration</a>
+            <a href="./travel-venue.html">Venue &amp; Hotels</a>
+            <a href="./visa.html">Visa</a>
+            <a href="https://partnernet.hktb.com/en/destination/hong_kong_experiences/index.html" target="_blank" rel="noopener noreferrer">What
+              to do in HK</a>
+            <a href="./sigir-travel-grant.html">SIGIR Travel Grant</a>
+          </div>
+        </div>
+        <div class="mobile-nav-item">
+          <a href="./cfwc.html">WSDM Cup</a>
+        </div>
+        <div class="mobile-nav-item">
+          <a href="#">Calls</a>
+          <div class="mobile-dropdown">
+            <a href="./cffp.html">Call for Full Papers</a>
+            <a href="./cfsp.html">Call for Short Papers</a>
+            <a href="./cfdemo.html">Call for Demonstrations</a>
+            <a href="./cfworkshops.html">Call for Workshops</a>
+            <a href="./cftutorial.html">Call for Tutorials</a>
+            <a href="./cfidt.html">Call for Industry Day Talks</a>
+			<a href="./cfdc.html">Call for Doctoral Consortium</a>
+			<a href="./cfwc.html">Call for WSDM Cup Proposals</a>
+			<a href="./cfp.html">Call for WSDM Day Presentations</a>
+          </div>
+        </div>
+        <div class="mobile-nav-item">
+          <a href="#">Sponsors</a>
+          <div class="mobile-dropdown">
+            <a href="./official-sponsors-partners.html">Official Sponsors &amp; Partners</a>
+            <a href="./sponsoring.html">Become a Sponsor</a>
+          </div>
+        </div>
+        <div class="mobile-nav-item">
+          <a href="./organizers.html">Organizers</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <main class="readable-call call-page tutorial-page call-pilot" id="main-content">
+    <div class="call-content">
+
+      <section class="tutorial-hero" aria-labelledby="call-title">
+        <div class="tutorial-intro">
+          <p class="tutorial-eyebrow">WSDM 2027 · Hong Kong</p>
+          <h1 id="call-title">Accepted Tutorials</h1>
+          <p class="tutorial-lead">WSDM 2027 is pleased to feature eight tutorials covering agentic search, large-scale recommendation, social computing, machine unlearning, graph retrieval, and trustworthy data mining.</p>
+          <p class="pilot-status">Tutorial day: February 15, 2027 · Hong Kong.</p>
+          <div class="tutorial-actions">
+            <a class="tutorial-secondary" href="#tutorials">Browse tutorials <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+        <aside class="tutorial-dates" aria-labelledby="key-dates">
+          <h2 id="key-dates">Key dates</h2>
+          <dl>
+            <div><dt>Tutorial proposal deadline</dt><dd>Oct 6, 2026</dd></div>
+            <div><dt>Tutorial notification</dt><dd>Nov 5, 2026</dd></div>
+            <div><dt>Tutorial day</dt><dd>Feb 15, 2027</dd></div>
+          </dl>
+          <p>All deadlines are 11:59 pm AoE.</p>
+        </aside>
+      </section>
+
+      <section class="cffp-section at-section" id="tutorials">
+        <h2>List of Accepted Tutorials</h2>
+        <nav class="at-toc" aria-label="Tutorial list">
+          <ol>
+            <li><a href="#tutorial-1"><span class="at-num">01</span>Agentic Search: Optimization, Long-Horizons, and Evaluation</a></li>
+            <li><a href="#tutorial-2"><span class="at-num">02</span>Training Large-Scale Recommendation Models: Data, Model, and Systems Co-Design</a></li>
+            <li><a href="#tutorial-3"><span class="at-num">03</span>LLM-assisted Social Computing: Foundations, Methods, and Challenges</a></li>
+            <li><a href="#tutorial-4"><span class="at-num">04</span>From Unimodal to Multimodal Machine Unlearning: Foundations and Applications</a></li>
+            <li><a href="#tutorial-5"><span class="at-num">05</span>A Tutorial on Retrieval-Augmented Generation for LLM-based Recommender Systems</a></li>
+            <li><a href="#tutorial-6"><span class="at-num">06</span>Hyperbolic Foundation Models for Web Search, Recommendation, and Structured Retrieval</a></li>
+            <li><a href="#tutorial-7"><span class="at-num">07</span>Knowing When to Doubt: Conformal Prediction for Large-Scale Data Mining</a></li>
+            <li><a href="#tutorial-8"><span class="at-num">08</span>Advances in Neural Graph Retrieval: Indexing and Robustness</a></li>
+          </ol>
+        </nav>
+        <div class="at-list">
+
+          <article class="at-item" id="tutorial-1">
+            <h3>Agentic Search: Optimization, Long-Horizons, and Evaluation</h3>
+            <p class="at-organizers"><strong>Organizers:</strong> Chuan Meng (The University of Edinburgh), Litu Ou (The University of Edinburgh), Andrew Drozdov (Databricks), Sean MacAvaney (University of Glasgow), Andrew Yates (Johns Hopkins University), and Jeff Dalton (The University of Edinburgh)</p>
+            <div class="at-abstract"><strong>Abstract:</strong>
+            <p>The information retrieval (IR) community is moving from traditional human-driven search towards agentic search, where agents iteratively generate search queries, inspect retrieved documents, and repeat the process until sufficient evidence is gathered to produce a final answer. Agentic search is important because it can scale knowledge-intensive work, and enable agents to interact with external knowledge. Despite its importance, existing tutorials cover it only as part of broader topics. Our tutorial is devoted entirely to agentic search. It covers three key topics: systematic optimization paradigms, with a focus on reinforcement learning (RL) methods; long-horizon agentic search (deep research); and evaluation, especially for long-horizon report generation. Also, it features a live demonstration and hands-on session. It is designed for students, researchers, and practitioners from both academia and industry. Participants will gain a comprehensive understanding of agentic search and learn to run a full agentic search pipeline themselves.</p>
+            </div>
+          </article>
+
+          <article class="at-item" id="tutorial-2">
+            <h3>Training Large-Scale Recommendation Models: Data, Model, and Systems Co-Design</h3>
+            <p class="at-organizers"><strong>Organizers:</strong> Ruochen Liu (Meta), Xuan Cao (Meta), Guxin Jin (Meta), Han Li (Meta), Rui Li (Meta), Wei Li (Meta), Yuhao Tang (Meta), Yuanjun Yao (Meta), and Jin Zhou (Meta)</p>
+            <div class="at-abstract"><strong>Abstract:</strong>
+            <p>Large-scale recommendation models combine high-cardinality sparse state, long and irregular behavior sequences, dense interaction modules, and rapidly changing training data. Their training efficiency cannot be improved by optimizing any layer in isolation: data and representation choices shape the workload; model scaling choices determine local execution, memory traffic, and numerical behavior; and distributed execution determines how much of that efficiency is retained across accelerators.</p>
+            <p>This half-day tutorial presents a measurement-driven framework for co-designing these layers. We first establish metrics for time to target quality, useful training throughput, local compute efficiency, and distributed scaling. We then follow the training path through three modules: shaping recommendation workloads through representation, example construction, and batching; co-designing model scaling with kernels and low-precision computation for efficient local execution; and co-designing partitioning, memory management, communication, and load balance for distributed training. Worked examples demonstrate how to identify bottlenecks and compare candidate solutions by their effects on model quality and end-to-end training efficiency. Attendees will leave with a practical vocabulary and a systematic workflow for training large recommendation models efficiently.</p>
+            </div>
+          </article>
+
+          <article class="at-item" id="tutorial-3">
+            <h3>LLM-assisted Social Computing: Foundations, Methods, and Challenges</h3>
+            <p class="at-organizers"><strong>Organizers:</strong> Bohan Jiang (Arizona State University), Chengshuai Zhao (Arizona State University), Dawei Li (Arizona State University), Xinyi Zhou (Boise State University), and Huan Liu (Arizona State University)</p>
+            <div class="at-abstract"><strong>Abstract:</strong>
+            <p>Social computing (SC) studies how people behave, communicate, and organize through the web and social media. Researchers build computational methods that measure, model, and support SC tasks at scale. The recent advancement of large language models (LLMs) is reshaping the SC research pipeline. They can help generate and augment data, simulate users and communities, develop and apply codebooks, annotate content, retrieve evidence, explain patterns, and judge open-ended outputs. These capabilities make the study of complex and evolving social problems more scalable and accessible, both for researchers and for industry teams working on trust and safety, user research, and content understanding. However, they also raise fundamental questions about LLM-assisted data quality, population representation, measurement, inference, and validation. This half-day tutorial offers an interdisciplinary overview of LLM-assisted SC for the web search and data mining community. We first connect the foundations of social media mining and text-as-data research to the roles that LLMs now play. We then organize current methods around three core areas: (1) data generation and social simulation, (2) measurement and content analysis, and (3) inference and generalization. Finally, we examine cross-cutting challenges involving validity, bias, distribution shift, reproducibility, privacy, and LLM-based evaluation. State-of-the-art frameworks and case studies illustrate a broad literature spanning data mining, machine learning, and NLP. Attendees will leave with a practical framework for deciding which roles LLMs should play in a social computing workflow, which claims LLM-assisted evidence can support, and which forms of human or external validation are required.</p>
+            </div>
+          </article>
+
+          <article class="at-item" id="tutorial-4">
+            <h3>From Unimodal to Multimodal Machine Unlearning: Foundations and Applications</h3>
+            <p class="at-organizers"><strong>Organizers:</strong> Yiwei Chen (Michigan State University), Zijie Liu (University of North Carolina at Chapel Hill), Jinhao Duan (University of North Carolina at Chapel Hill), Kaixiong Zhou (North Carolina State University), Sijia Liu (Michigan State University), Tianlong Chen (University of North Carolina at Chapel Hill), and Jiliang Tang (Michigan State University)</p>
+            <div class="at-abstract"><strong>Abstract:</strong>
+            <p>Web search, recommendation, and data mining systems rely on foundation models trained on web-scale user data, intensifying the demand for removing private, copyrighted, or hazardous information under deletion requests or regulations. Machine unlearning has advanced rapidly for generative AI, including large language models (LLMs), yet most methods, along with their evaluations, still assume a single modality. Web data, however, are inherently heterogeneous: information removed from text can remain accessible through images, tables, audio, or graph links, so forgetting that appears complete under unimodal tests may be illusory. This tutorial unpacks how unlearning changes when data span multiple modalities. We first establish unlearning foundations, using LLMs as the reference case, before exposing the limits of unimodal unlearning. We then examine text paired with tabular records, images, audio, text-attributed graphs, or knowledge graphs, comparing forgetting targets, representative methods, and recoverability tests. Finally, we demonstrate these principles in biomedical AI, AI safety, and embodied AI before concluding with open challenges. We offer a coherent framework for designing and auditing unlearning in multimodal web data mining systems.</p>
+            </div>
+          </article>
+
+          <article class="at-item" id="tutorial-5">
+            <h3>A Tutorial on Retrieval-Augmented Generation for LLM-based Recommender Systems</h3>
+            <p class="at-organizers"><strong>Organizers:</strong> Sunwoo Kim (KAIST), Geon Lee (KAIST), Kyungho Kim (KAIST), Liam Collins (Snap Inc.), Neil Shah (Pinterest), and Kijung Shin (KAIST)</p>
+            <div class="at-abstract"><strong>Abstract:</strong>
+            <p>Recommender systems are essential to real-world online services due to their substantial business value. Increasingly, large language models (LLMs) have been adopted for recommendation tasks, owing to their strong reasoning capabilities and their effectiveness in handling cold-start items. A large body of work has sought to adapt retrieval-augmented generation (RAG) for LLM-based recommender systems by retrieving information from external databases and integrating it into the LLM's input to improve recommendation quality. Despite the rapid growth of the field, existing tutorials lack a clear taxonomy and a dedicated review of RAG methods for LLM-based recommender systems. To fill this gap, we present the first tutorial on this topic. First, we discuss the types of information used in LLM-based recommender systems, including target-user information and external databases for retrieval. Second, we present the design space of RAG for LLM-based recommender systems, outlining the key design choices at each stage of the pipeline: (1) retrieval, (2) augmentation, and (3) generation. Lastly, we introduce open questions for future research on this topic.</p>
+            </div>
+          </article>
+
+          <article class="at-item" id="tutorial-6">
+            <h3>Hyperbolic Foundation Models for Web Search, Recommendation, and Structured Retrieval</h3>
+            <p class="at-organizers"><strong>Organizers:</strong> Jiahong Liu (The Chinese University of Hong Kong), Menglin Yang (HKUST (Guangzhou)), Rex Ying (Yale University), and Irwin King (The Chinese University of Hong Kong)</p>
+            <div class="at-abstract"><strong>Abstract:</strong>
+            <p>Foundation models increasingly empower Web systems with search, recommendation, retrieval-augmented generation (RAG), and agents. Many Web data structures—including query and product taxonomies, knowledge graphs, scale-free interaction networks, long-tailed content, hierarchical indexes, and multi-resolution memories—are hierarchical, yet most models use Euclidean representations. Euclidean spaces may need extra dimensions to preserve hierarchy, can mix similarity with specificity, and often separate rare or deep concepts poorly. Hyperbolic geometry offers a compact way to model this structure and has recently been applied to search, recommendation, RAG, and agents. However, practical evidence and implementation guidance remain scattered.</p>
+            <p>We propose a half-day WSDM 2027 tutorial centered on one practical question: when does hyperbolic geometry improve a Web system enough to justify its complexity? We compare four ways to add hyperbolic geometry—objectives, representation heads, adapters, and native architectures—across search and ranking, structured retrieval and RAG, recommendation, knowledge graphs, and agent memory. Attendees learn to diagnose hierarchy; choose among Poincaré, Lorentz, product, and mixed-curvature models; avoid common numerical issues; and compare fairly with same-size Euclidean baselines on accuracy, long-tail performance, stability, latency, and memory. The tutorial provides a step-by-step workflow for three WSDM areas: Web Search, Web Mining and Content Analysis, and Foundation Models and Agentic Systems. Materials include annotated slides, a reading list, reproducible PyTorch notebooks, and an evaluation checklist.</p>
+            </div>
+          </article>
+
+          <article class="at-item" id="tutorial-7">
+            <h3>Knowing When to Doubt: Conformal Prediction for Large-Scale Data Mining</h3>
+            <p class="at-organizers"><strong>Organizers:</strong> Huanxin Sheng (MBZUAI), Huajun Xi (MBZUAI), and Jian Kang (MBZUAI)</p>
+            <div class="at-abstract"><strong>Abstract:</strong>
+            <p>Modern data mining for web-scale data increasingly relies on machine learning models. In search and recommendation, these models are widely studied both to process unstructured text for content understanding and to infer relational patterns that capture underlying user intent and preferences. However, predictions made by these models are often overconfident and poorly calibrated, which could create operational risks.</p>
+            <p>In web search, uncalibrated confidence can lead generative engines to deliver factually incorrect advice on sensitive topics (e.g., healthcare or finance) without signaling uncertainty. In recommender systems, overconfident predictions restrict exploration, amplify feedback loops, and suppress diverse content. Furthermore, inflated confidence scores prevent automated safeguards from fact-checking dubious claims, admitting doubt, or warning users that an answer might be wrong.</p>
+            <p>Bayesian and frequentist uncertainty quantification provide principled foundations but are difficult to scale to large models and heterogeneous data nowadays, especially when they require retraining, strong priors, or posterior approximations. This tutorial introduces conformal prediction as a practical post-hoc, model-agnostic framework for distribution-free uncertainty quantification. It provides finite-sample coverage guarantees under exchangeability while enabling discriminative prediction sets through appropriate nonconformity score design and calibration strategies. Beyond mathematical foundations, the tutorial adopts a data-centric perspective, emphasizing how dependence, distribution shift, modality, and calibration data quality affect validity and efficiency. We will cover applications beyond text, including graphs and multimodal data, and provide practical guidance for real-world applications.</p>
+            </div>
+          </article>
+
+          <article class="at-item" id="tutorial-8">
+            <h3>Advances in Neural Graph Retrieval: Indexing and Robustness</h3>
+            <p class="at-organizers"><strong>Organizers:</strong> Pritish Chakraborty (Indian Institute of Technology, Bombay), Indradyumna Roy (Aalto University), Soumen Chakrabarti (IIT Bombay), and Abir De (IIT Bombay)</p>
+            <div class="at-abstract"><strong>Abstract:</strong>
+            <p>Graph-structured data arises across web search, knowledge graphs, social networks, e-commerce, code analysis, and drug discovery. In many of these applications, relevant graphs for any given query graph must be retrieved from a large corpus. Determining graph relevance is generally combinatorially hard, rendering the cosine and dot-product similarities used in standard dense retrieval inadequate. Recent neural graph retrieval work addresses this through bespoke neural architectures and scalable indexing methods.</p>
+            <p>In this tutorial, we first trace the progression of text retrieval from posting lists to dense embeddings and learned sparse indices, and show how graph retrieval is following a similar path. We next identify subgraph containment as a recurring primitive in graph relevance. Its inherent asymmetry motivates single-vector models that replace prevailing symmetric similarities with asymmetric variants. With an eye on improving relevance accuracy, we next study multi-vector graph representations, where late-interaction alignment over node embeddings captures combinatorial relevance.</p>
+            <p>However, as in text retrieval, richer interaction can improve relevance modeling but makes efficient retrieval harder. We discuss locality-sensitive hashing (LSH) for asymmetric relevance and show how exchangeability properties of learned graph representations make alignment-based late-interaction scores amenable to LSH. We then move to learned inverted indices, which tokenize graphs and retrieve them through posting lists. Finally, we consider two challenges specific to graph retrieval: out-of-distribution queries, where adapting a trained retriever needs new labels, each requiring an NP-hard solver call, and adversarial robustness, where a single edge edit can flip a relevance label.</p>
+            <p>Accompanied with open-source code and notebooks, the tutorial equips researchers and practitioners with the foundations and tools for scalable, structure-aware graph retrieval.</p>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <footer class="site-footer">
+      <div class="site-footer-inner">
+        <p class="site-footer-copyright">© 2027 WSDM 2027. All rights reserved.</p>
+        <a class="site-footer-top" href="#site-top">Back to top ↑</a>
+      </div>
+    </footer>
+</div></main>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const mobileMenuBtn = document.querySelector('.mobile-menu-button');
+        const closeBtn = document.querySelector('.close-button');
+        const mobileNav = document.querySelector('.mobile-nav');
+
+        if (mobileMenuBtn) {
+          mobileMenuBtn.addEventListener('click', function () {
+            mobileNav.classList.add('active');
+          });
+        }
+
+        if (closeBtn) {
+          closeBtn.addEventListener('click', function () {
+            mobileNav.classList.remove('active');
+          });
+        }
+
+        // 点击菜单外部关闭菜单
+        document.addEventListener('click', function (event) {
+          if (mobileNav.classList.contains('active') &&
+            !mobileNav.contains(event.target) &&
+            !mobileMenuBtn.contains(event.target)) {
+            mobileNav.classList.remove('active');
+          }
+        });
+
+        // 移动端下拉菜单切换
+        const mobileNavItems = document.querySelectorAll('.mobile-nav-item');
+        mobileNavItems.forEach(item => {
+          const link = item.querySelector('a');
+          if (link.nextElementSibling && link.nextElementSibling.classList.contains('mobile-dropdown')) {
+            link.addEventListener('click', function (e) {
+              e.preventDefault();
+              item.classList.toggle('active');
+            });
+          }
+        });
+      });
+    </script>
+</body>
+
+</html>

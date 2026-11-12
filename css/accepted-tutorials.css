@@ -1,0 +1,27 @@
+/* Accepted Tutorials list, modelled on the WSDM 2026 tutorials page. */
+.at-section { counter-reset: at; }
+.at-toc { margin: 4px 0 34px; padding: 22px 26px; background: #faf6f4; border-radius: 14px; }
+.at-toc ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 6px 28px; }
+.call-page .cffp-section .at-toc li { margin: 0; padding: 0; }
+.at-toc li::before { content: none; }
+.at-toc a { display: flex; gap: 12px; align-items: baseline; padding: 7px 0; font-size: 14.5px; line-height: 1.45; color: #333; text-decoration: none; border-bottom: 1px dashed transparent; }
+.at-toc a:hover { color: #961f12; }
+.at-num { flex: none; font-weight: 700; font-size: 13px; color: #961f12; font-variant-numeric: tabular-nums; }
+.at-list { display: flex; flex-direction: column; }
+.at-item { counter-increment: at; position: relative; padding: 32px 0 30px 64px; border-top: 1px solid #e7dcd7; scroll-margin-top: 110px; }
+.at-item:first-child { border-top: 0; padding-top: 8px; }
+.at-item::before { content: counter(at, decimal-leading-zero); position: absolute; left: 0; top: 31px; width: 46px; height: 46px; border-radius: 50%; background: #961f12; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+.at-item:first-child::before { top: 7px; }
+.tutorial-page .at-section .at-item h3 { font-size: 26px; line-height: 1.3; font-weight: 700; color: #961f12; margin: 0 0 18px; text-align: left; letter-spacing: -.01em; }
+.tutorial-page .at-item p { font-size: 15px; line-height: 1.8; color: #444; margin: 0 0 10px; text-align: left; }
+.tutorial-page .at-organizers { color: #555; background: #faf6f4; border-left: 3px solid #d9b3ab; padding: 10px 14px; border-radius: 0 8px 8px 0; margin-bottom: 16px !important; }
+.at-item strong { color: #333; font-weight: 600; }
+.at-abstract > strong { display: block; margin-bottom: 6px; font-size: 12.5px; letter-spacing: .08em; text-transform: uppercase; color: #961f12; }
+@media (max-width: 700px) {
+  .at-toc { padding: 16px 18px; }
+  .at-toc ol { grid-template-columns: 1fr; }
+  .at-item { padding: 24px 0 24px 0; }
+  .at-item::before { position: static; display: flex; width: 36px; height: 36px; font-size: 13px; margin-bottom: 12px; }
+  .tutorial-page .at-section .at-item h3 { font-size: 21px; }
+  .tutorial-page .at-item p { font-size: 14px; }
+}
