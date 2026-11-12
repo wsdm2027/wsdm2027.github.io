@@ -1,4 +1,7 @@
 /* Accepted Tutorials list, modelled on the WSDM 2026 tutorials page. */
+/* Hero without the Key dates box: single column. */
+.tutorial-page .tutorial-hero.at-hero { grid-template-columns: minmax(0,1fr); }
+.tutorial-page .at-hero .tutorial-lead { max-width: 760px; }
 .at-section { counter-reset: at; }
 .at-toc { margin: 4px 0 34px; padding: 22px 26px; background: #faf6f4; border-radius: 14px; }
 .at-toc ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 6px 28px; }

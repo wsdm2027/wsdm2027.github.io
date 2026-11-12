@@ -45,4 +45,4 @@
 .sp-cta{text-align:center;padding:56px 0 48px}
 .sponsor-page .sp-cta p{margin:0;color:#666;font-size:15px}
 .sp-cta a{font-weight:500;margin-left:6px}
-@media(max-width:700px){.sp-heading{padding:36px 0 0}.sp-tier{padding:32px 0 4px}.sponsor-page .sp-tier h2{font-size:13px;margin-bottom:26px}.sp-logos{flex-direction:column;align-items:center;gap:36px}.sp-logo-row{gap:14px;margin-bottom:12px}.sp-logo-row img{min-width:0}.sp-tier-gold .sp-logos img{height:64px}.sp-tier-silver .sp-logos img{height:52px}.sp-tier-silver .sp-logo-row img+img{height:42px}.sp-cta{padding:40px 0 36px}}
+@media(max-width:700px){.sp-heading{padding:36px 0 0}.sp-tier{padding:32px 0 4px}.sponsor-page .sp-tier h2{font-size:13px;margin-bottom:26px}.sp-logos{flex-direction:column;align-items:center;gap:36px}.sp-logo-row{gap:14px;margin-bottom:12px}.sp-logo-row img{min-width:0}.sp-tier-gold .sp-logos img{height:64px}.sp-tier-silver .sp-logos img{height:52px}.sp-logo-row{flex-wrap:wrap;row-gap:10px}.sp-tier-gold .sp-logo-row img+img{height:48px}.sp-tier-silver .sp-logo-row img+img{height:42px}.sp-cta{padding:40px 0 36px}}
