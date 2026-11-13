@@ -84,7 +84,7 @@ def build(source):
         grids.append(grid)
 
     output = ['<table class="program-week-table">',
-        '  <caption class="program-visually-hidden">WSDM 2027 tentative five-day schedule, February 15–19. Times are in Hong Kong time (UTC+8). Equal-height rows represent 30 minutes, except the 07:30–08:30, 12:00–13:30 and 18:30–20:30 rows, which are each 1.5 times as tall. Simultaneous sessions appear side by side.</caption>',
+        '  <caption class="program-visually-hidden">WSDM 2027 tentative five-day schedule, February 15–19. Times are in Hong Kong time (UTC+8). Equal-height rows represent 30 minutes, with taller rows for 07:30–08:30, 12:00–13:30 and 18:30–20:30. Simultaneous sessions appear side by side.</caption>',
         '  <colgroup><col class="week-time-column"></colgroup>']
     for day, count in enumerate(lanes):
         output.append(f'  <colgroup class="week-day-columns lanes-{count}"><col span="{count}"></colgroup>')
@@ -118,7 +118,13 @@ def build(source):
                         extra_class += ' week-event-with-closing'
                         closing = f'<span class="week-event-closing">Closing<span class="week-event-time">{clock(closing_start)}–{clock(event["end"])}</span></span>'
                     presentation_end = closing_start if closing_start is not None else event['end']
-                    output.append(f'      <td class="week-{event["kind"]}{extra_class}" rowspan="{rowspan}" colspan="{colspan}" headers="week-day-{day} week-time-{row}"{partial_style}><div class="week-event-content"><span class="week-event-title">{title}</span><span class="week-event-time">{clock(event["start"])}–{clock(presentation_end)}</span>{closing}</div></td>')
+                    time_label = f'<span class="week-event-time">{clock(event["start"])}–{clock(presentation_end)}</span>'
+                    if event['title'] == 'Coffee Break':
+                        if day in (0, 4):
+                            extra_class += ' week-coffee-inline'
+                        else:
+                            time_label = ''
+                    output.append(f'      <td class="week-{event["kind"]}{extra_class}" rowspan="{rowspan}" colspan="{colspan}" headers="week-day-{day} week-time-{row}"{partial_style}><div class="week-event-content"><span class="week-event-title">{title}</span>{time_label}{closing}</div></td>')
                     col += colspan
                 elif grid[row][col] is None:
                     span = 1

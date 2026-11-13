@@ -217,7 +217,7 @@
 }
 .program-week-scroll:focus-visible { outline: 2px solid var(--program-wine); outline-offset: 4px; }
 .program-week-table {
-  --week-row-height: 40px;
+  --week-row-height: 32px;
   border-collapse: separate;
   border-spacing: 0;
   table-layout: fixed;
@@ -252,6 +252,8 @@
 .program-week-table thead th:first-child { left: 0; z-index: 4; }
 .program-week-table tbody tr { height: var(--week-row-height); }
 .program-week-table tbody tr.week-compressed-row { height: calc(var(--week-row-height) * 1.5); }
+/* Leave room for the evening reception title to wrap. */
+.program-week-table tbody tr.week-compressed-row:last-child { height: 60px; }
 .program-week-table tbody td { position: relative; padding: 0; }
 .program-week-table .week-event-content {
   position: absolute;
@@ -292,6 +294,13 @@
 }
 .program-week-table .week-event-keynote { background: #961f12; color: #fff; }
 .program-week-table .week-event-break { background: #f3f3f3; color: #555; }
+.program-week-table .week-coffee-inline .week-event-content {
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+.program-week-table .week-coffee-inline .week-event-time { margin-top: 0; }
 .program-week-table .week-coffee-concurrent {
   background: #EAF3F8;
   border-right: 1px dashed #6F94AA;
