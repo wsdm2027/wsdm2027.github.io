@@ -26,45 +26,103 @@
 @media print{.sponsor-actions,.sponsor-button{display:none}.sponsor-page{max-width:none;padding:0}.sponsor-table{min-width:0;font-size:10px}.sponsor-table strong{font-size:16px}.sponsor-table th,.sponsor-table td{padding:8px 5px}.sponsor-table-scroll{overflow:visible}.sponsor-contact{break-inside:avoid}}
 
 /* Official Sponsors & Partners page */
-.sp-heading{text-align:center;padding:56px 0 8px}
-.sponsor-page .sp-heading h1{margin-bottom:0}
-.sp-heading h1::after{content:'';display:block;width:48px;height:3px;background:var(--wine);margin:20px auto 0}
-.sponsor-page .sp-heading p{color:#666;font-size:16px;margin:22px auto 0;max-width:620px}
-.sp-tier{padding:44px 0 8px}
-.sponsor-page .sp-tier h2{display:flex;align-items:center;gap:20px;font-size:15px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--wine);margin:0 0 36px}
-.sp-tier h2::before,.sp-tier h2::after{content:'';flex:1;height:1px;background:var(--line)}
-.sp-tier-gold h2 span{color:#9a7a12}
+.sp-heading { padding: var(--page-heading-space, 56px) 0 32px; }
+.sponsor-page .sp-heading h1 {
+  color: #172632;
+  font-size: clamp(36px, 5vw, 60px);
+  line-height: 1.1;
+  margin: 0 0 14px;
+}
+.sponsor-page .sp-eyebrow {
+  color: var(--wine);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .13em;
+  margin: 0 0 10px;
+}
+.sponsor-page .sp-intro { color: #58636b; font-size: 16px; max-width: 660px; margin: 0; }
+
+.sp-featured-tiers {
+  display: grid;
+  grid-template-columns: minmax(0, 11fr) minmax(0, 9fr);
+  gap: 20px;
+}
+.sp-feature {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+  padding: clamp(16px, 2.4vw, 30px);
+  border: 1px solid;
+  border-top-width: 3px;
+  border-radius: 8px;
+}
+.sp-feature-diamond {
+  border-color: #2c4760;
+  border-top-color: #8dc6f4;
+  background:
+    linear-gradient(125deg, transparent 58%, #b5dfff17 58%, transparent 58.25%),
+    linear-gradient(125deg, transparent 60%, #b5dfff12 60%, transparent 60.25%),
+    linear-gradient(115deg, #112337, #214b6a);
+  color: #fff;
+}
+.sp-feature-gold {
+  border-color: #d6b676;
+  border-top-color: #b18336;
+  background: linear-gradient(115deg, #ead2a0, #f6e8c7);
+  color: #4a3416;
+}
+.sponsor-page .sp-feature h2 {
+  margin: 0;
+  color: inherit;
+  font-size: clamp(24px, 2.4vw, 30px);
+  line-height: 1.2;
+}
+.sp-feature-panel {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 152px;
+  padding: 18px clamp(12px, 2.2vw, 28px);
+  border-radius: 6px;
+  background: #fff;
+  text-align: center;
+}
+.sp-meta-logo { display: block; width: min(100%, 310px); height: auto; }
+.sp-feature-gold .sp-logo-row {
+  --sp-logo-height: 66px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.sp-tier-silver { margin: 36px 0 32px; }
+.sponsor-page .sp-tier h2 {
+  color: #42596b;
+  font-size: 14px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  margin: 0 0 14px;
+}
 .sp-logos {
-  --sp-card-width: 488px;
-  --sp-card-gap: 24px;
   --sp-logo-height: 56px;
-  list-style: none;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--sp-card-gap);
-  max-width: calc(2 * var(--sp-card-width) + var(--sp-card-gap));
-  margin: 0 auto;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
   padding: 0;
 }
-.sp-tier-gold .sp-logos {
-  --sp-logo-height: 66px;
-  grid-template-columns: minmax(0, 1fr);
-  max-width: var(--sp-card-width);
-}
-.sp-tier-diamond h2 span{color:#3b6e9c}
-.sp-tier-diamond .sp-logos {
-  --sp-logo-height: 64px;
-  grid-template-columns: minmax(0, 1fr);
-  max-width: var(--sp-card-width);
-}
-.sp-logo-row .sp-solo-logo { max-width: 100%; }
 .sp-logos > li {
   display: flex;
   flex-direction: column;
   min-width: 0;
-  padding: 24px 20px;
-  border: 1px solid var(--line);
-  border-radius: 5px;
+  padding: 24px clamp(14px, 2vw, 24px);
+  border: 1px solid #dbe4ec;
+  border-top: 2px solid #9bafbe;
+  border-radius: 6px;
+  background: #fff;
   text-align: center;
 }
 .sp-logo-row {
@@ -85,22 +143,41 @@
   max-height: calc(var(--sp-logo-height) / 2);
   max-width: calc((100% - var(--sp-logo-gap)) / 3);
 }
-.sponsor-page .sp-logos .sp-name{flex:1;font-size:16px;font-weight:600;line-height:1.4;color:#333;margin:0 0 4px}
-.sponsor-page .sp-logos .sp-org{font-size:13px;line-height:1.5;color:#777;margin:0}
-.sp-cta{text-align:center;padding:56px 0 48px}
-.sponsor-page .sp-cta p{margin:0;color:#666;font-size:15px}
-.sp-cta a{font-weight:500;margin-left:6px}
+.sponsor-page .sp-name { font-size: 16px; font-weight: 600; line-height: 1.4; color: #243442; margin: 0 0 6px; }
+.sp-logos .sp-name { flex: 1; }
+.sponsor-page .sp-org { font-size: 13px; line-height: 1.5; color: #556470; margin: 0; }
+.sp-cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px 24px;
+  margin: 0 0 40px;
+  padding: 22px clamp(16px, 3vw, 32px);
+  border-block: 1px solid #dbe4ec;
+  background: #f4f7fa;
+}
+.sponsor-page .sp-cta p { margin: 0; color: #384b59; font-size: 16px; }
+
+@media (max-width: 820px) {
+  .sp-featured-tiers { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+}
 @media (max-width: 700px) {
-  .sp-heading { padding: 36px 0 0; }
-  .sp-tier { padding: 32px 0 4px; }
-  .sponsor-page .sp-tier h2 { font-size: 13px; margin-bottom: 26px; }
-  .sp-logos, .sp-tier-gold .sp-logos, .sp-tier-diamond .sp-logos {
-    --sp-logo-height: 48px;
-    grid-template-columns: minmax(0, 1fr);
-    max-width: var(--sp-card-width);
-    gap: 16px;
-  }
-  .sp-logos > li { padding: 18px 14px; }
+  .sp-heading { padding-bottom: 24px; }
+  .sp-feature { gap: 12px; }
+  .sp-feature-panel { min-height: 136px; padding-block: 14px; }
+  .sp-feature-gold .sp-logo-row { --sp-logo-height: 54px; }
+  .sp-meta-logo { max-width: 250px; }
+  .sp-tier-silver { margin: 28px 0 26px; }
+  .sp-logos { --sp-logo-height: 48px; }
+  .sp-logos > li { padding: 20px 14px; }
   .sp-logo-row { --sp-logo-gap: 10px; margin-bottom: 12px; }
-  .sp-cta { padding: 40px 0 36px; }
+  .sp-cta { margin-bottom: 32px; }
+}
+@media (max-width: 560px) {
+  .sp-logos { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+}
+@media print {
+  .sp-feature { break-inside: avoid; color: #172632; background: none; }
+  .sp-logos > li { break-inside: avoid; }
 }

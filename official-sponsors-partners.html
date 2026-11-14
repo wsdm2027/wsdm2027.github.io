@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="css/tablet.css" media="(max-width: 1199px)">
   <link rel="stylesheet" href="css/mobile.css" media="(max-width: 480px)">
   <link rel="preload" href="fonts/inter/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/sponsoring.css?v=b8929a36319e">
+  <link rel="stylesheet" href="css/sponsoring.css?v=5e7c6fe3433a">
   <link rel="stylesheet" href="css/navigation.css?v=fae76715e6fb">
   <link rel="stylesheet" href="css/page-layout.css?v=a0d41ef0bf81">
   <link rel="stylesheet" href="css/readability.css?v=209e7ea4b887">
@@ -186,36 +186,32 @@
 
   <!-- Main content -->
   <main class="sponsor-page" id="main-content">
-    <section class="sp-heading">
+    <div class="sp-heading">
+      <p class="sp-eyebrow">WSDM 2027</p>
       <h1>Sponsors</h1>
-      <p>We thank the following organizations for their generous support of WSDM 2027.</p>
-    </section>
-    <section class="sp-tier sp-tier-diamond" aria-labelledby="tier-diamond">
-      <h2 id="tier-diamond"><span>Diamond Sponsor</span></h2>
-      <ul class="sp-logos">
-        <li>
-          <div class="sp-logo-row">
-            <img class="sp-sponsor-logo sp-solo-logo" src="./images/sponsors/meta.svg" alt="">
-          </div>
-          <p class="sp-name">Meta</p>
-        </li>
-      </ul>
-    </section>
-    <section class="sp-tier sp-tier-gold" aria-labelledby="tier-gold">
-      <h2 id="tier-gold"><span>Gold Sponsor</span></h2>
-      <ul class="sp-logos">
-        <li>
+      <p class="sp-intro">We thank the following organizations for their generous support of WSDM 2027.</p>
+    </div>
+    <div class="sp-featured-tiers">
+      <section class="sp-feature sp-feature-diamond" aria-labelledby="tier-diamond">
+        <h2 id="tier-diamond">Diamond Sponsor</h2>
+        <div class="sp-feature-panel">
+          <img class="sp-meta-logo" src="./images/sponsors/meta.svg" width="512" height="104" alt="Meta">
+        </div>
+      </section>
+      <section class="sp-feature sp-feature-gold" aria-labelledby="tier-gold">
+        <h2 id="tier-gold">Gold Sponsor</h2>
+        <div class="sp-feature-panel">
           <div class="sp-logo-row">
             <img class="sp-sponsor-logo" src="./images/sponsors/polyu-comp.png" alt="">
             <img class="sp-university-logo" src="./images/sponsors/polyu.png" alt="">
           </div>
           <p class="sp-name">Department of Computing</p>
           <p class="sp-org">The Hong Kong Polytechnic University</p>
-        </li>
-      </ul>
-    </section>
+        </div>
+      </section>
+    </div>
     <section class="sp-tier sp-tier-silver" aria-labelledby="tier-silver">
-      <h2 id="tier-silver"><span>Silver Sponsors</span></h2>
+      <h2 id="tier-silver">Silver Sponsors</h2>
       <ul class="sp-logos">
         <li>
           <div class="sp-logo-row">
@@ -235,9 +231,10 @@
         </li>
       </ul>
     </section>
-    <section class="sp-cta">
-      <p>Interested in supporting WSDM 2027? <a href="./sponsoring.html">Become a Sponsor <span aria-hidden="true">&rarr;</span></a></p>
-    </section>
+    <div class="sp-cta">
+      <p>Interested in supporting WSDM 2027?</p>
+      <a class="sponsor-button" href="./sponsoring.html">Become a Sponsor <span aria-hidden="true">&rarr;</span></a>
+    </div>
     <footer class="site-footer">
       <div class="site-footer-inner">
         <p class="site-footer-copyright">© 2027 WSDM 2027. All rights reserved.</p>
