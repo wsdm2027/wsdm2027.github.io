@@ -181,15 +181,11 @@
       margin: 0 auto;
     }
 
-    .home-calls h2,
-    .home-authors h2 {
+    .home-calls h2 {
       font-size: 36px;
       font-weight: 900;
       line-height: 1.25;
       margin: 0 0 16px;
-    }
-
-    .home-calls h2 {
       color: #961F12;
       text-align: center;
     }
@@ -282,71 +278,9 @@
       margin: 16px 0 0;
     }
 
-    .home-authors {
-      max-width: 1120px;
-      margin: 0 auto 48px;
-      padding: 40px 48px;
-      background: #4a4a4a;
-      color: #fff;
-      clip-path: polygon(36px 0, 100% 0, 100% calc(100% - 36px), calc(100% - 36px) 100%, 0 100%, 0 36px);
-    }
-
-    .home-authors h2 {
-      font-size: 30px;
-      margin-bottom: 28px;
-    }
-
-    .home-authors .author-updates {
-      display: grid;
-      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-      gap: 40px;
-    }
-
-    .home-authors .author-update + .author-update {
-      border-left: 1px solid #777;
-      padding-left: 40px;
-    }
-
-    .home-authors h3 {
-      font-size: 22px;
-      line-height: 1.35;
-      margin: 0 0 12px;
-    }
-
-    .home-authors .notification-date {
-      display: block;
-      font-size: 28px;
-      font-weight: 700;
-      line-height: 1.4;
-    }
-
-    .home-authors p {
-      color: #eee;
-      font-size: 16px;
-      line-height: 1.65;
-      margin: 0 0 16px;
-    }
-
-    .home-authors a {
-      display: inline-block;
-      color: #fff;
-      font-size: 15px;
-      font-weight: 600;
-      text-underline-offset: 5px;
-      padding: 6px 0;
-    }
-
-    .home-calls a:focus-visible,
-    .home-authors a:focus-visible {
+    .home-calls a:focus-visible {
       outline: 2px solid currentColor;
       outline-offset: 4px;
-    }
-
-    @media (max-width: 1168px) {
-      .home-authors {
-        margin-left: 24px;
-        margin-right: 24px;
-      }
     }
 
     @media (max-width: 700px) {
@@ -378,30 +312,6 @@
 
       .home-calls .call-deadline {
         font-size: 16px;
-      }
-
-      .home-authors {
-        margin: 0 20px 32px;
-        padding: 32px 24px;
-      }
-
-      .home-authors h2 {
-        font-size: 28px;
-      }
-
-      .home-authors .author-updates {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 24px;
-      }
-
-      .home-authors .author-update + .author-update {
-        border-left: 0;
-        border-top: 1px solid #777;
-        padding: 24px 0 0;
-      }
-
-      .home-authors .notification-date {
-        font-size: 24px;
       }
     }
     /* A quieter homepage contact area and footer. */
@@ -834,8 +744,7 @@
     <section class="home-calls" aria-labelledby="home-calls-title">
       <div class="calls-container">
         <h2 id="home-calls-title">Calls for Participation</h2>
-        <p class="calls-intro">Contribute to WSDM 2027 through papers, proposals, and talks.
-          Explore the calls below, ordered by submission deadline.</p>
+        <p class="calls-intro">Contribute to WSDM 2027 through papers, proposals, talks, and the WSDM Cup challenge.</p>
         <ul class="calls-list">
           <li class="call-row">
             <div class="call-summary">
@@ -861,26 +770,21 @@
             </div>
             <a class="call-link" href="./cfp.html" aria-label="View details for WSDM Day Presentations">View details &rarr;</a>
           </li>
+          <li class="call-row">
+            <div class="call-summary">
+              <h3>WSDM Cup</h3>
+              <p class="call-description">Build an autonomous agent that researches posts on X and writes Community Notes for human raters.</p>
+            </div>
+            <div class="call-deadline">
+              <span class="deadline-label">Qualifying round</span>
+              <span><time datetime="2026-11-18">Nov 18</time> &ndash; <time datetime="2026-12-08">Dec 8, 2026</time></span>
+              <span class="tentative-label">Tentative dates</span>
+            </div>
+            <a class="call-link" href="https://wsdmcup2027.github.io" aria-label="View details for WSDM Cup">View details &rarr;</a>
+          </li>
         </ul>
-        <p class="calls-note">All deadlines are 11:59 pm Anywhere on Earth (AoE).
+        <p class="calls-note">Paper and presentation deadlines are 11:59 pm Anywhere on Earth (AoE).
           See the individual calls for details and updates.</p>
-      </div>
-    </section>
-
-    <!-- Author Updates -->
-    <section class="home-authors" aria-labelledby="home-authors-title">
-      <h2 id="home-authors-title">For Authors</h2>
-      <div class="author-updates">
-        <div class="author-update">
-          <h3>Full Paper Notifications</h3>
-          <time class="notification-date" datetime="2026-11-02">November 2, 2026</time>
-        </div>
-        <div class="author-update">
-          <h3>Findings of WSDM 2027</h3>
-          <p>Main-track submissions are also considered for Findings through the same review process.
-            No separate submission is required.</p>
-          <a href="./cffp.html">About the Findings track &rarr;</a>
-        </div>
       </div>
     </section>
 

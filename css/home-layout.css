@@ -2,12 +2,6 @@
 .home-typography { --home-content-max: 1504px; --home-gutter: 48px; }
 .home-typography .home-calls { padding-left: var(--home-gutter); padding-right: var(--home-gutter); }
 .home-typography .home-calls .calls-container { max-width: var(--home-content-max); }
-.home-typography .home-authors {
-  width: calc(100% - 2 * var(--home-gutter));
-  max-width: var(--home-content-max);
-  margin-left: auto;
-  margin-right: auto;
-}
 .home-chair-overview {
   max-width: calc(var(--home-content-max) + 2 * var(--home-gutter));
   margin: 0 auto;

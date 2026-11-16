@@ -5,7 +5,6 @@ body.home-typography { --home-body-size: 17px; }
 .home-typography .home-calls .call-deadline { font-size: 17px; }
 .home-typography .home-calls :is(.deadline-label,.tentative-label,.calls-note,.call-notification) { font-size: 14px; }
 .home-typography .home-calls .call-link,
-.home-typography .home-authors a,
 .home-typography .homepage-chairs .home-organizers-link { font-size: 16px; }
 .home-typography .homepage-chairs .chair-affiliation { font-size: 16px; }
 .home-typography .home-contact .contact-content p,
