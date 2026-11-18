@@ -457,7 +457,8 @@
   <link rel="preload" href="fonts/inter/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/navigation.css?v=fae76715e6fb">
   <link rel="stylesheet" href="css/readability.css?v=209e7ea4b887">
-  <link rel="stylesheet" href="css/home-layout.css?v=a56fbd24b783">
+  <link rel="stylesheet" href="css/home-layout.css?v=d9ac73de2a0e">
+  <link rel="stylesheet" href="css/home-cup.css?v=eeb65e84ea57">
   <link rel="stylesheet" href="css/footer.css?v=2d027e2271c1">
   <script src="js/navigation.js?v=c21d33d245ab" defer></script>
 </head>
@@ -468,7 +469,7 @@
     <div class="logo">
       <a href="./index.html">
         <div class="logo-container">
-          <img src="./images/logo.png" alt="Rectangle 19" class="logo-rectangle">
+          <img src="./images/wsdm-2027.svg" alt="WSDM 2027 home" width="165" height="56" class="logo-rectangle">
         </div>
       </a>
     </div>
@@ -504,7 +505,12 @@
 
       </div>
       <div class="nav-item">
-        <a href="https://wsdmcup2027.github.io">WSDM Cup</a>
+        <a href="#">WSDM Cup</a>
+        <span class="dropdown-icon" aria-hidden="true"></span>
+        <div class="dropdown-menu">
+          <a href="https://wsdmcup2027.github.io">Writing Agents for Community Notes</a>
+          <a href="https://wsdm2027-cup.github.io/agenticsearch/">Agentic Search over Instruction Trajectories</a>
+        </div>
       </div>
       <div class="nav-item">
         <a href="#">Calls</a>
@@ -592,7 +598,11 @@
 
         </div>
         <div class="mobile-nav-item">
-          <a href="https://wsdmcup2027.github.io">WSDM Cup</a>
+          <a href="#">WSDM Cup</a>
+          <div class="mobile-dropdown">
+            <a href="https://wsdmcup2027.github.io">Writing Agents for Community Notes</a>
+            <a href="https://wsdm2027-cup.github.io/agenticsearch/">Agentic Search over Instruction Trajectories</a>
+          </div>
         </div>
         <div class="mobile-nav-item">
           <a href="#">Calls</a>
@@ -744,20 +754,7 @@
     <section class="home-calls" aria-labelledby="home-calls-title">
       <div class="calls-container">
         <h2 id="home-calls-title">Calls for Participation</h2>
-        <p class="calls-intro">Contribute to WSDM 2027 through papers, proposals, talks, and the WSDM Cup challenge.</p>
         <ul class="calls-list">
-          <li class="call-row">
-            <div class="call-summary">
-              <h3>Short Papers</h3>
-              <p class="call-description">Present focused contributions in web search and data mining.</p>
-            </div>
-            <div class="call-deadline">
-              <span class="deadline-label">Submission deadline</span>
-              <time datetime="2026-11-17">November 17, 2026</time>
-              <span class="call-notification">Notification: <time datetime="2026-12-18">Dec 18, 2026</time></span>
-            </div>
-            <a class="call-link" href="./cfsp.html" aria-label="View details for Short Papers">View details &rarr;</a>
-          </li>
           <li class="call-row">
             <div class="call-summary">
               <h3>WSDM Day Presentations</h3>
@@ -770,21 +767,111 @@
             </div>
             <a class="call-link" href="./cfp.html" aria-label="View details for WSDM Day Presentations">View details &rarr;</a>
           </li>
-          <li class="call-row">
-            <div class="call-summary">
-              <h3>WSDM Cup</h3>
-              <p class="call-description">Build an autonomous agent that researches posts on X and writes Community Notes for human raters.</p>
-            </div>
-            <div class="call-deadline">
-              <span class="deadline-label">Qualifying round</span>
-              <span><time datetime="2026-11-18">Nov 18</time> &ndash; <time datetime="2026-12-08">Dec 8, 2026</time></span>
-              <span class="tentative-label">Tentative dates</span>
-            </div>
-            <a class="call-link" href="https://wsdmcup2027.github.io" aria-label="View details for WSDM Cup">View details &rarr;</a>
-          </li>
         </ul>
-        <p class="calls-note">Paper and presentation deadlines are 11:59 pm Anywhere on Earth (AoE).
-          See the individual calls for details and updates.</p>
+        <p class="calls-note">The submission deadline is 11:59 pm Anywhere on Earth (AoE).</p>
+      </div>
+    </section>
+
+    <section class="home-cup" aria-labelledby="cup-title">
+      <div class="cup-inner">
+        <header class="cup-heading">
+          <div>
+            <h2 id="cup-title">
+              <svg class="cup-trophy" viewBox="0 0 54 54" fill="none" aria-hidden="true">
+                <g stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M15 10H6v6c0 7 5 11 13 11m20-17h9v6c0 7-5 11-13 11"/>
+                  <path d="M15 7h24l-2 14c-.9 6.7-5.1 11-10 11s-9.1-4.3-10-11Z" fill="currentColor" fill-opacity=".13"/>
+                  <path d="M27 32v7m-8 5h16l-3-5H22Zm-4 4h24"/>
+                </g>
+                <path d="m27 12 1.7 3.5 3.8.6-2.8 2.7.7 3.8L27 20.8l-3.4 1.8.7-3.8-2.8-2.7 3.8-.6Z" fill="currentColor"/>
+              </svg>
+              WSDM Cup 2027
+            </h2>
+            <p>Choose a challenge and build your entry.</p>
+          </div>
+          <p class="cup-total">
+            <strong><small>US$</small>20,000</strong>
+            <span>Combined prize pool across two competitions</span>
+          </p>
+        </header>
+
+        <div class="cup-challenges">
+          <article class="cup-card">
+            <div class="cup-art">
+              <svg viewBox="0 0 380 132" role="img" aria-labelledby="cup-notes-diagram">
+                <title id="cup-notes-diagram">A post on X and a cited source inform a Community Note.</title>
+                <g fill="none" stroke="#98783e" stroke-width="1.5" stroke-dasharray="3 4">
+                  <path d="M152 40h45q10 0 10 10v14m88-25v25"/>
+                </g>
+                <rect x="15" y="20" width="149" height="88" rx="7" fill="#243451" opacity=".09"/>
+                <rect x="15" y="16" width="149" height="88" rx="7" fill="#fffdf7" stroke="#aa987b"/>
+                <rect x="28" y="28" width="23" height="23" rx="5" fill="#1a2a3b"/>
+                <path d="m34 33 9.8 13h2l-9.8-13Zm11 0-4.2 5.1m-2.2 3L34 46" fill="none" stroke="#fff" stroke-width="1.25"/>
+                <text x="60" y="45" fill="#223147" font-size="15" font-weight="650">Post on X</text>
+                <path d="M29 62h106m-106 9h94m-94 9h62" stroke="#c2c9c9" stroke-width="3" stroke-linecap="round"/>
+                <rect x="241" y="12" width="105" height="30" rx="15" fill="#fdf7e6" stroke="#ac8f5a"/>
+                <g fill="none" stroke="#816020" stroke-width="1.6" stroke-linecap="round">
+                  <path d="m256 28 4-4m-2 7-1 1a3.2 3.2 0 0 1-4.5-4.5l3-3m4.5 3 1-1a3.2 3.2 0 0 0-4.5-4.5l-2 2" transform="translate(2 0)"/>
+                </g>
+                <text x="271" y="32" fill="#694f24" font-size="14" font-weight="600">Source</text>
+                <rect x="135" y="60" width="222" height="61" rx="7" fill="#26364a" opacity=".12"/>
+                <rect x="135" y="56" width="222" height="61" rx="7" fill="#fdfcf7" stroke="#8e8068"/>
+                <rect x="146" y="68" width="25" height="25" rx="6" fill="#ecdbac"/>
+                <path d="M152 74h13v9h-6l-4 3v-3h-3Zm3 3h7m-7 3h5" fill="none" stroke="#755520" stroke-width="1.3" stroke-linejoin="round"/>
+                <text x="180" y="81" fill="#223147" font-size="16" font-weight="650">Community Note</text>
+                <path d="M181 93h152m-152 9h103" stroke="#c2c9c9" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="cup-card-body">
+              <h3>Writing Agents for Community Notes</h3>
+              <p>Build an agent that checks claims in posts on X and writes Community Notes. Real users rate how helpful the notes are.</p>
+              <div class="cup-card-footer">
+                <p class="cup-prize"><strong>US$10,000</strong> prize pool</p>
+                <a class="cup-register" href="https://wsdmcup2027.github.io/#participate">Register your agent <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="cup-card">
+            <div class="cup-art">
+              <svg viewBox="0 0 380 132" role="img" aria-labelledby="cup-search-diagram">
+                <title id="cup-search-diagram">Retrieve past trajectories for the current task to guide the agent's next action.</title>
+                <g fill="none" stroke="#6d91ac" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M75 58h60m-5-4 5 4-5 4m115-4h59m-5-4 5 4-5 4" />
+                </g>
+                <rect x="22" y="32" width="55" height="55" rx="11" fill="#93a9b5" opacity=".24"/>
+                <rect x="22" y="29" width="55" height="55" rx="11" fill="#f6fcff" stroke="#7c9bae"/>
+                <g fill="none" stroke="#3d637d" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M40 43h13l7 7v20H40Zm13 0v7h7m-15 6h9m-9 6h6"/>
+                </g>
+                <rect x="140" y="24" width="100" height="69" rx="12" fill="#718fa4" opacity=".26"/>
+                <rect x="140" y="20" width="100" height="69" rx="12" fill="#253e58" stroke="#49657f"/>
+                <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M154 66h10c10 0 11-30 24-30h17m-24 18c11 0 11 17 23 17h18" stroke="#7190a8" stroke-width="1.6"/>
+                  <path d="M154 66h10c11 0 10-12 20-12h13c11 0 11-13 23-13h7" stroke="#f0cf81" stroke-width="2.8"/>
+                </g>
+                <g fill="#eed28b"><circle cx="154" cy="66" r="3"/><circle cx="190" cy="54" r="3"/><circle cx="226" cy="41" r="3"/></g>
+                <g fill="#95b3c7"><circle cx="205" cy="36" r="2.5"/><circle cx="222" cy="71" r="2.5"/></g>
+                <rect x="305" y="32" width="55" height="55" rx="11" fill="#93a9b5" opacity=".24"/>
+                <rect x="305" y="29" width="55" height="55" rx="11" fill="#f6fcff" stroke="#7c9bae"/>
+                <path d="M320 66v-6a9 9 0 0 1 9-9h14m-7-7 7 7-7 7" fill="none" stroke="#3d637d" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <g fill="#29465b" font-size="14" font-weight="600" text-anchor="middle">
+                  <text x="49" y="110">Current task</text>
+                  <text x="190" y="110">Past trajectories</text>
+                  <text x="332" y="110">Next action</text>
+                </g>
+              </svg>
+            </div>
+            <div class="cup-card-body">
+              <h3>Agentic Search over Instruction Trajectories</h3>
+              <p>Design a retrieval method that finds useful steps in past tasks and adapts them to guide an agent’s next action on a new task.</p>
+              <div class="cup-card-footer">
+                <p class="cup-prize"><strong>US$10,000</strong> prize pool</p>
+                <a class="cup-register" href="https://wsdm2027-cup.github.io/agenticsearch/#participation">Register your team <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 

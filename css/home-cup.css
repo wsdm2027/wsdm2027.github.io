@@ -1,0 +1,152 @@
+.home-cup {
+  padding: clamp(24px, 3.2vw, 48px) var(--home-gutter);
+  background: #fff;
+}
+.cup-inner {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  max-width: var(--home-content-max);
+  margin-inline: auto;
+  padding: clamp(20px, 2vw, 30px);
+  border-radius: 12px;
+  color: #f8f7f3;
+  background: radial-gradient(ellipse at 83% 0, #1d344b, transparent 65%), #0c1a2c;
+}
+
+/* Fine engraved curves behind the prize banner. */
+.cup-inner::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0 0 auto;
+  height: 150px;
+  background: repeating-radial-gradient(ellipse at 84% -125%, transparent 0 13px, #a6c0d515 14px, transparent 15px 23px);
+  mask-image: linear-gradient(105deg, transparent 22%, #000 64%, transparent 95%);
+  pointer-events: none;
+}
+
+.cup-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 22px;
+}
+.cup-heading h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.1;
+  font-weight: 650;
+  letter-spacing: -.035em;
+}
+.cup-trophy { flex: none; width: 28px; height: 28px; color: #e9c778; }
+.cup-heading > div > p {
+  margin-top: 6px;
+  font-size: 16px;
+  color: #ced9e5;
+}
+.cup-total { text-align: right; }
+.cup-total strong {
+  display: block;
+  color: #f2d48e;
+  font-size: clamp(50px, 5.3vw, 72px);
+  font-weight: 650;
+  line-height: 1;
+  letter-spacing: -.07em;
+  white-space: nowrap;
+}
+.cup-total small { margin-right: .09em; font-size: .44em; letter-spacing: -.06em; }
+.cup-total span { display: block; margin-top: 4px; color: #dde3eb; font-size: 14px; }
+
+.cup-challenges { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(14px, 1.5vw, 22px); }
+.cup-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #405268;
+  border-radius: 8px;
+  background: #16283d;
+}
+.cup-art {
+  display: grid;
+  place-items: center;
+  height: clamp(120px, 9.5vw, 140px);
+  background: radial-gradient(circle, #9a866325 .75px, transparent 1px) 0 0 / 12px 12px, #f7f5ee;
+}
+.cup-art svg { display: block; width: 100%; max-width: 500px; height: 100%; }
+
+.cup-card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(16px, 1.7vw, 24px);
+}
+.cup-card h3 {
+  max-width: 24ch;
+  font-size: clamp(21px, 1.85vw, 26px);
+  font-weight: 600;
+  line-height: 1.16;
+  letter-spacing: -.035em;
+  text-wrap: balance;
+}
+.cup-card-body > p {
+  margin: 8px 0 16px;
+  max-width: 60ch;
+  color: #d2dce7;
+  font-size: 16px;
+  line-height: 1.55;
+}
+.cup-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid #405268;
+}
+.cup-prize { color: #d2dce7; font-size: 14px; }
+.cup-prize strong { color: #f2d48e; font-size: 20px; font-weight: 650; letter-spacing: -.035em; }
+.cup-register {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 44px;
+  padding: 10px 16px;
+  border-radius: 6px;
+  background: #f2d48e;
+  color: #132338;
+  font-size: 15px;
+  font-weight: 650;
+  line-height: 1.4;
+  text-decoration: none;
+}
+.cup-register:hover { background: #ffe7ae; }
+.cup-register:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+
+@media (min-width: 701px) and (max-width: 960px) {
+  .cup-card-footer { flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 700px) {
+  .cup-inner { padding: 18px 12px 12px; }
+  .cup-heading { flex-direction: column; align-items: flex-start; gap: 12px; margin: 0 4px 16px; }
+  .cup-heading h2 { font-size: 26px; gap: 7px; }
+  .cup-trophy { width: 23px; height: 23px; }
+  .cup-heading > div > p { margin-top: 4px; font-size: 15px; }
+  .cup-total { text-align: left; }
+  .cup-total span { font-size: 13px; }
+  .cup-challenges { grid-template-columns: 1fr; gap: 12px; }
+  .cup-art { height: 104px; }
+  .cup-card-body { padding: 14px; }
+  .cup-card-body > p { margin: 6px 0 12px; font-size: 15px; line-height: 1.5; }
+  .cup-card-footer { gap: 6px 10px; padding-top: 10px; }
+  .cup-prize { font-size: 12px; line-height: 1.3; }
+  .cup-prize strong { display: block; font-size: 18px; }
+  .cup-register { padding-inline: 12px; gap: 6px; font-size: 14px; }
+}
