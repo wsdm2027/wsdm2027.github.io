@@ -1,4 +1,9 @@
 /* Shared navigation: explicit Home entry and a quiet current-page indicator. */
+.header .logo-rectangle {
+  padding: 0 10px;
+  object-fit: contain;
+  background-color: #d9d9d9;
+}
 .header .nav { flex-wrap: nowrap; gap: clamp(14px, 1.65vw, 26px); }
 .header .nav-item { flex-shrink: 0; }
 .header .nav-item > a { white-space: nowrap; }
