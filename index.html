@@ -16,28 +16,35 @@
   <link rel="stylesheet" href="css/tablet.css" media="(max-width: 1199px)">
   <link rel="stylesheet" href="css/mobile.css" media="(max-width: 480px)">
   <style>
-    /* Homepage keynote speakers: one row on desktop. */
+    /* Homepage keynote speakers: all six in one row on desktop. */
     @media (min-width: 1200px) {
       .speakers-section .speakers-grid {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 1rem;
       }
 
       .speakers-section .speaker {
         width: 100%;
         height: auto;
-        min-height: 450px;
+        min-height: 340px;
+        padding: 1.25rem 0.75rem 1rem;
         background-size: 100% 100%;
       }
 
       .speakers-section .speaker img {
-        width: min(100%, 250px);
+        width: min(100%, 180px);
         height: auto;
         aspect-ratio: 1;
-        margin-bottom: 1rem;
+        border-width: 4px;
+        margin-bottom: 0.75rem;
+      }
+
+      .speakers-section .speaker h3 {
+        font-size: clamp(16px, 1.3vw, 22px);
       }
 
       .speakers-section .speaker p {
-        font-size: clamp(16px, 1.4vw, 22px);
+        font-size: clamp(12px, 0.95vw, 16px);
       }
     }
     @media (min-width: 700px) and (max-width: 1199px) {
@@ -746,6 +753,16 @@
           <img src="./images/speaker/Jingrui-He-2022.jpg" alt="Jingrui He">
           <h3>Jingrui He</h3>
           <p>Professor, University of Illinois Urbana-Champaign</p>
+        </div>
+        <div class="speaker">
+          <img src="./images/speaker/chua.jpg" alt="Tat-Seng Chua">
+          <h3>Tat-Seng Chua</h3>
+          <p>Professor, National University of Singapore; Director, NUS-Tsinghua Extreme Search Center (NExT)</p>
+        </div>
+        <div class="speaker">
+          <img src="./images/speaker/gionis.jpg" alt="Aristides Gionis">
+          <h3>Aristides Gionis</h3>
+          <p>WASP Professor, KTH Royal Institute of Technology</p>
         </div>
       </div>
     </section>
